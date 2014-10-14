@@ -10,7 +10,6 @@
      ******************************************************************************/
 
 
-	include $_SERVER["DOCUMENT_ROOT"] . "/include/dir.php";
 
 	// tomorrowkids-DB
 	$_db_info_tk[host_ip]  = "218.54.31.121";
@@ -165,38 +164,11 @@
 			$this->selectDB();
 		}
 
-		public function connectDB_gns()
+		public function connectDB_tk()
 		{
-			global $_db_info_gns;
+			global $_db_info_tk;
 
-			$this->connectDBWithArr($_db_info_gns);
-		}
-
-		public function connectDB_bsk()
-		{
-			global $_db_info_bsk;
-
-			$this->connectDBWithArr($_db_info_bsk);
-		}
-		public function connectDB_shop()
-		{
-			global $_db_info_shop;
-
-			$this->connectDBWithArr($_db_info_shop);
-		}
-
-		public function connectDB_ems()
-		{
-			global $_db_info_ems;
-
-			$this->connectDBWithArr($_db_info_ems);
-		}
-
-		public function connectDB_mobile()
-		{
-			global $_db_info_mobile;
-
-			$this->connectDBWithArr($_db_info_mobile);
+			$this->connectDBWithArr($_db_info_tk);
 		}
 
 		public function getConnection()
