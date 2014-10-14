@@ -127,9 +127,7 @@
 		public function connect()
 		{
 			$this->conn = @mysqli_connect($this->host_ip, $this->user, $this->password, true)
-				or $this->fatalError(__FILE__, __LINE__,
-					"DB 접속시 에러가 발생했습니다" . mysqli_error(),
-					"DB 접속시 에러가 발생했습니다. 잠시 후 다시 시도해 주세요.");
+				or die(mysqli_connect_error());
 		}
 
 		public function selectDB()
@@ -185,6 +183,42 @@
 				return $res;
 			}
 		}
+
+		public function execQuery($query_str)
+		{
+			if($this->conn == null)
+			{
+				if($this->f_return_type_boolean === false)
+				{
+					return $this->error(__FILE__, __LINE__,
+						"DB 연결이 되지 않았습니다.",
+						"DB 연결이 되지 않았습니다.");
+				}
+				else
+				{
+					return false;
+				}
+			}
+
+			$this->_last_query_str = $query_str;
+
+
+			if($this->f_return_type_boolean === false)
+			{
+				$result = mysqli_query($query_str, $this->conn)
+					or $this->dbError(__FILE__, __LINE__,
+						"[QUERY] $query_str [ERROR] (" . mysql_error() . ")",
+						"DB 에러가 발생했습니다.");
+			}
+			else
+			{
+				$result = mysqli_query($query_str, $this->conn);
+			}
+
+			return $result;
+		}
+
+
 
 	}
 ?>
