@@ -11,4 +11,6 @@
 
     $_gl[tk_member_table] 			= "tk_member";			//내일을 부탁해 참여자 테이블
 
+	$_gl[youtube_url]				= "http://youtu.be/mCK3pCGlQkI";	// 유튜브 URL
+
 ?>
