@@ -10,7 +10,7 @@ switch ($_REQUEST['exec'])
         $media = "kakao";
 
 		// 회원아이디 세션 생성
-		$_SESSION['ss_mb_id'] = $user_id;
+		$_SESSION['ss_mb_id'] = $userid;
 
         // 유저 정보 체크
         $query 		= "SELECT * FROM users WHERE user_id = '".$userid."'";
@@ -32,7 +32,7 @@ switch ($_REQUEST['exec'])
         $media = "facebook";
 
 		// 회원아이디 세션 생성
-		$_SESSION['ss_mb_id'] = $user_id;
+		$_SESSION['ss_mb_id'] = $userid;
 
         // 유저 정보 체크
         $query 		= "SELECT * FROM users WHERE user_id = '".$userid."'";
