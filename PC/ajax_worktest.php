@@ -2,7 +2,6 @@
 	// 설정파일
 	include_once "../config.php";
 
-print_r($_SESSION);
 	// 질문 정보
 	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
 
