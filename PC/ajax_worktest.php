@@ -6,9 +6,9 @@
 	// 질문 정보
 	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
 
-	$answer_data = TK_GetTestAnswerInfo($_POST[test_idx]);
+	$answer_data	= TK_GetTestAnswerInfo($_POST[test_idx]);
 
-	$next_num = $_POST[test_idx] + 1;
+	$next_num		= $_POST[test_idx] + 1;
 ?>
 <div>
   <h1><?=$question_data[test_value]?></h1>

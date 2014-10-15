@@ -1,4 +1,5 @@
 <?
+	// 내 직업 테스트 질문 정보
 	function TK_GetTestQuestionInfo($idx)
 	{
 		global $_gl;
@@ -11,6 +12,7 @@
 		return $info;
 	}
 
+	// 내 직업 테스트 질문idx에 해당하는 답변 정보
 	function TK_GetTestAnswerInfo($idx)
 	{
 		global $_gl;
