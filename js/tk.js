@@ -125,3 +125,19 @@ function facebook_logout()
 	FB.logout(function(response) {
 	});
 }
+
+function go_test(num)
+{
+	$.ajax({
+		type		: "POST",
+		async		: false,
+		url			: "./ajax_worktest.php",
+		data		: ({
+			"test_idx" : num
+		}),
+		success: function(response){
+			//alert(response);
+			$("#test_div").html(response);
+		}
+	});
+}
