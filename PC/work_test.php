@@ -1,6 +1,8 @@
 <?
 	// 설정파일
 	include_once "../config.php";
+
+	print_r($_SESSION);
 ?>
 <html>
   <head>
@@ -21,7 +23,7 @@
       </p>
     </div>
     <div style="position:relative;width:100%;height:500px;background:orange;" id="test_div">
-      <div style="position:absolute;margin-top:200px;margin-left:45%;background:green;cursor:pointer" onclick="go_test('1');">
+      <div style="position:absolute;margin-top:200px;margin-left:45%;background:green;cursor:pointer" onclick="go_test('1','');">
         <p><font size="17pt">테스트 시작!!</font></p>
       </div>
     </div>

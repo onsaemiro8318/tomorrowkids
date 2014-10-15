@@ -8,6 +8,10 @@ switch ($_REQUEST['exec'])
         $ip_addr = $_SERVER['REMOTE_ADDR'];
         $userid	= $_REQUEST['kaUserId'];
         $media = "kakao";
+
+		// 회원아이디 세션 생성
+		$_SESSION['ss_mb_id'] = $userid;
+
         // 유저 정보 체크
         $query 		= "SELECT * FROM users WHERE user_id = '".$userid."'";
         $result 	= mysqli_query($my_db, $query);
@@ -26,6 +30,10 @@ switch ($_REQUEST['exec'])
         $ip_addr = $_SERVER['REMOTE_ADDR'];
         $userid	= $_REQUEST['fbUserId'];
         $media = "facebook";
+
+		// 회원아이디 세션 생성
+		$_SESSION['ss_mb_id'] = $userid;
+
         // 유저 정보 체크
         $query 		= "SELECT * FROM users WHERE user_id = '".$userid."'";
         $result 	= mysqli_query($my_db, $query);
@@ -39,6 +47,10 @@ switch ($_REQUEST['exec'])
     	}
         echo $flag;
     break;
+
+	case "insert_test_result" :
+		print_r($_POST);
+	break;
 
 }
 

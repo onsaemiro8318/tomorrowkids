@@ -113,7 +113,6 @@ function facebook_login()
     $.ajax({
       type    : "POST",
       async    : false,
-      //AJAX 처리할것 중복응모체크 (아직 안만들었음)
       url      : "../PC/main_exec.php",
       data    : ({
         "exec" : "fb_user_info" ,
@@ -133,18 +132,60 @@ function facebook_login()
 
 
 
-function go_test(num)
+function go_test(num, val)
 {
-	$.ajax({
-		type		: "POST",
-		async		: false,
-		url			: "./ajax_worktest.php",
-		data		: ({
-			"test_idx" : num
-		}),
-		success: function(response){
-			//alert(response);
-			$("#test_div").html(response);
-		}
-	});
+	if (num > 10)
+	{
+		alert(val);
+		$.ajax({
+			type		: "POST",
+			async		: false,
+			url			: "../PC/main_exec.php",
+			data		: ({
+				"exec"         : "insert_test_result",
+				"selected_val" : val
+			}),
+			success: function(response){
+				alert(response);
+			}
+		});
+	}else{
+		$.ajax({
+			type		: "POST",
+			async		: false,
+			url			: "./ajax_worktest.php",
+			data		: ({
+				"test_idx"     : num,
+				"selected_val" : val
+			}),
+			success: function(response){
+				//alert(response);
+				$("#test_div").html(response);
+			}
+		});
+	}
+}
+
+function save_info(idx)
+{
+	$("#sel_value").val(idx);
+}
+
+function go_next_question(num, selected_val)
+{
+	var sel_val = $("#sel_value").val();
+	var gubun   = "";
+	if (sel_val == "")
+	{
+		alert('하나의 답변을 꼭 선택해 주세요.');
+		return false;
+	}
+
+	if (selected_val == "")
+		gubun = "";
+	else
+		gubun = "|";
+
+	sel_val = selected_val + gubun + sel_val;
+	go_test(num, sel_val);
 }
