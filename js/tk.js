@@ -1,6 +1,8 @@
 Kakao.init('5675f40b361955e0b3fcf93944b5d444');
 var jsonStr;
 var obj;
+var ka_access_token;
+var ka_refresh_token;
 
 function kakao_login(){
     // 로그인 창을 띄웁니다.
@@ -10,33 +12,29 @@ function kakao_login(){
         Kakao.API.request({
           url: '/v1/user/me',
           success: function(res) {
-             alert(JSON.stringify(res));
              jsonStr = JSON.stringify(res);
              obj = JSON.parse(jsonStr);
-             //
-             // $.ajax({
-             //   type    : "POST",
-             //   async    : false,
-             //   //AJAX 처리할것 중복응모체크 (아직 안만들었음)
-             //   url      : "./api/sns_exec.php",
-             //   data    : ({
-             //     "exec" : "user_check_ka" ,
-             //     "kaUserId" : obj.id ,
-             //     "kaUserName" : obj["properties"].nickname
-             //   }),
-             //   success: function(response){
-             //     //AJAX 리턴 결과값 Y = 이미 응모
-             //     if(response == "N"){
-             //       alert("회원정보가 없습니다.");
-             //       return;
-             //     //AJAX 리턴 결과값 N = 이미 응모
-             //     }else{
-             //       //$.popupOpen('topgirl_input.php');
-             //       alert("회원정보가 있습니다.");
-             //       return;
-             //     }
-             //   }
-             // });
+             ka_access_token = Kakao.Auth.getAccessToken();
+             ka_refresh_token = Kakao.Auth.getRefreshToken();             
+             $.ajax({
+               type    : "POST",
+               async    : false,
+               url      : "../PC/main_exec.php",
+               data    : ({
+                 "exec" : "ka_user_info" ,
+                 "kaUserId" : obj.id
+               }),
+               success: function(response){
+                 alert(response);
+                 if(response == "Y"){
+                   alert("회원정보가 입력되었습니다.");
+                   return;
+                 }else{
+                   alert("회원정보가 이미 있습니다.");
+                   return;
+                 }
+               }
+             });
           },
           fail: function(error) {
             alert(JSON.stringify(error))
@@ -119,7 +117,7 @@ function facebook_login_check()
 
 function kakao_login_check()
 {
-  alert(obj.id +" , "+ obj["properties"].nickname);
+  alert(obj.id +" , "+ obj["properties"].nickname +" , "+ ka_access_token +" , "+ ka_refresh_token);
 }
 
 function facebook_logout()

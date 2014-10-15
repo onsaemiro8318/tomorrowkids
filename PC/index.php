@@ -30,12 +30,16 @@
           </div>
       </div>
       <div id="sns_login_box">
+        <div>
         <input type="button" value="페이스북으로 참여하기" onclick="facebook_login();">
         <input type="button" value="페이스북 로그인 확인" onclick="facebook_login_check();">
-        <input type="button" value="페이스북 로그아웃" onclick="facebook_logout();">        
+        <input type="button" value="페이스북 로그아웃" onclick="facebook_logout();">
+        </div>        
+        <div>
         <input type="button" value="카카오계정으로 참여하기" onclick="kakao_login();">
         <input type="button" value="카카오 로그인 확인" onclick="kakao_login_check();">        
         <p>*어떠한 정보도 무단으로 포스팅하지 않습니다.</p>          
+        </div>
       </div>
     </div>
   </body>
