@@ -1,8 +1,7 @@
 <?
 	// 설정파일
 	include_once "../config.php";
-	mysqli_query($my_db,'set names utf8'); 
-<?
+
 	// 질문 정보
 	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
 

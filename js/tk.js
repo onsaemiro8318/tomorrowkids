@@ -133,8 +133,9 @@ function go_test(num, val)
 		$.ajax({
 			type		: "POST",
 			async		: false,
-			url			: "./ajax_worktest.php",
+			url			: "./main_exec.php",
 			data		: ({
+				"exec"         : "insert_test_result",
 				"test_idx"     : num,
 				"selected_val" : val
 			}),
