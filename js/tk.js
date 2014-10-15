@@ -138,7 +138,8 @@ function go_test(num)
 			"test_idx" : num
 		}),
 		success: function(response){
-			$("test_div").html(response);
+			//alert(response);
+			$("#test_div").html(response);
 		}
 	});
 }

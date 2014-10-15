@@ -5,22 +5,9 @@
 <html>
   <head>
     <title>Document</title>
-    <script type="text/javascript">
-	$(document).ready(function(){
-		$.ajax({
-			type		: "POST",
-			async		: false,
-			url			: "./ajax_worktest.php",
-			data		: ({
-				"test_idx" : "1"
-			}),
-			success: function(response){
-				$("test_div").html(response);
-			}
-		});
-	});
-
-    </script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
+    <script type='text/javascript' src='../js/tk.js'></script>
   </head>
   <body>
     <div style="position:top;width:100%;height:60px;background:green">
