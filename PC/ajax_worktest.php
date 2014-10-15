@@ -2,7 +2,7 @@
 	// 설정파일
 	include_once "../config.php";
 	mysqli_query($my_db,'set names utf8'); 
-	
+<?
 	// 질문 정보
 	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
 
@@ -11,9 +11,10 @@
 	$next_num		= $_POST[test_idx] + 1;
 ?>
 <div>
+  <input type="hidden" name="sel_value" id="sel_value">
+  <input type="text" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
   <h1><?=$question_data[test_value]?></h1>
-  <p><?=$answer_data[0][test_value]?></p>
-  <p><?=$answer_data[1][test_value]?></p>
-  <a href="javascript:go_test('<?=$next_num?>');">답변 선택</a>
+  <p id="answer1"><a href="javascript:save_info('<?=$answer_data[0][idx]?>');"><?=$answer_data[0][test_value]?></a></p>
+  <p id="answer2"><a href="javascript:save_info('<?=$answer_data[1][idx]?>');"><?=$answer_data[1][test_value]?></a></p>
+  <a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');">답변 선택</a>
 </div>
-
