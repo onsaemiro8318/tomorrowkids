@@ -2,23 +2,18 @@
 	// 설정파일
 	include_once "../config.php";
 	mysqli_query($my_db,'set names utf8'); 
-	$query 			= "SELECT * FROM ".$_gl[tk_worktest_table]." WHERE idx='".$_POST[test_idx]."'";
-	$result 		= mysqli_query($my_db, $query);
-	$question_data	= mysqli_fetch_array($result);
+	
+	// 질문 정보
+	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
 
-	$query 			= "SELECT * FROM ".$_gl[tk_worktest_table]." WHERE parent_idx='".$_POST[test_idx]."'";
-	$result 		= mysqli_query($my_db, $query);
-	while ($answer_data = mysqli_fetch_array($result))
-	{
-		$anser_array[idx][]			= $answer_data[idx];
-		$anser_array[test_value][]	= $answer_data[test_value];
-	}
+	$answer_data = TK_GetTestAnswerInfo($_POST[test_idx]);
 
 	$next_num = $_POST[test_idx] + 1;
 ?>
 <div>
   <h1><?=$question_data[test_value]?></h1>
-  <p><?=$anser_array[test_value][0]?></p>
-  <p><?=$anser_array[test_value][1]?></p>
+  <p><?=$answer_data[0][test_value]?></p>
+  <p><?=$answer_data[1][test_value]?></p>
   <a href="javascript:go_test('<?=$next_num?>');">답변 선택</a>
 </div>
+
