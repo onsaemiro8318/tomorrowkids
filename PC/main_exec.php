@@ -49,7 +49,7 @@ switch ($_REQUEST['exec'])
     break;
 
 	case "insert_test_result" :
-		
+		print_r($_POST);
 	break;
 
 }

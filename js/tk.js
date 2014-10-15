@@ -115,7 +115,6 @@ function facebook_login()
     $.ajax({
       type    : "POST",
       async    : false,
-      //AJAX 처리할것 중복응모체크 (아직 안만들었음)
       url      : "../PC/main_exec.php",
       data    : ({
         "exec" : "fb_user_info" ,
@@ -139,18 +138,17 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
+		alert(val);
 		$.ajax({
 			type		: "POST",
 			async		: false,
-			url			: "./main_exec.php",
+			url			: "../PC/main_exec.php",
 			data		: ({
 				"exec"         : "insert_test_result",
-				"test_idx"     : num,
 				"selected_val" : val
 			}),
 			success: function(response){
-				//alert(response);
-				$("#test_div").html(response);
+				alert(response);
 			}
 		});
 	}else{
