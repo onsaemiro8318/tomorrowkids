@@ -1,6 +1,6 @@
 <?
 	// 설정파일
-	include_once "config.php";
+	include_once "../config.php";
 
 	$total_count = TK_GetTestTotalCount();
 ?>

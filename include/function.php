@@ -111,7 +111,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl[tk_result_test_table]."";
+		$query 		= "SELECT * FROM ".$_gl[tk_test_result_table]."";
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_num_rows($result);
 
