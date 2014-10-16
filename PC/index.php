@@ -23,7 +23,7 @@
       </div>
       <div>
           <div id="movie_box">
-            <iframe id="ytplayer" width="100%"  src="//www.youtube.com/embed/aFTQ8gnKnFw?controls=0&showinfo=0&modestbranding=1&wmode=opaque&enablejsapi=1&autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe id="ytplayer" width="100%"  src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe>
           </div>
           <div id="count_box">
               <h1><?=number_format($total_count)?>명</h1>

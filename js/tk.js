@@ -7,42 +7,42 @@ var ka_access_token;
 var ka_refresh_token;
 
 function kakao_login(){
-    // 로그인 창을 띄웁니다.
-    Kakao.Auth.login({
-      success: function(authObj) {
-        // 로그인 성공시 API를 호출합니다.
-        Kakao.API.request({
-          url: '/v1/user/me',
-          success: function(res) {
-             jsonStr = JSON.stringify(res);
-             obj = JSON.parse(jsonStr);
-             ka_access_token = Kakao.Auth.getAccessToken();
-             ka_refresh_token = Kakao.Auth.getRefreshToken();             
-             $.ajax({
-               type    : "POST",
-               async    : false,
-               url      : "../PC/main_exec.php",
-               data    : ({
-                 "exec" : "ka_user_info" ,
-                 "kaUserId" : obj.id
-               }),
-               success: function(response){
-                 if(response == "Y"){
-                   return;
-                 }else{
-                   return;
-                 }
-               }
-             });
-             location.href="work_test.php";
-          },
-          fail: function(error) {
-          }
-        });
-      },
-      fail: function(err) {
-      }
-    });
+	// 로그인 창을 띄웁니다.
+	Kakao.Auth.login({
+		success: function(authObj) {
+			// 로그인 성공시 API를 호출합니다.
+			Kakao.API.request({
+				url: '/v1/user/me',
+				success: function(res) {
+					jsonStr = JSON.stringify(res);
+					obj = JSON.parse(jsonStr);
+					ka_access_token = Kakao.Auth.getAccessToken();
+					ka_refresh_token = Kakao.Auth.getRefreshToken();             
+					$.ajax({
+						type     : "POST",
+						async    : false,
+						url      : "../PC/main_exec.php",
+						data     : ({
+							"exec" : "ka_user_info" ,
+							"kaUserId" : obj.id
+						}),
+						success: function(response){
+							if(response == "Y"){
+								return;
+							}else{
+								return;
+							}
+						}
+					});
+					location.href="work_test.php";
+				},
+				fail: function(error) {
+				}
+			});
+		},
+		fail: function(err) {
+		}
+	});
 };
 
 /********************** 페이스북 **********************/
@@ -108,29 +108,27 @@ function testAPI() {
 function facebook_login()
 {
 	FB.login(function(response){
-	_fbUserId = response.authResponse.userID;
-	accessToken = response.authResponse.accessToken;	
-    $.ajax({
-      type    : "POST",
-      async    : false,
-      url      : "../PC/main_exec.php",
-      data    : ({
-        "exec" : "fb_user_info" ,
-        "fbUserId" : _fbUserId
-      }),
-      success: function(response){
-        if(response == "Y"){
-          return;
-        }else{
-          return;
-        }
-      }
-    }); 
-    location.href="work_test.php"; 
+		_fbUserId = response.authResponse.userID;
+		accessToken = response.authResponse.accessToken;	
+		$.ajax({
+			type     : "POST",
+			async    : false,
+			url      : "../PC/main_exec.php",
+			data     : ({
+				"exec" : "fb_user_info" ,
+				"fbUserId" : _fbUserId
+			}),
+			success: function(response){
+				if(response == "Y"){
+					return;
+				}else{
+					return;
+				}
+			}
+		}); 
+		location.href="work_test.php"; 
 	},{scope: 'public_profile,email'});
 }
-
-
 
 function go_test(num, val)
 {
