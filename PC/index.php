@@ -10,6 +10,7 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
     <script type='text/javascript' src='../js/tk.js'></script>
+    <script type='text/javascript' src='../js/googleAnalytics.js'></script>
   </head>
   <body>
     <div>
