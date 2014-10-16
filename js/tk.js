@@ -2,7 +2,20 @@
 
 function show_sns_select_box()
 {
-  $("#sns_select_box").show();
+	$.ajax({
+		type		: "POST",
+		async		: false,
+		url			: "../PC/main_exec.php",
+		data		: ({
+			"exec"         : "user_test_check"
+		}),
+		success: function(response){
+			if (response == "Y")
+				$("#sns_select_box").show();
+			else
+				alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+		}
+	});
 }
 
 function kt_share()
@@ -188,12 +201,15 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
+				/*
 				if (response == "N")
 				{
 					alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
 				}else{
 					location.href = "work_test_result.php?job=" + response;
 				}
+				*/
+				location.href = "work_test_result.php?job=" + response;
 			}
 		});
 	}else{

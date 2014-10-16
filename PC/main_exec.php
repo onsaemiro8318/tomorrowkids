@@ -54,12 +54,13 @@ switch ($_REQUEST['exec'])
 		$userid			= $_SESSION['ss_mb_id'];
 		$media			= $_SESSION['ss_media'];
 
-		$test_cnt	= TK_GetTestUserCntInfo($userid);
-
+		//$test_cnt	= TK_GetTestUserCntInfo($userid);
+/*
 		if ($test_cnt >= 3)
 		{
 			echo "N";
 		}else{
+*/
 			$test_point = 0;
 
 			// 직업 선택 로직
@@ -74,7 +75,7 @@ switch ($_REQUEST['exec'])
 			else
 				$test_point = $test_point + 1;
 
-			if ($worker_array[7]%2 == 0)
+			if ($worker_array[9]%2 == 0)
 				$test_point = $test_point + 2;
 			else
 				$test_point = $test_point + 1;
@@ -85,7 +86,19 @@ switch ($_REQUEST['exec'])
 			$result = mysqli_query($my_db, $query);
 
 			echo $selected_job[idx];
-		}
+		//}
+	break;
+
+	case "user_test_check" :
+		$userid			= $_SESSION['ss_mb_id'];
+
+		$test_cnt	= TK_GetTestUserCntInfo($userid);
+
+		if ($test_cnt >= 3)
+			echo "N";
+		else
+			echo "Y";
+
 	break;
 }
 
