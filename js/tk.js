@@ -159,8 +159,12 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
-				//alert(response);
-				$("#test_div").html(response);
+				if (response == "Y")
+				{
+					location.href = "work_test_result.php";
+				}else{
+					alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+				}
 			}
 		});
 	}

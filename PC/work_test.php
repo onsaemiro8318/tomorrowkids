@@ -2,7 +2,6 @@
 	// 설정파일
 	include_once "../config.php";
 
-	print_r($_SESSION);
 ?>
 <html>
   <head>
