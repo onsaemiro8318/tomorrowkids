@@ -6,7 +6,7 @@ switch ($_REQUEST['exec'])
 	case "ka_user_info" :
 		$ip_addr = $_SERVER['REMOTE_ADDR'];
 		$userid	= $_REQUEST['kaUserId'];
-		$media = "kakao"$_gl[login_media]['kakao'];
+		$media = $_gl[login_media]['kakao'];
 
 		// 회원아이디 세션 생성
 		$_SESSION['ss_mb_id'] = $userid;
