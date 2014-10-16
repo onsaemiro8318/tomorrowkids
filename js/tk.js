@@ -1,3 +1,48 @@
+/********************** 공유하기 **********************/
+
+function show_sns_select_box()
+{
+  $("#sns_select_box").show();
+}
+
+function kt_share()
+{
+  Kakao.Link.sendTalkLink({
+    label: 'Tomorrow Kids',
+    image: {
+      src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+      width: '300',
+      height: '200'
+    },
+    webButton: {
+      text: 'Tomorrow Kids',
+      url: 'http://www.tomorrowkids.or.kr'
+    }
+  });
+}
+
+function fb_share()
+{
+	FB.ui(
+	  {
+		method: 'feed',
+		name: 'Tomorrow Kids',
+		link: 'http://www.tomorrowkids.or.kr',
+		picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+		caption: 'http://www.tomorrowkids.or.kr',
+		description: '내일(work)이 아이들의 내일(tomorrow)이 됩니다.'
+	  },
+		function(response) {
+			if (response && response.post_id) {
+				location.href="index.php";
+			} 
+			else {
+				location.href="index.php";
+			}
+		}
+	);
+}
+
 /********************** 카카오톡 **********************/
 
 Kakao.init('5675f40b361955e0b3fcf93944b5d444');
