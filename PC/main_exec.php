@@ -52,20 +52,42 @@ switch ($_REQUEST['exec'])
 
 	case "insert_test_result" :
 		$selected_val	= $_REQUEST['selected_val'];
-		$userid			= $_SESSION['ss_mb_id'];
-		$media			= $_SESSION['ss_media'];
+		//$userid			= $_SESSION['ss_mb_id'];
+		//$media			= $_SESSION['ss_media'];
+		$userid			= "4447503";
+		$media			= "kakao";
 
-		$query		= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE user_id = '".$userid."'";
-		$result		= mysqli_query($my_db, $query);
-		$test_cnt	= mysqli_num_rows($result);
+		$test_cnt	= TK_GetTestUserCntInfo($userid);
 
 		if ($test_cnt >= 3)
 		{
 			echo "N";
 		}else{
-			$query = "insert into ".$_gl[tk_test_result_table]." (user_id, answer, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
+			$test_point = 0;
+
+			// 직업 선택 로직
+			$worker_array	= explode("|",$selected_val);
+			if ($worker_array[4]%2 == 0)
+				$test_point = $test_point + 2;
+			else
+				$test_point = $test_point + 1;
+
+			if ($worker_array[6]%2 == 0)
+				$test_point = $test_point + 2;
+			else
+				$test_point = $test_point + 1;
+
+			if ($worker_array[7]%2 == 0)
+				$test_point = $test_point + 2;
+			else
+				$test_point = $test_point + 1;
+
+			$selected_job	= TK_GetTestResultInfo($test_point);
+
+			$query = "insert into ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job[idx]."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
 			$result = mysqli_query($my_db, $query);
-			echo "Y";
+
+			echo $selected_job[idx];
 		}
 	break;
 }

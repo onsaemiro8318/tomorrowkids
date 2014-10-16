@@ -146,11 +146,11 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
-				if (response == "Y")
+				if (response == "N")
 				{
-					location.href = "work_test_result.php";
-				}else{
 					alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+				}else{
+					location.href = "work_test_result.php?job=" + response;
 				}
 			}
 		});

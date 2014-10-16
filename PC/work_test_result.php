@@ -1,7 +1,6 @@
 <?
 	// 설정파일
 	include_once "../config.php";
-
 ?>
 <html>
   <head>
@@ -19,10 +18,7 @@
       <h1>STEP2. 내일(work) 공유로 기부하기</h1>
       <p>당신의 내일(work) 테스트 결과 입니다.</p>
     </div>
-    <div style="position:relative;width:100%;height:300px;background:orange;" id="test_div">
-      <div style="position:absolute;margin-top:200px;margin-left:45%;background:green;cursor:pointer" onclick="go_test('1','');">
-        <p><font size="17pt">테스트 시작!!</font></p>
-      </div>
+    <div style="position:relative;width:100%;height:300px;background:orange;" id="test_result_div">
     </div>
     <div style="position:top;width:100%;height:200px;background:skyblue;">
       <p>세상에는 이처럼 당신이 하고 있는 일, 상상치도 못했던 다양한 내 일(work)이 많이 있답니다.
