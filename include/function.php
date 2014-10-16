@@ -26,6 +26,7 @@
 		return $info;
 	}
 
+	// 내 직업 테스트 동일 유저 참여 횟수
 	function TK_GetTestUserCntInfo($userid)
 	{
 		global $_gl;
@@ -38,6 +39,7 @@
 		return $info;
 	}
 
+	// 내 직업 테스트 직업 구하기 로직
 	function TK_GetTestResultInfo($point)
 	{
 		global $_gl;
@@ -91,5 +93,15 @@
 		}
 
 		return $info;
+	}
+
+	// 유입매체 정보 입력
+	function TK_InsertTrackingInfo($media, $gubun)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query		= "INSERT INTO ".$_gl[tk_tracking_info_table]."(media, ip_addr, reg_date, gubun) values('".$media."','".$_SERVER['REMOTE_ADDR']."','now()','".$gubun."')";
+		$result		= mysqli_query($my_db, $query);
 	}
 ?>

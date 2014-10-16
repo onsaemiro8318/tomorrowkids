@@ -136,7 +136,6 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
-		alert(val);
 		$.ajax({
 			type		: "POST",
 			async		: false,
