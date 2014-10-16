@@ -117,4 +117,18 @@
 
 		return $info;
 	}
+
+	// 테스트 결과 직업 표시
+	function TK_GetUserJobInfo($idx)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl[tk_works_table]." WHERE idx='".$idx."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_fetch_array($result);
+
+		return $info;
+	}
+
 ?>
