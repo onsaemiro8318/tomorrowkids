@@ -104,4 +104,17 @@
 		$query		= "INSERT INTO ".$_gl[tk_tracking_info_table]."(media, ip_addr, reg_date, gubun) values('".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
 		$result		= mysqli_query($my_db, $query);
 	}
+
+	// 기부 총 참여자 수 구하기
+	function TK_GetTestTotalCount()
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl[tk_result_test_table]."";
+		$result 	= mysqli_query($my_db, $query);
+		$info		= mysqli_num_rows($result);
+
+		return $info;
+	}
 ?>

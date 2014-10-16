@@ -1,6 +1,8 @@
 <?
 	// 설정파일
 	include_once "config.php";
+
+	$total_count = TK_GetTestTotalCount();
 ?>
 <html>
   <head>
@@ -24,7 +26,7 @@
             <iframe id="ytplayer" width="100%"  src="//www.youtube.com/embed/aFTQ8gnKnFw?controls=0&showinfo=0&modestbranding=1&wmode=opaque&enablejsapi=1&autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>
           </div>
           <div id="count_box">
-              <h1>15,069명</h1>
+              <h1><?=number_format($total_count)?>명</h1>
               <p>의 내일(work)이<p>
               <p>아이들의 내일(Tomorrow)이 되고 있습니다.</p>
           </div>
