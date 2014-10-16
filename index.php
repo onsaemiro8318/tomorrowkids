@@ -9,7 +9,7 @@
 			break;
 		}
 	}
-
+	unset($media);
 	if($check_mobile)
 		$gubun = "MOBILE";
 	else
