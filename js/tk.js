@@ -37,12 +37,10 @@ function kakao_login(){
              location.href="work_test.php";
           },
           fail: function(error) {
-            alert(JSON.stringify(error))
           }
         });
       },
       fail: function(err) {
-        alert(JSON.stringify(err))
       }
     });
 };
