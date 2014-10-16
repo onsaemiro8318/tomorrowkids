@@ -52,10 +52,8 @@ switch ($_REQUEST['exec'])
 
 	case "insert_test_result" :
 		$selected_val	= $_REQUEST['selected_val'];
-		//$userid			= $_SESSION['ss_mb_id'];
-		//$media			= $_SESSION['ss_media'];
-		$userid			= "4447503";
-		$media			= "kakao";
+		$userid			= $_SESSION['ss_mb_id'];
+		$media			= $_SESSION['ss_media'];
 
 		$test_cnt	= TK_GetTestUserCntInfo($userid);
 
