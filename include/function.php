@@ -101,7 +101,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query		= "INSERT INTO ".$_gl[tk_tracking_info_table]."(media, ip_addr, reg_date, gubun) values('".$media."','".$_SERVER['REMOTE_ADDR']."','now()','".$gubun."')";
+		$query		= "INSERT INTO ".$_gl[tk_tracking_info_table]."(media, ip_addr, reg_date, gubun) values('".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
 		$result		= mysqli_query($my_db, $query);
 	}
 ?>

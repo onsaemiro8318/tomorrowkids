@@ -14,10 +14,11 @@
 		$gubun = "MOBILE";
 	else
 		$gubun = "PC";
+
 	$media = $_REQUEST[media];
 
 	TK_InsertTrackingInfo($media, $gubun);
-/*
+
 	if($check_mobile)
 	{
 		Header("Location:http://www.tomorrowkids.or.kr/MOBILE/");
@@ -26,5 +27,5 @@
 		Header("Location:http://www.tomorrowkids.or.kr/PC/");
 		exit;
 	}
-*/
+
 ?>
