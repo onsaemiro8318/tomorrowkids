@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-include_once "./include/db_conn.php";
-
-if (!$_SESSION['ss_mb_email'])
+if (!$_SESSION['ss_mb_name'])
 	exit;
 
 ?>
@@ -16,7 +14,7 @@ if (!$_SESSION['ss_mb_email'])
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>THEFACESHOP 2014 Top GIRL - Admin</title>
+    <title>TomorrowKids 2014 - Admin</title>
 	<!-- jQuery Version 1.11.0 -->
 	<script src="js/jquery-1.11.0.js"></script>
 
@@ -31,11 +29,6 @@ if (!$_SESSION['ss_mb_email'])
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <script src="telerik/js/kendo.all.min.js"></script>
-
-
-    <link href=""telerik/styles/kendo.dataviz.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,7 +49,7 @@ if (!$_SESSION['ss_mb_email'])
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="daily_applicant_count.php">Top GIRL 2014 Admin</a>
+          <a class="navbar-brand" href="daily_applicant_count.php">TomorrowKids 2014 Admin</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -76,36 +69,27 @@ if (!$_SESSION['ss_mb_email'])
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Daily Count<i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                   <li>
-                    <a href="daily_applicant_count.php">일자별 탑걸 응모자 수</a>
+                    <a href="daily_influx_count.php">일자별 매체 유입자 수</a>
                   </li>
                   <li>
-                    <a href="daily_topgirl_vote_count.php">일자별 탑걸 투표자 수</a>
+                    <a href="daily_test_count.php">일자별 테스트 응모자 수</a>
                   </li>
                   <li>
-                    <a href="daily_story_vote_count.php">일자별 스토리 투표자 수</a>
-                  </li>
-                  <li>
-                    <a href="daily_coupon_used_count.php">일자별 쿠폰 사용자 수</a>
+                    <a href="daily_story_vote_count.php">일자별 질문당 답변선택 수</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="applicant_list.php"><i class="fa fa-fw fa-bar-chart-o"></i> 탑걸 응모자 목록</a>
+                <a href="applicant_list.php"><i class="fa fa-fw fa-bar-chart-o"></i> 유입경로별 접속 정보</a>
               </li>
               <li>
-                <a href="coupon_used_applicant_list.php"><i class="fa fa-fw fa-table"></i> 쿠폰 사용자 목록</a>
+                <a href="coupon_used_applicant_list.php"><i class="fa fa-fw fa-table"></i> 테스트 참여자 목록</a>
               </li>
               <li>
-                <a href="vote_winner_list.php"><i class="fa fa-fw fa-edit"></i> 투표 당첨자 목록</a>
+                <a href="vote_winner_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>
               </li>
               <li>
-                <a href="story_vote_total.php"><i class="fa fa-fw fa-bar-chart-o"></i> 스토리 투표 집계</a>
-              </li>
-              <li>
-                <a href="chart_test.php"><i class="fa fa-fw fa-bar-chart-o"></i> test</a>
-              </li>
-              <li>
-                <a href="telerik_test.php"><i class="fa fa-fw fa-bar-chart-o"></i> test - telerik</a>
+                <a href="story_vote_total.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 매체 목록</a>
               </li>
             </ul>
           </div>

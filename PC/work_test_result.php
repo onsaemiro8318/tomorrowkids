@@ -1,7 +1,8 @@
 <?
 	// 설정파일
 	include_once "../config.php";
-	$total_count = TK_GetTestTotalCount();
+	$total_count	= TK_GetTestTotalCount();
+	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
 ?>
 <html>
   <head>
@@ -23,6 +24,7 @@
       <p>당신의 내일(work) 테스트 결과 입니다.</p>
     </div>
     <div style="position:relative;width:100%;height:300px;background:orange;" id="test_result_div">
+<?=$user_job[job];?>
     </div>
     <div style="position:top;width:100%;height:200px;background:skyblue;">
       <p>세상에는 이처럼 당신이 하고 있는 일, 상상치도 못했던 다양한 내 일(work)이 많이 있답니다.
