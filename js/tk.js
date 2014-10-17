@@ -53,7 +53,7 @@ function ks_share()
     }
   }).then(function(res) {
     // 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-    Kakao.API.request( {
+    return Kakao.API.request( {
       url : '/v1/api/story/post/link',
       data : {
         link_info : {
@@ -61,7 +61,11 @@ function ks_share()
           host : 'www.tomorrowkids.or.kr',
           title : 'Tomorrow Kids',
           description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
-        }
+        },
+        content : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
+      },
+      success: function(res) {
+        alert(JSON.stringify(res));
       }
     });
   }).then(function(res) {
