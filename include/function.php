@@ -168,6 +168,13 @@
         
 		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
 		$result = mysqli_query($my_db, $query);
+
+		$answer_array = explode("|",$selected_val);
+		foreach ($answer_array as $key => $val)
+		{
+			$query = "UPDATE ".$_gl[tk_worktest_table]." SET select_cnt=select_cnt+1 WHERE idx='".$val."'";
+			$result = mysqli_query($my_db, $query);
+		}
     }
     
     function TK_UpdateUserShare($userid,$share_on)
