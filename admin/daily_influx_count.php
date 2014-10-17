@@ -50,12 +50,18 @@ $code_singapore = '4';
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
 		$daily_date = substr($date_daily_data[reg_date],0,10);
-		$media_query = "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date like '%".$daily_date."%'";
+		$media_query = "SELECT media, count(media) media_cnt FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date like '%".$daily_date."%' GROUP BY media";
 		$media_res = mysqli_query($my_db, $media_query);
+		while ($media_daily_data = mysqli_fetch_array($media_res))
+		{
+			$media_name[]	= $media_daily_data[media];
+			$media_cnt[]	= $media_daily_data[cnt];
+		}
+	
 ?>
                   <tr>
-                    <td><?php echo $daily_date?></td>
-                    <td></td>
+                    <td rowspan="2"><?php echo $daily_date?></td>
+                    <td><?=$media_daily_data[media]?></td>
                     <td><?php echo $phi_daily_applicant_count_pc?></td>
                     <td><?php echo $phi_daily_applicant_count_mobile?></td>
                     <td><?php echo $phi_daily_applicant_count_total?></td>
