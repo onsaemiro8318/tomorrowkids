@@ -148,7 +148,7 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "insert into ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."')";
+		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."')";
 		$result = mysqli_query($my_db, $query);
     }
     
@@ -166,9 +166,26 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "insert into ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job[idx]."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
+		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job[idx]."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
 		$result = mysqli_query($my_db, $query);
     }
+    
+    function TK_UpdateUserShare($share_on)
+    {
+		global $_gl;
+		global $my_db;
         
+		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE user_id = '".$userid."'";
+		$result = mysqli_query($my_db, $query);  
+    }     
+    
+    function TK_UpdateUserDonation($direct_on)
+    {
+		global $_gl;
+		global $my_db;
+        
+		$query = "UPDATE ".$_gl[tk_test_result_table]." SET direct = '".$direct_on."' WHERE user_id = '".$userid."'";
+		$result = mysqli_query($my_db, $query);  
+    }        
 
 ?>

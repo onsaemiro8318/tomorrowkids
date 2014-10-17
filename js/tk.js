@@ -2,6 +2,18 @@
 var curURL=location.href;
 var curTitle = document.getElementsByTagName("TITLE")[0].text;
 
+function go_direct_donation()
+{
+	$.ajax({
+		type		: "POST",
+		async		: false,
+		url			: "../PC/main_exec.php",
+		data		: ({
+			"exec"         : "update_user_donation"
+		})
+	});
+}
+
 function show_sns_select_box()
 {
 	$.ajax({
@@ -22,6 +34,15 @@ function show_sns_select_box()
 
 function kt_share()
 {
+	$.ajax({
+		type     : "POST",
+		async    : false,
+		url      : "../PC/main_exec.php",
+		data     : ({
+			"exec" : "update_user_share" ,
+		})
+	}); 
+  
   kakao.Link.sendTalkLink({
     label: 'Tomorrow Kids',
     image: {
@@ -65,7 +86,14 @@ function ks_share()
         content : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
       },
       success: function(res) {
-        alert(JSON.stringify(res));
+    		$.ajax({
+    			type     : "POST",
+    			async    : false,
+    			url      : "../PC/main_exec.php",
+    			data     : ({
+    				"exec" : "update_user_share" ,
+    			})
+    		}); 
       }
     });
   }).then(function(res) {
@@ -94,6 +122,14 @@ function fb_share()
 	  },
 		function(response) {
 			if (response && response.post_id) {
+    		$.ajax({
+    			type     : "POST",
+    			async    : false,
+    			url      : "../PC/main_exec.php",
+    			data     : ({
+    				"exec" : "update_user_share" ,
+    			})
+    		}); 
 				location.href="index.php";
 			} 
 			else {
