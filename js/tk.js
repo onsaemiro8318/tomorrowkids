@@ -61,7 +61,7 @@ function ks_share()
           host: 'www.tomorrowkids.or.kr',
           title: 'Tomorrow Kids',
           description: '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.',
-          content: '사용자 입력 내용',
+          content: '사용자 입력 내용?'
         }
       }
     });
