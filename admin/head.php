@@ -69,10 +69,10 @@ if (!$_SESSION['ss_mb_name'])
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Daily Count<i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                   <li>
-                    <a href="daily_influx_count.php">일자별 유입매체별 유입자 수</a>
+                    <a href="daily_influx_count.php">일자별 매체 유입자 수</a>
                   </li>
                   <li>
-                    <a href="daily_topgirl_vote_count.php">일자별 테스트 응모자 수</a>
+                    <a href="daily_test_count.php">일자별 테스트 응모자 수</a>
                   </li>
                   <li>
                     <a href="daily_story_vote_count.php">일자별 질문당 답변선택 수</a>

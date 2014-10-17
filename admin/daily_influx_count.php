@@ -45,16 +45,19 @@ $code_singapore = '4';
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query = "SELECT reg_date FROM ".$_gl[tk_tracking_info_table]." Group by substr(reg_date,1,10)";
-	$date_res = mysqli_query($my_db, $daily_date_query);
+	$daily_date_query	= "SELECT reg_date FROM ".$_gl[tk_tracking_info_table]." Group by substr(reg_date,1,10)";
+	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
-		$daily_date = substr($date_daily_data[reg_date],0,10);
-		$media_query = "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date LIKE  '%".$daily_date."%' GROUP BY media";
-		$media_res = mysqli_query($my_db, $media_query);
+		$daily_date		= substr($date_daily_data[reg_date],0,10);
+		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date LIKE  '%".$daily_date."%' GROUP BY media";
+		$media_res		= mysqli_query($my_db, $media_query);
 		
 		unset($media_name);
 		unset($media_cnt);
+		unset($pc_cnt);
+		unset($mobile_cnt);
+		$total_media_cnt = 0;
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
 			$media_name[]	= $media_daily_data[media];
@@ -66,6 +69,7 @@ $code_singapore = '4';
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;
 		}
+
 		$rowspan_cnt =  count($media_name);
 		$i = 0;
 		foreach($media_name as $key => $val)
@@ -81,16 +85,23 @@ $code_singapore = '4';
 			}
 ?>
                     <td><?=$val?></td>
-                    <td><?=$pc_cnt[$i]?></td>
-                    <td><?=$mobile_cnt[$i]?></td>
-                    <td><?=$media_cnt[$i]?></td>
+                    <td><?=number_format($pc_cnt[$i])?></td>
+                    <td><?=number_format($mobile_cnt[$i])?></td>
+                    <td><?=number_format($media_cnt[$i])?></td>
                   </tr>
 <?php
+			$total_media_cnt += $media_cnt[$i];
 			$i++;
 		}
+?>
+                  <tr>
+                    <td colspan="4">합계</td>
+                    <td><?php echo number_format($total_media_cnt)?></td>
+                  </tr>
+
+<?
 	}
 ?>
-                  <tr><td>합계</td><td><?php echo $phi_daily_applicant_count_pc_sum?></td><td><?php echo $phi_daily_applicant_count_mobile_sum?></td><td><?php echo $phi_daily_applicant_count_total_sum?></td></tr>
                 </tbody>
               </table>
             </div>
@@ -103,74 +114,6 @@ $code_singapore = '4';
     <!-- /#page-wrapper -->
   </div>
   <!-- /#wrapper -->
-
-<!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
-
-
-
-
-<script type="text/javascript">
-	function display_daily_count(val)
-	{
-		for(i=1; i<=4; i++) {
-			if(i == val) {
-				document.getElementById('daily_count_main' + i).style.display = "block";  
-			} else {
-				document.getElementById('daily_count_main' + i).style.display = "none";  
-			}
-		}
-	}
-
-	function display_daily_applicant_count(val)
-	{
-		for(i=1; i<=4; i++) {
-			if(i == val) {
-				document.getElementById('daily_applicant_count_div' + i).style.display = "block";  
-			} else {
-				document.getElementById('daily_applicant_count_div' + i).style.display = "none";  
-			}
-		}
-	}
-
-	function display_daily_topgirl_vote_count(val)
-	{
-		for(i=1; i<=4; i++) {
-			if(i == val) {
-				document.getElementById('daily_topgirl_vote_count_div' + i).style.display = "block";  
-			} else {
-				document.getElementById('daily_topgirl_vote_count_div' + i).style.display = "none";  
-			}
-		}
-	}
-	
-	function display_daily_story_vote_count(val)
-	{
-		for(i=1; i<=4; i++) {
-			if(i == val) {
-				document.getElementById('daily_story_vote_count_div' + i).style.display = "block";  
-			} else {
-				document.getElementById('daily_story_vote_count_div' + i).style.display = "none";  
-			}
-		}
-	}
-
-	function display_daily_coupon_used_count(val)
-	{
-		for(i=1; i<=4; i++) {
-			if(i == val) {
-				document.getElementById('daily_coupon_used_count_div' + i).style.display = "block";  
-			} else {
-				document.getElementById('daily_coupon_used_count_div' + i).style.display = "none";  
-			}
-		}
-	}
-
-</script>
