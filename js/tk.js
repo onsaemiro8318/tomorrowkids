@@ -42,7 +42,7 @@ function ks_share()
     appver : "1.0",
     appname : "Tomorrow Kids",
     urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
-  });/
+  });
 }
 
 function fb_share()
