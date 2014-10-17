@@ -11,7 +11,7 @@
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">일자별 테스트 응모자 수 PC / Mobile</h1>
+        <h1 class="page-header">일자별 공유한 응모자 수 PC / Mobile</h1>
       </div>
     </div>
       <!-- /.row -->
@@ -21,7 +21,7 @@
             <div id="daily_topgirl_vote_count_div1" style="display:block">
               <table class="table table-hover">
                 <thead>
-                  <tr><th>날짜</th><th>유입매체</th><th>PC</th><th>Mobile</th><th>Share</th><th>Total</th></tr>
+                  <tr><th>날짜</th><th>유입매체</th><th>PC</th><th>Mobile</th><th>Total</th></tr>
                 </thead>
                 <tbody>
 <?php
@@ -37,7 +37,6 @@
 		unset($media_cnt);
 		unset($pc_cnt);
 		unset($mobile_cnt);
-		unset($share_cnt);
 		$total_media_cnt = 0;
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
@@ -47,11 +46,8 @@
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
 			$mobile_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE regdate LIKE  '%".$daily_date."%' AND media='".$media_daily_data[media]."' AND gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
-			$share_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE regdate LIKE  '%".$daily_date."%' AND media='".$media_daily_data[media]."' AND share='Y'";
-			$share_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;
-			$share_cnt[]	= $share_count;
 		}
 
 		$rowspan_cnt =  count($media_name);
@@ -71,18 +67,15 @@
                     <td><?=$val?></td>
                     <td><?=number_format($pc_cnt[$i])?></td>
                     <td><?=number_format($mobile_cnt[$i])?></td>
-                    <td><?=number_format($share_cnt[$i])?></td>
                     <td><?=number_format($media_cnt[$i])?></td>
                   </tr>
 <?php
 			$total_media_cnt += $media_cnt[$i];
-			$total_share_cnt += $share_cnt[$i];
 			$i++;
 		}
 ?>
                   <tr>
                     <td colspan="4">합계</td>
-                    <td><?php echo number_format($total_share_cnt)?></td>
                     <td><?php echo number_format($total_media_cnt)?></td>
                   </tr>
 

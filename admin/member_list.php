@@ -1,27 +1,28 @@
 <?php
 
-include_once "./include/page.class.php";
-include_once "./include/db_conn.php";
-include "./head.php";
-$search_type = $_REQUEST['search_type'];
-$search_txt = $_REQUEST['search_txt'];
-$pg = $_REQUEST['pg'];
+	// 설정파일
+	include_once "../config.php";
+	include "./head.php";
 
-if(!$pg) $pg = 1;	// $pg가 없으면 1로 생성
-$page_size = 20;	// 한 페이지에 나타날 개수
-$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
+	$search_type = $_REQUEST['search_type'];
+	$search_txt = $_REQUEST['search_txt'];
+	$pg = $_REQUEST['pg'];
 
-$applicant_count_main = '1';
-$topgirl_vote_count_main = '2';
-$story_vote_count_main = '3';
+	if(!$pg) $pg = 1;	// $pg가 없으면 1로 생성
+	$page_size = 20;	// 한 페이지에 나타날 개수
+	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
-$code_philippines = '1';
-$code_taiwan = '2';
-$code_indonesia = '3';
-$code_singapore = '4';
+	$applicant_count_main = '1';
+	$topgirl_vote_count_main = '2';
+	$story_vote_count_main = '3';
 
-if (!$search_type)
-	$search_type = "search_by_name";
+	$code_philippines = '1';
+	$code_taiwan = '2';
+	$code_indonesia = '3';
+	$code_singapore = '4';
+
+	if (!$search_type)
+		$search_type = "search_by_name";
 ?>
 
 
@@ -30,7 +31,7 @@ if (!$search_type)
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">쿠폰 사용자 목록</h1>
+        <h1 class="page-header">테스트 참여자 목록</h1>
       </div>
     </div>
     <!-- /.row -->
@@ -52,26 +53,20 @@ if (!$search_type)
             <thead>
               <tr>
                 <th>No</th>
-                <th>이름</th>
-                <th>나이</th>
-                <th>전화번호</th>
-                <th>이메일</th>
-                <th>국가</th>
-                <th>주소</th>
-                <th>YOUTUBE URL</th>
-                <th>LIKE COUNT</th>
-                <th>신청날짜</th>
-                <th>쿠폰 URL</th>
-                <th>쿠폰 사용여부</th>
+                <th>사용자 고유ID</th>
+                <th>IP주소</th>
+                <th>참여한 날짜</th>
+                <th>최근 참여 날짜</th>
+                <th>매체</th>
               </tr>
             </thead>
             <tbody>
 <?php 
 
-$applicant_list_count_query = "SELECT count(*) FROM event_topgirl_main WHERE USED = '1'";
-list($applicant_list_count) = mysqli_fetch_array(mysqli_query($my_db, $applicant_list_count_query));
+$member_count_query = "SELECT count(*) FROM ".$_gl[tk_member]."";
+list($member_count) = mysqli_fetch_array(mysqli_query($my_db, $member_count_query));
 
-$PAGE_CLASS = new Page($pg,$applicant_list_count,$page_size,$block_size);
+$PAGE_CLASS = new Page($pg,$member_count,$page_size,$block_size);
 $BLOCK_LIST = $PAGE_CLASS->blockList(); 
 $PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
@@ -98,19 +93,6 @@ $res = mysqli_query($my_db, $applicant_list_query);
                 <td><?php echo $applicant_data[PHONE]?></td>
                 <td><?php echo $applicant_data[EMAIL]?></td>
                 <td><?php echo $country?></td>
-                <td><?php echo $applicant_data[ADDRESS]?></td>
-                <td><?php echo $applicant_data[YOUTUBE]?></td>
-                <td><?php echo $applicant_data[LIKECOUNT]?></td>
-                <td><?php echo $applicant_data[REGDATE]?></td>
-                <td><?php echo $applicant_data[coupon_page]?></td>
-<?php
-if($applicant_data[USED]=="1"){
-	$coupon_status = "사용완료";
-}else if($applicant_data[USED]=="0"){
-	$coupon_status = "미사용";
-}
-?>
-                <td><?php echo $coupon_status?></td>
               </tr>
 <?php 
 	}

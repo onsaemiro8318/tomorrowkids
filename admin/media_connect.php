@@ -1,28 +1,28 @@
 <?php
 
-include_once "./include/page.class.php";
-include_once "./include/db_conn.php";
-include "./head.php";
+	// 설정파일
+	include_once "../config.php";
+	include "./head.php";
 
-$search_type = $_REQUEST['search_type'];
-$search_txt = $_REQUEST['search_txt'];
-$pg = $_REQUEST['pg'];
+	$search_type = $_REQUEST['search_type'];
+	$search_txt = $_REQUEST['search_txt'];
+	$pg = $_REQUEST['pg'];
 
-if(!$pg) $pg = 1;	// $pg가 없으면 1로 생성
-$page_size = 20;	// 한 페이지에 나타날 개수
-$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
+	if(!$pg) $pg = 1;	// $pg가 없으면 1로 생성
+	$page_size = 20;	// 한 페이지에 나타날 개수
+	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
-$applicant_count_main = '1';
-$topgirl_vote_count_main = '2';
-$story_vote_count_main = '3';
+	$applicant_count_main = '1';
+	$topgirl_vote_count_main = '2';
+	$story_vote_count_main = '3';
 
-$code_philippines = '1';
-$code_taiwan = '2';
-$code_indonesia = '3';
-$code_singapore = '4';
+	$code_philippines = '1';
+	$code_taiwan = '2';
+	$code_indonesia = '3';
+	$code_singapore = '4';
 
-if (!$search_type)
-	$search_type = "search_by_name";
+	if (!$search_type)
+		$search_type = "search_by_name";
 ?>
 
 <div id="page-wrapper">
@@ -30,7 +30,7 @@ if (!$search_type)
     <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">탑걸 응모자 목록</h1>
+        <h1 class="page-header">유입경로별 접속 정보</h1>
       </div>
     </div>
     <!-- /.row -->
@@ -128,13 +128,6 @@ if($applicant_data[USED]=="1"){
   <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
-
-<!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

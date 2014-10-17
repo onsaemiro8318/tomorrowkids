@@ -82,7 +82,7 @@ switch ($_REQUEST['exec'])
 
 			$selected_job	= TK_GetTestResultInfo($test_point);
 
-			$query = "insert into ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job[idx]."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
+			$query = "insert into ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job[idx]."','".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$_gl[gubun]['pc']."')";
 			$result = mysqli_query($my_db, $query);
 
 			echo $selected_job[idx];
