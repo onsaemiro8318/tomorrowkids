@@ -131,7 +131,7 @@
 		return $info;
 	}
 
-    function TK_GetUserInfo()
+    function TK_GetUserInfo($userid)
     {
 		global $_gl;
 		global $my_db;
@@ -143,7 +143,7 @@
         return $info;
     }
     
-    function TK_InsertUserInfo()
+    function TK_InsertUserInfo($userid,$ip_addr,$media)
     {
 		global $_gl;
 		global $my_db;
@@ -152,7 +152,7 @@
 		$result = mysqli_query($my_db, $query);
     }
     
-    function TK_UpdateUserInfo()
+    function TK_UpdateUserInfo($userid)
     {
 		global $_gl;
 		global $my_db;
@@ -161,16 +161,16 @@
 		$result = mysqli_query($my_db, $query);  
     }
     
-    function TK_InsertTestResultUserInfo()
+    function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media)
     {
 		global $_gl;
 		global $my_db;
         
-		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job[idx]."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
+		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
 		$result = mysqli_query($my_db, $query);
     }
     
-    function TK_UpdateUserShare($share_on)
+    function TK_UpdateUserShare($userid,$share_on)
     {
 		global $_gl;
 		global $my_db;
@@ -179,7 +179,7 @@
 		$result = mysqli_query($my_db, $query);  
     }     
     
-    function TK_UpdateUserDonation($direct_on)
+    function TK_UpdateUserDonation($userid,$direct_on)
     {
 		global $_gl;
 		global $my_db;
