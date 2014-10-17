@@ -12,15 +12,6 @@
 	$page_size = 20;	// 한 페이지에 나타날 개수
 	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
-	$applicant_count_main = '1';
-	$topgirl_vote_count_main = '2';
-	$story_vote_count_main = '3';
-
-	$code_philippines = '1';
-	$code_taiwan = '2';
-	$code_indonesia = '3';
-	$code_singapore = '4';
-
 	if (!$search_type)
 		$search_type = "search_by_name";
 ?>
@@ -55,44 +46,49 @@
                 <th>No</th>
                 <th>사용자 고유ID</th>
                 <th>IP주소</th>
+                <th>매체</th>
+                <th>참여 횟수</th>
+                <th>공유여부</th>
+                <th>공유 횟수</th>
                 <th>참여한 날짜</th>
                 <th>최근 참여 날짜</th>
-                <th>매체</th>
               </tr>
             </thead>
             <tbody>
 <?php 
 
-$member_count_query = "SELECT count(*) FROM ".$_gl[tk_member]."";
-list($member_count) = mysqli_fetch_array(mysqli_query($my_db, $member_count_query));
+	$member_count_query = "SELECT count(*) FROM ".$_gl[tk_member_table]."";
+	list($member_count) = mysqli_fetch_array(mysqli_query($my_db, $member_count_query));
 
-$PAGE_CLASS = new Page($pg,$member_count,$page_size,$block_size);
-$BLOCK_LIST = $PAGE_CLASS->blockList(); 
-$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
+	$PAGE_CLASS = new Page($pg,$member_count,$page_size,$block_size);
+	$BLOCK_LIST = $PAGE_CLASS->blockList();
+	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
+	$member_list_query = "SELECT * FROM ".$_gl[tk_member_table]." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$res = mysqli_query($my_db, $member_list_query);
 
-$applicant_list_query = "SELECT intseq, strNAME, strAGE, PHONE, EMAIL, ADDRESS , YOUTUBE, TYPE, LIKECOUNT, USERID, REGDATE, coupon_page, USED FROM event_topgirl_main WHERE USED = '1' Order by intseq DESC LIMIT $PAGE_CLASS->page_start, $page_size";
-$res = mysqli_query($my_db, $applicant_list_query);
-
-	while($applicant_data = mysqli_fetch_array($res))
+	while($member_data = mysqli_fetch_array($res))
 	{
-		if($applicant_data[TYPE]=="1"){
-			$country = "필리핀";
-		}else if($applicant_data[TYPE]=="2"){
-			$country = "대만";
-		}else if($applicant_data[TYPE]=="3"){
-			$country = "인도네시아";
-		}else if($applicant_data[TYPE]=="4"){
-			$country = "싱가폴";
-		}
+		$test_result_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE user_id='".$member_data[user_id]."'";
+		$test_count			= mysqli_num_rows(mysqli_query($my_db, $test_result_query));
+		$share_result_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE user_id='".$member_data[user_id]."' AND share='Y'";
+		$share_count		= mysqli_num_rows(mysqli_query($my_db, $share_result_query));
+
+		if ($share_count == 0)
+			$share_txt = "미공유";
+		else
+			$share_txt = "공유";
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $applicant_data[strNAME]?></td>
-                <td><?php echo $applicant_data[strAGE]?></td>
-                <td><?php echo $applicant_data[PHONE]?></td>
-                <td><?php echo $applicant_data[EMAIL]?></td>
-                <td><?php echo $country?></td>
+                <td><?php echo $member_data[user_id]?></td>
+                <td><?php echo $member_data[ip_addr]?></td>
+                <td><?php echo $member_data[media]?></td>
+                <td><?php echo number_format($test_count)?></td>
+                <td><?php echo $share_txt?></td>
+                <td><?php echo number_format($share_count)?></td>
+                <td><?php echo $member_data[created_at]?></td>
+                <td><?php echo $member_data[updated_at]?></td>
               </tr>
 <?php 
 	}
@@ -109,13 +105,6 @@ $res = mysqli_query($my_db, $applicant_list_query);
   <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
-
-<!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

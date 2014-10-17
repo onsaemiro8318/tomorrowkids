@@ -83,7 +83,7 @@ if (!$_SESSION['ss_mb_name'])
                 <a href="member_list.php"><i class="fa fa-fw fa-table"></i> 테스트 참여자 목록</a>
               </li>
               <li>
-                <a href="vote_winner_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>
+                <a href="answer_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>
               </li>
               <li>
                 <a href="story_vote_total.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 매체 목록</a>
