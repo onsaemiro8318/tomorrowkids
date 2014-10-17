@@ -18,7 +18,7 @@
             <div id="daily_story_vote_count_div1" style="display:block">
               <table class="table table-hover">
                 <thead>
-                  <tr><th>질문</th><th>답변</th><th>선택갯수</th></tr>
+                  <tr><th width="300px">질문</th><th width="600px">답변</th><th width="100px">선택갯수</th></tr>
                 </thead>
                 <tbody>
 <?php
@@ -41,7 +41,7 @@
 ?>
                   <tr>
 <?
-			if ($i%2 == 0 && $j%2 == 0)
+			if ($j%2 == 0)
 			{
 ?>
                     <td rowspan="2"><?=$test_data[test_value]?></td>
@@ -57,7 +57,6 @@
 		$i++;
 	}
 ?>
-                  <tr><td>합계</td><td><?php echo $phi_daily_story_vote_count_pc_sum?></td><td><?php echo $phi_daily_story_vote_count_mobile_sum?></td><td><?php echo $phi_daily_story_vote_count_total_sum?></td></tr>
                 </tbody>
               </table>
             </div>
