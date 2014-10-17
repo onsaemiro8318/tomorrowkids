@@ -15,7 +15,7 @@
 			{
 				// 회원아이디 세션 생성
 				$_SESSION['ss_mb_name'] = $member_info[media];
-				echo "<script>location.href='./daily_applicant_count.php';</script>";
+				echo "<script>location.href='./daily_influx_count.php';</script>";
 			}else{
 				echo "<script>alert('로그인에 실패하였습니다.');</script>";
 				echo "<script>history.back();</script>";
