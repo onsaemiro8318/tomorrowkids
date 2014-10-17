@@ -32,7 +32,7 @@
          당신의 내일(work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.
       </p>
       <a href="#" onclick="show_sns_select_box();">공유로 기부하기</a>
-      <a href="#">직접 후원하고 싶다면?</a>
+      <a href="#" onclick="go_direct_donation();">직접 후원하고 싶다면?</a>
     </div>
     </div>
     <div id="sns_select_box" style="position:absolute;display:none;width:400px;height:200px;background:red;margin-top:200px;margin-left:400px;">

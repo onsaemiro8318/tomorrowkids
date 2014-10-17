@@ -177,6 +177,15 @@
         
 		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
+    }     
+    
+    function TK_UpdateUserDonation($direct_on)
+    {
+		global $_gl;
+		global $my_db;
+        
+		$query = "UPDATE ".$_gl[tk_test_result_table]." SET direct = '".$direct_on."' WHERE user_id = '".$userid."'";
+		$result = mysqli_query($my_db, $query);  
     }        
 
 ?>

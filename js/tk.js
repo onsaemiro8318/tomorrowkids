@@ -2,6 +2,18 @@
 var curURL=location.href;
 var curTitle = document.getElementsByTagName("TITLE")[0].text;
 
+function go_direct_donation()
+{
+	$.ajax({
+		type		: "POST",
+		async		: false,
+		url			: "../PC/main_exec.php",
+		data		: ({
+			"exec"         : "update_user_donation"
+		})
+	});
+}
+
 function show_sns_select_box()
 {
 	$.ajax({
