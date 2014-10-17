@@ -51,8 +51,15 @@ $code_singapore = '4';
 	{
 		$daily_date = substr($date_daily_data[reg_date],0,10);
 		$media_query = "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date like '%".$daily_date."%'";
+		$media_res = mysqli_query($my_db, $media_query);
 ?>
-                  <tr><td><?php echo $daily_date?></td><td></td><td><?php echo $phi_daily_applicant_count_pc?></td><td><?php echo $phi_daily_applicant_count_mobile?></td><td><?php echo $phi_daily_applicant_count_total?></td></tr>
+                  <tr>
+                    <td><?php echo $daily_date?></td>
+                    <td></td>
+                    <td><?php echo $phi_daily_applicant_count_pc?></td>
+                    <td><?php echo $phi_daily_applicant_count_mobile?></td>
+                    <td><?php echo $phi_daily_applicant_count_total?></td>
+                  </tr>
 <?php
 	}
 ?>
