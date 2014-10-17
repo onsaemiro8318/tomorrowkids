@@ -38,13 +38,38 @@ function kt_share()
 
 function ks_share()
 {
-  kakao.link("story").send({   
-    post : curURL,
-    appid : "www.tomorrowkids.or.kr",
-    appver : "1.0",
-    appname : "Tomorrow Kids",
-    urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
+  // kakao.link("story").send({
+  //   post : curURL,
+  //   appid : "www.tomorrowkids.or.kr",
+  //   appver : "1.0",
+  //   appname : "Tomorrow Kids",
+  //   urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
+  // });
+  
+  Kakao.API.request( {
+    url : '/v1/api/story/linkinfo',
+    data : {
+      url : 'http://www.tomorrowkids.or.kr'
+    }
+  }).then(function(res) {
+    // 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
+    return Kakao.API.request( {
+      url : '/v1/api/story/post/link',
+      data : {
+        link_info : res
+      }
+    });
+  }).then(function(res) {
+    return Kakao.API.request( {
+      url : '/v1/api/story/mystory',
+      data : { id : res.id }
+    });
+  }).then(function(res) {
+    document.getElementById('post-result').innerHTML = JSON.stringify(res);
+  }, function (err) {
+    alert(JSON.stringify(err));
   });
+
 }
 
 function fb_share()
