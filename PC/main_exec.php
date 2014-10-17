@@ -86,8 +86,6 @@ switch ($_REQUEST['exec'])
 
 			$selected_job	= TK_GetTestResultInfo($test_point);
 
-			TK_InsertTestResultUserInfo();
-
 			echo $selected_job[idx];
 		//}
 	break;

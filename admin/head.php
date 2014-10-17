@@ -74,16 +74,13 @@ if (!$_SESSION['ss_mb_name'])
                   <li>
                     <a href="daily_test_count.php">일자별 테스트 응모자 수</a>
                   </li>
-                  <li>
-                    <a href="daily_story_vote_count.php">일자별 질문당 답변선택 수</a>
-                  </li>
                 </ul>
               </li>
               <li>
-                <a href="applicant_list.php"><i class="fa fa-fw fa-bar-chart-o"></i> 유입경로별 접속 정보</a>
+                <a href="media_connect.php"><i class="fa fa-fw fa-bar-chart-o"></i> 유입경로별 접속 정보</a>
               </li>
               <li>
-                <a href="coupon_used_applicant_list.php"><i class="fa fa-fw fa-table"></i> 테스트 참여자 목록</a>
+                <a href="member_list.php"><i class="fa fa-fw fa-table"></i> 테스트 참여자 목록</a>
               </li>
               <li>
                 <a href="vote_winner_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>

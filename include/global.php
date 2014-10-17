@@ -19,4 +19,7 @@
 
 	$_gl[login_media]['facebook']	= "facebook";
 	$_gl[login_media]['kakao']		= "kakao";
+
+	$_gl[gubun]['pc']				= "PC";
+	$_gl[gubun]['mobile']			= "MOBILE";
 ?>
