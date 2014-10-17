@@ -4,25 +4,6 @@
 
 	include "./head.php";
 
-/* 
-if(!$pg) $pg = 1;	// $pg가 없으면 1로 생성
-$page_size = 20;	// 한 페이지에 나타날 개수
-$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
-
-// 주차별 
-$page_size = 7;
-$block_size
-*/
-
-$applicant_count_main = '1';
-$topgirl_vote_count_main = '2';
-$story_vote_count_main = '3';
-$coupon_used_count_main = '4';
-
-$code_philippines = '1';
-$code_taiwan = '2';
-$code_indonesia = '3';
-$code_singapore = '4';
 ?>
 
   <div id="page-wrapper">
