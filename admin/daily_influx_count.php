@@ -50,23 +50,44 @@ $code_singapore = '4';
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
 		$daily_date = substr($date_daily_data[reg_date],0,10);
-		$media_query = "SELECT media, count(media) media_cnt FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date like '%".$daily_date."%' GROUP BY media";
+		$media_query = "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date LIKE  '%".$daily_date."%' GROUP BY media";
 		$media_res = mysqli_query($my_db, $media_query);
+		
+		unset($media_name);
+		unset($media_cnt);
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
 			$media_name[]	= $media_daily_data[media];
-			$media_cnt[]	= $media_daily_data[cnt];
+			$media_cnt[]	= $media_daily_data[media_cnt];
+			$pc_query		= "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date LIKE  '%".$daily_date."%' AND media='".$media_daily_data[media]."' AND gubun='PC'";
+			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
+			$mobile_query	= "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE reg_date LIKE  '%".$daily_date."%' AND media='".$media_daily_data[media]."' AND gubun='MOBILE'";
+			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
+			$pc_cnt[]		= $pc_count;
+			$mobile_cnt[]	= $mobile_count;
 		}
-	
+		$rowspan_cnt =  count($media_name);
+		$i = 0;
+		foreach($media_name as $key => $val)
+		{
 ?>
                   <tr>
-                    <td rowspan="2"><?php echo $daily_date?></td>
-                    <td><?=$media_daily_data[media]?></td>
-                    <td><?php echo $phi_daily_applicant_count_pc?></td>
-                    <td><?php echo $phi_daily_applicant_count_mobile?></td>
-                    <td><?php echo $phi_daily_applicant_count_total?></td>
+<?
+			if ($i == 0)
+			{
+?>
+                    <td rowspan="<?=$rowspan_cnt?>"><?php echo $daily_date?></td>
+<?
+			}
+?>
+                    <td><?=$val?></td>
+                    <td><?=$pc_cnt[$i]?></td>
+                    <td><?=$mobile_cnt[$i]?></td>
+                    <td><?=$media_cnt[$i]?></td>
                   </tr>
 <?php
+			$i++;
+		}
 	}
 ?>
                   <tr><td>합계</td><td><?php echo $phi_daily_applicant_count_pc_sum?></td><td><?php echo $phi_daily_applicant_count_mobile_sum?></td><td><?php echo $phi_daily_applicant_count_total_sum?></td></tr>
