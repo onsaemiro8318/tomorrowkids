@@ -63,6 +63,9 @@ function ks_share()
           description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
         },
         content : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
+      },
+      success: function(res) {
+        alert(JSON.stringify(res));
       }
     });
   }).then(function(res) {

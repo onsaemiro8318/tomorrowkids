@@ -131,5 +131,44 @@
 		return $info;
 	}
 
+    function TK_GetUserInfo()
+    {
+		global $_gl;
+		global $my_db;
+        
+		$query 		= "SELECT * FROM ".$_gl[tk_member_table]." WHERE user_id = '".$userid."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info = mysqli_num_rows($result);
+        
+        return $info;
+    }
+    
+    function TK_InsertUserInfo()
+    {
+		global $_gl;
+		global $my_db;
+        
+		$query = "insert into ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."')";
+		$result = mysqli_query($my_db, $query);
+    }
+    
+    function TK_UpdateUserInfo()
+    {
+		global $_gl;
+		global $my_db;
+        
+		$query = "UPDATE ".$_gl[tk_member_table]." SET update_at = now() WHERE user_id = '".$userid."'";
+		$result = mysqli_query($my_db, $query);  
+    }
+    
+    function TK_InsertTestResultUserInfo()
+    {
+		global $_gl;
+		global $my_db;
+        
+		$query = "insert into ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job[idx]."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
+		$result = mysqli_query($my_db, $query);
+    }
+        
 
 ?>
