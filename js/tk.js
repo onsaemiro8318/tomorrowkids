@@ -1,4 +1,6 @@
 /********************** 공유하기 **********************/
+var curURL=location.href;
+var curTitle = document.getElementsByTagName("TITLE")[0].text;
 
 function show_sns_select_box()
 {
@@ -20,7 +22,7 @@ function show_sns_select_box()
 
 function kt_share()
 {
-  Kakao.Link.sendTalkLink({
+  kakao.Link.sendTalkLink({
     label: 'Tomorrow Kids',
     image: {
       src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
