@@ -157,7 +157,7 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "UPDATE ".$_gl[tk_member_table]." SET update_at = now() WHERE user_id = '".$userid."'";
+		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
     }
     
