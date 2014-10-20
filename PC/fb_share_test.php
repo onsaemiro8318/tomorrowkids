@@ -59,7 +59,6 @@
 			}(document));
 
 			function fnShare() {
-			
 				var sIdx = $("#survey_idx").val();
 				var sLink = "";
 				switch (sIdx) {
@@ -112,12 +111,14 @@
 			}
 
 			function fnFaceLogin() {
+				alert('11');
 				FB.login(
 					function(response) {
 						if (response.authResponse) {
-	//						alert("login"); 
+							//alert("login"); 
 							FB.getLoginStatus(function(response) {
 								if (response.status === 'connected') {
+				alert('22');
 
 									FB.api('/me', function(user) {
 										if (user) {
@@ -127,7 +128,7 @@
 											$("#fShare").parent("a").attr("href", "javascript:fnShare()");
 											$("#fShare").attr("src", "http://www.skt-lte.co.kr/static/img/event/btn_join.gif");
 										}
-									});    
+									});
 								} else {
 									$("#fShare").parent("a").attr("href", "javascript:fnFaceLogin()");
 									$("#fShare").attr("src", "http://www.skt-lte.co.kr/static/img/event/btn_fb_lo.gif ");
@@ -149,6 +150,6 @@
   <input type="text" id="member_icon">
   <input type="text" id="etc1">
   <a href="javascript:fnFaceLogin()">페이스북 공유</a>
-  <img src="" id="fShare">
+  <a href="#"><img src="" id="fShare"></a>
  </body>
 </html>
