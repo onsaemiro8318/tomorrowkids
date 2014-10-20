@@ -143,7 +143,7 @@
         return $info;
     }
     
-    function TK_InsertUserInfo($userid,$ip_addr,$media)
+    function TK_InsertUserInfo($userid,$ip_addr,$media,$gubun)
     {
 		global $_gl;
 		global $my_db;
