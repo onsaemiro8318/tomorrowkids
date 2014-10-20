@@ -1,3 +1,8 @@
+Kakao.init('5675f40b361955e0b3fcf93944b5d444');
+var jsonStr;
+var obj;
+var ka_access_token;
+var ka_refresh_token;
 /********************** 모바일 카스 **********************/
 
 function ks_share_mobile()
@@ -158,11 +163,6 @@ function fb_share()
 
 /********************** 카카오톡 **********************/
 
-Kakao.init('5675f40b361955e0b3fcf93944b5d444');
-var jsonStr;
-var obj;
-var ka_access_token;
-var ka_refresh_token;
 
 function kakao_login(){
 	// 로그인 창을 띄웁니다.
