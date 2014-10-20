@@ -17,10 +17,12 @@ if (!$_SESSION['ss_mb_name'])
     <title>TomorrowKids 2014 - Admin</title>
 	<!-- jQuery Version 1.11.0 -->
 	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
 
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 

@@ -4,33 +4,38 @@
 	include_once "../config.php";
 	include "./head.php";
 
-	$search_type = $_REQUEST['search_type'];
-	$search_txt = $_REQUEST['search_txt'];
-	$pg = $_REQUEST['pg'];
-
-	if(!$pg) $pg = 1;	// $pg가 없으면 1로 생성
-	$page_size = 20;	// 한 페이지에 나타날 개수
-	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
-
-	$applicant_count_main = '1';
-	$topgirl_vote_count_main = '2';
-	$story_vote_count_main = '3';
-
-	$code_philippines = '1';
-	$code_taiwan = '2';
-	$code_indonesia = '3';
-	$code_singapore = '4';
-
-	if (!$search_type)
-		$search_type = "search_by_name";
+	$sDate = $_REQUEST['sDate'];
+	$eDate = $_REQUEST['eDate'];
 ?>
+<script>
+	$(function() {
+		$( "#sDate" ).datepicker();
+		$( "#eDate" ).datepicker();
+	});
+
+	function checkfrm()
+	{
+		if ($("#sDate").val() > $("#eDate").val())
+		{
+			alert("검색 시작일은 종료일보다 작아야 합니다.");
+			return false;
+		}
+
+		if ($("#sDate").val() == "" || $("#eDate").val() == "")
+		{
+			alert("검색 시작일과 종료일은 모두 포함 되어야 합니다.");
+			return false;
+		}
+	}
+
+</script>
 
 <div id="page-wrapper">
   <div class="container-fluid">
-    <!-- Page Heading -->
+  <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">유입경로별 접속 정보</h1>
+        <h1 class="page-header">유입경로별 접속자 수</h1>
       </div>
     </div>
     <!-- /.row -->
@@ -38,85 +43,45 @@
       <div class="col-lg-12">
         <div class="table-responsive">
           <ol class="breadcrumb">
-          <form name="frm_execute" method="POST">
-            <input type="hidden" name="pg">
-            <select name="search_type">
-              <option value="search_by_name" <?php if($search_type == "search_by_name"){?>selected<?php }?>>이름</option>
-              <option value="search_by_phone" <?php if($search_type == "search_by_phone"){?>selected<?php }?>>전화번호</option>
-              <option value="search_by_country" <?php if($search_type == "search_by_country"){?>selected<?php }?>>국가</option>
-            </select>
-            <input type="text" name="search_txt" onkeyup="search_query(this.value,search_type.value)" value="<?php echo $search_txt?>">
-          </form>
+            <form name="frm_execute" method="POST" onsubmit="return checkfrm()">
+              기간 검색 : <input type="text" id="sDate" name="sDate" value="<?=$sDate?>"> - <input type="text" id="eDate" name="eDate" value="<?=$eDate?>">
+              <input type="submit" value="검색">
+            </form>
           </ol>
-
-          <table id="applicant_list" class="table table-hover">
+          <table id="coupon_used_applicant_list" class="table table-hover">
             <thead>
               <tr>
-                <th>No</th>
-                <th>이름</th>
-                <th>나이</th>
-                <th>전화번호</th>
-                <th>이메일</th>
-                <th>국가</th>
-                <th>주소</th>
-                <th>YOUTUBE URL</th>
-                <th>LIKE COUNT</th>
-                <th>신청날짜</th>
-                <th>쿠폰 URL</th>
-                <th>쿠폰 사용여부</th>
+                <th>매체</th>
+                <th>PC</th>
+                <th>MOBILE</th>
+                <th>합계</th>
               </tr>
             </thead>
             <tbody>
 <?php 
 
-$applicant_list_count_query = "SELECT count(*) FROM event_topgirl_main";
-list($applicant_list_count) = mysqli_fetch_array(mysqli_query($my_db, $applicant_list_count_query));
+	if ($sDate)
+		$where	= " AND reg_date >= '".$sDate."' AND reg_date <= '".$eDate."'";
+	$media_query = "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE 1 ".$where." GROUP BY media";
+	$media_res = mysqli_query($my_db, $media_query);
 
-$PAGE_CLASS = new Page($pg,$applicant_list_count,$page_size,$block_size);
-$BLOCK_LIST = $PAGE_CLASS->blockList(); 
-$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
-
-
-$applicant_list_query = "SELECT intseq, strNAME, strAGE, PHONE, EMAIL, ADDRESS , YOUTUBE, TYPE, LIKECOUNT, USERID, REGDATE, coupon_page, USED FROM event_topgirl_main Order by intseq DESC LIMIT $PAGE_CLASS->page_start, $page_size";
-$res = mysqli_query($my_db, $applicant_list_query);
-
-	while($applicant_data = mysqli_fetch_array($res))
+	while($media_data = mysqli_fetch_array($media_res))
 	{
-		if($applicant_data[TYPE]=="1"){
-			$country = "필리핀";
-		}else if($applicant_data[TYPE]=="2"){
-			$country = "대만";
-		}else if($applicant_data[TYPE]=="3"){
-			$country = "인도네시아";
-		}else if($applicant_data[TYPE]=="4"){
-			$country = "싱가폴";
-		}
+		$pc_result_query	= "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE media='".$media_data[media]."' ".$where." AND gubun='PC'";
+		$pc_count			= mysqli_num_rows(mysqli_query($my_db, $pc_result_query));
+		$mobile_result_query= "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE media='".$media_data[media]."' ".$where." AND gubun='MOBILE'";
+		$mobile_count		= mysqli_num_rows(mysqli_query($my_db, $mobile_result_query));
+		$total_count		= $pc_count + $mobile_count;
 ?>
               <tr>
-                <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $applicant_data[strNAME]?></td>
-                <td><?php echo $applicant_data[strAGE]?></td>
-                <td><?php echo $applicant_data[PHONE]?></td>
-                <td><?php echo $applicant_data[EMAIL]?></td>
-                <td><?php echo $country?></td>
-                <td><?php echo $applicant_data[ADDRESS]?></td>
-                <td><?php echo $applicant_data[YOUTUBE]?></td>
-                <td><?php echo $applicant_data[LIKECOUNT]?></td>
-                <td><?php echo $applicant_data[REGDATE]?></td>
-                <td><?php echo $applicant_data[coupon_page]?></td>
-<?php
-if($applicant_data[USED]=="1"){
-	$coupon_status = "사용완료";
-}else if($applicant_data[USED]=="0"){
-	$coupon_status = "미사용";
-}
-?>
-						<td><?php echo $coupon_status?></td>
-						</tr>
+                <td><?=$media_data[media]?></td>	<!-- No. 하나씩 감소 -->
+                <td><?=number_format($pc_count)?></td>
+                <td><?=number_format($mobile_count)?></td>
+                <td><?=number_format($total_count)?></td>
+              </tr>
 <?php 
 	}
 ?>
-              <tr><td colspan="12"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
             </tbody>
           </table>
         </div>
@@ -131,33 +96,3 @@ if($applicant_data[USED]=="1"){
 </body>
 
 </html>
-
-
-
-<script type="text/javascript">
- 
-	function pageRun(num)
-	{
-		f = document.frm_execute;
-		f.pg.value = num;
-		f.submit();
-	}
-
-	// 검색어 서칭 ajax 처리
-	function search_query(val1,val2)
-	{
-		$.ajax({
-			type	: "POST",
-			url		: "ajax_applicant_list.php",
-			data	: ({
-						"search_txt"	: val1,
-						"search_type"	: val2
-					}),
-			success	: function(msg) {
-				$("#applicant_list").html(msg);
-			}
-		});
-	}
-
-
-</script>
