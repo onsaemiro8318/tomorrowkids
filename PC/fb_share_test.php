@@ -12,6 +12,7 @@
 		<meta property="og:site_name" content="SKT LTE-A" />
 		<meta property="fb:app_id" content="1480974095497322" />
 
+		<script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
 		<script type="text/javascript">
 			window.fbAsyncInit = function() {
 				FB.init({
