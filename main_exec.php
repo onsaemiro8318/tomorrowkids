@@ -15,7 +15,7 @@ switch ($_REQUEST['exec'])
         $info = TK_GetUserInfo($userid);
         
 		if ($info == 0){
-			TK_InsertUserInfo($userid,$ip_addr,$media);
+			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
 			$flag = "Y";
 		}else {
             TK_UpdateUserInfo($userid);
@@ -37,7 +37,7 @@ switch ($_REQUEST['exec'])
         $info = TK_GetUserInfo($userid);
         
 		if ($info == 0){
-			TK_InsertUserInfo($userid,$ip_addr,$media);
+			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
 			$flag = "Y";
 		}else {
             TK_UpdateUserInfo($userid);
