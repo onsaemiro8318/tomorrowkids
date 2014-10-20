@@ -53,7 +53,7 @@ function kt_share()
 		async    : false,
 		url      : "../main_exec.php",
 		data     : ({
-			"exec" : "update_user_share" ,
+			"exec" : "update_user_share"
 		})
 	}); 
   
