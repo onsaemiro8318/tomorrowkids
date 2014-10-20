@@ -111,6 +111,11 @@ function ks_share()
 
 function fb_share()
 {
+	FB.api('/me', function(response) {
+		alert('111');
+	});
+
+/*
 	FB.ui(
 	  {
 		method: 'feed',
@@ -137,6 +142,7 @@ function fb_share()
 			}
 		}
 	);
+*/
 }
 
 /********************** 카카오톡 **********************/
