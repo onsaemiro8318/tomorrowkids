@@ -33,6 +33,7 @@
 		while ($answer_data = mysqli_fetch_array($answer_res))
 		{
 			$answer_txt[]	= $answer_data[test_value];
+			$answer_cnt[]	= $answer_data[select_cnt];
 		}
 
 		$j = 0;
@@ -49,7 +50,7 @@
 			}
 ?>
                     <td><?=$val?></td>
-                    <td></td>
+                    <td><?=$answer_cnt[$j]?></td>
                   </tr>
 <?php
 			$j++;
