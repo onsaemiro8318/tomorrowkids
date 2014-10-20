@@ -147,6 +147,8 @@
   <input type="text" id="user_id">
   <input type="text" id="user_name">
   <input type="text" id="member_icon">
+  <input type="text" id="etc1">
   <a href="javascript:fnFaceLogin()">페이스북 공유</a>
+  <img src="" id="fbShare">
  </body>
 </html>
