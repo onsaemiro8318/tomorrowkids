@@ -118,7 +118,7 @@
 							//alert("login"); 
 							FB.getLoginStatus(function(response) {
 								if (response.status === 'connected') {
-				alert(user);
+				alert("22");
 
 									FB.api('/me', function(user) {
 										if (user) {
@@ -130,6 +130,7 @@
 										}
 									});
 								} else {
+				alert("33");
 									$("#fShare").parent("a").attr("href", "javascript:fnFaceLogin()");
 									$("#fShare").attr("src", "http://www.skt-lte.co.kr/static/img/event/btn_fb_lo.gif ");
 								}
