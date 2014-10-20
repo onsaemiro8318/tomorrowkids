@@ -111,10 +111,8 @@ function ks_share()
 
 function fb_share()
 {
-	FB.api('/me', function(response) {
-		alert('111');
-	});
-
+	FB.API("/me/friends?fields=id,name", HttpMethod.GET, FriendDataCallback);
+	alert(FriendDataCallback);
 /*
 	FB.ui(
 	  {
