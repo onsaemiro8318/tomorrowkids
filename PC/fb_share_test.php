@@ -10,7 +10,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
 		<meta property="og:site_name" content="SKT LTE-A" />
-		<meta property="fb:app_id" content="1480974095497322" />
+		<meta property="fb:app_id" content="293604627507652" />
 
 		<script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
 		<script type="text/javascript">
@@ -84,7 +84,7 @@
 				}
 
 				FB.ui({
-					app_id: '1480974095497322',
+					app_id: '293604627507652',
 					display: 'popup',
 					method: 'share',
 					name: 'SKT-LTE',
