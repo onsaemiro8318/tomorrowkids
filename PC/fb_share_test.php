@@ -30,12 +30,12 @@
 								$("#user_name").val(user.name);
 								$("#member_icon").val('http://graph.facebook.com/' + user.id + '/picture');
 								$("#fShare").parent("a").attr("href", "javascript:fnShare()");
-								$("#fShare").attr("src", "http://www.skt-lte.co.kr/img/event/btn_join.gif");
+								$("#fShare").attr("src", "http://www.skt-lte.co.kr/static/img/event/btn_join.gif");
 							}
 						});    
 					} else {
 						$("#fShare").parent("a").attr("href", "javascript:fnFaceLogin()");
-						$("#fShare").attr("src", "http://www.skt-lte.co.kr/img/event/btn_fb_lo.gif ");
+						$("#fShare").attr("src", "http://www.skt-lte.co.kr/static/img/event/btn_fb_lo.gif ");
 					}
 				});
 				/*
@@ -125,12 +125,12 @@
 											$("#user_name").val(user.name);
 											$("#member_icon").val('http://graph.facebook.com/' + user.id + '/picture');
 											$("#fShare").parent("a").attr("href", "javascript:fnShare()");
-											$("#fShare").attr("src", "http://www.skt-lte.co.kr/img/event/btn_join.gif");
+											$("#fShare").attr("src", "http://www.skt-lte.co.kr/static/img/event/btn_join.gif");
 										}
 									});    
 								} else {
 									$("#fShare").parent("a").attr("href", "javascript:fnFaceLogin()");
-									$("#fShare").attr("src", "http://www.skt-lte.co.kr/img/event/btn_fb_lo.gif ");
+									$("#fShare").attr("src", "http://www.skt-lte.co.kr/static/img/event/btn_fb_lo.gif ");
 								}
 							});
 						} else {
