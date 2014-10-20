@@ -275,6 +275,7 @@ function facebook_login()
 				"fbUserId" : _fbUserId
 			}),
 			success: function(response){
+					alert(response);
 				if(response == "Y"){
 					testAPI();
 					return;
