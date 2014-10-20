@@ -144,6 +144,9 @@
 		</script>
 	</head>
  <body>
+  <input type="text" id="user_id">
+  <input type="text" id="user_name">
+  <input type="text" id="member_icon">
   <a href="javascript:fnFaceLogin()">페이스북 공유</a>
  </body>
 </html>
