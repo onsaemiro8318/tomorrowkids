@@ -275,12 +275,14 @@ function facebook_login()
 				"fbUserId" : _fbUserId
 			}),
 			success: function(response){
+				/*
 				if(response == "Y"){
 					testAPI();
 					return;
 				}else{
 					return;
 				}
+				*/
 				location.href="work_test.php"; 
 
 			}
