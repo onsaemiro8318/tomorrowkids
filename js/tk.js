@@ -111,9 +111,6 @@ function ks_share()
 
 function fb_share()
 {
-	FB.API("/me/friends?fields=id,name", HttpMethod.GET, FriendDataCallback);
-	alert(FriendDataCallback);
-/*
 	FB.ui(
 	  {
 		method: 'feed',
@@ -140,7 +137,6 @@ function fb_share()
 			}
 		}
 	);
-*/
 }
 
 /********************** 카카오톡 **********************/
