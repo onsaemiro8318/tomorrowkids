@@ -35,6 +35,8 @@ function go_direct_donation()
 
 function show_sns_select_box()
 {
+	$("#sns_select_box").show();
+/*
 	$.ajax({
 		type		: "POST",
 		async		: false,
@@ -49,6 +51,7 @@ function show_sns_select_box()
 				alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
 		}
 	});
+*/
 }
 
 function kt_share()
@@ -175,23 +178,39 @@ function kakao_login(){
 					jsonStr = JSON.stringify(res);
 					obj = JSON.parse(jsonStr);
 					ka_access_token = Kakao.Auth.getAccessToken();
-					ka_refresh_token = Kakao.Auth.getRefreshToken();             
+					ka_refresh_token = Kakao.Auth.getRefreshToken();
 					$.ajax({
-						type     : "POST",
-						async    : false,
-						url      : "../main_exec.php",
-						data     : ({
-							"exec" : "ka_user_info" ,
-							"kaUserId" : obj.id
+						type		: "POST",
+						async		: false,
+						url			: "../main_exec.php",
+						data		: ({
+							"exec"         : "user_test_check"
 						}),
 						success: function(response){
-							if(response == "Y"){
-								return;
+							if (response == "Y")
+							{
+									$.ajax({
+										type     : "POST",
+										async    : false,
+										url      : "../main_exec.php",
+										data     : ({
+											"exec" : "ka_user_info" ,
+											"kaUserId" : obj.id
+										}),
+										success: function(response){
+											if(response == "Y"){
+												return;
+											}else{
+												return;
+											}
+										}
+									});
 							}else{
-								return;
+								alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
 							}
 						}
 					});
+
 					location.href="work_test.php";
 				},
 				fail: function(error) {
@@ -268,28 +287,43 @@ function facebook_login()
 {
 	FB.login(function(response){
 		_fbUserId = response.authResponse.userID;
-		accessToken = response.authResponse.accessToken;	
+		accessToken = response.authResponse.accessToken;
 		$.ajax({
-			type     : "POST",
-			async    : false,
-			url      : "../main_exec.php",
-			data     : ({
-				"exec" : "fb_user_info" ,
-				"fbUserId" : _fbUserId
+			type		: "POST",
+			async		: false,
+			url			: "../main_exec.php",
+			data		: ({
+				"exec"         : "user_test_check"
 			}),
 			success: function(response){
-				/*
-				if(response == "Y"){
-					testAPI();
-					return;
-				}else{
-					return;
-				}
-				*/
-				location.href="work_test.php"; 
+				if (response == "Y")
+				{
+					$.ajax({
+						type     : "POST",
+						async    : false,
+						url      : "../main_exec.php",
+						data     : ({
+							"exec" : "fb_user_info" ,
+							"fbUserId" : _fbUserId
+						}),
+						success: function(response){
+							/*
+							if(response == "Y"){
+								testAPI();
+								return;
+							}else{
+								return;
+							}
+							*/
+							location.href="work_test.php"; 
 
+						}
+					}); 
+				}else{
+					alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+				}
 			}
-		}); 
+		});
 		//location.href="work_test.php"; 
 	},{scope: 'public_profile,email'});
 }
