@@ -275,16 +275,17 @@ function facebook_login()
 				"fbUserId" : _fbUserId
 			}),
 			success: function(response){
-					alert(response);
 				if(response == "Y"){
 					testAPI();
 					return;
 				}else{
 					return;
 				}
+				location.href="work_test.php"; 
+
 			}
 		}); 
-		location.href="work_test.php"; 
+		//location.href="work_test.php"; 
 	},{scope: 'public_profile,email'});
 }
 
