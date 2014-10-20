@@ -1,3 +1,17 @@
+/********************** 모바일 카스 **********************/
+
+function ks_share_mobile()
+{
+  kakao.link("story").send({
+    post : curURL,
+    appid : "www.tomorrowkids.or.kr",
+    appver : "1.0",
+    appname : "Tomorrow Kids",
+    urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
+  });
+}
+
+
 /********************** 공유하기 **********************/
 var curURL=location.href;
 var curTitle = document.getElementsByTagName("TITLE")[0].text;
