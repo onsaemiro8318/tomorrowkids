@@ -118,7 +118,7 @@
 							//alert("login"); 
 							FB.getLoginStatus(function(response) {
 								if (response.status === 'connected') {
-				alert('22');
+				alert(user);
 
 									FB.api('/me', function(user) {
 										if (user) {
