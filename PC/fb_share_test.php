@@ -105,7 +105,7 @@
 					} else {
 					//	alert('Error while posting.');
 					}
-					fnMobileChk();
+					//fnMobileChk();
 				});
 				
 			}
