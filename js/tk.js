@@ -21,7 +21,7 @@ function go_direct_donation()
 	$.ajax({
 		type		: "POST",
 		async		: false,
-		url			: "../PC/main_exec.php",
+		url			: "../main_exec.php",
 		data		: ({
 			"exec"         : "update_user_donation"
 		})
@@ -33,7 +33,7 @@ function show_sns_select_box()
 	$.ajax({
 		type		: "POST",
 		async		: false,
-		url			: "../PC/main_exec.php",
+		url			: "../main_exec.php",
 		data		: ({
 			"exec"         : "user_test_check"
 		}),
@@ -51,7 +51,7 @@ function kt_share()
 	$.ajax({
 		type     : "POST",
 		async    : false,
-		url      : "../PC/main_exec.php",
+		url      : "../main_exec.php",
 		data     : ({
 			"exec" : "update_user_share" ,
 		})
@@ -103,7 +103,7 @@ function ks_share()
     		$.ajax({
     			type     : "POST",
     			async    : false,
-    			url      : "../PC/main_exec.php",
+    			url      : "../main_exec.php",
     			data     : ({
     				"exec" : "update_user_share" ,
     			})
@@ -139,7 +139,7 @@ function fb_share()
     		$.ajax({
     			type     : "POST",
     			async    : false,
-    			url      : "../PC/main_exec.php",
+    			url      : "../main_exec.php",
     			data     : ({
     				"exec" : "update_user_share" ,
     			})
@@ -176,7 +176,7 @@ function kakao_login(){
 					$.ajax({
 						type     : "POST",
 						async    : false,
-						url      : "../PC/main_exec.php",
+						url      : "../main_exec.php",
 						data     : ({
 							"exec" : "ka_user_info" ,
 							"kaUserId" : obj.id
@@ -269,7 +269,7 @@ function facebook_login()
 		$.ajax({
 			type     : "POST",
 			async    : false,
-			url      : "../PC/main_exec.php",
+			url      : "../main_exec.php",
 			data     : ({
 				"exec" : "fb_user_info" ,
 				"fbUserId" : _fbUserId
@@ -294,7 +294,7 @@ function go_test(num, val)
 		$.ajax({
 			type		: "POST",
 			async		: false,
-			url			: "../PC/main_exec.php",
+			url			: "../main_exec.php",
 			data		: ({
 				"exec"         : "insert_test_result",
 				"selected_val" : val

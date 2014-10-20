@@ -1,21 +1,21 @@
 <?
 class Page
 {
-	var $pg; //-- ÇöÁ¦ ÆäÀÌÁö
-	var $tot_no; //--ÀüÃ¼ °Ô½Ã¹°¼ö
-	var $page_size; //--ÇÑ¹ø¿¡ º¸¿©ÁÙ °Ô½Ã¹°¼ö
-	var $page_count; //--ÀüÃ¼ ÆäÀÌÁö¼ö
-	var $page_start; //--°Ô½Ã¹° ½ÃÀÛÀ§Ä¡
-	var $page_uncount; //--°Ô½Ã¹° ¹øÈ£
+	var $pg; //-- í˜„ì œ í˜ì´ì§€
+	var $tot_no; //--ì „ì²´ ê²Œì‹œë¬¼ìˆ˜
+	var $page_size; //--í•œë²ˆì— ë³´ì—¬ì¤„ ê²Œì‹œë¬¼ìˆ˜
+	var $page_count; //--ì „ì²´ í˜ì´ì§€ìˆ˜
+	var $page_start; //--ê²Œì‹œë¬¼ ì‹œì‘ìœ„ì¹˜
+	var $page_uncount; //--ê²Œì‹œë¬¼ ë²ˆí˜¸
 	
-	var $block_size; //--ÇÑ¹ø¿¡ º¸¿©ÁÙ ºÒ·°¼ö
-	var $block_count; //--ÀüÃ¼ ºÒ·°¼ö
-	var $block; //--ÇöÀç ºÒ·°¼ö
-	var $block_start; //--ºÒ·°½ÃÀÛ¼ö
-	var $block_end; //--ºÒ·° ³¡¼ö
+	var $block_size; //--í•œë²ˆì— ë³´ì—¬ì¤„ ë¶ˆëŸ­ìˆ˜
+	var $block_count; //--ì „ì²´ ë¶ˆëŸ­ìˆ˜
+	var $block; //--í˜„ì¬ ë¶ˆëŸ­ìˆ˜
+	var $block_start; //--ë¶ˆëŸ­ì‹œì‘ìˆ˜
+	var $block_end; //--ë¶ˆëŸ­ ëìˆ˜
 	
-	var $block_list; //--ºÒ·°ÀÇ ³»¿ëÀ» ´ãÀ» º¯¼ö
-	var $script; //-- ÆäÀÌÁö°ü·Ã ÀÚ¹Ù½ºÅ©¸³Æ®
+	var $block_list; //--ë¶ˆëŸ­ì˜ ë‚´ìš©ì„ ë‹´ì„ ë³€ìˆ˜
+	var $script; //-- í˜ì´ì§€ê´€ë ¨ ìë°”ìŠ¤í¬ë¦½íŠ¸
 	
 	function Page($class_pg,$class_tot_no,$class_page_size,$class_block_size){
 		$this->pg = $class_pg;
@@ -23,14 +23,14 @@ class Page
 		$this->page_size = $class_page_size;
 		$this->block_size = $class_block_size;
 		
-		$this->page_count = ceil($this->tot_no/$this->page_size); //ÀüÃ¼ ÆäÀÌÁö¼ö
-		$this->page_start = ($this->pg - 1) * $this->page_size; //°Ô½Ã¹° ½ÃÀÛÀ§Ä¡
-		$this->page_uncount = $this->tot_no - $this->page_start; //°Ô½Ã¹° ¹øÈ£
+		$this->page_count = ceil($this->tot_no/$this->page_size); //ì „ì²´ í˜ì´ì§€ìˆ˜
+		$this->page_start = ($this->pg - 1) * $this->page_size; //ê²Œì‹œë¬¼ ì‹œì‘ìœ„ì¹˜
+		$this->page_uncount = $this->tot_no - $this->page_start; //ê²Œì‹œë¬¼ ë²ˆí˜¸
 		
-		$this->block_count = ceil($this->page_count/$this->block_size);///////// ÀüÃ¼ ºÒ·°¼ö
-		$this->block = ceil($this->pg/$this->block_size); //////////////////////////// ÇöÀç ºÒ·°¼ö
-		$this->block_start = (($this->block - 1) * $this->block_size) + 1; ///////// ºÒ·°½ÃÀÛ¼ö
-		$this->block_end = $this->block * $this->block_size; /////////////////////// ºÒ·° ³¡¼ö
+		$this->block_count = ceil($this->page_count/$this->block_size);///////// ì „ì²´ ë¶ˆëŸ­ìˆ˜
+		$this->block = ceil($this->pg/$this->block_size); //////////////////////////// í˜„ì¬ ë¶ˆëŸ­ìˆ˜
+		$this->block_start = (($this->block - 1) * $this->block_size) + 1; ///////// ë¶ˆëŸ­ì‹œì‘ìˆ˜
+		$this->block_end = $this->block * $this->block_size; /////////////////////// ë¶ˆëŸ­ ëìˆ˜
 	}
 	
 	function blockList( $str = "pageRun(")
@@ -38,18 +38,18 @@ class Page
 		$b_start = $this->block_start;
 		$block_str = "";
 		$block_str = '<table border="0" cellspacing="0" cellpadding="0"><tr><td>';
-		//-- ÀÌÀü ºí·°
+		//-- ì´ì „ ë¸”ëŸ­
 		if($this->block != 1)
 		{
 			$temp = $this->block_start - 1;
-			$block_str .= '<a href="javascript:' . $str . $temp . ');" title="ÀÌÀü ' . $this->block_size . '">ÀÌÀü</a>';
+			$block_str .= '<a href="javascript:' . $str . $temp . ');" title="ì´ì „ ' . $this->block_size . '">ì´ì „</a>';
 		}
 		else
 		{
-			$block_str .= 'ÀÌÀü';
+			$block_str .= 'ì´ì „';
 		}
 		$block_str .= '</td><td>';
-		//--ºí·° ¸®½ºÆ®
+		//--ë¸”ëŸ­ ë¦¬ìŠ¤íŠ¸
 		$arrBlock = array();
 		while($b_start <= $this->block_end && $b_start <= $this->page_count )
 		{
@@ -70,14 +70,14 @@ class Page
 		}
 		$block_str .= '</td><td>';
 		
-		//´ÙÀ½ ºí·°
+		//ë‹¤ìŒ ë¸”ëŸ­
 		if($this->block != $this->block_count && $this->tot_no != 0){
 			$temp = $this->block_end + 1;
-			$block_str .= '<a href="javascript:' .$str . $temp . ')" title="´ÙÀ½ ' . $this->block_size . '">´ÙÀ½</a>';
+			$block_str .= '<a href="javascript:' .$str . $temp . ')" title="ë‹¤ìŒ ' . $this->block_size . '">ë‹¤ìŒ</a>';
 		}
 		else
 		{
-			$block_str .= '´ÙÀ½';
+			$block_str .= 'ë‹¤ìŒ';
 		}
 		$block_str .= '</td></tr></table>';
 		return $block_str;
@@ -87,14 +87,14 @@ class Page
 	{
 		$b_start = $this->block_start;
 		$block_str = "";
-		//-- ÀÌÀü ºí·°
+		//-- ì´ì „ ë¸”ëŸ­
 		if($this->block != 1)
 		{
 			$temp = $this->block_start - 1;
-			$block_str .= '<li><a href="javascript:' . $str . $temp . ');" title="ÀÌÀü ' . $this->block_size . '">&lt;</a></li>';
+			$block_str .= '<li><a href="javascript:' . $str . $temp . ');" title="ì´ì „ ' . $this->block_size . '">&lt;</a></li>';
 		}
 
-		//--ºí·° ¸®½ºÆ®
+		//--ë¸”ëŸ­ ë¦¬ìŠ¤íŠ¸
 		$arrBlock = array();
 		while($b_start <= $this->block_end && $b_start <= $this->page_count )
 		{
@@ -114,10 +114,10 @@ class Page
 			if($i < (count($arrBlock) - 1) ) $block_str .= "  ";
 		}
 		
-		//´ÙÀ½ ºí·°
+		//ë‹¤ìŒ ë¸”ëŸ­
 		if($this->block != $this->block_count && $this->tot_no != 0){
 			$temp = $this->block_end + 1;
-			$block_str .= '<li><a href="javascript:' .$str . $temp . ')" title="´ÙÀ½ ' . $this->block_size . '">&gt;</a></li>';
+			$block_str .= '<li><a href="javascript:' .$str . $temp . ')" title="ë‹¤ìŒ ' . $this->block_size . '">&gt;</a></li>';
 		}
 
 		return $block_str;
@@ -127,14 +127,14 @@ class Page
 	{
 		$b_start = $this->block_start;
 		$block_str = "";
-		//-- ÀÌÀü ºí·°
+		//-- ì´ì „ ë¸”ëŸ­
 		if($this->block != 1)
 		{
 			$temp = $this->block_start - 1;
-			$block_str .= '<span class="next"><a href="javascript:' . $str . $temp . ');">¢¸</a>&nbsp;</span>';
+			$block_str .= '<span class="next"><a href="javascript:' . $str . $temp . ');">â—€</a>&nbsp;</span>';
 		}
 
-		//--ºí·° ¸®½ºÆ®
+		//--ë¸”ëŸ­ ë¦¬ìŠ¤íŠ¸
 		$arrBlock = array();
 		while($b_start <= $this->block_end && $b_start <= $this->page_count )
 		{
@@ -154,10 +154,10 @@ class Page
 			if($i < (count($arrBlock) - 1) ) $block_str .= " / ";
 		}
 		
-		//´ÙÀ½ ºí·°
+		//ë‹¤ìŒ ë¸”ëŸ­
 		if($this->block != $this->block_count && $this->tot_no != 0){
 			$temp = $this->block_end + 1;
-			$block_str .= '<span class="next">&nbsp;<a href="javascript:' .$str . $temp . ')">¢º</a></span>';
+			$block_str .= '<span class="next">&nbsp;<a href="javascript:' .$str . $temp . ')">â–¶</a></span>';
 		}
 
 		return $block_str;
@@ -169,14 +169,14 @@ class Page
 		$block_str = "";
 
 		$block_str .= '<ul class="con_paging">';
-		//-- ÀÌÀü ºí·°
+		//-- ì´ì „ ë¸”ëŸ­
 		if($this->block != 1)
 		{
 			$temp = $this->block_start - 1;
 			$block_str .= '<li><a href="javascript:' . $str . $temp . ');">&lt;</a>&nbsp;</li>';
 		}
 
-		//--ºí·° ¸®½ºÆ®
+		//--ë¸”ëŸ­ ë¦¬ìŠ¤íŠ¸
 		$arrBlock = array();
 		while($b_start <= $this->block_end && $b_start <= $this->page_count )
 		{
@@ -196,7 +196,7 @@ class Page
 			//if($i < (count($arrBlock) - 1) ) $block_str .= " / ";
 		}
 		
-		//´ÙÀ½ ºí·°
+		//ë‹¤ìŒ ë¸”ëŸ­
 		if($this->block != $this->block_count && $this->tot_no != 0){
 			$temp = $this->block_end + 1;
 			$block_str .= '<li>&nbsp;<a href="javascript:' .$str . $temp . ')">&gt;</a></li>';

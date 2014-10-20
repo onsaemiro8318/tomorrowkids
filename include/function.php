@@ -1,5 +1,5 @@
 <?
-	// ³» Á÷¾÷ Å×½ºÆ® Áú¹® Á¤º¸
+	// ë‚´ ì§ì—… í…ŒìŠ¤íŠ¸ ì§ˆë¬¸ ì •ë³´
 	function TK_GetTestQuestionInfo($idx)
 	{
 		global $_gl;
@@ -12,7 +12,7 @@
 		return $info;
 	}
 
-	// ³» Á÷¾÷ Å×½ºÆ® Áú¹®idx¿¡ ÇØ´çÇÏ´Â ´äº¯ Á¤º¸
+	// ë‚´ ì§ì—… í…ŒìŠ¤íŠ¸ ì§ˆë¬¸idxì— í•´ë‹¹í•˜ëŠ” ë‹µë³€ ì •ë³´
 	function TK_GetTestAnswerInfo($idx)
 	{
 		global $_gl;
@@ -26,7 +26,7 @@
 		return $info;
 	}
 
-	// ³» Á÷¾÷ Å×½ºÆ® µ¿ÀÏ À¯Àú Âü¿© È½¼ö
+	// ë‚´ ì§ì—… í…ŒìŠ¤íŠ¸ ë™ì¼ ìœ ì € ì°¸ì—¬ íšŸìˆ˜
 	function TK_GetTestUserCntInfo($userid)
 	{
 		global $_gl;
@@ -39,7 +39,7 @@
 		return $info;
 	}
 
-	// ³» Á÷¾÷ Å×½ºÆ® Á÷¾÷ ±¸ÇÏ±â ·ÎÁ÷
+	// ë‚´ ì§ì—… í…ŒìŠ¤íŠ¸ ì§ì—… êµ¬í•˜ê¸° ë¡œì§
 	function TK_GetTestResultInfo($point)
 	{
 		global $_gl;
@@ -95,7 +95,7 @@
 		return $info;
 	}
 
-	// À¯ÀÔ¸ÅÃ¼ Á¤º¸ ÀÔ·Â
+	// ìœ ìž…ë§¤ì²´ ì •ë³´ ìž…ë ¥
 	function TK_InsertTrackingInfo($media, $gubun)
 	{
 		global $_gl;
@@ -105,7 +105,7 @@
 		$result		= mysqli_query($my_db, $query);
 	}
 
-	// ±âºÎ ÃÑ Âü¿©ÀÚ ¼ö ±¸ÇÏ±â
+	// ê¸°ë¶€ ì´ ì°¸ì—¬ìž ìˆ˜ êµ¬í•˜ê¸°
 	function TK_GetTestTotalCount()
 	{
 		global $_gl;
@@ -118,7 +118,7 @@
 		return $info;
 	}
 
-	// Å×½ºÆ® °á°ú Á÷¾÷ Ç¥½Ã
+	// í…ŒìŠ¤íŠ¸ ê²°ê³¼ ì§ì—… í‘œì‹œ
 	function TK_GetUserJobInfo($idx)
 	{
 		global $_gl;
@@ -148,7 +148,7 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."')";
+		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media, gubun) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."')";
 		$result = mysqli_query($my_db, $query);
     }
     

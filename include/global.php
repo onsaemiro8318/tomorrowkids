@@ -9,11 +9,11 @@
      *
      ******************************************************************************/
 
-	$_gl[tk_member_table] 			= "tk_member";				//³»ÀÏÀ» ºÎÅ¹ÇØ Âü¿©ÀÚ Å×ÀÌºí
-	$_gl[tk_worktest_table] 		= "tk_worktest";			//³»ÀÏÀ» ºÎÅ¹ÇØ Å×½ºÆ® ³»¿ë Å×ÀÌºí
-	$_gl[tk_test_result_table] 		= "tk_test_result";			//³»ÀÏÀ» ºÎÅ¹ÇØ Å×½ºÆ® °á°ú Å×ÀÌºí
-	$_gl[tk_works_table] 			= "tk_works";				//³»ÀÏÀ» ºÎÅ¹ÇØ Å×½ºÆ® Á÷¾÷ Å×ÀÌºí
-	$_gl[tk_tracking_info_table] 	= "tk_tracking_info";		//³»ÀÏÀ» ºÎÅ¹ÇØ À¯ÀÔ Á¤º¸ Å×ÀÌºí
+	$_gl[tk_member_table] 			= "tk_member";				//ë‚´ì¼ì„ ë¶€íƒí•´ ì°¸ì—¬ì í…Œì´ë¸”
+	$_gl[tk_worktest_table] 		= "tk_worktest";			//ë‚´ì¼ì„ ë¶€íƒí•´ í…ŒìŠ¤íŠ¸ ë‚´ìš© í…Œì´ë¸”
+	$_gl[tk_test_result_table] 		= "tk_test_result";			//ë‚´ì¼ì„ ë¶€íƒí•´ í…ŒìŠ¤íŠ¸ ê²°ê³¼ í…Œì´ë¸”
+	$_gl[tk_works_table] 			= "tk_works";				//ë‚´ì¼ì„ ë¶€íƒí•´ í…ŒìŠ¤íŠ¸ ì§ì—… í…Œì´ë¸”
+	$_gl[tk_tracking_info_table] 	= "tk_tracking_info";		//ë‚´ì¼ì„ ë¶€íƒí•´ ìœ ì… ì •ë³´ í…Œì´ë¸”
 
 	$_gl[youtube_url]				= "http://www.youtube.com/embed/aFTQ8gnKnFw?controls=0&showinfo=0&modestbranding=1&wmode=opaque&enablejsapi=1&autoplay=1&rel=0";
 
