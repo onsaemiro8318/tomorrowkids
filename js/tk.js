@@ -293,6 +293,7 @@ function facebook_login()
 
 function go_test(num, val)
 {
+	alert(num);
 	if (num > 10)
 	{
 		$.ajax({
