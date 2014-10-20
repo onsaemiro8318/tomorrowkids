@@ -54,7 +54,7 @@ function kt_share()
 		url      : "../main_exec.php",
 		data     : ({
 			"exec" : "update_user_share"
-		})
+		}),
 		success: function(res) {
 			alert(res);
 		}
