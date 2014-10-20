@@ -242,6 +242,7 @@ window.fbAsyncInit = function() {
 
 function testAPI() {
 	FB.api('/me', function(response) {
+		alert('111');
 	});
 }
 
@@ -261,6 +262,7 @@ function facebook_login()
 			}),
 			success: function(response){
 				if(response == "Y"){
+					testAPI();
 					return;
 				}else{
 					return;

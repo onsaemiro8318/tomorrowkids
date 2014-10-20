@@ -92,8 +92,8 @@ switch ($_REQUEST['exec'])
 				$test_point = $test_point + 1;
 
 			$selected_job	= TK_GetTestResultInfo($test_point);
-            
-            TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job[idx],$media);
+
+			TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job[idx],$media);
             
 			echo $selected_job[idx];
 		//}
