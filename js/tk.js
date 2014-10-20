@@ -55,20 +55,23 @@ function kt_share()
 		data     : ({
 			"exec" : "update_user_share"
 		})
+		success: function(res) {
+			alert(res);
+		}
 	}); 
-  
-  kakao.Link.sendTalkLink({
-    label: 'Tomorrow Kids',
-    image: {
-      src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
-      width: '300',
-      height: '200'
-    },
-    webButton: {
-      text: 'Tomorrow Kids',
-      url: 'http://www.tomorrowkids.or.kr'
-    }
-  });
+
+	kakao.Link.sendTalkLink({
+		label: 'Tomorrow Kids',
+		image: {
+			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+			width: '300',
+			height: '200'
+		},
+		webButton: {
+			text: 'Tomorrow Kids',
+			url: 'http://www.tomorrowkids.or.kr'
+		}
+	});
 }
 
 function ks_share()
@@ -105,7 +108,7 @@ function ks_share()
     			async    : false,
     			url      : "../main_exec.php",
     			data     : ({
-    				"exec" : "update_user_share" ,
+    				"exec" : "update_user_share"
     			})
     		}); 
       }
