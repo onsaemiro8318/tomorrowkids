@@ -175,6 +175,10 @@
 			$query = "UPDATE ".$_gl[tk_worktest_table]." SET select_cnt=select_cnt+1 WHERE idx='".$val."'";
 			$result = mysqli_query($my_db, $query);
 		}
+
+		$query = "UPDATE ".$_gl[tk_works_table]." SET sel_countt=sel_count+1 WHERE idx='".$selected_job."'";
+		$result = mysqli_query($my_db, $query);
+
 	}
 
 	function TK_UpdateUserShare($userid,$share_on)
