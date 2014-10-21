@@ -7,7 +7,7 @@ var ka_refresh_token;
 
 function ks_share_mobile()
 {
-  kakao.link("story").send({
+  Kakao.link("story").send({
     post : curURL,
     appid : "www.tomorrowkids.or.kr",
     appver : "1.0",
