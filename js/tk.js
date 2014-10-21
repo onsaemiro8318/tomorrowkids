@@ -7,6 +7,18 @@ var ka_refresh_token;
 
 function ks_share_mobile()
 {
+	$.ajax({
+		type     : "POST",
+		async    : false,
+		url      : "../main_exec.php",
+		data     : ({
+			"exec" : "update_user_share"
+		}),
+		success: function(res) {
+			alert(res);
+		}
+	}); 
+  
   kakao.link("story").send({
     post : curURL,
     appid : "www.tomorrowkids.or.kr",
@@ -68,30 +80,31 @@ function kt_share()
 		}
 	}); 
 
-	kakao.Link.sendTalkLink({
-		label: 'Tomorrow Kids',
-		image: {
-			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
-			width: '300',
-			height: '200'
-		},
-		webButton: {
-			text: 'Tomorrow Kids',
-			url: 'http://www.tomorrowkids.or.kr'
-		}
-	});
+  kakao.link("talk").send({
+    msg : "내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.",
+    url : "http://www.tomorrowkids.or.kr",
+    appid : "www.tomorrowkids.or.kr",
+    appver : "1.0",
+    appname : "Tomorrow Kids",
+    type : "link"
+  });
+
+  // kakao.Link.sendTalkLink({
+  //   label: 'Tomorrow Kids',
+  //   image: {
+  //     src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+  //     width: '300',
+  //     height: '200'
+  //   },
+  //   webButton: {
+  //     text: 'Tomorrow Kids',
+  //     url: 'http://www.tomorrowkids.or.kr'
+  //   }
+  // });
 }
 
 function ks_share()
-{
-  // kakao.link("story").send({
-  //   post : curURL,
-  //   appid : "www.tomorrowkids.or.kr",
-  //   appver : "1.0",
-  //   appname : "Tomorrow Kids",
-  //   urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
-  // });
-  
+{ 
   Kakao.API.request( {
     url : '/v1/api/story/linkinfo',
     data : {
