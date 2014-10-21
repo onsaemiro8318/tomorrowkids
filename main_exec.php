@@ -33,9 +33,9 @@ switch ($_REQUEST['exec'])
 		// 회원아이디 세션 생성
 		$_SESSION['ss_mb_id'] = $userid;
 		$_SESSION['ss_media'] = $media;
-        
-        $info = TK_GetUserInfo($userid);
-        
+
+		$info = TK_GetUserInfo($userid);
+
 		if ($info == 0){
 			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
 			$flag = "Y";
@@ -43,7 +43,7 @@ switch ($_REQUEST['exec'])
             TK_UpdateUserInfo($userid);
 			$flag = "N";
 		}
-                    
+
 		echo $flag;
 	break;
     
