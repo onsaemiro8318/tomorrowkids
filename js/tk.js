@@ -46,7 +46,11 @@ function go_direct_donation()
 
 function show_sns_select_box()
 {
-	$("#sns_select_box").show();
+  if( "facebook" == "<?php $_SESSION['ss_media']?>"){
+  	$("#sns_select_box_01").show();    
+  }else {
+  	$("#sns_select_box_02").show();    
+  }
 /*
 	$.ajax({
 		type		: "POST",
@@ -66,30 +70,7 @@ function show_sns_select_box()
 }
 
 function kt_share()
-{
-  // kakao.link("talk").send({
-  //   msg : "내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.",
-  //   url : "http://www.tomorrowkids.or.kr",
-  //   appid : "www.tomorrowkids.or.kr",
-  //   appver : "1.0",
-  //   appname : "Tomorrow Kids",
-  //   type : "link"
-  // });
-
-  // Kakao.Link.createTalkLinkButton({
-  //   container: '#kt_share_btn',
-  //   label: 'Tomorrow Kids',
-  //   image: {
-  //     src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
-  //     width: '300',
-  //     height: '200'
-  //   },
-  //   webButton: {
-  //     text: 'Tomorrow Kids',
-  //     url: 'http://www.tomorrowkids.or.kr'
-  //   }
-  // });
-    
+{   
 	$.ajax({
 		type     : "POST",
 		async    : false,
