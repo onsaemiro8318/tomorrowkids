@@ -68,15 +68,28 @@ function show_sns_select_box()
 
 function kt_share()
 {
-  kakao.link("talk").send({
-    msg : "내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.",
-    url : "http://www.tomorrowkids.or.kr",
-    appid : "www.tomorrowkids.or.kr",
-    appver : "1.0",
-    appname : "Tomorrow Kids",
-    type : "link"
-  });
+  // kakao.link("talk").send({
+  //   msg : "내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.",
+  //   url : "http://www.tomorrowkids.or.kr",
+  //   appid : "www.tomorrowkids.or.kr",
+  //   appver : "1.0",
+  //   appname : "Tomorrow Kids",
+  //   type : "link"
+  // });
 
+  Kakao.Link.createTalkLinkButton({
+    label: 'Tomorrow Kids',
+    image: {
+      src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+      width: '300',
+      height: '200'
+    },
+    webButton: {
+      text: 'Tomorrow Kids',
+      url: 'http://www.tomorrowkids.or.kr'
+    }
+  });
+    
 	$.ajax({
 		type     : "POST",
 		async    : false,
@@ -217,7 +230,6 @@ function kakao_login(){
 							});
 						}
 					});
-
 				},
 				fail: function(error) {
 				}
@@ -226,7 +238,7 @@ function kakao_login(){
 		fail: function(err) {
 		}
 	});
-};
+}
 
 /********************** 페이스북 **********************/
       
