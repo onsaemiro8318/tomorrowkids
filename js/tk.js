@@ -7,6 +7,14 @@ var ka_refresh_token;
 
 function ks_share_mobile()
 {
+  kakao.link("story").send({
+    post : curURL,
+    appid : "www.tomorrowkids.or.kr",
+    appver : "1.0",
+    appname : "Tomorrow Kids",
+    urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
+  });
+  
 	$.ajax({
 		type     : "POST",
 		async    : false,
@@ -15,16 +23,11 @@ function ks_share_mobile()
 			"exec" : "update_user_share"
 		}),
 		success: function(res) {
+      if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+        window.open("http://www.naver.com/");
+      }
 		}
 	}); 
-  
-  kakao.link("story").send({
-    post : curURL,
-    appid : "www.tomorrowkids.or.kr",
-    appver : "1.0",
-    appname : "Tomorrow Kids",
-    urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
-  });
 }
 
 
@@ -92,6 +95,9 @@ function kt_share()
     webButton: {
       text: 'Tomorrow Kids',
       url: 'http://www.tomorrowkids.or.kr'
+    }
+    success: {
+      
     }
   });
 }
