@@ -176,7 +176,7 @@
 			$result = mysqli_query($my_db, $query);
 		}
 
-		$query = "UPDATE ".$_gl[tk_works_table]." SET sel_countt=sel_count+1 WHERE idx='".$selected_job."'";
+		$query = "UPDATE ".$_gl[tk_works_table]." SET sel_count=sel_count+1 WHERE idx='".$selected_job."'";
 		$result = mysqli_query($my_db, $query);
 
 	}
