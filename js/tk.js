@@ -140,15 +140,6 @@ function ks_share(desc)
 				}); 
 			}
 		});
-  }).then(function(res) {
-    return Kakao.API.request( {
-      url : '/v1/api/story/mystory',
-      data : { id : res.id }
-    });
-  }).then(function(res) {
-    document.getElementById('post-result').innerHTML = JSON.stringify(res);
-  }, function (err) {
-    alert(JSON.stringify(err));
   });
 
 }
