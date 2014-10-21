@@ -2,6 +2,9 @@
 	// 설정파일
 	include_once "../config.php";
 
+	unset($_SESSION['ss_mb_id']);
+	unset($_SESSION['ss_media']);
+
 	$total_count = TK_GetTestTotalCount();
 ?>
 <html>
