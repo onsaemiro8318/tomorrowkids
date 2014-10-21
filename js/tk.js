@@ -189,29 +189,29 @@ function kakao_login(){
 						success: function(response){
 							if (response == "Y")
 							{
-									$.ajax({
-										type     : "POST",
-										async    : false,
-										url      : "../main_exec.php",
-										data     : ({
-											"exec" : "ka_user_info" ,
-											"kaUserId" : obj.id
-										}),
-										success: function(response){
-											if(response == "Y"){
-												return;
-											}else{
-												return;
-											}
+								$.ajax({
+									type     : "POST",
+									async    : false,
+									url      : "../main_exec.php",
+									data     : ({
+										"exec" : "ka_user_info" ,
+										"kaUserId" : obj.id
+									}),
+									success: function(response){
+										if(response == "Y"){
+											return;
+										}else{
+											return;
 										}
-									});
+									}
+								});
+								location.href="work_test.php";
 							}else{
 								alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
 							}
 						}
 					});
 
-					location.href="work_test.php";
 				},
 				fail: function(error) {
 				}
@@ -316,7 +316,6 @@ function facebook_login()
 							}
 							*/
 							location.href="work_test.php"; 
-
 						}
 					}); 
 				}else{

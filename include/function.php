@@ -131,38 +131,38 @@
 		return $info;
 	}
 
-    function TK_GetUserInfo($userid)
-    {
+	function TK_GetUserInfo($userid)
+	{
 		global $_gl;
 		global $my_db;
-        
+
 		$query 		= "SELECT * FROM ".$_gl[tk_member_table]." WHERE user_id = '".$userid."'";
 		$result 	= mysqli_query($my_db, $query);
 		$info = mysqli_num_rows($result);
-        
-        return $info;
-    }
-    
-    function TK_InsertUserInfo($userid,$ip_addr,$media,$gubun)
-    {
+
+		return $info;
+	}
+
+	function TK_InsertUserInfo($userid,$ip_addr,$media,$gubun)
+	{
 		global $_gl;
 		global $my_db;
-        
+
 		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media, gubun) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."')";
 		$result = mysqli_query($my_db, $query);
-    }
-    
-    function TK_UpdateUserInfo($userid)
-    {
+	}
+
+	function TK_UpdateUserInfo($userid)
+	{
 		global $_gl;
 		global $my_db;
-        
+
 		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
-    }
-    
-    function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media)
-    {
+	}
+
+	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media)
+	{
 		global $_gl;
 		global $my_db;
         
@@ -175,24 +175,24 @@
 			$query = "UPDATE ".$_gl[tk_worktest_table]." SET select_cnt=select_cnt+1 WHERE idx='".$val."'";
 			$result = mysqli_query($my_db, $query);
 		}
-    }
-    
-    function TK_UpdateUserShare($userid,$share_on)
-    {
+	}
+
+	function TK_UpdateUserShare($userid,$share_on)
+	{
 		global $_gl;
 		global $my_db;
         
 		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
-    }     
-    
-    function TK_UpdateUserDonation($userid,$direct_on)
-    {
+	}
+
+	function TK_UpdateUserDonation($userid,$direct_on)
+	{
 		global $_gl;
 		global $my_db;
-        
+
 		$query = "UPDATE ".$_gl[tk_test_result_table]." SET direct = '".$direct_on."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
-    }        
+	}
 
 ?>
