@@ -22,4 +22,6 @@
 	else
 		$gubun = "PC";
 
+	$total_count	= TK_GetTestTotalCount();
+
 ?>

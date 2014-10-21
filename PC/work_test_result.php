@@ -1,7 +1,7 @@
 <?
 	// 설정파일
 	include_once "../config.php";
-	$total_count	= TK_GetTestTotalCount();
+	include_once "header.php";
 	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
 ?>
 <html>

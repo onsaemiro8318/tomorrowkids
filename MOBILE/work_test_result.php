@@ -1,20 +1,9 @@
 <?
 	// 설정파일
 	include_once "../config.php";
-	$total_count	= TK_GetTestTotalCount();
+	include_once "header.php";
 	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
 ?>
-<html>
-  <head>
-    <title>Document</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
-    <script type='text/javascript' src='../js/tk.js'></script>
-    <script type='text/javascript' src='../js/googleAnalytics.js'></script>
-    <script type='text/javascript' src='../js/kakao.link.js'></script>
-  </head>
   <body>
     <div style="position:absolute;">
     <div style="position:top;width:100%;height:60px;background:green">

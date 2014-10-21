@@ -1,22 +1,12 @@
 <?
 	// 설정파일
 	include_once "../config.php";
+	include_once "header.php";
 
 	unset($_SESSION['ss_mb_id']);
 	unset($_SESSION['ss_media']);
 
-	$total_count = TK_GetTestTotalCount();
 ?>
-<html>
-  <head>
-    <title>Document</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
-    <script type='text/javascript' src='../js/tk.js'></script>
-    <script type='text/javascript' src='../js/googleAnalytics.js'></script>
-    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
 	<script type="text/javascript">
 	// 유튜브 반복 재생
 	var controllable_player,start, 
@@ -38,7 +28,6 @@
 	}, 3000)
 
 	</script>
-  </head>
   <body>
     <div>
       <h1>'내일을 부탁해'</h1>
