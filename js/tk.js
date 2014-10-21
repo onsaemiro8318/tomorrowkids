@@ -25,6 +25,8 @@ function ks_share_mobile()
 		success: function(res) {
       if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
         window.open("http://www.naver.com/");
+      }else{
+        
       }
 		}
 	}); 
@@ -74,17 +76,6 @@ function show_sns_select_box(media)
 
 function kt_share()
 {   
-	$.ajax({
-		type     : "POST",
-		async    : false,
-		url      : "../main_exec.php",
-		data     : ({
-			"exec" : "update_user_share"
-		}),
-		success: function(res) {
-    }
-	}); 
-  
   Kakao.Link.sendTalkLink({
     label: 'Tomorrow Kids',
     image: {
@@ -97,6 +88,21 @@ function kt_share()
       url: 'http://www.tomorrowkids.or.kr'
     }
   });
+	$.ajax({
+		type     : "POST",
+		async    : false,
+		url      : "../main_exec.php",
+		data     : ({
+			"exec" : "update_user_share"
+		}),
+		success: function(res) {
+      if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+        window.open("http://www.naver.com/");
+      }else{
+        
+      }
+    }
+	}); 
 }
 
 function ks_share()
@@ -164,7 +170,11 @@ function fb_share()
     				"exec" : "update_user_share" ,
     			})
     		}); 
-				location.href="index.php";
+        if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+          window.open("http://www.naver.com/");
+        }else{
+          location.href="index.php";
+        }
 			} 
 			else {
 				location.href="index.php";
