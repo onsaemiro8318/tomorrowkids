@@ -289,40 +289,40 @@ function facebook_login()
 		_fbUserId = response.authResponse.userID;
 		accessToken = response.authResponse.accessToken;
 		$.ajax({
-			type		: "POST",
-			async		: false,
-			url			: "../main_exec.php",
-			data		: ({
-				"exec"         : "user_test_check"
+			type     : "POST",
+			async    : false,
+			url      : "../main_exec.php",
+			data     : ({
+				"exec" : "fb_user_info" ,
+				"fbUserId" : _fbUserId
 			}),
 			success: function(response){
-				if (response == "Y")
-				{
-					$.ajax({
-						type     : "POST",
-						async    : false,
-						url      : "../main_exec.php",
-						data     : ({
-							"exec" : "fb_user_info" ,
-							"fbUserId" : _fbUserId
-						}),
-						success: function(response){
-							/*
-							if(response == "Y"){
-								testAPI();
-								return;
-							}else{
-								return;
-							}
-							*/
+				$.ajax({
+					type		: "POST",
+					async		: false,
+					url			: "../main_exec.php",
+					data		: ({
+						"exec"         : "user_test_check"
+					}),
+					success: function(response){
+						if (response == "Y")
+						{
 							location.href="work_test.php"; 
+						}else{
+							alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
 						}
-					}); 
+					}
+				});
+				/*
+				if(response == "Y"){
+					testAPI();
+					return;
 				}else{
-					alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+					return;
 				}
+				*/
 			}
-		});
+		}); 
 		//location.href="work_test.php"; 
 	},{scope: 'public_profile,email'});
 }
