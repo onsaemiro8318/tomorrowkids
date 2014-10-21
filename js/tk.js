@@ -15,7 +15,6 @@ function ks_share_mobile()
 			"exec" : "update_user_share"
 		}),
 		success: function(res) {
-			alert(res);
 		}
 	}); 
   
@@ -77,30 +76,8 @@ function kt_share()
   //   type : "link"
   // });
 
-  Kakao.Link.createTalkLinkButton({
-    label: 'Tomorrow Kids',
-    image: {
-      src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
-      width: '300',
-      height: '200'
-    },
-    webButton: {
-      text: 'Tomorrow Kids',
-      url: 'http://www.tomorrowkids.or.kr'
-    }
-  });
-    
-	$.ajax({
-		type     : "POST",
-		async    : false,
-		url      : "../main_exec.php",
-		data     : ({
-			"exec" : "update_user_share"
-		}),
-		success: function(res) {
-    }
-	}); 
-  // kakao.Link.sendTalkLink({
+  // Kakao.Link.createTalkLinkButton({
+  //   container: '#kt_share_btn',
   //   label: 'Tomorrow Kids',
   //   image: {
   //     src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
@@ -112,6 +89,30 @@ function kt_share()
   //     url: 'http://www.tomorrowkids.or.kr'
   //   }
   // });
+    
+	$.ajax({
+		type     : "POST",
+		async    : false,
+		url      : "../main_exec.php",
+		data     : ({
+			"exec" : "update_user_share"
+		}),
+		success: function(res) {
+    }
+	}); 
+  
+  Kakao.Link.sendTalkLink({
+    label: 'Tomorrow Kids',
+    image: {
+      src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+      width: '300',
+      height: '200'
+    },
+    webButton: {
+      text: 'Tomorrow Kids',
+      url: 'http://www.tomorrowkids.or.kr'
+    }
+  });
 }
 
 function ks_share()
