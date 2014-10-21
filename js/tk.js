@@ -46,6 +46,7 @@ function go_direct_donation()
 
 function show_sns_select_box(media)
 {
+	alert(media);
   if( "facebook" == media){
   	$("#sns_select_box_01").show();    
   }else {
