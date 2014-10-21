@@ -107,35 +107,39 @@ function kt_share()
 
 function ks_share(desc)
 { 
-  Kakao.API.request( {
-    url : '/v1/api/story/linkinfo',
-    data : {
-      url : 'http://www.tomorrowkids.or.kr'
-    }
-  }).then(function(res) {
-    // 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-    return Kakao.API.request( {
-      url : '/v1/api/story/post/link',
-      data : {
-        link_info : {
-          url : 'http://www.tomorrowkids.or.kr',
-          host : 'www.tomorrowkids.or.kr',
-          title : 'Tomorrow Kids',
-          description : desc
-        },
-        content : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
-      },
-      success: function(res) {
-    		$.ajax({
-    			type     : "POST",
-    			async    : false,
-    			url      : "../main_exec.php",
-    			data     : ({
-    				"exec" : "update_user_share"
-    			})
-    		}); 
-      }
-    });
+	Kakao.API.request( {
+		url : '/v1/api/story/linkinfo',
+		data : {
+		url : 'http://www.tomorrowkids.or.kr'
+		}
+	}).then(function(res) {
+		// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
+		return Kakao.API.request( {
+			url : '/v1/api/story/post/link',
+			data : {
+			link_info : {
+				url : 'http://www.tomorrowkids.or.kr',
+				host : 'www.tomorrowkids.or.kr',
+				title : 'Tomorrow Kids',
+				description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
+			},
+			content : desc
+			},
+			success: function(res) {
+				$.ajax({
+					type     : "POST",
+					async    : false,
+					url      : "../main_exec.php",
+					data     : ({
+						"exec" : "update_user_share"
+					}),
+					success: function(response){
+						if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?"))
+							window.open("http://www.naver.com");
+					}
+				}); 
+			}
+		});
   }).then(function(res) {
     return Kakao.API.request( {
       url : '/v1/api/story/mystory',

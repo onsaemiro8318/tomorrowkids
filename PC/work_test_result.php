@@ -43,7 +43,7 @@
         <input type="button" value="페이스북에 공유하기" onclick="fb_share();">
     </div>
     <div id="sns_select_box_02" style="position:absolute;display:none;width:400px;height:200px;background:red;margin-top:200px;margin-left:400px;">
-        <input type="button" value="카카오스토리에 공유하기" onclick="ks_share('<?=$user_job?>');">
+        <input type="button" value="카카오스토리에 공유하기" onclick="ks_share('<?=$user_job[job]?>');">
     </div>
   </body>
 </html>
