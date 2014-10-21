@@ -15,7 +15,9 @@
     <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type="text/javascript">
-	facebook_logout();
+	$(document).ready(function() {
+		facebook_logout();
+	});
     </script>
   </head>
   <body>
