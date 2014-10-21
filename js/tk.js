@@ -46,8 +46,8 @@ function go_direct_donation()
 
 function show_sns_select_box()
 {
-	alert("<?php echo $_SESSION['ss_media']?>");
-  if( "facebook" == "<?php echo $_SESSION['ss_media']?>"){
+	alert(<?=$_SESSION['ss_media']?>);
+  if( "facebook" == <?php echo $_SESSION['ss_media']?>){
   	$("#sns_select_box_01").show();    
   }else {
   	$("#sns_select_box_02").show();    
