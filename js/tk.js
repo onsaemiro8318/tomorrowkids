@@ -135,7 +135,7 @@ function ks_share(desc)
 					}),
 					success: function(response){
 						if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?"))
-							window.open("http://www.naver.com");
+							window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
 					}
 				}); 
 			}
