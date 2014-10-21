@@ -59,15 +59,16 @@
 			$group_min_range	= 46;
 			$group_max_range	= 60;
 		}
-
 		$query 				= "SELECT job FROM ".$_gl[tk_test_result_table]." WHERE job between '".$group_min_range."' AND '".$group_max_range."' ORDER BY idx DESC limit 1";
 		$result 			= mysqli_query($my_db, $query);
 		if ($result)
 			list($job_idx)		= mysqli_fetch_array($result);
 		else
 			$job_idx = 0;
+
 		if ($job_idx != 0)
 		{
+
 			$query				= "SELECT `group` FROM ".$_gl[tk_works_table]." WHERE idx='".$job_idx."'";
 			$result				= mysqli_query($my_db, $query);
 			list($job_group)	= mysqli_fetch_array($result);
@@ -76,7 +77,7 @@
 			{
 				$job_idx = $job_idx + 1;
 
-				$query				= "SELECT * FROM ".$_gl[tk_works_table]." WHERE group='".$job_group."' AND idx = '".$job_idx."'";
+				$query				= "SELECT * FROM ".$_gl[tk_works_table]." WHERE `group`='".$job_group."' AND idx = '".$job_idx."'";
 				$result				= mysqli_query($my_db, $query);
 				if ($result)
 					$job_yn			= mysqli_fetch_array($result);
