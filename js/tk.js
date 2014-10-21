@@ -3,6 +3,15 @@ var jsonStr;
 var obj;
 var ka_access_token;
 var ka_refresh_token;
+/********************** 동영상 재생 **********************/
+function play_movie(){
+  var width = $(window).width();
+  var height = $(window).height();
+  $(".backLayer").width(width);
+  $(".backLayer").height(height);
+  $(".backLayer").fadeTo(1000, 0.7);
+  $("#movie_layer").fadeIn(500);
+}
 /********************** 모바일 카스 **********************/
 
 function ks_share_mobile()
