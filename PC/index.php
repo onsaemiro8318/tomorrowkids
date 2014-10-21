@@ -38,8 +38,8 @@
       <div id="sns_login_box">
         <div>
         <input type="button" value="페이스북으로 참여하기" onclick="facebook_login();">
-        <input type="button" value="카카오계정으로 참여하기" onclick="kakao_login();">      
-        <p>*어떠한 정보도 무단으로 포스팅하지 않습니다.</p>          
+        <input type="button" value="카카오계정으로 참여하기" onclick="kakao_login();">
+        <p>*어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
         </div>
       </div>
     </div>

@@ -296,6 +296,7 @@ function facebook_login()
 				"exec"         : "user_test_check"
 			}),
 			success: function(response){
+				alert(response);
 				if (response == "Y")
 				{
 					$.ajax({

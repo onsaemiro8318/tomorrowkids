@@ -45,7 +45,22 @@
 		global $_gl;
 		global $my_db;
 
-		$query 				= "SELECT job FROM ".$_gl[tk_test_result_table]." ORDER BY idx DESC limit 1";
+		if ($point == 3)
+		{
+			$group_min_range	= 1;
+			$group_max_range	= 15;
+		}else if ($point == 4){
+			$group_min_range	= 16;
+			$group_max_range	= 30;
+		}else if ($point == 5){
+			$group_min_range	= 31;
+			$group_max_range	= 45;
+		}else{
+			$group_min_range	= 46;
+			$group_max_range	= 60;
+		}
+
+		$query 				= "SELECT job FROM ".$_gl[tk_test_result_table]." WHERE job between '".$group_min_range."' AND '".$group_max_range."' ORDER BY idx DESC limit 1";
 		$result 			= mysqli_query($my_db, $query);
 		if ($result)
 			list($job_idx)		= mysqli_fetch_array($result);
