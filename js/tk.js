@@ -399,21 +399,3 @@ function go_next_question(num, selected_val)
 	go_test(num, sel_val);
 }
 
-// 유튜브 반복 재생
-var controllable_player,start, 
-statechange = function(e){
-	if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
-
-};
-function onYouTubeIframeAPIReady() {
-controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
-}
-
-if(window.opera){
-addEventListener('load', onYouTubeIframeAPIReady, false);
-}
-setTimeout(function(){
-    if (typeof(controllable_player) == 'undefined'){
-        onYouTubeIframeAPIReady();
-    }
-}, 3000)

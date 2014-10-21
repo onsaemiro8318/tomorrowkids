@@ -17,6 +17,27 @@
     <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+	<script type="text/javascript">
+	// 유튜브 반복 재생
+	var controllable_player,start, 
+	statechange = function(e){
+		if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
+
+	};
+	function onYouTubeIframeAPIReady() {
+	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+	}
+
+	if(window.opera){
+	addEventListener('load', onYouTubeIframeAPIReady, false);
+	}
+	setTimeout(function(){
+		if (typeof(controllable_player) == 'undefined'){
+			onYouTubeIframeAPIReady();
+		}
+	}, 3000)
+
+	</script>
   </head>
   <body>
     <div>
