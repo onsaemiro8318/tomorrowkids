@@ -76,18 +76,16 @@ function kt_share()
 			"exec" : "update_user_share"
 		}),
 		success: function(res) {
-			alert(res);
+      kakao.link("talk").send({
+        msg : "내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.",
+        url : "http://www.tomorrowkids.or.kr",
+        appid : "www.tomorrowkids.or.kr",
+        appver : "1.0",
+        appname : "Tomorrow Kids",
+        type : "link"
+      });
 		}
 	}); 
-
-  kakao.link("talk").send({
-    msg : "내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.",
-    url : "http://www.tomorrowkids.or.kr",
-    appid : "www.tomorrowkids.or.kr",
-    appver : "1.0",
-    appname : "Tomorrow Kids",
-    type : "link"
-  });
 
   // kakao.Link.sendTalkLink({
   //   label: 'Tomorrow Kids',
