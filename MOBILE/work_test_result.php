@@ -38,9 +38,9 @@
     </div>
     </div>
     <div id="sns_select_box" style="position:absolute;display:none;width:400px;height:200px;background:red;margin-top:200px;margin-left:400px;">
-        <input type="button" value="페이스북에 공유하기" onclick="fb_share();">
-        <input type="button" value="카카오톡에 공유하기" onclick="kt_share();">        
-        <input type="button" value="카카오스토리에 공유하기" onclick="ks_share_mobile();">        
+        <input type="button" id="fb_share_btn" value="페이스북에 공유하기" onclick="fb_share();">
+        <input type="button" id="kt_share_btn" value="카카오톡에 공유하기" onclick="kt_share();">        
+        <input type="button" id="ks_share_btn" value="카카오스토리에 공유하기" onclick="ks_share_mobile();">        
     </div>
   </body>
 </html>
