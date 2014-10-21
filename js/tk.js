@@ -328,6 +328,14 @@ function facebook_login()
 	},{scope: 'public_profile,email'});
 }
 
+function facebook_logout()
+{
+	FB.logout(function(response) {
+	// Person is now logged out
+	});
+}
+
+
 function go_test(num, val)
 {
 	if (num > 10)
