@@ -95,9 +95,6 @@ function kt_share()
     webButton: {
       text: 'Tomorrow Kids',
       url: 'http://www.tomorrowkids.or.kr'
-    },
-    success: {
-      
     }
   });
 }
