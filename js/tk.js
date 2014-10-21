@@ -105,7 +105,7 @@ function kt_share()
 	}); 
 }
 
-function ks_share()
+function ks_share(desc)
 { 
   Kakao.API.request( {
     url : '/v1/api/story/linkinfo',
@@ -121,7 +121,7 @@ function ks_share()
           url : 'http://www.tomorrowkids.or.kr',
           host : 'www.tomorrowkids.or.kr',
           title : 'Tomorrow Kids',
-          description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
+          description : desc
         },
         content : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
       },
