@@ -104,7 +104,7 @@ switch ($_REQUEST['exec'])
 
 	case "user_test_check" :
 		$userid			= $_SESSION['ss_mb_id'];
-		echo $userid;
+
 		$test_cnt	= TK_GetTestUserCntInfo($userid);
 
 		if ($test_cnt >= 3)
