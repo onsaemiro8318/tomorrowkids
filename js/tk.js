@@ -285,7 +285,6 @@ function testAPI() {
 // 페이스북 로그인
 function facebook_login()
 {
-	facebook_logout();
 	FB.login(function(response){
 		_fbUserId = response.authResponse.userID;
 		accessToken = response.authResponse.accessToken;

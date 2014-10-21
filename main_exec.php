@@ -8,6 +8,8 @@ switch ($_REQUEST['exec'])
 		$userid	= $_REQUEST['kaUserId'];
 		$media = $_gl[login_media]['kakao'];
 
+		unset($_SESSION['ss_mb_id']);
+		unset($_SESSION['ss_media']);
 		// 회원아이디 세션 생성
 		$_SESSION['ss_mb_id'] = $userid;
 		$_SESSION['ss_media'] = $media;
@@ -30,6 +32,8 @@ switch ($_REQUEST['exec'])
 		$userid	= $_REQUEST['fbUserId'];
 		$media = $_gl[login_media]['facebook'];
 
+		unset($_SESSION['ss_mb_id']);
+		unset($_SESSION['ss_media']);
 		// 회원아이디 세션 생성
 		$_SESSION['ss_mb_id'] = $userid;
 		$_SESSION['ss_media'] = $media;
