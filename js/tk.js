@@ -1,8 +1,3 @@
-Kakao.init('5675f40b361955e0b3fcf93944b5d444');
-var jsonStr;
-var obj;
-var ka_access_token;
-var ka_refresh_token;
 /********************** 모바일 카스 **********************/
 
 function ks_share_mobile()
@@ -15,6 +10,19 @@ function ks_share_mobile()
     urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
   });
   
+	$.ajax({
+		type     : "POST",
+		async    : false,
+		url      : "../main_exec.php",
+		data     : ({
+			"exec" : "update_user_share"
+		}),
+		success: function(res) {
+      if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+        window.open("http://www.naver.com/");
+      }
+		}
+	}); 
 }
 
 
