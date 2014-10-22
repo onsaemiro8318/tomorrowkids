@@ -14,7 +14,7 @@ switch ($_REQUEST['exec'])
 		$_SESSION['ss_mb_id'] = $userid;
 		$_SESSION['ss_media'] = $media;
 
-		$info = TK_GetUserInfo($userid);
+		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
 			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
@@ -38,7 +38,7 @@ switch ($_REQUEST['exec'])
 		$_SESSION['ss_mb_id'] = $userid;
 		$_SESSION['ss_media'] = $media;
 
-		$info = TK_GetUserInfo($userid);
+		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
 			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);

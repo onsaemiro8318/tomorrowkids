@@ -147,6 +147,18 @@
 		return $info;
 	}
 
+	function TK_GetUserCnt($userid)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query 		= "SELECT * FROM ".$_gl[tk_member_table]." WHERE user_id = '".$userid."'";
+		$result 	= mysqli_query($my_db, $query);
+		$info = mysqli_num_rows($result);
+
+		return $info;
+	}
+
 	function TK_GetUserInfo($userid)
 	{
 		global $_gl;
