@@ -19,6 +19,7 @@
     <script type='text/javascript' src='../js/kakao.link.js'></script>
   </head>
   <body>
+    <div id="backlayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
     <div style="position:absolute;">
       <div style="position:top;width:100%;height:60px;background:green">
         <a href="index.php">내일을 부탁해</a>
@@ -55,7 +56,6 @@
         <!-- <a href="#" onclick="show_sns_select_box('<?=$_SESSION['ss_media']?>');">공유로 기부하기</a>
         <a href="http://www.dreamfull.or.kr/app/newdf/main" onclick="go_direct_donation();" target="_blank">직접 후원하고 싶다면?</a> -->
       </div>
-    </div id="backlayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
     <div id="email_div" style="display:none;position:absolute;width:50%;height:30%;top:30%;margin-left:20%;background:gray;z-index:1000;">
       감사합니다. 공유로 기부가 완료 되셨습니다.<br />
       캠페인 결과와 강연회 소식을 이메일로 알려드립니다.<br />
@@ -73,6 +73,7 @@
         <option value="outlook.com">outlook.com</option>
       </select>
     </div>
+    </div>
   </body>
 </html>
 <script type="text/javascript">
@@ -81,5 +82,16 @@
         var height = $(window).height();
         $("#backLayer").width(width).height(height);
     });
-
+    $(document).keydown(function(event){
+        if(event.which=='27'){
+        $("#email_div").fadeOut(300);
+        $("#backLayer").fadeOut(1000);
+        }
+    });
+    $(document).ready(function(){
+    $("#backLayer").click(function(){
+        $("#backLayer").fadeOut(500);
+        $("#email_div").fadeOut(500);
+    });
+    });
 </script>
