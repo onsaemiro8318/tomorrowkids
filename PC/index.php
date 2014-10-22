@@ -34,8 +34,8 @@
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
-        $("#movie_layer").fadeOut(300);
-        $(".backLayer").fadeOut(1000);
+        $("#movie_layer").fadeOut(500);
+        $(".backLayer").fadeOut(500);
         }
     });
     $(document).ready(function(){
