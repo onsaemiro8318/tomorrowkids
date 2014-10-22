@@ -42,6 +42,7 @@
     $(".backLayer").click(function(){
         $(".backLayer").fadeOut(500);
         $("#movie_layer").fadeOut(500);
+		controllable_player.stopVideo();
     });
     });
     </script>

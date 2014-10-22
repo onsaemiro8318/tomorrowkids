@@ -11,6 +11,7 @@ function play_movie(){
 	$(".backLayer").height(height);
 	$(".backLayer").fadeTo(1000, 0.7);
 	$("#movie_layer").fadeIn(500);
+	controllable_player.playVideo();
 }
 /********************** 모바일 카스 **********************/
 
@@ -59,9 +60,9 @@ function go_direct_donation()
 function show_sns_select_box(media)
 {
 	if( "facebook" == media){
-		$("#sns_select_box_01").show();    
+		$("#sns_select_box_01").show();
 	}else {
-		$("#sns_select_box_02").show();    
+		$("#sns_select_box_02").show();
 	}
 }
 
