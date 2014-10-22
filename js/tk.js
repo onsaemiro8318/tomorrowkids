@@ -68,7 +68,9 @@ function show_sns_select_box(media)
 
 function kt_share(job, job_explain)
 {
-	alert('12345');
+Kakao.API.request({
+
+});
 	Kakao.Link.createTalkLinkButton({
 		container: '#kakao-link-btn',
 		label: job + " - " + job_explain,
@@ -82,20 +84,21 @@ function kt_share(job, job_explain)
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
-
-	$.ajax({
-		type     : "POST",
-		async    : false,
-		url      : "../main_exec.php",
-		data     : ({
-			"exec" : "update_user_share"
-		}),
-		success: function(res) {
-			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-				window.open("http://www.naver.com/");
+	setTimeout(
+		$.ajax({
+			type     : "POST",
+			async    : false,
+			url      : "../main_exec.php",
+			data     : ({
+				"exec" : "update_user_share"
+			}),
+			success: function(res) {
+				if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+					window.open("http://www.naver.com/");
+				}
 			}
-		}
-	}); 
+		})
+	,3000);
 }
 
 function ks_share(job, job_explain)
