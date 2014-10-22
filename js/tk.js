@@ -68,6 +68,7 @@ function show_sns_select_box(media)
 
 function kt_share(job, job_explain)
 {
+	alert('12345');
 // 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 	Kakao.Link.createTalkLinkButton({
 		container: '#kakao-link-btn',
