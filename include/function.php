@@ -166,7 +166,7 @@
 
 		$query 		= "SELECT * FROM ".$_gl[tk_member_table]." WHERE user_id = '".$userid."'";
 		$result 	= mysqli_query($my_db, $query);
-		$info = mysqli_num_rows($result);
+		$info = mysqli_fetch_array($result);
 
 		return $info;
 	}
