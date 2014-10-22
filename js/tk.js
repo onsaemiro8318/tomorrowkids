@@ -70,7 +70,7 @@ function kt_share(job, job_explain)
 {
 	alert('12345');
 	Kakao.Link.createTalkLinkButton({
-	//	container: '#kakao-link-btn',
+		container: '#kakao-link-btn',
 		label: job + " - " + job_explain,
 		image: {
 			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
