@@ -29,7 +29,8 @@ function update_user_email(){
            },
     	url: "../main_exec.php",
     	success: function(response){
-
+        $("#email_div").fadeOut(500);
+        $("#donation_div").fadeIn(500);
     	}
     });
 }
@@ -83,8 +84,14 @@ function go_direct_donation()
 		url			: "../main_exec.php",
 		data		: ({
 			"exec"         : "update_user_donation"
-		})
+		}),
+    success: function (response) {
+      $("#donation_div").fadeOut(500);
+      $(".backLayer").fadeOut(500);
+    }
+    
 	});
+
 }
 
 function show_sns_select_box(media)
