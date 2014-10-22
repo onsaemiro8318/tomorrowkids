@@ -88,6 +88,7 @@ function go_direct_donation()
     success: function (response) {
       $("#donation_div").fadeOut(500);
       $(".backLayer").fadeOut(500);
+      location.href="index.php";
     }
     
 	});
