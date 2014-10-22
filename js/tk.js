@@ -69,17 +69,8 @@ function show_sns_select_box(media)
 function kt_share(job, job_explain)
 {
 	alert('12345');
-  kakao.link("talk").send({
-      msg : job + " - " + job_explain,
-      url : "http://wwww.tomorrowkids.or.kr",  
-      appid : "www.tomorrowkids.or.kr",
-      appver : "1.0",
-      appname : "Tomorrow Kids",
-      type : "link"
-  });
-/*
 	Kakao.Link.createTalkLinkButton({
-		container: '#kakao-link-btn',
+	//	container: '#kakao-link-btn',
 		label: job + " - " + job_explain,
 		image: {
 			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
@@ -91,7 +82,7 @@ function kt_share(job, job_explain)
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
-*/
+
 	$.ajax({
 		type     : "POST",
 		async    : false,
