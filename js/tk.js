@@ -89,6 +89,7 @@ function go_direct_donation()
       $("#donation_div").fadeOut(500);
       $(".backLayer").fadeOut(500);
       location.href="index.php";
+      window.open("http://www.dreamfull.or.kr/app/newdf/main");
     }
     
 	});
