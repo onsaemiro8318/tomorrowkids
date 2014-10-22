@@ -194,7 +194,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query = "UPDATE ".$_gl[tk_member_table]." SET email = '".$email."' WHERE user_id = '".$userid."'";
+		$query = "UPDATE ".$_gl[tk_member_table]." SET mb_email = '".$email."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
 	}
 
