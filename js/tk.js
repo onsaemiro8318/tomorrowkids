@@ -68,9 +68,6 @@ function show_sns_select_box(media)
 
 function kt_share(job, job_explain)
 {
-Kakao.API.request({
-
-});
 	Kakao.Link.createTalkLinkButton({
 		container: '#kakao-link-btn',
 		label: job + " - " + job_explain,
@@ -84,8 +81,11 @@ Kakao.API.request({
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
-	//setTimeout("kt_ajax()",3000);
+	setTimeout("kt_ajax()",3000);
+}
 
+function kt_ajax()
+{
 	$.ajax({
 		type     : "POST",
 		async    : false,
@@ -99,9 +99,7 @@ Kakao.API.request({
 			}
 		}
 	});
-
 }
-
 function ks_share(job, job_explain)
 { 
 	Kakao.API.request( {
