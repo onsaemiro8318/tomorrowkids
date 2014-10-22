@@ -16,6 +16,10 @@
     </div>
     <div style="position:relative;width:100%;height:300px;background:orange;" id="test_result_div">
 <?=$user_job[job];?>
+<br />
+------------------------------------------------------------------------------
+<br />
+<?=$user_job[job_explain];?>
     </div>
     <div style="position:top;width:100%;height:200px;background:skyblue;">
       <p>세상에는 이처럼 당신이 하고 있는 일, 상상치도 못했던 다양한 내 일(work)이 많이 있답니다.
@@ -31,7 +35,7 @@
     </div>
     <div id="sns_select_box_02" style="position:absolute;display:none;width:400px;height:200px;background:red;margin-top:200px;margin-left:400px;">
         <input type="button" value="카카오톡에 공유하기" onclick="kt_share();">        
-        <input type="button" value="카카오스토리에 공유하기" onclick="ks_share('<?=$user_job[job]?>');">
+        <input type="button" value="카카오스토리에 공유하기" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">
     </div>
   </body>
 </html>

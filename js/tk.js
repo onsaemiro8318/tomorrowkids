@@ -65,22 +65,6 @@ function show_sns_select_box(media)
 	}else {
 		$("#sns_select_box_02").show();    
 	}
-/*
-	$.ajax({
-		type		: "POST",
-		async		: false,
-		url			: "../main_exec.php",
-		data		: ({
-			"exec"         : "user_test_check"
-		}),
-		success: function(response){
-			if (response == "Y")
-				$("#sns_select_box").show();
-			else
-				alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
-		}
-	});
-*/
 }
 
 function kt_share()
@@ -114,7 +98,7 @@ function kt_share()
 	}); 
 }
 
-function ks_share(desc)
+function ks_share(job, job_explain)
 { 
 	Kakao.API.request( {
 		url : '/v1/api/story/linkinfo',
@@ -132,7 +116,7 @@ function ks_share(desc)
 				title : 'Tomorrow Kids',
 				description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 			},
-			content : desc
+			content : job + " - " + job_explain;
 			},
 			success: function(res) {
 				$.ajax({
