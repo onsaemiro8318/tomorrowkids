@@ -29,6 +29,10 @@
     </div>
     <div style="position:relative;width:100%;height:300px;background:orange;" id="test_result_div">
 <?=$user_job[job];?>
+<br />
+------------------------------------------------------------------------------
+<br />
+<?=$user_job[job_explain];?>
     </div>
     <div style="position:top;width:100%;height:200px;background:skyblue;">
       <p>세상에는 이처럼 당신이 하고 있는 일, 상상치도 못했던 다양한 내 일(work)이 많이 있답니다.
