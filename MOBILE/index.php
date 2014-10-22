@@ -38,6 +38,15 @@
         $(".backLayer").fadeOut(1000);
         }
     });
+
+    $(document).ready(function(){
+    $(".backLayer").click(function(){
+        $(".backLayer").fadeOut(500);
+        $("#movie_layer").fadeOut(500);
+		controllable_player.stopVideo();
+    });
+    });
+
     </script>
   <body>
   <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;">
