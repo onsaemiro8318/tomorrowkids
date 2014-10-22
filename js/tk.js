@@ -66,10 +66,10 @@ function show_sns_select_box(media)
 	}
 }
 
-function kt_share()
+function kt_share(job, job_explain)
 {
-	Kakao.Link.sendTalkLink({
-		label: 'Tomorrow Kids',
+	Kakao.Link.createTalkLinkButton({
+		label: job + " - " + job_explain,
 		image: {
 			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
 			width: '300',
