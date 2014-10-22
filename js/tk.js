@@ -84,11 +84,8 @@ Kakao.API.request({
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
-	setTimeout("kt_ajax()",3000);
-}
+	//setTimeout("kt_ajax()",3000);
 
-function kt_ajax()
-{
 	$.ajax({
 		type     : "POST",
 		async    : false,
@@ -102,7 +99,9 @@ function kt_ajax()
 			}
 		}
 	});
+
 }
+
 function ks_share(job, job_explain)
 { 
 	Kakao.API.request( {
