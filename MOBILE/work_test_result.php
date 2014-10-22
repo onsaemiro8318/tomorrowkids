@@ -26,27 +26,22 @@
          빈곤한 환경으로 이런 일이 있다는 것 조차 모른 채 제한된 꿈을 꾸는 아이들을 도와주세요.
          당신의 내일(work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.
       </p>
-      <a href="#" onclick="show_sns_select_box('<?=$_SESSION['ss_media']?>');">공유로 기부하기</a>
-      <a href="http://www.dreamfull.or.kr/app/newdf/main" onclick="go_direct_donation();" target="_blank">직접 후원하고 싶다면?</a>
-    </div>
-    </div>
 <?
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>
-
-    <div id="sns_select_box_01" style="position:absolute;display:none;width:400px;height:200px;background:red;margin-top:200px;margin-left:400px;">
-        <input type="button" value="페이스북에 공유하기" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">     
-    </div>
+      <a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">페이스북 공유</a>
 <?
 	}else{
 ?>
-    <div id="sns_select_box_02" style="position:absolute;display:none;width:400px;height:200px;background:red;margin-top:200px;margin-left:400px;">
-        <input type="button" value="카카오톡에 공유하기" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">        
-        <input type="button" value="카카오스토리에 공유하기" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">
-    </div>
+      <a href="#" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오톡 공유</a>
+      <a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오스토리 공유</a>
 <?
 	}
 ?>
+      <!-- <a href="#" onclick="show_sns_select_box('<?=$_SESSION['ss_media']?>');">공유로 기부하기</a>
+      <a href="http://www.dreamfull.or.kr/app/newdf/main" onclick="go_direct_donation();" target="_blank">직접 후원하고 싶다면?</a> -->
+    </div>
+    </div>
   </body>
 </html>
