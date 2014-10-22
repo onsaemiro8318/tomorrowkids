@@ -116,7 +116,7 @@ function ks_share(job, job_explain)
 				title : 'Tomorrow Kids',
 				description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 			},
-			content : job + " - " + job_explain;
+			content : job + " - " + job_explain
 			},
 			success: function(res) {
 				$.ajax({
