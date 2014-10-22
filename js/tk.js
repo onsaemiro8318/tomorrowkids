@@ -137,7 +137,7 @@ function ks_share(job, job_explain)
 
 }
 
-function fb_share()
+function fb_share(job, job_explain)
 {
 	FB.ui(
 	{
@@ -146,7 +146,7 @@ function fb_share()
 		link: 'http://www.tomorrowkids.or.kr',
 		picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
 		caption: 'http://www.tomorrowkids.or.kr',
-		description: '내일(work)이 아이들의 내일(tomorrow)이 됩니다.'
+		description: job + " - " + job_explain
 	},
 		function(response) {
 			if (response && response.post_id) {
@@ -163,7 +163,7 @@ function fb_share()
 				}else{
 					location.href="index.php";
 				}
-			} 
+			}
 			else 
 			{
 				location.href="index.php";
