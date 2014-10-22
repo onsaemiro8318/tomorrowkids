@@ -13,9 +13,9 @@ switch ($_REQUEST['exec'])
 		// 회원아이디 세션 생성
 		$_SESSION['ss_mb_id'] = $userid;
 		$_SESSION['ss_media'] = $media;
-        
-        $info = TK_GetUserInfo($userid);
-        
+
+		$info = TK_GetUserInfo($userid);
+
 		if ($info == 0){
 			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
 			$flag = "Y";
@@ -23,7 +23,7 @@ switch ($_REQUEST['exec'])
             TK_UpdateUserInfo($userid);
 			$flag = "N";
 		}
-                    
+
 		echo $flag;
 	break;
 
@@ -44,25 +44,25 @@ switch ($_REQUEST['exec'])
 			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
 			$flag = "Y";
 		}else {
-            TK_UpdateUserInfo($userid);
+			TK_UpdateUserInfo($userid);
 			$flag = "N";
 		}
 
 		echo $flag;
 	break;
-    
-    case "update_user_share" :
-        $userid	= $_SESSION['ss_mb_id'];
-        $share_on = "Y";
-        TK_UpdateUserShare($userid,$share_on);
-    break;
-   
-    case "update_user_donation" :
-        $userid	= $_SESSION['ss_mb_id'];
-        $direct_on = "Y";
-        TK_UpdateUserDonation($userid,$direct_on);     
-    break;
-    
+
+	case "update_user_share" :
+		$userid	= $_SESSION['ss_mb_id'];
+		$share_on = "Y";
+		TK_UpdateUserShare($userid,$share_on);
+	break;
+
+	case "update_user_donation" :
+		$userid	= $_SESSION['ss_mb_id'];
+		$direct_on = "Y";
+		TK_UpdateUserDonation($userid,$direct_on);     
+	break;
+
 	case "insert_test_result" :
 		$selected_val	= $_REQUEST['selected_val'];
 		$userid			= $_SESSION['ss_mb_id'];
@@ -97,7 +97,7 @@ switch ($_REQUEST['exec'])
 			$selected_job	= TK_GetTestResultInfo($test_point);
 
 			TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job[idx],$media,$gubun);
-            
+
 			echo $selected_job[idx];
 		//}
 	break;

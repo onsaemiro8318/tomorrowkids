@@ -5,25 +5,25 @@ var ka_access_token;
 var ka_refresh_token;
 /********************** 동영상 재생 **********************/
 function play_movie(){
-  var width = $(window).width();
-  var height = $(window).height();
-  $(".backLayer").width(width);
-  $(".backLayer").height(height);
-  $(".backLayer").fadeTo(1000, 0.7);
-  $("#movie_layer").fadeIn(500);
+	var width = $(window).width();
+	var height = $(window).height();
+	$(".backLayer").width(width);
+	$(".backLayer").height(height);
+	$(".backLayer").fadeTo(1000, 0.7);
+	$("#movie_layer").fadeIn(500);
 }
 /********************** 모바일 카스 **********************/
 
 function ks_share_mobile()
 {
-  kakao.link("story").send({
-    post : curURL,
-    appid : "www.tomorrowkids.or.kr",
-    appver : "1.0",
-    appname : "Tomorrow Kids",
-    urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
-  });
-  
+	kakao.link("story").send({
+		post : curURL,
+		appid : "www.tomorrowkids.or.kr",
+		appver : "1.0",
+		appname : "Tomorrow Kids",
+		urlinfo : JSON.stringify({title:curTitle, desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.", imageurl:["http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"], type:"article"})
+	});
+
 	$.ajax({
 		type     : "POST",
 		async    : false,
@@ -32,11 +32,9 @@ function ks_share_mobile()
 			"exec" : "update_user_share"
 		}),
 		success: function(res) {
-      if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-        window.open("http://www.naver.com/");
-      }else{
-        
-      }
+			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+				window.open("http://www.naver.com/");
+			}
 		}
 	}); 
 }
@@ -68,19 +66,19 @@ function show_sns_select_box(media)
 }
 
 function kt_share()
-{   
-  Kakao.Link.sendTalkLink({
-    label: 'Tomorrow Kids',
-    image: {
-      src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
-      width: '300',
-      height: '200'
-    },
-    webButton: {
-      text: 'Tomorrow Kids',
-      url: 'http://www.tomorrowkids.or.kr'
-    }
-  });
+{
+	Kakao.Link.sendTalkLink({
+		label: 'Tomorrow Kids',
+		image: {
+			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+			width: '300',
+			height: '200'
+		},
+		webButton: {
+			text: 'Tomorrow Kids',
+			url: 'http://www.tomorrowkids.or.kr'
+		}
+	});
 	$.ajax({
 		type     : "POST",
 		async    : false,
@@ -89,12 +87,10 @@ function kt_share()
 			"exec" : "update_user_share"
 		}),
 		success: function(res) {
-      if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-        window.open("http://www.naver.com/");
-      }else{
-        
-      }
-    }
+			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+				window.open("http://www.naver.com/");
+			}
+		}
 	}); 
 }
 
@@ -127,10 +123,11 @@ function ks_share(job, job_explain)
 						"exec" : "update_user_share"
 					}),
 					success: function(response){
-						if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?"))
+						if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
 							//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
 							var openNewWindow = window.open("about:blank");
 							openNewWindow.location.href = "http://www.naver.com";
+						}
 					}
 				}); 
 			}
@@ -142,31 +139,32 @@ function ks_share(job, job_explain)
 function fb_share()
 {
 	FB.ui(
-	  {
+	{
 		method: 'feed',
 		name: 'Tomorrow Kids',
 		link: 'http://www.tomorrowkids.or.kr',
 		picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
 		caption: 'http://www.tomorrowkids.or.kr',
 		description: '내일(work)이 아이들의 내일(tomorrow)이 됩니다.'
-	  },
+	},
 		function(response) {
 			if (response && response.post_id) {
-    		$.ajax({
-    			type     : "POST",
-    			async    : false,
-    			url      : "../main_exec.php",
-    			data     : ({
-    				"exec" : "update_user_share" ,
-    			})
-    		}); 
-        if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-          window.open("http://www.naver.com/");
-        }else{
-          location.href="index.php";
-        }
+				$.ajax({
+					type     : "POST",
+					async    : false,
+					url      : "../main_exec.php",
+					data     : ({
+						"exec" : "update_user_share" ,
+					})
+				}); 
+				if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+					window.open("http://www.naver.com/");
+				}else{
+					location.href="index.php";
+				}
 			} 
-			else {
+			else 
+			{
 				location.href="index.php";
 			}
 		}
