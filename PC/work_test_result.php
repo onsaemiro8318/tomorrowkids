@@ -19,7 +19,7 @@
     <script type='text/javascript' src='../js/kakao.link.js'></script>
   </head>
   <body>
-    <div id="backlayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
+    <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
     <div style="position:absolute;">
       <div style="position:top;width:100%;height:60px;background:green">
         <a href="index.php">내일을 부탁해</a>
@@ -80,17 +80,17 @@
 	$(window).resize(function(){
         var width = $(window).width();
         var height = $(window).height();
-        $("#backLayer").width(width).height(height);
+        $(".backLayer").width(width).height(height);
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
         $("#email_div").fadeOut(300);
-        $("#backLayer").fadeOut(1000);
+        $(".backLayer").fadeOut(1000);
         }
     });
     $(document).ready(function(){
-    $("#backLayer").click(function(){
-        $("#backLayer").fadeOut(500);
+    $(".backLayer").click(function(){
+        $(".backLayer").fadeOut(500);
         $("#email_div").fadeOut(500);
     });
     });

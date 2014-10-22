@@ -175,9 +175,9 @@ function fb_share(job, job_explain)
 				});
 				var width = $(window).width();
 				var height = $(window).height();
-				$("#backLayer").width(width);
-				$("#backLayer").height(height);
-				$("#backLayer").fadeTo(1000, 0.7);
+				$(".backLayer").width(width);
+				$(".backLayer").height(height);
+				$(".backLayer").fadeTo(1000, 0.7);
 				$("#email_div").fadeIn(500);
 
 				/*
