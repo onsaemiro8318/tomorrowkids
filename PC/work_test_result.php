@@ -55,23 +55,31 @@
         <!-- <a href="#" onclick="show_sns_select_box('<?=$_SESSION['ss_media']?>');">공유로 기부하기</a>
         <a href="http://www.dreamfull.or.kr/app/newdf/main" onclick="go_direct_donation();" target="_blank">직접 후원하고 싶다면?</a> -->
       </div>
-      <div style="width:50%;height:30%;top:background:gray">
-        감사합니다. 공유로 기부가 완료 되셨습니다.<br />
-        캠페인 결과와 강연회 소식을 이메일로 알려드립니다.<br />
-        <input type="text" name="email1"> @ 
-        <input type="text" name="email2" id="email2">
-        <select name="sel_email" onchange="input_email(this.value)">
-          <option value="">직접입력</option>
-          <option value="gmail.com">gmail.com</option>
-          <option value="hanmail.net">hanmail.net</option>
-          <option value="hitel.net">hitel.net</option>
-          <option value="hotmail.com">hotmail.com</option>
-          <option value="korea.com">korea.com</option>
-          <option value="nate.com">nate.com</option>
-          <option value="naver.com">naver.com</option>
-          <option value="outlook.com">outlook.com</option>
-        </select>
-      </div>
+    </div id="backlayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
+    <div style="position:absolute;width:50%;height:30%;top:30%;margin-left:20%;background:gray;z-index:1000;">
+      감사합니다. 공유로 기부가 완료 되셨습니다.<br />
+      캠페인 결과와 강연회 소식을 이메일로 알려드립니다.<br />
+      <input type="text" name="email1"> @ 
+      <input type="text" name="email2" id="email2">
+      <select name="sel_email" onchange="input_email(this.value)">
+        <option value="">직접입력</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="hitel.net">hitel.net</option>
+        <option value="hotmail.com">hotmail.com</option>
+        <option value="korea.com">korea.com</option>
+        <option value="nate.com">nate.com</option>
+        <option value="naver.com">naver.com</option>
+        <option value="outlook.com">outlook.com</option>
+      </select>
     </div>
   </body>
 </html>
+<script type="text/javascript">
+	$(window).resize(function(){
+        var width = $(window).width();
+        var height = $(window).height();
+        $("#backLayer").width(width).height(height);
+    });
+
+</script>
