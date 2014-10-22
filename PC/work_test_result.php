@@ -2,9 +2,11 @@
 	// 설정파일
 	include_once "../config.php";
 	include_once "header.php";
-	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
+	$user_job	= TK_GetUserJobInfo($_REQUEST[job]);
 
+	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
+	print_r($user_info);
 ?>
 <html>
   <head>
@@ -40,7 +42,7 @@
          당신의 내일(work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.
       </p>
       <a href="#" onclick="show_sns_select_box('<?=$_SESSION['ss_media']?>');">공유로 기부하기</a>
-      <a href="http://www.dreamfull.or.kr/app/newdf/main" onclick="go_direct_donation();" target="_blank">직접 후원하고 싶다면?</a>
+      <!-- <a href="http://www.dreamfull.or.kr/app/newdf/main" onclick="go_direct_donation();" target="_blank">직접 후원하고 싶다면?</a> -->
     </div>
     </div>
     <div id="sns_select_box_01" style="position:absolute;display:none;width:400px;height:200px;background:red;margin-top:200px;margin-left:400px;">

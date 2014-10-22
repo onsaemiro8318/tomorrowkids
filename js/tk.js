@@ -79,8 +79,8 @@ function kt_share(job, job_explain)
 			height: '200'
 		},
 		webButton: {
-			text: 'Tomorrow Kids'
-			//url: 'http://www.tomorrowkids.or.kr'
+			text: 'Tomorrow Kids',
+			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
 /*
