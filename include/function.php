@@ -177,12 +177,12 @@
 		$result = mysqli_query($my_db, $query);  
 	}
 
-	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media)
+	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media,$gubun)
 	{
 		global $_gl;
 		global $my_db;
         
-		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now())";
+		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
 		$result = mysqli_query($my_db, $query);
 
 		$answer_array = explode("|",$selected_val);
