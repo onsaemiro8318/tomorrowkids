@@ -418,3 +418,8 @@ function go_next_question(num, selected_val)
 	go_test(num, sel_val);
 }
 
+// 이메일 입력
+function input_email(val)
+{
+	$("#email2").val(val);
+}
