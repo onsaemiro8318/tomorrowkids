@@ -188,6 +188,15 @@
 		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
 	}
+    
+	function TK_UpdateUserEmail($userid,$email)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query = "UPDATE ".$_gl[tk_member_table]." SET email = '".$email."' WHERE user_id = '".$userid."'";
+		$result = mysqli_query($my_db, $query);  
+	}
 
 	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media,$gubun)
 	{
