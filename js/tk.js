@@ -132,6 +132,7 @@ function ks_share(job, job_explain)
 						$("#backLayer").width(width);
 						$("#backLayer").height(height);
 						$("#backLayer").fadeTo(1000, 0.7);
+						$("#email_div").fadeIn(500);
 						//$("#movie_layer").fadeIn(500);
 /*
 						if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
@@ -174,6 +175,7 @@ function fb_share(job, job_explain)
 				$("#backLayer").width(width);
 				$("#backLayer").height(height);
 				$("#backLayer").fadeTo(1000, 0.7);
+				$("#email_div").fadeIn(500);
 
 				/*
 				if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
