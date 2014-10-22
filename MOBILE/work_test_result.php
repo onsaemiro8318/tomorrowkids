@@ -34,7 +34,7 @@
 <?
 	}else{
 ?>
-      <a href="#" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오톡 공유</a>
+      <a href="#" id="#kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오톡 공유</a>
       <a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오스토리 공유</a>
 <?
 	}
