@@ -69,22 +69,17 @@ function show_sns_select_box(media)
 function kt_share(job, job_explain)
 {
 	alert('12345');
-// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-	Kakao.Link.createTalkLinkButton({
-		container: '#kakao-link-btn',
-		label: job + " - " + job_explain,
-		image: {
-			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
-			width: '300',
-			height: '200'
-		},
-		webButton: {
-			text: 'Tomorrow Kids',
-			url: 'http://www.tomorrowkids.or.kr'
-		}
-	});
+  kakao.link("talk").send({
+      msg : job + " - " + job_explain,
+      url : "http://wwww.tomorrowkids.or.kr",  
+      appid : "www.tomorrowkids.or.kr",
+      appver : "1.0",
+      appname : "Tomorrow Kids",
+      type : "link"
+  });
 /*
 	Kakao.Link.createTalkLinkButton({
+		container: '#kakao-link-btn',
 		label: job + " - " + job_explain,
 		image: {
 			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
