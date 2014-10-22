@@ -29,8 +29,8 @@ function update_user_email(){
            },
     	url: "../main_exec.php",
     	success: function(response){
-        $("#email_div").fadeOut(500);
-        $("#donation_div").fadeIn(500);
+        $("#email_div").fadeOut(300);
+        $("#donation_div").fadeIn(300);
     	}
     });
 }
