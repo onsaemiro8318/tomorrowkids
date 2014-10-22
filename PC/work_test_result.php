@@ -59,7 +59,7 @@
     <div id="email_div" style="display:none;position:absolute;width:50%;height:30%;top:30%;margin-left:20%;background:gray;z-index:1000;">
       감사합니다. 공유로 기부가 완료 되셨습니다.<br />
       캠페인 결과와 강연회 소식을 이메일로 알려드립니다.<br />
-      <input type="text" name="email1"> @ 
+      <input type="text" name="email1" id="email1"> @ 
       <input type="text" name="email2" id="email2">
       <select name="sel_email" onchange="input_email(this.value)">
         <option value="">직접입력</option>
@@ -72,6 +72,7 @@
         <option value="naver.com">naver.com</option>
         <option value="outlook.com">outlook.com</option>
       </select>
+      <input type="button" value="확인" onclick="update_user_email();">
     </div>
     </div>
   </body>

@@ -3,6 +3,36 @@ var jsonStr;
 var obj;
 var ka_access_token;
 var ka_refresh_token;
+/********************** 이메일 입력 **********************/
+function update_user_email(){
+    var EMAIL1	= $.trim($('#email1').val());
+    var EMAIL2	= $.trim($('#email2').val());
+    var EMAIL = EMAIL1 + "@" + EMAIL2
+    var re_email = /^[_a-zA-Z0-9-.]+@[\._a-zA-Z0-9-]+\.[a-zA-Z]+$/;
+    
+    if (EMAIL1 == ""){
+    	alert('이메일 주소를 확인해주세요.');
+    	return false;
+    }else if (EMAIL2 == ""){
+    	alert('이메일 주소를 확인해주세요.');
+    	return false;
+    }else if (!EMAIL.match(re_email)){
+    	alert('이메일 주소를 확인해주세요.');
+    	return false;
+    }
+    
+    $.ajax({
+    	type:"POST",
+    	data:{
+          "exec" : "update_user_email",
+          "email" : EMAIL ,
+           },
+    	url: "../main_exec.php",
+    	success: function(response){
+
+    	}
+    });
+}
 /********************** 동영상 재생 **********************/
 function play_movie(){
 	var width = $(window).width();

@@ -3,6 +3,13 @@ include_once "config.php";
 
 switch ($_REQUEST['exec'])
 {
+    case "update_user_email" :
+        $email = $_REQUEST['email'];
+		$userid	= $_SESSION['ss_mb_id'];
+		TK_UpdateUserEmail($userid,$email); 
+        
+    break;
+    
 	case "ka_user_info" :
 		$ip_addr = $_SERVER['REMOTE_ADDR'];
 		$userid	= $_REQUEST['kaUserId'];
