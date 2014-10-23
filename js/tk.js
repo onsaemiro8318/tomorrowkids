@@ -403,8 +403,31 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
-		$(".backLayer").fadeTo(1000,0.7);
-		
+		$.ajax({
+			type		: "POST",
+			async		: false,
+			url			: "../main_exec.php",
+			data		: ({
+				"exec"         : "insert_test_result",
+				"selected_val" : val
+			}),
+			beforeSend: function(){
+				$(".backLayer").fadeTo(1000,0.7);
+			},
+			success: function(response){
+				$(".backLayer").fadeOut(500);
+				var res_result = response.split("|");
+				/*
+				if (response == "N")
+				{
+					alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+				}else{
+					location.href = "work_test_result.php?job=" + response;
+				}
+				*/
+				location.href = "work_test_result.php?job=" + res_result[0] + "&idx=" + res_result[1];
+			}
+		});
 	}else{
 		$.ajax({
 			type		: "POST",
