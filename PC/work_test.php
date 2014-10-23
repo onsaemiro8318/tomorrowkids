@@ -4,6 +4,10 @@
 	include_once "header.php";
 
 ?>
+<script>
+    window.history.forward(0);
+</script>
+
   <body>
     <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;width:100%;height:100%"></div>
     <div style="position:absolute;width:100%;height:100%">
