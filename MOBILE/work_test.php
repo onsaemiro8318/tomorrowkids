@@ -2,7 +2,18 @@
 	// 설정파일
 	include_once "../config.php";
 	include_once "header.php";
+
+	// 주소 바로 입력시 index로 이동
+	if ( !isset($_SERVER['HTTP_REFERER']) ) { 
+		header('Location: index.php'); 
+		exit; 
+	} 
+
 ?>
+<script>
+    window.history.forward(0);
+</script>
+
   <body>
     <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
     <div style="position:absolute;">

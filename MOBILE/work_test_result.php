@@ -9,6 +9,9 @@
 	$test_idx	= $_REQUEST[idx];
 
 ?>
+<script>
+    window.history.forward(0);
+</script>
   <body>
     <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>      
     <div style="position:absolute;">
