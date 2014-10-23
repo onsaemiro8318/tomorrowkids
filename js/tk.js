@@ -403,6 +403,7 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
+		alert('111');
 		$(".backLayer").fadeTo(1000,0.7);
 	}else{
 		$.ajax({
