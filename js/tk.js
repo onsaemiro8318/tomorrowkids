@@ -193,6 +193,7 @@ function ks_share(job, job_explain, mb_idx)
 
 function fb_share(job, job_explain, mb_idx)
 {
+	alert(mb_idx);
 	FB.ui(
 	{
 		method: 'feed',
@@ -209,7 +210,7 @@ function fb_share(job, job_explain, mb_idx)
 					async    : false,
 					url      : "../main_exec.php",
 					data     : ({
-						"exec"   : "update_user_share" ,
+						"exec"   : "update_user_share",
 						"mb_idx" : mb_idx
 					})
 				});
