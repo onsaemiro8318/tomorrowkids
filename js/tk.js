@@ -408,6 +408,7 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
+				var res_result = response.split("|");
 				/*
 				if (response == "N")
 				{
@@ -416,7 +417,7 @@ function go_test(num, val)
 					location.href = "work_test_result.php?job=" + response;
 				}
 				*/
-				location.href = "work_test_result.php?job=" + response;
+				location.href = "work_test_result.php?job=" + res_result[0] + "idx=" + res_result[1];
 			}
 		});
 	}else{
