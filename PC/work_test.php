@@ -3,6 +3,10 @@
 	include_once "../config.php";
 	include_once "header.php";
 
+	if ( !isset($_SERVER['HTTP_REFERER']) ) { 
+		header('Location: index.php'); 
+		exit; 
+	} 
 ?>
 <script>
     window.history.forward(0);
