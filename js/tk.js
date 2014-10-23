@@ -226,10 +226,6 @@ function fb_share(job, job_explain)
 				}
 				*/
 			}
-			else 
-			{
-				location.href="index.php";
-			}
 		}
 	);
 }
