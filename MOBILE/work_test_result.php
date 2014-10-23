@@ -3,6 +3,8 @@
 	include_once "../config.php";
 	include_once "header.php";
 	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
+
+	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 ?>
   <body>
     <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>      
