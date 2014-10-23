@@ -220,12 +220,12 @@
 		return $test_result;
 	}
 
-	function TK_UpdateUserShare($userid,$share_on)
+	function TK_UpdateUserShare($test_idx,$share_on)
 	{
 		global $_gl;
 		global $my_db;
         
-		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE user_id = '".$userid."'";
+		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE idx= '".$test_idx."'";
 		$result = mysqli_query($my_db, $query);  
 	}
 

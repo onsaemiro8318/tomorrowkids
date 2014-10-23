@@ -59,9 +59,9 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "update_user_share" :
-		$userid	= $_SESSION['ss_mb_id'];
+		$test_idx	= $_REQUEST['test_idx'];
 		$share_on = "Y";
-		TK_UpdateUserShare($userid,$share_on);
+		TK_UpdateUserShare($test_idx,$share_on);
 	break;
 
 	case "update_user_donation" :

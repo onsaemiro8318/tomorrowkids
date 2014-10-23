@@ -6,6 +6,7 @@
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
+	$test_idx	= $_REQUEST[idx];
 ?>
 <html>
   <head>
@@ -45,11 +46,11 @@
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>
-        <a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">페이스북 공유</a>
+        <a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');">페이스북 공유</a>
 <?
 	}else{
 ?>
-        <a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오스토리 공유</a>
+        <a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');">카카오스토리 공유</a>
 <?
 	}
 ?>

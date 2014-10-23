@@ -139,7 +139,7 @@ function kt_ajax()
 		}
 	});
 }
-function ks_share(job, job_explain)
+function ks_share(job, job_explain, test_idx)
 { 
 	Kakao.API.request( {
 		url : '/v1/api/story/linkinfo',
@@ -165,7 +165,8 @@ function ks_share(job, job_explain)
 					async    : false,
 					url      : "../main_exec.php",
 					data     : ({
-						"exec" : "update_user_share"
+						"exec"     : "update_user_share" ,
+						"test_idx" : test_idx
 					}),
 					success: function(response){
 						var width = $(window).width();
@@ -190,7 +191,7 @@ function ks_share(job, job_explain)
 
 }
 
-function fb_share(job, job_explain)
+function fb_share(job, job_explain, test_idx)
 {
 	FB.ui(
 	{
@@ -208,7 +209,8 @@ function fb_share(job, job_explain)
 					async    : false,
 					url      : "../main_exec.php",
 					data     : ({
-						"exec" : "update_user_share" ,
+						"exec"     : "update_user_share" ,
+						"test_idx" : test_idx
 					})
 				});
 				var width = $(window).width();
