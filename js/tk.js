@@ -413,7 +413,7 @@ function go_test(num, val)
 			}),
 			beforeSend: function(){
 				$(".backLayer").fadeTo(1000,0.7);
-			}
+			},
 			success: function(response){
 				$(".backLayer").fadeOut(500);
 				var res_result = response.split("|");
