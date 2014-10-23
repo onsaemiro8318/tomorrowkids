@@ -254,13 +254,10 @@ function kakao_login(){
           
     			Kakao.API.request({
     				url: '/v1/api/talk/profile',
-            data : ({
-              "access_token" = ka_access_token
-            }),
     				success: function(res) {
     					profileJsonStr = JSON.stringify(res);
     					profileObj = JSON.parse(profileJsonStr);
-              alert(profileObj.thumbnailURL);
+              alert(profileObj);
               kaUserImage = profileObj.thumbnailURL;
     					$.ajax({
     						type     : "POST",
