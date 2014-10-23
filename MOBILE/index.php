@@ -80,7 +80,7 @@
       </div>
     </div>
   </div>
-    <div id="movie_layer" style="position:absolute;background:red;margin-top:300px;z-index:1000;">
+    <div id="movie_layer" style="position:absolute;display:none;background:red;margin-top:300px;z-index:1000;">
         <div id="movie_box">
           <iframe id="ytplayer" width="100%"  src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe>
         </div>
