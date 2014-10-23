@@ -3,11 +3,6 @@
 	include_once "../config.php";
 	include_once "header.php";
 	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
-
-	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
-
-	$test_idx	= $_REQUEST[idx];
-
 ?>
   <body>
     <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>      
@@ -36,12 +31,12 @@
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>
-      <a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');">페이스북 공유</a>
+      <a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">페이스북 공유</a>
 <?
 	}else{
 ?>
-      <a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');">카카오톡 공유</a>
-      <a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');">카카오스토리 공유</a>
+      <a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오톡 공유</a>
+      <a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>');">카카오스토리 공유</a>
 <?
 	}
 ?>
@@ -92,9 +87,4 @@
         $(".popup_div").fadeOut(500);
     });
     });
-    $(window).ajaxStart(function (){
-        $(".backLayer").fadeTo(1000,0.7);
-    }).ajaxStop(function (){
-        $(".backLayer").fadeOut(500);
-    }); 
 </script>
