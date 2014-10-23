@@ -144,7 +144,7 @@ function kt_ajax(test_idx)
 			$("#email_div").fadeIn(500);
 //			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
 //				window.open("http://www.naver.com/");
-			}
+//			}
 		}
 	});
 }
