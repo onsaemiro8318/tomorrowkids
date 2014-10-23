@@ -5,8 +5,8 @@
 
 ?>
   <body>
-    <div class="backLayer" style="background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
-    <div style="position:absolute;">
+    <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;width:100%;height:100%"></div>
+    <div style="position:absolute;width:100%;height:100%">
     <div style="position:top;width:100%;height:60px;background:green">
       <a href="index.php">내일을 부탁해</a>
       <p><?=number_format($total_count)?>명의 내일(work)이 내일(tomorrow)이 되고 있습니다.</p>
