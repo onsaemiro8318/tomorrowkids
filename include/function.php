@@ -229,12 +229,12 @@
 		$result = mysqli_query($my_db, $query);  
 	}
 
-	function TK_UpdateUserDonation($userid,$direct_on)
+	function TK_UpdateUserDonation($test_idx,$direct_on)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query = "UPDATE ".$_gl[tk_test_result_table]." SET direct = '".$direct_on."' WHERE user_id = '".$userid."'";
+		$query = "UPDATE ".$_gl[tk_test_result_table]." SET direct = '".$direct_on."' WHERE idx = '".$test_idx."'";
 		$result = mysqli_query($my_db, $query);  
 	}
 

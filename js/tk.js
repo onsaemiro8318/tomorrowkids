@@ -76,14 +76,15 @@ function ks_share_mobile()
 var curURL=location.href;
 var curTitle = document.getElementsByTagName("TITLE")[0].text;
 
-function go_direct_donation()
+function go_direct_donation(test_idx)
 {
 	$.ajax({
 		type		: "POST",
 		async		: false,
 		url			: "../main_exec.php",
 		data		: ({
-			"exec"         : "update_user_donation"
+			"exec"         : "update_user_donation",
+			"test_idx" : test_idx
 		}),
     success: function (response) {
       $("#donation_div").fadeOut(500);

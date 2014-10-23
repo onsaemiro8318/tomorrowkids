@@ -69,7 +69,7 @@
     <div id="donation_div" class="popup_div" style="display:none;position:absolute;width:50%;height:30%;top:30%;margin-left:20%;background:gray;z-index:1000;">
         아이들을 2배 더 후원하고 싶은 분은<br />
         아래 직접 기부하기에도 참여해보세요!<br />
-        <a href="#" onclick="go_direct_donation();">직접 기부하기</a>
+        <a href="#" onclick="go_direct_donation('<?=$test_idx?>');">직접 기부하기</a>
     </div>
     </div>
   </body>

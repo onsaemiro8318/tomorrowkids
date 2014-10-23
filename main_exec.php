@@ -65,9 +65,9 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "update_user_donation" :
-		$userid	= $_SESSION['ss_mb_id'];
+		$test_idx	= $_REQUEST['test_idx'];
 		$direct_on = "Y";
-		TK_UpdateUserDonation($userid,$direct_on);     
+		TK_UpdateUserDonation($test_idx,$direct_on);     
 	break;
 
 	case "insert_test_result" :
