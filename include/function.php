@@ -204,7 +204,8 @@
 		global $my_db;
         
 		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
-		$test_result = mysqli_query($my_db, $query);
+
+		$test_result = mysqli_insert_id($my_db);
 
 		$answer_array = explode("|",$selected_val);
 		foreach ($answer_array as $key => $val)
