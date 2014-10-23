@@ -28,7 +28,8 @@ switch ($_REQUEST['exec'])
 			$_SESSION['ss_mb_idx'] = $mb_idx;
 			$flag = "Y";
 		}else {
-			TK_UpdateUserInfo($userid);
+			$mb_idx = TK_UpdateUserInfo($userid);
+			$_SESSION['ss_mb_idx'] = $mb_idx;
 			$flag = "N";
 		}
 
@@ -49,10 +50,12 @@ switch ($_REQUEST['exec'])
 		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
-			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
+			$mb_idx = TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
+			$_SESSION['ss_mb_idx'] = $mb_idx;
 			$flag = "Y";
 		}else {
-			TK_UpdateUserInfo($userid);
+			$mb_idx = TK_UpdateUserInfo($userid);
+			$_SESSION['ss_mb_idx'] = $mb_idx;
 			$flag = "N";
 		}
 
