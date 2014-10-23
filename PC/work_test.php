@@ -5,7 +5,7 @@
 
 ?>
   <body>
-    <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
+    <div class="backLayer" style="background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
     <div style="position:absolute;">
     <div style="position:top;width:100%;height:60px;background:green">
       <a href="index.php">내일을 부탁해</a>
