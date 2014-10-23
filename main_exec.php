@@ -4,9 +4,10 @@ include_once "config.php";
 switch ($_REQUEST['exec'])
 {
     case "update_user_email" :
-        $email = $_REQUEST['email'];
-		$userid	= $_SESSION['ss_mb_id'];
-		TK_UpdateUserEmail($userid,$email); 
+		$email		= $_REQUEST['email'];
+		$test_idx	= $_REQUEST['test_idx'];
+		$userid		= $_SESSION['ss_mb_id'];
+		TK_UpdateUserEmail($userid,$email,$test_idx); 
         
     break;
     

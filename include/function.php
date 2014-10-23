@@ -189,13 +189,16 @@
 		$result = mysqli_query($my_db, $query);  
 	}
     
-	function TK_UpdateUserEmail($userid,$email)
+	function TK_UpdateUserEmail($userid,$email,$test_idx)
 	{
 		global $_gl;
 		global $my_db;
 
 		$query = "UPDATE ".$_gl[tk_member_table]." SET mb_email = '".$email."' WHERE user_id = '".$userid."'";
-		$result = mysqli_query($my_db, $query);  
+		$result = mysqli_query($my_db, $query);
+
+		$direct_on	= "Y";
+		TK_UpdateUserDonation($test_idx,$direct_on);
 	}
 
 	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media,$gubun)

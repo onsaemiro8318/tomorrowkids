@@ -64,7 +64,7 @@
         <option value="naver.com">naver.com</option>
         <option value="outlook.com">outlook.com</option>
       </select>
-      <input type="button" value="확인" onclick="update_user_email();">
+      <input type="button" value="확인" onclick="update_user_email('<?=$test_idx?>');">
     </div>
     <div id="donation_div" class="popup_div" style="display:none;position:absolute;width:50%;height:30%;top:30%;margin-left:20%;background:gray;z-index:1000;">
         아이들을 2배 더 후원하고 싶은 분은<br />
