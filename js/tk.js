@@ -120,7 +120,7 @@ function kt_share(job, job_explain, test_idx)
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
-	setTimeout("kt_ajax(test_idx)",3000);
+	setTimeout("kt_ajax("+test_idx+")",5000);
 }
 
 function kt_ajax(test_idx)
