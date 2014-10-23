@@ -4,7 +4,7 @@ var obj;
 var ka_access_token;
 var ka_refresh_token;
 /********************** 이메일 입력 **********************/
-function update_user_email(test_idx){
+function update_user_email(){
     var EMAIL1	= $.trim($('#email1').val());
     var EMAIL2	= $.trim($('#email2').val());
     var EMAIL = EMAIL1 + "@" + EMAIL2
@@ -25,8 +25,7 @@ function update_user_email(test_idx){
     	type:"POST",
     	data:{
           "exec" : "update_user_email",
-          "email" : EMAIL ,
-		  "test_idx" : test_idx
+          "email" : EMAIL
            },
     	url: "../main_exec.php",
     	success: function(response){
