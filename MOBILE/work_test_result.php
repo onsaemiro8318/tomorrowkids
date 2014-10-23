@@ -92,4 +92,9 @@
         $(".popup_div").fadeOut(500);
     });
     });
+    $(window).ajaxStart(function (){
+        $(".backLayer").fadeTo(1000,0.7);
+    }).ajaxStop(function (){
+        $(".backLayer").fadeOut(500);
+    }); 
 </script>
