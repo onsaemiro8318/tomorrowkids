@@ -359,13 +359,15 @@ function facebook_login()
 	FB.login(function(response){
 		_fbUserId = response.authResponse.userID;
 		accessToken = response.authResponse.accessToken;
+    _fbUserImage = "http://graph.facebook.com/" + _fbUserId + "/picture?type=square"
 		$.ajax({
 			type     : "POST",
 			async    : false,
 			url      : "../main_exec.php",
 			data     : ({
 				"exec" : "fb_user_info" ,
-				"fbUserId" : _fbUserId
+				"fbUserId" : _fbUserId,
+        "fbUserImage" : _fbUserImage
 			}),
 			success: function(response){
 				$.ajax({

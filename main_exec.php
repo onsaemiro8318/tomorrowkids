@@ -39,7 +39,8 @@ switch ($_REQUEST['exec'])
 		$ip_addr = $_SERVER['REMOTE_ADDR'];
 		$userid	= $_REQUEST['fbUserId'];
 		$media = $_gl[login_media]['facebook'];
-
+        $user_img = $_REQUEST['fbUserImage'];
+        
 		unset($_SESSION['ss_mb_id']);
 		unset($_SESSION['ss_media']);
 		// 회원아이디 세션 생성
@@ -49,10 +50,10 @@ switch ($_REQUEST['exec'])
 		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
-			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
+			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img);
 			$flag = "Y";
 		}else {
-			TK_UpdateUserInfo($userid);
+			TK_UpdateUserInfo($userid,$user_img);
 			$flag = "N";
 		}
 
