@@ -250,41 +250,49 @@ function kakao_login(){
           kaUserImage = obj["properties"].thumbnail_image;
 					ka_access_token = Kakao.Auth.getAccessToken();
 					ka_refresh_token = Kakao.Auth.getRefreshToken();
-					$.ajax({
-						type     : "POST",
-						async    : false,
-						url      : "../main_exec.php",
-						data     : ({
-							"exec" : "ka_user_info" ,
-							"kaUserId" : obj.id,
-              "kaUserImage" : kaUserImage
-						}),
-						success: function(response){
-							$.ajax({
-								type		: "POST",
-								async		: false,
-								url			: "../main_exec.php",
-								data		: ({
-									"exec"         : "user_test_check"
-								}),
-								success: function(response){
-									if (response == "Y")
-									{
-										location.href="work_test.php";
-									}else{
-										alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
-									}
-								}
-							});
-						}
-					});
+          
+    			Kakao.API.request({
+    				url: '/v1/api/talk/profile',
+            data : ({
+              "access_token" = ka_access_token
+            }),
+    				success: function(res) {
+    					profileJsonStr = JSON.stringify(res);
+    					profileObj = JSON.parse(profileJsonStr);
+              kaUserImage = profileObj.thumbnailURL;
+    					$.ajax({
+    						type     : "POST",
+    						async    : false,
+    						url      : "../main_exec.php",
+    						data     : ({
+    							"exec" : "ka_user_info" ,
+    							"kaUserId" : obj.id,
+                  "kaUserImage" : kaUserImage
+    						}),
+    						success: function(response){
+    							$.ajax({
+    								type		: "POST",
+    								async		: false,
+    								url			: "../main_exec.php",
+    								data		: ({
+    									"exec"         : "user_test_check"
+    								}),
+    								success: function(response){
+    									if (response == "Y")
+    									{
+    										location.href="work_test.php";
+    									}else{
+    										alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+    									}
+    								}
+    							});
+    						}
+    					}); 
+            }
+          });
 				},
-				fail: function(error) {
-				}
 			});
 		},
-		fail: function(err) {
-		}
 	});
 }
 
