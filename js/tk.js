@@ -190,8 +190,7 @@ function ks_share(job, job_explain, test_idx)
 				}); 
 			}
 		});
-  });
-
+	});
 }
 
 function fb_share(job, job_explain, test_idx)
