@@ -41,7 +41,7 @@ function play_movie(){
 	$(".backLayer").width(width);
 	$(".backLayer").height(height);
 	//$(".backLayer").fadeTo(1000, 0.7);
-	$("#movie_layer").fadeIn(500);
+	//$("#movie_layer").fadeIn(500);
 	controllable_player.playVideo();
 }
 /********************** 모바일 카스 **********************/
