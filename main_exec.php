@@ -24,12 +24,10 @@ switch ($_REQUEST['exec'])
 		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
-			$mb_idx = TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
-			$_SESSION['ss_mb_idx'] = $mb_idx;
+			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
 			$flag = "Y";
 		}else {
-			$mb_idx = TK_UpdateUserInfo($userid);
-			$_SESSION['ss_mb_idx'] = $mb_idx;
+            TK_UpdateUserInfo($userid);
 			$flag = "N";
 		}
 
@@ -50,12 +48,10 @@ switch ($_REQUEST['exec'])
 		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
-			$mb_idx = TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
-			$_SESSION['ss_mb_idx'] = $mb_idx;
+			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun);
 			$flag = "Y";
 		}else {
-			$mb_idx = TK_UpdateUserInfo($userid);
-			$_SESSION['ss_mb_idx'] = $mb_idx;
+			TK_UpdateUserInfo($userid);
 			$flag = "N";
 		}
 
@@ -63,10 +59,9 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "update_user_share" :
-		//$userid	= $_SESSION['ss_mb_id'];
-		$mb_idx		= $_REQUEST['mb_idx'];
+		$userid	= $_SESSION['ss_mb_id'];
 		$share_on = "Y";
-		TK_UpdateUserShare($mb_idx,$share_on);
+		TK_UpdateUserShare($userid,$share_on);
 	break;
 
 	case "update_user_donation" :

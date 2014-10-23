@@ -178,9 +178,6 @@
 
 		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media, gubun) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."')";
 		$result = mysqli_query($my_db, $query);
-		
-		$mb_info = TK_GetUserInfo($userid);
-		return $mb_info[idx];
 	}
 
 	function TK_UpdateUserInfo($userid)
@@ -190,9 +187,6 @@
 
 		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
-
-		$mb_info = TK_GetUserInfo($userid);
-		return $mb_info[idx];
 	}
     
 	function TK_UpdateUserEmail($userid,$email)
@@ -224,12 +218,12 @@
 
 	}
 
-	function TK_UpdateUserShare($mb_idx,$share_on)
+	function TK_UpdateUserShare($userid,$share_on)
 	{
 		global $_gl;
 		global $my_db;
         
-		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE idx = '".$mb_idx."'";
+		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
 	}
 
