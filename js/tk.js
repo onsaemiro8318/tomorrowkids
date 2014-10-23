@@ -403,6 +403,7 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
+    $(".backLayer").fadeTo(1000,0.7);
 		$.ajax({
 			type		: "POST",
 			async		: false,
@@ -422,7 +423,10 @@ function go_test(num, val)
 				}
 				*/
 				location.href = "work_test_result.php?job=" + res_result[0] + "&idx=" + res_result[1];
-			}
+			},
+      complete: function(){
+        $(".backLayer").fadeOut(500);
+      }
 		});
 	}else{
 		$.ajax({
