@@ -9,17 +9,9 @@
 	$test_idx	= $_REQUEST[idx];
 
 ?>
-<html>
-  <head>
-    <title>Document</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
-    <script type='text/javascript' src='../js/tk.js'></script>
-    <script type='text/javascript' src='../js/googleAnalytics.js'></script>
-    <script type='text/javascript' src='../js/kakao.link.js'></script>
-  </head>
+<script>
+    window.history.forward(0);
+</script>
   <body>
     <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>
     <div style="position:absolute;">
