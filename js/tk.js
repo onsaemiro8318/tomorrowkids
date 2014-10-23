@@ -138,9 +138,9 @@ function kt_ajax(test_idx)
 		success: function(res) {
 			var width = $(window).width();
 			var height = $(window).height();
-			$("#backLayer").width(width);
-			$("#backLayer").height(height);
-			$("#backLayer").fadeTo(1000, 0.7);
+			$(".backLayer").width(width);
+			$(".backLayer").height(height);
+			$(".backLayer").fadeTo(1000, 0.7);
 			$("#email_div").fadeIn(500);
 //			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
 //				window.open("http://www.naver.com/");
@@ -180,9 +180,9 @@ function ks_share(job, job_explain, test_idx)
 					success: function(response){
 						var width = $(window).width();
 						var height = $(window).height();
-						$("#backLayer").width(width);
-						$("#backLayer").height(height);
-						$("#backLayer").fadeTo(1000, 0.7);
+						$(".backLayer").width(width);
+						$(".backLayer").height(height);
+						$(".backLayer").fadeTo(1000, 0.7);
 						$("#email_div").fadeIn(500);
 						//$("#movie_layer").fadeIn(500);
 /*
