@@ -171,21 +171,21 @@
 		return $info;
 	}
 
-	function TK_InsertUserInfo($userid,$ip_addr,$media,$gubun)
+	function TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media, gubun) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."')";
+		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media, gubun, mb_image) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."','".$user_img."')";
 		$result = mysqli_query($my_db, $query);
 	}
 
-	function TK_UpdateUserInfo($userid)
+	function TK_UpdateUserInfo($userid,$user_img)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() WHERE user_id = '".$userid."'";
+		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() , mb_image = '".$user_img."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
 	}
     

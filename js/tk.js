@@ -248,6 +248,7 @@ function kakao_login(){
 				success: function(res) {
 					jsonStr = JSON.stringify(res);
 					obj = JSON.parse(jsonStr);
+          kaUserImage = obj["properties"].thumbnail_image;
 					ka_access_token = Kakao.Auth.getAccessToken();
 					ka_refresh_token = Kakao.Auth.getRefreshToken();
 					$.ajax({
@@ -256,7 +257,8 @@ function kakao_login(){
 						url      : "../main_exec.php",
 						data     : ({
 							"exec" : "ka_user_info" ,
-							"kaUserId" : obj.id
+							"kaUserId" : obj.id,
+              "kaUserImage" : kaUserImage
 						}),
 						success: function(response){
 							$.ajax({
