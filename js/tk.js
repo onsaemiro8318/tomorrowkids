@@ -105,7 +105,7 @@ function show_sns_select_box(media)
 	}
 }
 
-function kt_share(job, job_explain)
+function kt_share(job, job_explain, test_idx)
 {
 	Kakao.Link.createTalkLinkButton({
 		container: '#kakao-link-btn',
@@ -120,17 +120,18 @@ function kt_share(job, job_explain)
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
-	setTimeout("kt_ajax()",3000);
+	setTimeout("kt_ajax(test_idx)",3000);
 }
 
-function kt_ajax()
+function kt_ajax(test_idx)
 {
 	$.ajax({
 		type     : "POST",
 		async    : false,
 		url      : "../main_exec.php",
 		data     : ({
-			"exec" : "update_user_share"
+			"exec"     : "update_user_share" ,
+			"test_idx" : test_idx
 		}),
 		success: function(res) {
 			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
