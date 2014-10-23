@@ -32,16 +32,4 @@
         var height = $(window).height();
         $(".backLayer").width(width).height(height);
     });
-    $(document).keydown(function(event){
-        if(event.which=='27'){
-        $(".popup_div").fadeOut(500);
-        $(".backLayer").fadeOut(500);
-        }
-    });
-    $(document).ready(function(){
-    $(".backLayer").click(function(){
-        $(".backLayer").fadeOut(500);
-        $(".popup_div").fadeOut(500);
-    });
-    }); 
 </script>
