@@ -4,6 +4,8 @@
 	include_once "header.php";
 	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
 
+	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
+
 	$test_idx	= $_REQUEST[idx];
 
 ?>
