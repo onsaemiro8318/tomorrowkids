@@ -411,11 +411,11 @@ function go_test(num, val)
 				"exec"         : "insert_test_result",
 				"selected_val" : val
 			}),
-      beforeSend: function(){
-        $(".backLayer").fadeTo(1000,0.7);
-      },
+			beforeSend: function(){
+				$(".backLayer").fadeTo(1000,0.7);
+			}
 			success: function(response){
-        $(".backLayer").fadeOut(500);
+				$(".backLayer").fadeOut(500);
 				var res_result = response.split("|");
 				/*
 				if (response == "N")
