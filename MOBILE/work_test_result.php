@@ -5,6 +5,7 @@
 	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
 ?>
   <body>
+    <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;"></div>      
     <div style="position:absolute;">
     <div style="position:top;width:100%;height:60px;background:green">
       <a href="index.php">내일을 부탁해</a>
@@ -42,6 +43,48 @@
       <!-- <a href="#" onclick="show_sns_select_box('<?=$_SESSION['ss_media']?>');">공유로 기부하기</a>
       <a href="http://www.dreamfull.or.kr/app/newdf/main" onclick="go_direct_donation();" target="_blank">직접 후원하고 싶다면?</a> -->
     </div>
+    <div id="email_div" class="popup_div" style="display:none;position:absolute;width:50%;height:30%;top:30%;margin-left:20%;background:gray;z-index:1000;">
+      감사합니다. 공유로 기부가 완료 되셨습니다.<br />
+      캠페인 결과와 강연회 소식을 이메일로 알려드립니다.<br />
+      <input type="text" name="email1" id="email1"> @ 
+      <input type="text" name="email2" id="email2">
+      <select name="sel_email" onchange="input_email(this.value)">
+        <option value="">직접입력</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="hitel.net">hitel.net</option>
+        <option value="hotmail.com">hotmail.com</option>
+        <option value="korea.com">korea.com</option>
+        <option value="nate.com">nate.com</option>
+        <option value="naver.com">naver.com</option>
+        <option value="outlook.com">outlook.com</option>
+      </select>
+      <input type="button" value="확인" onclick="update_user_email();">
+    </div>
+    <div id="donation_div" class="popup_div" style="display:none;position:absolute;width:50%;height:30%;top:30%;margin-left:20%;background:gray;z-index:1000;">
+        아이들을 2배 더 후원하고 싶은 분은<br />
+        아래 직접 기부하기에도 참여해보세요!<br />
+        <a href="#" onclick="go_direct_donation();">직접 기부하기</a>
+    </div>
     </div>
   </body>
 </html>
+<script type="text/javascript">
+	$(window).resize(function(){
+        var width = $(window).width();
+        var height = $(window).height();
+        $(".backLayer").width(width).height(height);
+    });
+    $(document).keydown(function(event){
+        if(event.which=='27'){
+        $(".popup_div").fadeOut(500);
+        $(".backLayer").fadeOut(500);
+        }
+    });
+    $(document).ready(function(){
+    $(".backLayer").click(function(){
+        $(".backLayer").fadeOut(500);
+        $(".popup_div").fadeOut(500);
+    });
+    });
+</script>
