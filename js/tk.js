@@ -259,6 +259,7 @@ function kakao_login(){
     				success: function(res) {
     					profileJsonStr = JSON.stringify(res);
     					profileObj = JSON.parse(profileJsonStr);
+              alert(profileObj.thumbnailURL);
               kaUserImage = profileObj.thumbnailURL;
     					$.ajax({
     						type     : "POST",
