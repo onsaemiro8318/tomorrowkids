@@ -178,6 +178,8 @@
 
 		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media, gubun) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."')";
 		$result = mysqli_query($my_db, $query);
+		
+		return $result;
 	}
 
 	function TK_UpdateUserInfo($userid)
@@ -187,6 +189,8 @@
 
 		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
+
+		return $result;
 	}
     
 	function TK_UpdateUserEmail($userid,$email)

@@ -3,6 +3,7 @@
 	include_once "../config.php";
 	include_once "header.php";
 
+print_r($_SESSION);
 ?>
   <body>
     <div style="position:top;width:100%;height:60px;background:green">
