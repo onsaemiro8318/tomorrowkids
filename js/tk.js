@@ -121,7 +121,7 @@ function kt_share(job, job_explain, test_idx)
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
-
+  
 	setTimeout("kt_ajax("+test_idx+")",5000);
 }
 
@@ -136,8 +136,14 @@ function kt_ajax(test_idx)
 			"test_idx" : test_idx
 		}),
 		success: function(res) {
-			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-				window.open("http://www.naver.com/");
+			var width = $(window).width();
+			var height = $(window).height();
+			$("#backLayer").width(width);
+			$("#backLayer").height(height);
+			$("#backLayer").fadeTo(1000, 0.7);
+			$("#email_div").fadeIn(500);
+//			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+//				window.open("http://www.naver.com/");
 			}
 		}
 	});
