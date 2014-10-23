@@ -64,7 +64,7 @@ switch ($_REQUEST['exec'])
 
 	case "update_user_share" :
 		//$userid	= $_SESSION['ss_mb_id'];
-		$mb_idx	= $_REQUEST['mb_idx'];
+		$mb_idx		= $_REQUEST['mb_idx'];
 		$share_on = "Y";
 		TK_UpdateUserShare($mb_idx,$share_on);
 	break;

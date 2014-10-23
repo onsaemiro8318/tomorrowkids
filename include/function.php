@@ -229,7 +229,7 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE mb_idx = '".$mb_idx."'";
+		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE idx = '".$mb_idx."'";
 		$result = mysqli_query($my_db, $query);  
 	}
 
