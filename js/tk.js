@@ -107,6 +107,7 @@ function show_sns_select_box(media)
 
 function kt_share(job, job_explain, test_idx)
 {
+	alert('111');
 	Kakao.Link.createTalkLinkButton({
 		container: '#kakao-link-btn',
 		label: job + " - " + job_explain,
