@@ -107,8 +107,8 @@ function show_sns_select_box(media)
 
 function kt_share(job, job_explain, test_idx)
 {
-	Kakao.Link.createTalkLinkButton({
-		container: '#kakao-link-btn',
+	Kakao.Link.sendTalkLink({
+		//container: '#kakao-link-btn',
 		label: job + " - " + job_explain,
 		image: {
 			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
@@ -121,7 +121,7 @@ function kt_share(job, job_explain, test_idx)
 		}
 	});
 
-	//setTimeout("kt_ajax("+test_idx+")",5000);
+	setTimeout("kt_ajax("+test_idx+")",5000);
 }
 
 function kt_ajax(test_idx)
