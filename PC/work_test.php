@@ -3,7 +3,7 @@
 	include_once "../config.php";
 	include_once "header.php";
 
-print_r($_SESSION);
+	$mb_idx = $_SESSION['ss_mb_idx'];
 ?>
   <body>
     <div style="position:top;width:100%;height:60px;background:green">
@@ -17,7 +17,7 @@ print_r($_SESSION);
       </p>
     </div>
     <div style="position:relative;width:100%;height:500px;background:orange;" id="test_div">
-      <div style="position:absolute;margin-top:200px;margin-left:45%;background:green;cursor:pointer" onclick="go_test('1','');">
+      <div style="position:absolute;margin-top:200px;margin-left:45%;background:green;cursor:pointer" onclick="go_test('1','','<?=$mb_idx?>');">
         <p><font size="17pt">테스트 시작!!</font></p>
       </div>
     </div>

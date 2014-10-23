@@ -139,7 +139,7 @@ function kt_ajax()
 		}
 	});
 }
-function ks_share(job, job_explain)
+function ks_share(job, job_explain, mb_idx)
 { 
 	Kakao.API.request( {
 		url : '/v1/api/story/linkinfo',
@@ -165,7 +165,8 @@ function ks_share(job, job_explain)
 					async    : false,
 					url      : "../main_exec.php",
 					data     : ({
-						"exec" : "update_user_share"
+						"exec"   : "update_user_share",
+						"mb_idx" : mb_idx
 					}),
 					success: function(response){
 						var width = $(window).width();
@@ -190,7 +191,7 @@ function ks_share(job, job_explain)
 
 }
 
-function fb_share(job, job_explain)
+function fb_share(job, job_explain, mb_idx)
 {
 	FB.ui(
 	{
@@ -208,7 +209,8 @@ function fb_share(job, job_explain)
 					async    : false,
 					url      : "../main_exec.php",
 					data     : ({
-						"exec" : "update_user_share" ,
+						"exec"   : "update_user_share" ,
+						"mb_idx" : mb_idx
 					})
 				});
 				var width = $(window).width();
@@ -395,7 +397,7 @@ function facebook_logout()
 }
 
 
-function go_test(num, val)
+function go_test(num, val, mb_idx)
 {
 	if (num > 10)
 	{
@@ -405,7 +407,8 @@ function go_test(num, val)
 			url			: "../main_exec.php",
 			data		: ({
 				"exec"         : "insert_test_result",
-				"selected_val" : val
+				"selected_val" : val,
+				"mb_idx"       : mb_idx
 			}),
 			success: function(response){
 				/*
@@ -416,7 +419,7 @@ function go_test(num, val)
 					location.href = "work_test_result.php?job=" + response;
 				}
 				*/
-				location.href = "work_test_result.php?job=" + response;
+				location.href = "work_test_result.php?job=" + response + "&mb_idx=" + mb_idx;
 			}
 		});
 	}else{
@@ -440,7 +443,7 @@ function save_info(idx)
 	$("#sel_value").val(idx);
 }
 
-function go_next_question(num, selected_val)
+function go_next_question(num, selected_val, mb_idx)
 {
 	var sel_val = $("#sel_value").val();
 	var gubun   = "";
@@ -456,7 +459,7 @@ function go_next_question(num, selected_val)
 		gubun = "|";
 
 	sel_val = selected_val + gubun + sel_val;
-	go_test(num, sel_val);
+	go_test(num, sel_val,mb_idx);
 }
 
 // 이메일 입력
