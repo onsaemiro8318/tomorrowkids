@@ -17,4 +17,3 @@
   <p id="answer2"><a href="javascript:save_info('<?=$answer_data[1][idx]?>');"><?=$answer_data[1][test_value]?></a></p>
   <a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');">답변 선택</a>
 </div>
-

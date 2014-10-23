@@ -403,8 +403,8 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
-		//$(".backLayer").fadeTo(1000,0.7);
-		$(".backLayer").show();
+		$(".backLayer").fadeTo(1000,0.7);
+		
 	}else{
 		$.ajax({
 			type		: "POST",
