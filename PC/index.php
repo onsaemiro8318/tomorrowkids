@@ -61,7 +61,7 @@
       </div>
       <div>
           <div id="movie_play_box">
-              <a href="#" onclick="play_movie();"><img src="http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"></a>
+              <a href="#" onclick="play_movie('<?=$gubun?>');"><img src="http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"></a>
           </div>  
           <div id="count_box">
               <h1><?=number_format($total_count)?>명</h1>
