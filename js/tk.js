@@ -206,7 +206,7 @@ function ks_share(job, job_explain, test_idx)
       // 카카오스토리 유저 아닐 때
       }else { 
         alert("카카오스토리 이용자가 아닙니다. 가입하신 후 이용해주세요.");
-        window.open("http://https://story.kakao.com/");
+        window.open("https://story.kakao.com/");
       }
     }
   });
