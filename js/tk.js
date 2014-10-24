@@ -155,8 +155,7 @@ function ks_share(job, job_explain, test_idx)
   	success: function(res) {
   		ksUserJsonStr = JSON.stringify(res);
   		ksUserObj = JSON.parse(ksUserJsonStr);
-  		isStoryuser = ksUserObj.isStoryUser;
-      alert(ksUserJsonStr);
+  		isStoryUser = ksUserObj.isStoryUser;
   		// 카카오스토리 유저일 때
       if(isStoryUser == "true"){
       	Kakao.API.request( {
