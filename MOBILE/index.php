@@ -32,12 +32,6 @@
         var height = $(window).height();
         $(".backLayer").width(width).height(height);
     });
-    $(document).keydown(function(event){
-        if(event.which=='27'){
-        $("#movie_layer").fadeOut(300);
-        $(".backLayer").fadeOut(1000);
-        }
-    });
 
     $(document).ready(function(){
     $(".backLayer").click(function(){
