@@ -484,8 +484,10 @@ function go_next_question(num, selected_val)
 function input_email(val)
 {
 	$("#email2").val(val);
-  if (val != "")
+  if (val == "")
   {
-    $("#email2").attr('readonly',true);
+    $("#email2").attr('readonly',false);
+  }else {
+    $("#email2").attr('readonly',true);    
   }
 }
