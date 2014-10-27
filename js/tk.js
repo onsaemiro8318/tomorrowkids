@@ -151,109 +151,66 @@ function kt_ajax(test_idx)
 }
 function ks_share(job, job_explain, test_idx)
 {
-  Kakao.API.request({
-  	url: '/v1/api/story/isstoryuser',
-  	success: function(res) {
-  		ksUserJsonStr = JSON.stringify(res);
-  		ksUserObj = JSON.parse(ksUserJsonStr);
-  		isStoryUser = ksUserObj.isStoryUser;
-  		// 카카오스토리 유저일 때
-      if(isStoryUser == "true"){
-      	Kakao.API.request( {
-      		url : '/v1/api/story/linkinfo',
-      		data : {
-      		url : 'http://www.tomorrowkids.or.kr'
-      		}
-      	}).then(function(res) {
-      		// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-      		return Kakao.API.request( {
-      			url : '/v1/api/story/post/link',
-      			data : {
-      			link_info : {
-      				url : 'http://www.tomorrowkids.or.kr',
-      				host : 'www.tomorrowkids.or.kr',
-      				title : 'Tomorrow Kids',
-      				description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
-      			},
-      			content : job + " - " + job_explain
-      			},
-      			success: function(res) {
-      				$.ajax({
-      					type     : "POST",
-      					async    : false,
-      					url      : "../main_exec.php",
-      					data     : ({
-      						"exec"     : "update_user_share" ,
-      						"test_idx" : test_idx
-      					}),
-      					success: function(response){
-      						var width = $(window).width();
-      						var height = $(window).height();
-      						$(".backLayer").width(width);
-      						$(".backLayer").height(height);
-      						$(".backLayer").fadeTo(1000, 0.7);
-      						$("#email_div").fadeIn(500);
-      						//$("#movie_layer").fadeIn(500);
-                  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-      							//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
-      							var openNewWindow = window.open("about:blank");
-      							openNewWindow.location.href = "http://www.naver.com";
-      						} */
-      					}
-      				}); 
-      			}
-      		});
-      	});
-      // 카카오스토리 유저 아닐 때
-      }else { 
-      	Kakao.API.request( {
-      		url : '/v1/api/story/linkinfo',
-      		data : {
-      		url : 'http://www.tomorrowkids.or.kr'
-      		}
-      	}).then(function(res) {
-      		// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-      		return Kakao.API.request( {
-      			url : '/v1/api/story/post/link',
-      			data : {
-      			link_info : {
-      				url : 'http://www.tomorrowkids.or.kr',
-      				host : 'www.tomorrowkids.or.kr',
-      				title : 'Tomorrow Kids',
-      				description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
-      			},
-      			content : job + " - " + job_explain
-      			},
-      			success: function(res) {
-      				$.ajax({
-      					type     : "POST",
-      					async    : false,
-      					url      : "../main_exec.php",
-      					data     : ({
-      						"exec"     : "update_user_share" ,
-      						"test_idx" : test_idx
-      					}),
-      					success: function(response){
-      						var width = $(window).width();
-      						var height = $(window).height();
-      						$(".backLayer").width(width);
-      						$(".backLayer").height(height);
-      						$(".backLayer").fadeTo(1000, 0.7);
-      						$("#email_div").fadeIn(500);
-      						//$("#movie_layer").fadeIn(500);
-                  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-      							//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
-      							var openNewWindow = window.open("about:blank");
-      							openNewWindow.location.href = "http://www.naver.com";
-      						} */
-      					}
-      				}); 
-      			}
-      		});
-      	});
-      }
-    }
-  });
+	Kakao.API.request({
+		url: '/v1/api/story/isstoryuser',
+		success: function(res) {
+			ksUserJsonStr = JSON.stringify(res);
+			ksUserObj = JSON.parse(ksUserJsonStr);
+			isStoryUser = ksUserObj.isStoryUser;
+			// 카카오스토리 유저일 때
+			if(isStoryUser == "true"){
+				Kakao.API.request( {
+					url : '/v1/api/story/linkinfo',
+					data : {
+						url : 'http://www.tomorrowkids.or.kr'
+					}
+				}).then(function(res) {
+					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
+					return Kakao.API.request( {
+						url : '/v1/api/story/post/link',
+						data : {
+						link_info : {
+							url : 'http://www.tomorrowkids.or.kr',
+							host : 'www.tomorrowkids.or.kr',
+							title : 'Tomorrow Kids',
+							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
+						},
+						content : job + " - " + job_explain
+						},
+						success: function(res) {
+							$.ajax({
+								type     : "POST",
+								async    : false,
+								url      : "../main_exec.php",
+								data     : ({
+									"exec"     : "update_user_share" ,
+									"test_idx" : test_idx
+								}),
+								success: function(response){
+									var width = $(window).width();
+									var height = $(window).height();
+									$(".backLayer").width(width);
+									$(".backLayer").height(height);
+									$(".backLayer").fadeTo(1000, 0.7);
+									$("#email_div").fadeIn(500);
+								//$("#movie_layer").fadeIn(500);
+					  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+									//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
+									var openNewWindow = window.open("about:blank");
+									openNewWindow.location.href = "http://www.naver.com";
+								} */
+								}
+							}); 
+						}
+					});
+				});
+			// 카카오스토리 유저 아닐 때
+			}else { 
+				alert("카카오스토리 이용자가 아닙니다. 가입하신 후 이용해주세요.");
+				window.open("https://story.kakao.com/");
+			}
+		}
+	});
 }
 
 function fb_share(job, job_explain, test_idx)
@@ -305,6 +262,7 @@ function kakao_login(){
 	Kakao.Auth.login({
 		success: function(authObj) {
 			// 로그인 성공시 API를 호출합니다.
+			alert('12345');
 			Kakao.API.request({
 				url: '/v1/user/me',
 				success: function(res) {
