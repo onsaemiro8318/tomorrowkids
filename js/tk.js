@@ -517,7 +517,7 @@ function select_answer(answer_id, event_id)
 		$("#"+answer_id).css("font-weight","bold");
 	}else if (event_id == "click"){
 		$("#"+answer_id).css("font-weight","bold");
-		$("#slected_answer").val(event_id);
+		$("#selected_answer").val(event_id);
 	}else{
 		$("#"+answer_id).css("font-weight","normal");
 	}
