@@ -259,10 +259,60 @@ function fb_share(job, job_explain, test_idx)
 
 function kakao_login(){
 	// 로그인 창을 띄웁니다.
+					ka_access_token = Kakao.Auth.getAccessToken();
+					ka_refresh_token = Kakao.Auth.getRefreshToken();
 	Kakao.Auth.login({
 		success: function(authObj) {
 			// 로그인 성공시 API를 호출합니다.
-			alert('111');
+			Kakao.API.request({
+				url: '/v1/user/me',
+				success: function(res) {
+					jsonStr = JSON.stringify(res);
+					obj = JSON.parse(jsonStr);
+					ka_access_token = Kakao.Auth.getAccessToken();
+					ka_refresh_token = Kakao.Auth.getRefreshToken();
+          
+					Kakao.API.request({
+						url: '/v1/api/talk/profile',
+						success: function(res) {
+							profileJsonStr = JSON.stringify(res);
+							profileObj = JSON.parse(profileJsonStr);
+							kaUserImage = profileObj.thumbnailURL;
+							$.ajax({
+								type     : "POST",
+								async    : false,
+								url      : "../main_exec.php",
+								data     : ({
+									"exec" : "ka_user_info" ,
+									"kaUserId" : obj.id,
+									"kaUserImage" : kaUserImage
+								}),
+								success: function(response){
+									$.ajax({
+										type		: "POST",
+										async		: false,
+										url			: "../main_exec.php",
+										data		: ({
+											"exec"         : "user_test_check"
+										}),
+										success: function(response){
+											if (response == "Y")
+											{
+												location.href="work_test.php";
+											}else{
+												alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+											}
+										}
+									});
+								}
+							}); 
+						}
+					});
+				},
+				fail : function(res) {
+					alert(JSON.stringify(err));
+				}
+			});
 		},
 	});
 }
