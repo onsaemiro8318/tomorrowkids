@@ -149,6 +149,11 @@ function kt_ajax(test_idx)
 		}
 	});
 }
+
+function trim(str) {
+	return str.replace( /(^\s*)|(\s*$)/g, "" );
+}
+
 function ks_share(job, job_explain, test_idx)
 {
 	Kakao.API.request({
@@ -157,10 +162,9 @@ function ks_share(job, job_explain, test_idx)
 			ksUserJsonStr = JSON.stringify(res);
 			ksUserObj = JSON.parse(ksUserJsonStr);
 			isStoryUser = ksUserObj.isStoryUser;
-			var subValue = "true";
-			 var flag_text = isStoryUser.indexOf(subValue);
+			isStoryUser = trim(isStoryUser);
 			// 카카오스토리 유저일 때
-			if(flag_text != -1){
+			if(isStoryUser == "true"){
 				Kakao.API.request( {
 					url : '/v1/api/story/linkinfo',
 					data : {
