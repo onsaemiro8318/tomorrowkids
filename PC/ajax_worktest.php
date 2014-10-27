@@ -20,10 +20,10 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
-		var sel_answer = $("#selected_answer").val();
-		if (sel_answer != "")
+		if ($("#selected_answer").val() != "")
 			$("#"+ sel_answer).css("font-weight","bold");
 	});
+
 
 	function select_answer(answer_id, event_id)
 	{
@@ -33,8 +33,11 @@
 		}else if (event_id == "click"){
 			$("#"+answer_id).css("font-weight","bold");
 			$("#selected_answer").val(answer_id);
+			if (answer_id == "answer1")
+				$("#answer2").css("font-weight","normal");
+			else
+				$("#answer1").css("font-weight","normal");
 		}else{
-			alert(sel_answer+"||"+answer_id);
 			if (sel_answer != answer_id){
 				$("#"+answer_id).css("font-weight","normal");
 			}
