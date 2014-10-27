@@ -505,3 +505,8 @@ function input_email(val)
     $("#email2").attr('readonly',true);    
   }
 }
+
+function select_answer(answer_id)
+{
+	$("#"+answer_id).css("font-weight","bold");
+}
