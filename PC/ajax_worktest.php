@@ -19,8 +19,8 @@
   <a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');">답변 선택</a>
 </div>
 <script type="text/javascript">
-	var sel_answer = $("#selected_answer").val();
 	$(document).ready(function(){
+		var sel_answer = $("#selected_answer").val();
 		if (sel_answer != "")
 			$("#"+ sel_answer).css("font-weight","bold");
 	});
