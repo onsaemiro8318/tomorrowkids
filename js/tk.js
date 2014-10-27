@@ -258,7 +258,7 @@ function fb_share(job, job_explain, test_idx)
 
 
 function kakao_login(){
-	setTimeout("kakao_auth_login()",1000);
+	setTimeout("kakao_auth_login()",2000);
 	// 로그인 창을 띄웁니다.
 }
 
@@ -266,6 +266,7 @@ function kakao_auth_login()
 {
 	Kakao.Auth.login({
 		success: function(authObj) {
+			alert('22222');
 			// 로그인 성공시 API를 호출합니다.
 			Kakao.API.request({
 				url: '/v1/user/me',
