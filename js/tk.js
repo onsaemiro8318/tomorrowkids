@@ -1,3 +1,4 @@
+Kakao.init('5675f40b361955e0b3fcf93944b5d444');
 var jsonStr;
 var obj;
 var ka_access_token;
@@ -257,7 +258,6 @@ function fb_share(job, job_explain, test_idx)
 
 
 function kakao_login(){
-Kakao.init('5675f40b361955e0b3fcf93944b5d444');
 	// 로그인 창을 띄웁니다.
 	Kakao.Auth.login({
 		success: function(authObj) {
