@@ -484,7 +484,12 @@ function go_next_question(num, selected_val)
 		alert('하나의 답변을 꼭 선택해 주세요.');
 		return false;
 	}
-
+  
+	if (num > 10)
+	{
+		$(".backLayer").fadeTo(1000,0.7);
+  }
+  
 	if (selected_val == "")
 		gubun = "";
 	else
