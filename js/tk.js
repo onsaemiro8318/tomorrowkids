@@ -258,12 +258,15 @@ function fb_share(job, job_explain, test_idx)
 
 
 function kakao_login(){
+	setTimeout("kakao_auth_login()",1000);
 	// 로그인 창을 띄웁니다.
-	alert('1111');
+}
+
+function kakao_auth_login()
+{
 	Kakao.Auth.login({
 		success: function(authObj) {
 			// 로그인 성공시 API를 호출합니다.
-			alert('2222');
 			Kakao.API.request({
 				url: '/v1/user/me',
 				success: function(res) {
@@ -309,14 +312,11 @@ function kakao_login(){
 						}
 					});
 				},
-				fail : function(res) {
-					alert(JSON.stringify(err));
-				}
 			});
 		},
 	});
-}
 
+}
 /********************** 페이스북 **********************/
       
 var _fbUserId;
