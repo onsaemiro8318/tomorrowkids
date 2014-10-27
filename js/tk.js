@@ -258,9 +258,8 @@ function fb_share(job, job_explain, test_idx)
 
 
 function kakao_login(){
+	alert('11111');
 	// 로그인 창을 띄웁니다.
-					ka_access_token = Kakao.Auth.getAccessToken();
-					ka_refresh_token = Kakao.Auth.getRefreshToken();
 	Kakao.Auth.login({
 		success: function(authObj) {
 			// 로그인 성공시 API를 호출합니다.
