@@ -131,7 +131,20 @@
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_num_rows($result);
 
-		return $info;
+        function leadingZeros(n, digits) {
+          var zero = '';
+          n = n.toString();
+
+          if (n.length < digits) {
+            for (var i = 0; i < digits - n.length; i++)
+              zero += '0';
+          }
+          return zero + n;
+        }
+        
+        $total = leadingZeros($info, 4);
+        
+		return $total;
 	}
 
 	// 테스트 결과 직업 표시
