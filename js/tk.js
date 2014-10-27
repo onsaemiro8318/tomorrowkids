@@ -1,4 +1,4 @@
-Kakao.init('5675f40b361955e0b3fcf93944b5d444');
+//Kakao.init('5675f40b361955e0b3fcf93944b5d444');
 var jsonStr;
 var obj;
 var ka_access_token;

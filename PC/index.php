@@ -39,6 +39,7 @@
         }
     });
     $(document).ready(function(){
+	Kakao.init('5675f40b361955e0b3fcf93944b5d444');
     $(".backLayer").click(function(){
         $(".backLayer").fadeOut(500);
         $("#movie_layer").fadeOut(500);
