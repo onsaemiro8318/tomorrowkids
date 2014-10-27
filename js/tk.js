@@ -508,8 +508,10 @@ function input_email(val)
 
 function select_answer(answer_id, event_id)
 {
-	if (event_id == "over")
+	if (event_id == "over"){
 		$("#"+answer_id).css("font-weight","bold");
-	else
+	}else{
 		$("#"+answer_id).css("font-weight","normal");
+		$("#slected_answer").val(event_id);
+	}
 }
