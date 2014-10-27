@@ -511,7 +511,7 @@ function input_email(val)
   }
 }
 
-function select_answer(answer_id, event_id)
+function select_answer(answer_id, event_id, sel_answer)
 {
 	if (event_id == "over"){
 		$("#"+answer_id).css("font-weight","bold");
@@ -519,6 +519,7 @@ function select_answer(answer_id, event_id)
 		$("#"+answer_id).css("font-weight","bold");
 		$("#selected_answer").val(answer_id);
 	}else{
-		$("#"+answer_id).css("font-weight","normal");
+		if (sel_answer != "")
+			$("#"+answer_id).css("font-weight","normal");
 	}
 }
