@@ -20,7 +20,7 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
-		var sel_answer = $("selected_answer").val();
+		var sel_answer = $("#selected_answer").val();
 		if (sel_answer != "")
 			$("#"+ sel_answer).css("font-weight","bold");
 	});
