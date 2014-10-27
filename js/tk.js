@@ -259,6 +259,7 @@ function fb_share(job, job_explain, test_idx)
 
 function kakao_login(){
 	// 로그인 창을 띄웁니다.
+	alert('1111');
 	Kakao.Auth.login({
 		success: function(authObj) {
 			// 로그인 성공시 API를 호출합니다.
