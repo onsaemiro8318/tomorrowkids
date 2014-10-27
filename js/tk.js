@@ -157,9 +157,9 @@ function ks_share(job, job_explain, test_idx)
 			ksUserJsonStr = JSON.stringify(res);
 			ksUserObj = JSON.parse(ksUserJsonStr);
 			isStoryUser = ksUserObj.isStoryUser;
+			 var flag_text = isStoryUser.indexOf("true");
 			// 카카오스토리 유저일 때
-			alert(isStoryUser);
-			if(isStoryUser == "true"){
+			if(flag_text == -1){
 				Kakao.API.request( {
 					url : '/v1/api/story/linkinfo',
 					data : {
