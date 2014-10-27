@@ -33,8 +33,10 @@
 			$("#"+answer_id).css("font-weight","bold");
 			$("#selected_answer").val(answer_id);
 		}else{
-			if (sel_answer != answer_id)
+			if (sel_answer != answer_id){
+				alert('11');
 				$("#"+answer_id).css("font-weight","normal");
+			}
 		}
 	}
 </script>
