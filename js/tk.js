@@ -431,7 +431,6 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
-		$(".backLayer").fadeTo(1000,0.7);
 		$.ajax({
 			type		: "POST",
 			async		: false,
@@ -477,6 +476,11 @@ function save_info(idx)
 
 function go_next_question(num, selected_val)
 {
+	if (num > 10)
+	{
+		$(".backLayer").fadeTo(1000,0.7);
+  }
+  
 	var sel_val = $("#sel_value").val();
 	var gubun   = "";
 	if (sel_val == "")
