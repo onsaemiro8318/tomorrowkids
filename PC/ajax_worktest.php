@@ -27,6 +27,7 @@
 
 	function select_answer(answer_id, event_id)
 	{
+		var sel_answer = $("#selected_answer").val();
 		if (event_id == "over"){
 			$("#"+answer_id).css("font-weight","bold");
 		}else if (event_id == "click"){
