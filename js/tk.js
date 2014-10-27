@@ -262,7 +262,6 @@ function kakao_login(){
 	Kakao.Auth.login({
 		success: function(authObj) {
 			// 로그인 성공시 API를 호출합니다.
-			alert('2222');
 			Kakao.API.request({
 				url: '/v1/user/me',
 				success: function(res) {
