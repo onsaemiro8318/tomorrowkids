@@ -19,10 +19,22 @@
   <a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');">답변 선택</a>
 </div>
 <script type="text/javascript">
+	var sel_answer = $("#selected_answer").val();
 	$(document).ready(function(){
-		var sel_answer = $("#selected_answer").val();
 		if (sel_answer != "")
 			$("#"+ sel_answer).css("font-weight","bold");
 	});
 
+	function select_answer(answer_id, event_id)
+	{
+		if (event_id == "over"){
+			$("#"+answer_id).css("font-weight","bold");
+		}else if (event_id == "click"){
+			$("#"+answer_id).css("font-weight","bold");
+			$("#selected_answer").val(answer_id);
+		}else{
+			if (sel_answer != answer_id)
+				$("#"+answer_id).css("font-weight","normal");
+		}
+	}
 </script>

@@ -510,16 +510,3 @@ function input_email(val)
     $("#email2").attr('readonly',true);    
   }
 }
-
-function select_answer(answer_id, event_id, sel_answer)
-{
-	if (event_id == "over"){
-		$("#"+answer_id).css("font-weight","bold");
-	}else if (event_id == "click"){
-		$("#"+answer_id).css("font-weight","bold");
-		$("#selected_answer").val(answer_id);
-	}else{
-		if (sel_answer != "")
-			$("#"+answer_id).css("font-weight","normal");
-	}
-}
