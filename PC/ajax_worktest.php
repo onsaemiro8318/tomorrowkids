@@ -12,10 +12,10 @@
 <div>
   <input type="hidden" name="sel_value" id="sel_value">
   <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
-  <input type="hidden" name="selected_answer" id="selected_answer" value="">
+  <input type="text" name="selected_answer" id="selected_answer" value="">
   <h1><?=$question_data[test_value]?></h1>
-  <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'over');"><a href="javascript:save_info('<?=$answer_data[0][idx]?>');"><?=$answer_data[0][test_value]?></a></p>
-  <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'over');"><a href="javascript:save_info('<?=$answer_data[1][idx]?>');"><?=$answer_data[1][test_value]?></a></p>
+  <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><a href="javascript:save_info('<?=$answer_data[0][idx]?>');"><?=$answer_data[0][test_value]?></a></p>
+  <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><a href="javascript:save_info('<?=$answer_data[1][idx]?>');"><?=$answer_data[1][test_value]?></a></p>
   <a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');">답변 선택</a>
 </div>
 <script type="text/javascript">
