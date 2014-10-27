@@ -308,7 +308,7 @@ Kakao.init('5675f40b361955e0b3fcf93944b5d444');
 					});
 				},
 				fail : function(res) {
-					alert(JSON.stringify(err));
+					alert(JSON.stringify(res));
 				}
 			});
 		},
