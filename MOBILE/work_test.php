@@ -19,7 +19,7 @@
     <div style="position:absolute;width:100%,height:100%;">
     <div style="position:top;width:100%;height:60px;background:green">
       <a href="index.php">내일을 부탁해</a>
-      <p><?=number_format($total_count)?>명의 내일(work)이 내일(tomorrow)이 되고 있습니다.</p>
+      <p><?=$total_count?>명의 내일(work)이 내일(tomorrow)이 되고 있습니다.</p>
     </div>
     <div style="position:top;width:100%;height:110px;background:skyblue;">
       <h1>STEP1. 내일(work) 테스트</h1>

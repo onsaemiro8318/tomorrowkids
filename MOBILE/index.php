@@ -60,7 +60,7 @@
               <a href="#" onclick="play_movie('<?=$gubun?>');"><img src="http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"></a>
           </div>  
           <div id="count_box">
-              <h1><?=number_format($total_count)?>명</h1>
+              <h1><?=$total_count?>명</h1>
               <p>의 내일(work)이<p>
               <p>아이들의 내일(Tomorrow)이 되고 있습니다.</p>
           </div>
