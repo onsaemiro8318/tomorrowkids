@@ -22,7 +22,7 @@
 	else
 		$gubun = "PC";
 
-	if ($_SERVER['REMOTE_ADDR'] != "61.40.46.36" && $gubun == "PC")
+	if ($_SERVER['REMOTE_ADDR'] != "61.40.46.36")
 		exit;
 
 
