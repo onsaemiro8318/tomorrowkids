@@ -21,5 +21,7 @@
  $accessTokenJson = curl_exec($curlSession);
  curl_close($curlSession);
  
+
+ echo "<script>alert('".$accessTokenJson."');</script>";
  echo $accessTokenJson;
 ?>
