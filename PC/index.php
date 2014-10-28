@@ -119,8 +119,8 @@
 </div>
 <!--Line3 end-->
 </div>
-<div class="video_fremebox" style="z-index:99999;position:absolute;width:100%;margin:0 auto;">
-	<div class="video" style="background-color:red"><iframe id="ytplayer" width="951px" height="579px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
+<div class="video_fremebox" style="z-index:99999;position:absolute;width:100%;">
+	<div class="video" style="margin:0 auto;"><iframe id="ytplayer" width="951px" height="579px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
 <div class="mask"></div>
 
