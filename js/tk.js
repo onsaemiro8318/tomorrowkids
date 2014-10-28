@@ -469,7 +469,7 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
-				$("#test_div").html(response);
+				$("top2_content").html(response);
 			}
 		});
 	}
