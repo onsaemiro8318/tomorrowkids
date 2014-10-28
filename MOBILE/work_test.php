@@ -30,6 +30,7 @@
 <body>
   <input type="hidden" name="sel_value" id="sel_value">
   <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
+  <input type="hidden" name="selected_answer" id="selected_answer" value="">
   <div class="mob_sub_top1">
     <h1><a href=""><img src="images/logo.png"/></a></h1>
     <div>
@@ -60,11 +61,11 @@
       </div>
       <div class="ansbox" onclick="save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;">
         <div class="fl_left tag">A.</div>
-        <div class="fl_left tagtext"><?=$answer_data[0][test_value]?></div>
+        <div class="fl_left tagtext" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[0][test_value]?></div>
       </div>
       <div class="ansbox" onclick="save_info('<?=$answer_data[1][idx]?>')" style="cursor:pointer;">
         <div class="fl_left tag">B.</div>
-        <div class="fl_left tagtext2"><?=$answer_data[1][test_value]?></div>
+        <div class="fl_left tagtext2" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[1][test_value]?></div>
       </div>
       <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','');"><img src="images/next_qu_but.jpg"/></a></div>
     </div>
@@ -74,3 +75,29 @@
   </div>
 </body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		if ($("#selected_answer").val() != "")
+			$("#"+ sel_answer).css("font-weight","bold");
+	});
+
+
+	function select_answer(answer_id, event_id)
+	{
+		var sel_answer = $("#selected_answer").val();
+		if (event_id == "over"){
+			$("#"+answer_id).css("font-weight","bold");
+		}else if (event_id == "click"){
+			$("#"+answer_id).css("font-weight","bold");
+			$("#selected_answer").val(answer_id);
+			if (answer_id == "answer1")
+				$("#answer2").css("font-weight","normal");
+			else
+				$("#answer1").css("font-weight","normal");
+		}else{
+			if (sel_answer != answer_id){
+				$("#"+answer_id).css("font-weight","normal");
+			}
+		}
+	}
+</script>
