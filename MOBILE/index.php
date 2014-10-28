@@ -27,6 +27,14 @@
 		}
 	}, 3000)
 
+	$(window).resize(function(){
+		var width = $(window).width();
+		//var height = $(window).height();
+
+		var youtube_height = (width / 16) * 9;
+		$("#ytplayer").height(youtube_height);
+	});
+
 
     </script>
 <body>
@@ -70,7 +78,7 @@
         </div>
         </div>
         <div class="youtubebox">
-          <iframe id="ytplayer" width="100%" height="100%" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe>
+          <iframe id="ytplayer" width="100%" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
     <!--Line2 end-->
