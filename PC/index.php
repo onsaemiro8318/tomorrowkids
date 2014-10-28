@@ -30,18 +30,18 @@
 	$(window).resize(function(){
         var width = $(window).width();
         var height = $(window).height();
-        $(".backLayer").width(width).height(height);
+        $(".mask").width(width).height(height);
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
-        $("#movie_layer").fadeOut(500);
-        $(".backLayer").fadeOut(500);
+        $("#video_fremebox").fadeOut(500);
+        $(".mask").fadeOut(500);
         }
     });
     $(document).ready(function(){
-    $(".backLayer").click(function(){
-        $(".backLayer").fadeOut(500);
-        $("#movie_layer").fadeOut(500);
+    $(".mask").click(function(){
+        $(".mask").fadeOut(500);
+        $("#video_fremebox").fadeOut(500);
 		controllable_player.stopVideo();
     });
     });
@@ -105,7 +105,7 @@
 </div>
 <!--Line3 end-->
 <div class="video_fremebox">
-	<div class="video"><img src="images/video_freme.png"/><div class="playbut"><a href=""><img src="images/video_wbut.png"/></a></div><div class="closebut"><a href=""><img src="images/video_wbut_close.png"/></a></div></div>
+	<div class="video"><iframe id="ytplayer" width="100%"  src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
 <div class="mask"></div>
 
