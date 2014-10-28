@@ -66,7 +66,7 @@
         	<div class="fl_left tag">B.</div>
             <div class="fl_left tagtext2"><?=$answer_data[1][test_value]?></div>
         </div>
-        <div class="next_but"><a href=""><img src="images/next_qu_but.jpg"/></a></div>
+        <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');"><img src="images/next_qu_but.jpg"/></a></div>
     </div>
     <div class="footer_mob">
 	<div class="line1">
