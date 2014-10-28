@@ -91,12 +91,12 @@
 			$("#"+answer_id).attr('class','fl_left tagtext');
 			$("#selected_answer").val(answer_id);
 			if (answer_id == "answer1")
-				$("#answer2").css("font-weight","normal");
+				$("#answer2").attr('class','fl_left tagtext2');
 			else
-				$("#answer1").css("font-weight","normal");
+				$("#answer1").attr('class','fl_left tagtext2');
 		}else{
 			if (sel_answer != answer_id){
-				$("#"+answer_id).css("font-weight","normal");
+				$("#"+answer_id).attr('class','fl_left tagtext2');
 			}
 		}
 	}
