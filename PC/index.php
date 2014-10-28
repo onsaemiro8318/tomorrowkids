@@ -11,7 +11,8 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	$percentage_cnt	= ($total_count / 1000) * 100;
+	$left_per	= ($total_count / 1000) * 100;
+	$right_per	= 100 - $left_per - 0.3;
 	print_r($percentage_cnt);
 ?>
     <script type='text/javascript'>
@@ -51,6 +52,9 @@
         $(".video_fremebox").fadeOut(500);
 		controllable_player.stopVideo();
     });
+
+	$(".greenco_left fl_left").css("width","<?=$left_per?>");
+	$(".greenco_right fl_left").css("width","<?=$right_per?>");
     });
     </script>
     
