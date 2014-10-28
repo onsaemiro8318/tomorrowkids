@@ -64,18 +64,19 @@
           직감에 의존하는 대답을 해 주실수록 상상 이상의 특별한 일들이 기다리고 있답니다!
           </div>
         </div>
-        <div class="result_box2">
-          <div class="hidden">
-            <div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
+<div class="result_box2">
+        	<div class="hidden"><div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
             <div class="fl_left textinbox">
-              <p class="bluetext"><?=$question_data[test_value]?></p>
-              <p onclick="save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">A.</div><span class="anstext fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[0][test_value]?></span></p>
-              <p onclick="save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[1][test_value]?></span></p>
-            </div>
-          </div>
-          <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','');""><img src="images/next_but.jpg" alt="다음 질문"/></a></div>
+            	<p class="bluetext">5. 갑자기 생각지 않은 일주일의 휴가가 생겼다. 
+     당신이 하고 싶은 것은? </p>
+     			<p><div class="fl_left tag">A.</div><span class="anstext fl_left">오랜만에 여유 있는 나만의 시간을 갖고 싶다. 
+ 집에서 푹 쉬거나 못 만났던 친구들을 만난다. 대낮의 여유도 즐긴다. </span></p>
+ <p><div class="fl_left tag">B.</div><span class="anstextone fl_left">이런 기회가 또 오겠는가. 당장 가장 빠른 비행기와 숙박 편을 확인해
+가까운 해외로 떠난다.  휴가 바로 전날까지 실컷 놀다 온다.</span></p>
+            </div></div>
+            <div class="hidden nextbut"><a href=""><img src="images/next_but.jpg" alt="다음 질문"/></a></div>
         </div>
-      </div>
+</div>
     </div>
   </div>
 <!----Line2 end--->
