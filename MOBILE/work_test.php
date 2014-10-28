@@ -9,9 +9,9 @@
 		exit; 
 	} 
 	$t_count1 = substr($total_count,0,1);
-	$t_count2 = substr($total_count,0,2);
-	$t_count3 = substr($total_count,0,3);
-	$t_count4 = substr($total_count,0,4);
+	$t_count2 = substr($total_count,1,1);
+	$t_count3 = substr($total_count,2,1);
+	$t_count4 = substr($total_count,3,1);
 ?>
 <script>
     window.history.forward(0);
