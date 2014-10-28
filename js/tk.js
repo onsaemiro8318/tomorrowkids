@@ -38,10 +38,10 @@ function update_user_email(){
 function play_movie(gubun){
 	var width = $(window).width();
 	var height = $(window).height();
-	$(".backLayer").width(width);
-	$(".backLayer").height(height);
-	$(".backLayer").fadeTo(1000, 0.7);
-	$("#movie_layer").fadeIn(500);
+	$(".mask").width(width);
+	$(".mask").height(height);
+	$(".mask").fadeTo(1000, 0.7);
+	$("#video_fremebox").fadeIn(500);
 	if (gubun == "PC")
 		controllable_player.playVideo();
 }
@@ -89,7 +89,7 @@ function go_direct_donation(test_idx)
 		}),
     success: function (response) {
       $("#donation_div").fadeOut(500);
-      $(".backLayer").fadeOut(500);
+      $(".mask").fadeOut(500);
       location.href="index.php";
       window.open("http://www.dreamfull.or.kr/app/newdf/main");
     }
@@ -139,9 +139,9 @@ function kt_ajax(test_idx)
 		success: function(res) {
 			var width = $(window).width();
 			var height = $(window).height();
-			$(".backLayer").width(width);
-			$(".backLayer").height(height);
-			$(".backLayer").fadeTo(1000, 0.7);
+			$(".mask").width(width);
+			$(".mask").height(height);
+			$(".mask").fadeTo(1000, 0.7);
 			$("#email_div").fadeIn(500);
 //			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
 //				window.open("http://www.naver.com/");
@@ -191,11 +191,11 @@ function ks_share(job, job_explain, test_idx)
 								success: function(response){
 									var width = $(window).width();
 									var height = $(window).height();
-									$(".backLayer").width(width);
-									$(".backLayer").height(height);
-									$(".backLayer").fadeTo(1000, 0.7);
+									$(".mask").width(width);
+									$(".mask").height(height);
+									$(".mask").fadeTo(1000, 0.7);
 									$("#email_div").fadeIn(500);
-								//$("#movie_layer").fadeIn(500);
+								//$("#video_fremebox").fadeIn(500);
 					  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
 									//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
 									var openNewWindow = window.open("about:blank");
@@ -239,9 +239,9 @@ function fb_share(job, job_explain, test_idx)
 				});
 				var width = $(window).width();
 				var height = $(window).height();
-				$(".backLayer").width(width);
-				$(".backLayer").height(height);
-				$(".backLayer").fadeTo(1000, 0.7);
+				$(".mask").width(width);
+				$(".mask").height(height);
+				$(".mask").fadeTo(1000, 0.7);
 				$("#email_div").fadeIn(500);
 
 				/*
@@ -436,7 +436,7 @@ function go_test(num, val)
 {
 	if (num > 10)
 	{
-		$(".backLayer").fadeTo(1000,0.7);
+		$(".mask").fadeTo(1000,0.7);
 		$.ajax({
 			type		: "POST",
 			async		: false,
@@ -446,7 +446,7 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
-				$(".backLayer").fadeOut(500);
+				$(".mask").fadeOut(500);
 				var res_result = response.split("|");
 				/*
 				if (response == "N")
@@ -492,7 +492,7 @@ function go_next_question(num, selected_val)
   
 	if (num > 10)
 	{
-		$(".backLayer").fadeTo(1000,0.7);
+		$(".mask").fadeTo(1000,0.7);
   }
   
 	if (selected_val == "")
