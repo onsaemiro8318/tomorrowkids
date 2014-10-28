@@ -13,7 +13,6 @@
 
 	$left_per	= ($total_count / 1000) * 100;
 	$right_per	= 100 - $left_per - 0.3;
-	print_r($percentage_cnt);
 ?>
     <script type='text/javascript'>
 	// 유튜브 반복 재생
@@ -119,7 +118,7 @@
 <!--Line3 end-->
 </div>
 <div class="video_fremebox">
-	<div class="video"><iframe id="ytplayer" width="951px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
+	<div class="video"><iframe id="ytplayer" width="951px" height="579px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
 <div class="mask"></div>
 
