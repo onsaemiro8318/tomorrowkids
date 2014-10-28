@@ -69,8 +69,8 @@
             <div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
             <div class="fl_left textinbox">
               <p class="bluetext"><?=$question_data[test_value]?></p>
-              <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click')" style="cursor:pointer;"><div class="fl_left tag">A.</div><span class="anstext fl_left"><?=$answer_data[0][test_value]?></span></p>
-              <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click')" style="cursor:pointer;"><div class="fl_left tag">B.</div><span class="anstextone fl_left"><?=$answer_data[1][test_value]?></span></p>
+              <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">A.</div><span class="anstext fl_left"><?=$answer_data[0][test_value]?></span></p>
+              <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">B.</div><span class="anstextone fl_left"><?=$answer_data[1][test_value]?></span></p>
             </div>
           </div>
           <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','');""><img src="images/next_but.jpg" alt="다음 질문"/></a></div>
@@ -106,17 +106,17 @@
 	{
 		var sel_answer = $("#selected_answer").val();
 		if (event_id == "over"){
-			$("#"+answer_id).attr('class','fl_left tagtext');
+			$("#"+answer_id).attr('class','anstext fl_left');
 		}else if (event_id == "click"){
-			$("#"+answer_id).attr('class','fl_left tagtext');
+			$("#"+answer_id).attr('class','anstext fl_left');
 			$("#selected_answer").val(answer_id);
 			if (answer_id == "answer1")
-				$("#answer2").attr('class','fl_left tagtext2');
+				$("#answer2").attr('class','anstextone fl_left');
 			else
-				$("#answer1").attr('class','fl_left tagtext2');
+				$("#answer1").attr('class','anstextone fl_left');
 		}else{
 			if (sel_answer != answer_id){
-				$("#"+answer_id).attr('class','fl_left tagtext2');
+				$("#"+answer_id).attr('class','anstextone fl_left');
 			}
 		}
 	}
