@@ -46,43 +46,68 @@
     });
     });
     </script>
-  <body>
-  <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;">
-  </div>
-  <div style="position:absolute;">
-    <div>
-      <h1>'내일을 부탁해'</h1>
-      <div>
-        <p>약 100만 명의 우리 아이들이 빈곤한 환경 탓에</p>
-        <p>기쁨과 성취를 얻을 수 있는 다양한 일이 있다는 것을 몰라</p>
-        <p>내일을 꿈꾸지 못하고 있다는 사실, 알고 계셨나요?</p>
-        <p>당신이 도전할만한 특별한 내일(work)을 확인하시면,</p>
-        <p>내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.</p>
-      </div>
-      <div>
-          <div id="movie_play_box">
-              <a href="#" onclick="play_movie('<?=$gubun?>');"><img src="http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png"></a>
-          </div>  
-          <div id="count_box">
-              <h1><?=$total_count?>명</h1>
-              <p>의 내일(work)이<p>
-              <p>아이들의 내일(Tomorrow)이 되고 있습니다.</p>
-          </div>
-      </div>
-      <div id="sns_login_box">
-        <div>
-        <input type="button" value="페이스북으로 참여하기" onclick="javascript:facebook_login();">
-        <input type="button" value="카카오계정으로 참여하기" onclick="javascript:kakao_login();">
-        <p>*어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
-        </div>
-      </div>
+    
+<body>
+<!--Line1 start-->
+<div class="main_top1">
+	<div class="main_topinbg1">
+    	<h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
+        <div class="videobox"><div class="video_but"><a href="#" onclick="play_movie('<?=$gubun?>');"><img src="images/play_but.png"/></a></div></div>
     </div>
-  </div>
-    <div id="movie_layer" style="position:absolute;display:none;background:red;margin-top:300px;z-index:1000;">
-        <div id="movie_box">
-          <iframe id="ytplayer" width="100%"  src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe>
+</div>
+<!--Line1 end-->
+<!--Line2 start-->
+<div class="main_top2">
+	<div class="main_topin2">
+    <p class="text_data"><span class="f_text">1,000명의 내일이 모이면</span><br/><span class="t_text">아이들의 내일을 위한 특별 강연회</span>가 열립니다!</p>
+    <div class="gr_box">
+    	<div class="greenco_left fl_left"></div><div class="greenco_right fl_left"><div class="peopleic"><img src="images/gr_peopleicon.png"/></div></div><div class="minic"><img src="images/gr_15min.png"/></div><div class="line_number"><img src="images/gr_number_line.png"/></div>
+    </div>
+    <div class="number_boxwr">
+    	<div class="fl_left peoplenumber">현재 참여자수</div>
+        <div class="number_box fl_left">
+        	<ul>
+            	<li>1</li>
+                <li class="number2">0</li>
+                <li class="number3">0</li>
+                <li class="number4">0</li>
+            </ul>
         </div>
     </div>
-  </body>
-</html>
+    </div>
+</div>
+<!--Line2 end-->
+<!--Line3 start-->
+<div class="main_top3">
+	<div class="soc_linkbox">
+    	<div class="hidden"><span class="fl_left facebookic"><a href="#" onclick="facebook_login();"><img src="images/facebook_but.png"/></a></span><span class="fl_left"><a href="#" onclick="kakao_login();"><img src="images/kakaotalk_but.png"/></a></span></div>
+        <p class="text hidden">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
+    </div>
+    <div class="stepbox hidden">
+    	<div><img src="images/step_fiveicon.png"/></div>
+        	<ul>
+            	<li>내일<br/>테스트하기</li>
+                <li class="stept1">내일 결과<br/>SNS에 공유하기</li>
+                <li class="stept2">참여를 통한<br/>기부 완료</li>
+                <li class="stept3">세상을 바꾸는 시간,15분 과<br/>함께 하는 아이들 교육<br/>프로그램 제작</li>
+            </ul>
+    </div>
+    <div class="donation"><img src="images/donation_img.png"/><div class="donationbutton"><span class="fl_left pinkbut"><a href=""><img src="images/donation_but_pink.png"/></a></span><span class="fl_left"><a href=""><img src="images/donation_but_green.png"/></a></span></div>
+    </div>
+<!--Footer start-->
+<div class="footer">
+	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
+    <div class="linetwo">
+    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
+    </div>
+</div>
+<!--Footer end-->
+</div>
+<!--Line3 end-->
+<div class="video_fremebox">
+	<div class="video"><img src="images/video_freme.png"/><div class="playbut"><a href=""><img src="images/video_wbut.png"/></a></div><div class="closebut"><a href=""><img src="images/video_wbut_close.png"/></a></div></div>
+</div>
+<div class="mask"></div>
 
+</body>
+</html>
