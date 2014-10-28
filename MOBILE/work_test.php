@@ -12,6 +12,14 @@
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
+
+	// 질문 정보
+	$question_data	= TK_GetTestQuestionInfo("1");
+
+	$answer_data	= TK_GetTestAnswerInfo("1");
+
+	$next_num		= $_POST[test_idx] + 1;
+
 ?>
 <script>
     window.history.forward(0);
