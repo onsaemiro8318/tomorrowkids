@@ -51,7 +51,7 @@ if (!$_SESSION['ss_mb_name'])
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="daily_applicant_count.php">TomorrowKids 2014 Admin</a>
+          <a class="navbar-brand" href="daily_influx_count.php">TomorrowKids 2014 Admin</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
