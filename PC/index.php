@@ -49,6 +49,7 @@
     
 <body>
 <!--Line1 start-->
+<div class="main_wrapper">
 <div class="main_top1">
 	<div class="main_topinbg1">
     	<h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
@@ -104,6 +105,7 @@
 <!--Footer end-->
 </div>
 <!--Line3 end-->
+</div>
 <div class="video_fremebox">
 	<div class="video"><iframe id="ytplayer" width="100%"  src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
