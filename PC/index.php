@@ -53,8 +53,8 @@
 		controllable_player.stopVideo();
     });
 
-	$(".greenco_left fl_left").css("width","<?=$left_per?>");
-	$(".greenco_right fl_left").css("width","<?=$right_per?>");
+	$(".greenco_left").css("width","<?=$left_per?>%");
+	$(".greenco_right").css("width","<?=$right_per?>%");
     });
     </script>
     
