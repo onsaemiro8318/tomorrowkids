@@ -11,7 +11,7 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	$percentage_cnt	= $total_count / 1000;
+	$percentage_cnt	= ($total_count / 1000) * 100;
 	print_r($percentage_cnt);
 ?>
     <script type='text/javascript'>
