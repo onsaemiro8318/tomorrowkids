@@ -86,9 +86,9 @@
 	{
 		var sel_answer = $("#selected_answer").val();
 		if (event_id == "over"){
-			$("#"+answer_id).css("font-weight","bold");
+			$("#"+answer_id).attr('class','fl_left tagtext');
 		}else if (event_id == "click"){
-			$("#"+answer_id).css("font-weight","bold");
+			$("#"+answer_id).attr('class','fl_left tagtext');
 			$("#selected_answer").val(answer_id);
 			if (answer_id == "answer1")
 				$("#answer2").css("font-weight","normal");
