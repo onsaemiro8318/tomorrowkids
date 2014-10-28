@@ -41,13 +41,15 @@
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
-        $(".video_fremebox").fadeOut(500);
-        $(".mask").fadeOut(500);
+			$(".video_fremebox").fadeOut(500);
+			$(".mask").fadeOut(500);
+			$(".video_but").show();
         }
     });
 	$(document).ready(function(){
 		$(".mask").click(function(){
 			$(".mask").fadeOut(500);
+			$(".video_but").show();
 			$(".video_fremebox").fadeOut(500);
 			controllable_player.stopVideo();
 		});

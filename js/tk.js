@@ -42,6 +42,7 @@ function play_movie(gubun){
 	$(".mask").height(height);
 	$(".mask").fadeTo(1000, 0.7);
 	$(".video_fremebox").fadeTo(1000,1);
+	$(".video_but").hide();
 	if (gubun == "PC")
 		controllable_player.playVideo();
 }
