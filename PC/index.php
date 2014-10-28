@@ -107,7 +107,7 @@
 <!--Line3 end-->
 </div>
 <div class="video_fremebox">
-	<div class="video"><iframe id="ytplayer" width="951px" hieght="579px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
+	<div class="video"><iframe id="ytplayer" width="951px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
 <div class="mask"></div>
 
