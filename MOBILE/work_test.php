@@ -54,7 +54,7 @@
 답해주세요. 직감에 의존하는 대답을 해 주실수록 
 상상 이상의 특별한 일들이 기다리고 있답니다!
 </div>
-	<div class="top2_content">
+	<div class="top2_content" id="test_div">
     	<div class="quas">
         	<?=$question_data[test_value]?>
         </div>

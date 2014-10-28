@@ -469,12 +469,12 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
-				$(".top2_content").html(response);
+				$("#test_div").html(response);
 			}
 		});
 	}
 }
-.
+
 function save_info(idx)
 {
 	$("#sel_value").val(idx);
