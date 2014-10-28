@@ -69,8 +69,8 @@
             <div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
             <div class="fl_left textinbox">
               <p class="bluetext"><?=$question_data[test_value]?></p>
-              <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">A.</div><span class="anstext fl_left"><?=$answer_data[0][test_value]?></span></p>
-              <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">B.</div><span class="anstextone fl_left"><?=$answer_data[1][test_value]?></span></p>
+              <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click')" style="cursor:pointer;"><div class="fl_left tag">A.</div><span class="anstext fl_left"><?=$answer_data[0][test_value]?></span></p>
+              <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click')" style="cursor:pointer;"><div class="fl_left tag">B.</div><span class="anstextone fl_left"><?=$answer_data[1][test_value]?></span></p>
             </div>
           </div>
           <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','');""><img src="images/next_but.jpg" alt="다음 질문"/></a></div>
