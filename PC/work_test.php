@@ -8,38 +8,109 @@
 		header('Location: index.php'); 
 		exit; 
 	} 
+
+	$t_count1 = substr($total_count,0,1);
+	$t_count2 = substr($total_count,1,1);
+	$t_count3 = substr($total_count,2,1);
+	$t_count4 = substr($total_count,3,1);
+
+	if (!$_POST[test_idx])
+		$_POST[test_idx] = "1";
+	// 질문 정보
+	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
+
+	$answer_data	= TK_GetTestAnswerInfo($_POST[test_idx]);
+
+	$next_num		= $_POST[test_idx] + 1;
+
 ?>
 <script>
 	// 테스트 결과 페이지에서 뒤로가기 버튼을 이용해 테스트 페이지로 이동 막기
 	window.history.forward(0);
 </script>
 
-  <body>
-    <div class="backLayer" style="display:none;background-color:black;position:absolute;left:0px;top:0px;z-index:999;width:100%;height:100%"></div>
-    <div style="position:absolute;width:100%;height:100%">
-    <div style="position:top;width:100%;height:60px;background:green">
-      <a href="index.php">내일을 부탁해</a>
-      <p><?=$total_count?>명의 내일(work)이 내일(tomorrow)이 되고 있습니다.</p>
+<body>
+<!----Line1 start--->
+  <input type="hidden" name="sel_value" id="sel_value">
+  <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
+  <input type="hidden" name="selected_answer" id="selected_answer" value="">
+<div class="main_top1">
+	<div class="subtopinbg1">
+    	<h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
+        <div class="fl_right sub_toprite">
+        	<span class="toptext">1,000명의 내일이 모이면<br/>아이들의 내일을 위한<br/>특별 강연회가 열립니다!</span>
+            <div class="number_sub">
+            	<ul>
+            	<li><?=$t_count1?></li>
+                <li class="number2"><?=$t_count2?></li>
+                <li class="number3"><?=$t_count3?></li>
+                <li class="number4"><?=$t_count4?></li>
+            </ul>
+            </div>
+        </div>
     </div>
-    <div style="position:top;width:100%;height:110px;background:skyblue;">
-      <h1>STEP1. 내일(work) 테스트</h1>
-      <p>당신의 내일(work)을 확인하기 위한 10개의 질문에 답해주세요.<br/>
-         직감에 의존하는 대답을 해 주실수록 상상 이상의 특별한 일들이 기다리고 있답니다!
-      </p>
+</div>
+<!----Line1 end--->
+<!----Line2 start--->
+<div class="sub_top2_step2">
+	<div class="hidden"><div class="sub_top2in">
+    	<div class="hidden"><div class="fl_left"><p class="bluetext">STEP1</p>
+        <p class="whitetext">내일 (Work) 테스트</p></div>
+        <div class="step_sumtext hidden">당신의 내일(work)을 확인하기 위한 10개의 질문에 답해주세요.
+직감에 의존하는 대답을 해 주실수록 상상 이상의 특별한 일들이 기다리고 있답니다!
+</div></div>
+<div class="result_box2">
+        	<div class="hidden"><div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
+            <div class="fl_left textinbox">
+            	<p class="bluetext"><?=$question_data[test_value]?></p>
+     			<p onclick="save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">A.</div><span class="anstext fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[0][test_value]?></span></p>
+                <p onclick="save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><div class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[1][test_value]?></span></p>
+            </div></div>
+            <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','');""><img src="images/next_but.jpg" alt="다음 질문"/></a></div>
+        </div>
+</div>
     </div>
-    <div style="position:relative;width:100%;height:500px;background:orange;" id="test_div">
-      <div style="position:absolute;margin-top:200px;margin-left:45%;background:green;cursor:pointer" onclick="go_test('1','');">
-        <p><font size="17pt">테스트 시작!!</font></p>
-      </div>
+    
+</div>
+<!----Line2 end--->
+<!----Line3 start--->
+<div class="main_top3">
+<!----Footer start--->
+<div class="footer">
+	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
+    <div class="linetwo">
+    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
     </div>
-    </div>
-  </body>
+</div>
+<!----Footer end--->
+</div>
+<!----Line3 end--->
+</body>
 </html>
-
 <script type="text/javascript">
 	$(window).resize(function(){
         var width = $(window).width();
         var height = $(window).height();
         $(".backLayer").width(width).height(height);
     });
+
+	function select_answer(answer_id, event_id)
+	{
+		var sel_answer = $("#selected_answer").val();
+		if (event_id == "over"){
+			$("#"+answer_id).attr('class','fl_left tagtext');
+		}else if (event_id == "click"){
+			$("#"+answer_id).attr('class','fl_left tagtext');
+			$("#selected_answer").val(answer_id);
+			if (answer_id == "answer1")
+				$("#answer2").attr('class','fl_left tagtext2');
+			else
+				$("#answer1").attr('class','fl_left tagtext2');
+		}else{
+			if (sel_answer != answer_id){
+				$("#"+answer_id).attr('class','fl_left tagtext2');
+			}
+		}
+	}
+
 </script>
