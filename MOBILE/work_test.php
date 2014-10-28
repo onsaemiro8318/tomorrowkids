@@ -32,9 +32,9 @@
   <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
   <input type="hidden" name="selected_answer" id="selected_answer" value="">
   <div class="mob_sub_top1">
-    <h1><a href=""><img src="images/logo.png"/></a></h1>
+    <h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1>
     <div>
-      <div class="tmor_text fl_left"><img src="images/page_title.png"/></div>
+      <div class="tmor_text fl_left"><a href="http://www.tomorrowkids.or.kr/" target="_blank"><img src="images/page_title.png"/></a></div>
       <div class="mob_sub_number fl_right">
         <div class="peopletitle">현재 참여자</div>
         <div class="numberbox">
