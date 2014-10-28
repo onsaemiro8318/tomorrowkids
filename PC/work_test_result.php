@@ -9,7 +9,6 @@
 	$test_idx	= $_REQUEST[idx];
 
 ?>
-?>
 <script>
     window.history.forward(0);
 </script>
