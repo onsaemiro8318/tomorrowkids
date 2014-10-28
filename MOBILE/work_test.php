@@ -13,10 +13,12 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
+	if (!$_POST[test_idx])
+		$_POST[test_idx] = "1";
 	// 질문 정보
-	$question_data	= TK_GetTestQuestionInfo("1");
+	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
 
-	$answer_data	= TK_GetTestAnswerInfo("1");
+	$answer_data	= TK_GetTestAnswerInfo($_POST[test_idx]);
 
 	$next_num		= $_POST[test_idx] + 1;
 
@@ -26,6 +28,8 @@
 </script>
 
 <body>
+  <input type="hidden" name="sel_value" id="sel_value">
+  <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
 <div class="mob_sub_top1">
 	<h1><a href=""><img src="images/logo.png"/></a></h1>
     <div>
@@ -52,21 +56,15 @@
 </div>
 	<div class="top2_content">
     	<div class="quas">
-        	5. 갑자기 생각지 않은 일주일의 휴가가 생겼다.       
-    당신이 하고 싶은 것은? 
+        	<?=$question_data[test_value]?>
         </div>
-        <div class="ansbox">
+        <div class="ansbox" onclick="save_info('<?=$answer_data[0][idx]?>')">
         	<div class="fl_left tag">A.</div>
-            <div class="fl_left tagtext">오랜만에 여유 있는 나만의 시간을 갖고 싶다.  
-집에서 푹 쉬거나 못 만났던 친구들을 만난다. 
-대낮의 여유도 즐긴다</div>
+            <div class="fl_left tagtext"><?=$answer_data[0][test_value]?></div>
         </div>
-         <div class="ansbox">
+         <div class="ansbox" onclick="save_info('<?=$answer_data[1][idx]?>')">
         	<div class="fl_left tag">B.</div>
-            <div class="fl_left tagtext2">이런 기회가 또 오겠는가. 당장 가장 빠른 
-비행기와 숙박 편을 확인해서    가까운 해외로
-떠난다.  휴가 바로 전날까지 실컷 놀다 온다. 
-대낮의 여유도 즐긴다</div>
+            <div class="fl_left tagtext2"><?=$answer_data[1][test_value]?></div>
         </div>
         <div class="next_but"><a href=""><img src="images/next_qu_but.jpg"/></a></div>
     </div>
