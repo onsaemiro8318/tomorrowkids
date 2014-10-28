@@ -6,6 +6,13 @@
 	unset($_SESSION['ss_mb_id']);
 	unset($_SESSION['ss_media']);
 
+	$t_count1 = substr($total_count,0,1);
+	$t_count2 = substr($total_count,1,1);
+	$t_count3 = substr($total_count,2,1);
+	$t_count4 = substr($total_count,3,1);
+
+	$percentage_cnt	= $total_count / 1000;
+	print_r($percentage_cnt);
 ?>
     <script type='text/javascript'>
 	// 유튜브 반복 재생
@@ -68,10 +75,10 @@
     	<div class="fl_left peoplenumber">현재 참여자수</div>
         <div class="number_box fl_left">
         	<ul>
-            	<li>1</li>
-                <li class="number2">0</li>
-                <li class="number3">0</li>
-                <li class="number4">0</li>
+            	<li><?=$t_count1?></li>
+                <li class="number2"><?=$t_count2?></li>
+                <li class="number3"><?=$t_count3?></li>
+                <li class="number4"><?=$t_count4?></li>
             </ul>
         </div>
     </div>
