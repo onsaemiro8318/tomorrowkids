@@ -46,16 +46,17 @@
         $(".mask").fadeOut(500);
         }
     });
-    $(document).ready(function(){
-    $(".mask").click(function(){
-        $(".mask").fadeOut(500);
-        $(".video_fremebox").fadeOut(500);
-		controllable_player.stopVideo();
-    });
+	$(document).ready(function(){
+		$(".mask").click(function(){
+			$(".mask").fadeOut(500);
+			$(".video_fremebox").fadeOut(500);
+			controllable_player.stopVideo();
+		});
 
-	$(".greenco_left").css("width","<?=$left_per?>%");
-	$(".greenco_right").css("width","<?=$right_per?>%");
-    });
+		$(".greenco_left").css("width","<?=$left_per?>%");
+		$(".greenco_right").css("width","<?=$right_per?>%");
+		$(".peopleic").css("left","<?=$left_per?>%");
+	});
     </script>
     
 <body>
