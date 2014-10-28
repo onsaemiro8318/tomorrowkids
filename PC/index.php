@@ -34,14 +34,14 @@
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
-        $("#video_fremebox").fadeOut(500);
+        $(".video_fremebox").fadeOut(500);
         $(".mask").fadeOut(500);
         }
     });
     $(document).ready(function(){
     $(".mask").click(function(){
         $(".mask").fadeOut(500);
-        $("#video_fremebox").fadeOut(500);
+        $(".video_fremebox").fadeOut(500);
 		controllable_player.stopVideo();
     });
     });
@@ -107,7 +107,7 @@
 <!--Line3 end-->
 </div>
 <div class="video_fremebox">
-	<div class="video"><iframe id="ytplayer" width="100%"  src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
+	<div class="video"><iframe id="ytplayer" width="100%" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
 <div class="mask"></div>
 
