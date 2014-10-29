@@ -66,7 +66,7 @@
 <?
 	}
 ?>
-<div class="popupbg1">
+<div class="popupbg1" id="email_div">
   <div class="closeic"><a href=""><img src="images/close_icon.gif"/></a></div>
   <div class="mailboxw hidden">
     <div class="fl_left mailbox">
