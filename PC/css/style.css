@@ -102,7 +102,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .result_box2 .nextbut{ width:158px; margin:26px 0 0 232px;}
 
 .popupbg1{ background:url(../images/popup1_bg.png) no-repeat; width:587px; height:417px; position:absolute; top:325px; margin-left:150px; z-index: 1000; display:none}
-.popupbg2{ background:url(../images/popup2_bg.png) no-repeat; width:588px; height:362px; position:absolute; top:325px; margin-left:390px; z-index: 1000; display:none}
+.popupbg2{ background:url(../images/popup2_bg.png) no-repeat; width:588px; height:362px; position:absolute; top:325px; margin-left:185px; z-index: 1000; display:none}
 .closeic{ position:absolute; right:20px; top:20px;}
 .mailbox{ width:145px;}
 .mailboxw{padding:210px 0 0 55px;}
