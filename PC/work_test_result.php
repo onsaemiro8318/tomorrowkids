@@ -110,7 +110,7 @@
       <div class="fl_left"><input type="checkbox" class="checkboxw" checked /></div>
       <ul>
         <li class="fi">개인정보동의<span>/</span></li>
-        <li class="ti">개인정보이용약관</li>
+        <li class="ti" onclick="show_term();">개인정보이용약관</li>
       </ul>
     </div>
   <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');"><img src="images/pu_summitbut.jpg"/></a></div>
@@ -122,6 +122,18 @@
   <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_pbut.jpg"/></a></div>
 </div>
 
+////////////////
+<div class="popupbg3" id="privacy_term">
+  <div class="closeic"><a href="javascript:close_popup2()"><img src="images/close_icon.gif"/></a></div>
+  <div class="donationbt">
+  사단법인 부스러기사랑나눔회 귀하
+  본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.
+  1. 수집하는 개인정보의 항목 : 이메일 주소
+  2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림
+  3. 개인정보 보유.이용기간 : 캠페인 종료일로부터 1년간 보관됩니다.
+  </div>
+</div>
+////////////
     </div>
 </div>
 <!--Line2 end-->
@@ -148,4 +160,8 @@
     });
     });
 
+	function show_term()
+	{
+		$("privacy_term").show();
+	}
 </script>
