@@ -59,8 +59,8 @@
 <?
 	}else{
 ?>
-        <div class="face_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
-        <div class="face_dt_button"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
+        <div class="face_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
+        <div class="face_dt_button"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
 <?
 	}
 ?>    

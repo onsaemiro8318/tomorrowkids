@@ -55,11 +55,11 @@
         <div class="content"><div><h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1></div>
         	<!--<div class="text1_cont"><img src="images/mob_top1_text1.png"/></div>
             <div class="text2_cont"><img src="images/page_title.png"/></div>-->
-            <div class="sum_text">약 100만 명의 우리 아이들이 빈곤한 환경 탓에
+            <div class="sum_text"><!-- 약 100만 명의 우리 아이들이 빈곤한 환경 탓에
 기쁨과 성취를 얻을 수 있는 다양한 일이 있다는 것을 몰라
 내일을 꿈꾸지 못하고 있다는 사실, 알고 계셨나요?
 <p class="bold">당신이 도전할만한 특별한 내일(work)을 확인하시면,
-내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.</p>
+내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.</p> -->
             </div>
             <!--<div class="top1_mobbotbg"><img src="images/top_1bg_img.png"/></div>-->
         </div>
