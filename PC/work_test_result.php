@@ -40,7 +40,7 @@
 <!--Line1 start-->
   <div class="main_top1">
     <div class="subtopinbg1">
-      <h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
+      <h1><a href="http://www.dreamfull.or.kr" target="_blank"><img src="images/logo.png" alt="dreamfull"/></a></h1>
       <div class="fl_left tomrlogo"><a href="index.php"><img src="images/tomrr_logo.png"/></a></div>
       <div class="fl_right sub_toprite">
         <span class="toptext">1,000명의 내일이 모이면<br/>아이들의 내일을 위한<br/>특별 강연회가 열립니다!</span>
