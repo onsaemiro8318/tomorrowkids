@@ -106,19 +106,23 @@
                 <li class="stept3">세상을 바꾸는 시간,15분 과<br/>함께 하는 아이들 교육<br/>프로그램 제작</li>
             </ul>
     </div>
-    <div class="donation"><img src="images/donation_img.png"/><div class="donationbutton"><span class="fl_left pinkbut"><a href="http://www.dreamfull.or.kr/app/newdf/donation/donation" target="_blank"><img src="images/donation_but_pink.png"/></a></span><span class="fl_left"><a href="http://www.dreamfull.or.kr/app/newdf/donation/collection_box" target="_blank"><img src="images/donation_but_green.png"/></a></span></div>
+    <div class="donation"><img src="images/donation_img.png"/><div class="donationbutton"><span class="fl_left pinkbut"><a href=""><img src="images/donation_but_pink.png"/></a></span><span class="fl_left"><a href=""><img src="images/donation_but_green.png"/></a></span></div>
     </div>
 <!--Footer start-->
-<?
-	include_once "footer.php";
-?>
+<div class="footer">
+	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
+    <div class="linetwo">
+    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
+    </div>
+</div>
 <!--Footer end-->
 </div>
 <!--Line3 end-->
 </div>
-<div class="mask"></div>
-<div class="video_fremebox">
+<div class="video_fremebox" style="z-index:99999;">
 	<div class="video"><iframe id="ytplayer" width="951px" height="579px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
+<div class="mask"></div>
+
 </body>
 </html>
