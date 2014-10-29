@@ -18,7 +18,6 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .fl_left{float:left;}
 .fl_right{float:right;}
 
-.footer_mob a, a:link, a:hover {text-decoration:none; color:#8b8b8b;}
 .mob_top1box{overflow:hidden; height:766px; background:url(../images/mob_top3bg.jpg) no-repeat; background-size:100%; padding-bottom:39%; position:relative;}
 .mob_top1box .content{ position:absolute; width:100%;}
 .mob_top1box .content h1{position:absolute; top:20px; left:20px;}
@@ -111,7 +110,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .face_dt_button{ width:498px; margin:0 auto; padding:15% 0 10% 0;}
 .face_dt_button img{ width:80%;}
 
-.thankspupup{display:none; background-color: #fff;position: absolute;z-index: 1000;top: 103px;left:2%;width: 96%;overflow: hidden;}
+.thankspupup{background-color: #fff;position: absolute;z-index: 1000;top: 103px;left:2%;width: 96%;overflow: hidden;}
 .thankspupup .closeicon{ position:absolute; top:20px; right:20px;}
 .thankspupup .bigtext{ color:#253f71; font-size:100px; font-family: 'NanumGothic-Bold'; text-align:center; padding-top:16%;}
 .thankspupup .bigtext span{ text-indent:inherit;}
@@ -128,7 +127,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .checkbox{ width:30px; height:30px; margin-top:3px; margin-right:20px;}
 .summitbut{ width:24%; margin:0 auto; padding:5% 0 3% 0;}
 .summitbut img{ width:100%;}
-.mask{display:none; position:absolute;top:0;left:0;width:100%;height:100%;background:url(../images/mask_bg.png) repeat;z-index:10}
+.mask{position:fixed;top:0;left:0;width:100%;height:100%;background:url(../images/mask_bg.png) repeat;z-index:10}
 .smtext_in{ color:#fc7a85; font-size:136%;}
 
 .footer_bggry{ background:url(../images/gray_bgline.jpg) repeat-x;}

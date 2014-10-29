@@ -3,6 +3,18 @@ var jsonStr;
 var obj;
 var ka_access_token;
 var ka_refresh_token;
+
+var userAgent = navigator.userAgent.toLowerCase();
+ 
+var browser = {
+    msie    : /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+    safari  : /webkit/.test( userAgent ),
+    firefox : /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
+    opera   : /opera/.test( userAgent )
+};   
+
+
+
 /********************** 이메일 입력 **********************/
 function update_user_email(){
     var EMAIL1	= $.trim($('#email1').val());
@@ -43,7 +55,25 @@ function update_user_email(){
 /********************** 동영상 재생 **********************/
 function play_movie(gubun){
 	var width = $(window).width();
-	var height = $(window).height();
+	//var height = $(window).height();
+
+	var height = 0;
+
+	if( browser.msie ){ //IE
+		var scrollHeight = document.documentElement.scrollHeight;
+		var browserHeight = document.documentElement.clientHeight;
+		height = scrollHeight;
+
+	} else if ( browser.safari ){ //Chrome || Safari
+		height = document.body.scrollHeight;
+	} else if ( browser.firefox ){ // Firefox || NS
+		var bodyHeight = document.body.clientHeight;
+		height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+	} else if ( browser.opera ){ // Opera
+		var bodyHeight = document.body.clientHeight;
+		height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+	}
+
 	$(".mask").width(width);
 	$(".mask").height(height);
 	$(".mask").fadeTo(1000, 0.7);
@@ -197,7 +227,25 @@ function ks_share(job, job_explain, test_idx)
 								}),
 								success: function(response){
 									var width = $(window).width();
-									var height = $(window).height();
+									//var height = $(window).height();
+
+									var height = 0;
+
+									if( browser.msie ){ //IE
+										var scrollHeight = document.documentElement.scrollHeight;
+										var browserHeight = document.documentElement.clientHeight;
+										height = scrollHeight;
+
+									} else if ( browser.safari ){ //Chrome || Safari
+										height = document.body.scrollHeight;
+									} else if ( browser.firefox ){ // Firefox || NS
+										var bodyHeight = document.body.clientHeight;
+										height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+									} else if ( browser.opera ){ // Opera
+										var bodyHeight = document.body.clientHeight;
+										height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+									}
+
 									$(".mask").width(width);
 									$(".mask").height(height);
 									$(".mask").fadeTo(1000, 0.7);
@@ -245,9 +293,28 @@ function fb_share(job, job_explain, test_idx)
 					})
 				});
 				var width = $(window).width();
-				var height = $(window).height();
+				//var height = $(window).height();
+				
+				var height = 0;
+
+				if( browser.msie ){ //IE
+					var scrollHeight = document.documentElement.scrollHeight;
+					var browserHeight = document.documentElement.clientHeight;
+					height = scrollHeight;
+
+				} else if ( browser.safari ){ //Chrome || Safari
+					height = document.body.scrollHeight;
+				} else if ( browser.firefox ){ // Firefox || NS
+					var bodyHeight = document.body.clientHeight;
+					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+				} else if ( browser.opera ){ // Opera
+					var bodyHeight = document.body.clientHeight;
+					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+				}
+
 				$(".mask").width(width);
 				$(".mask").height(height);
+
 				$(".mask").fadeTo(1000, 0.7);
 				$("#email_div").fadeIn(500);
 
@@ -496,13 +563,15 @@ function go_next_question(num, selected_val)
 	if (sel_val == "")
 	{
 		alert('하나의 답변을 꼭 선택해 주세요.');
+		if (num == 2)
+			location.href="work_test.php";
 		return false;
 	}
-  
+
 	if (num > 10)
 	{
 		$(".mask").fadeTo(1000,0.7);
-  }
+	}
   
 	if (selected_val == "")
 		gubun = "";

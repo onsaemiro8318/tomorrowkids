@@ -25,9 +25,10 @@
 	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
 	}
 
-	if(window.opera){
+	if(window.opera ){
 	addEventListener('load', onYouTubeIframeAPIReady, false);
 	}
+
 	setTimeout(function(){
 		if (typeof(controllable_player) == 'undefined'){
 			onYouTubeIframeAPIReady();
@@ -36,8 +37,25 @@
 
 	$(window).resize(function(){
         var width = $(window).width();
-        var height = $(window).height();
-        $(".mask").width(width).height(height);
+        //var height = $(window).height();
+		var height = 0;
+
+		if( browser.msie ){ //IE
+			var scrollHeight = document.documentElement.scrollHeight;
+			var browserHeight = document.documentElement.clientHeight;
+			height = scrollHeight;
+
+		} else if ( browser.safari ){ //Chrome || Safari
+			height = document.body.scrollHeight;
+		} else if ( browser.firefox ){ // Firefox || NS
+			var bodyHeight = document.body.clientHeight;
+			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+		} else if ( browser.opera ){ // Opera
+			var bodyHeight = document.body.clientHeight;
+			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+		}
+
+		$(".mask").width(width).height(height);
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
