@@ -32,7 +32,6 @@
 	function close_popup3()
 	{
 		$("#privacy_term").fadeOut(500);
-		$(".mask").fadeOut(500);
 	}
 
 </script>
