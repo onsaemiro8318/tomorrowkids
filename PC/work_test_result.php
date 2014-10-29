@@ -146,6 +146,7 @@
     $(".mask").click(function(){
         $(".mask").fadeOut(500);
         $(".popupbg1").fadeOut(500);
+        $(".popupbg2").fadeOut(500);
     });
     });
 
