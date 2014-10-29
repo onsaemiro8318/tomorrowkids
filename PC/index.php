@@ -34,15 +34,6 @@
 		}
 	}, 3000)
 
-var userAgent = navigator.userAgent.toLowerCase();
- 
-var browser = {
-    msie    : /msie/.test( userAgent ) && !/opera/.test( userAgent ),
-    safari  : /webkit/.test( userAgent ),
-    firefox : /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
-    opera   : /opera/.test( userAgent )
-};   
-
 	$(window).resize(function(){
         var width = $(window).width();
         //var height = $(window).height();
@@ -62,8 +53,8 @@ var browser = {
 			var bodyHeight = document.body.clientHeight;
 			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
 		}
-alert(height);
-        $(".mask").width(width).height(height);
+
+		$(".mask").width(width).height(height);
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
