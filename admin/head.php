@@ -88,7 +88,7 @@ if (!$_SESSION['ss_mb_name'])
                 <a href="answer_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>
               </li>
               <li>
-                <a href="story_vote_total.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 매체 목록</a>
+                <a href="share_media_count.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 매체 목록</a>
               </li>
             </ul>
           </div>
