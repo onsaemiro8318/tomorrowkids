@@ -470,6 +470,7 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
+				$("#sel_value").val("");
 				$("#selected_answer").val("");
 				$("#test_div").html(response);
 			}
