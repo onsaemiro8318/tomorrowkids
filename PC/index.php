@@ -109,12 +109,9 @@
     <div class="donation"><img src="images/donation_img.png"/><div class="donationbutton"><span class="fl_left pinkbut"><a href=""><img src="images/donation_but_pink.png"/></a></span><span class="fl_left"><a href=""><img src="images/donation_but_green.png"/></a></span></div>
     </div>
 <!--Footer start-->
-<div class="footer">
-	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
-    <div class="linetwo">
-    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
-    </div>
-</div>
+<?
+	include_once "footer.php";
+?>
 <!--Footer end-->
 </div>
 <!--Line3 end-->
