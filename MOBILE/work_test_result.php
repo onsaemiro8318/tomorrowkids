@@ -9,8 +9,26 @@
 	$test_idx	= $_REQUEST[idx];
 
 ?>
-<script>
-    window.history.forward(0);
+<script type="text/javascript">
+	window.history.forward(0);
+
+	function close_popup()
+	{
+		$("#email_div").fadeOut(500);
+		$(".mask").fadeOut(500);
+	}
+
+	function close_popup2()
+	{
+		$("#donation_div").fadeOut(500);
+		$(".mask").fadeOut(500);
+	}
+
+	function close_popup3()
+	{
+		$("#privacy_term").fadeOut(500);
+	}
+
 </script>
 <body>
 <div class="mob_sub_wrapper">
@@ -73,7 +91,7 @@
 </div>
 <!--mail box-->
 <div id="email_div" class="thankspupup">
-	<div class="closeicon"><a href=""><img src="images/popup_closeicon.png"/></a></div>
+	<div class="closeicon"><a href="javascript:close_popup();"><img src="images/popup_closeicon.png"/></a></div>
     <div class="bigtext">감사합니다<span>!</span></div>
     <div class="smtext">공유로 기부가 완료되셨습니다.<br/>
 캠페인 결과와 강연회 소식을 이메일로<br/>
@@ -92,7 +110,7 @@
         <div class="fl_left"><input type="checkbox" class="checkbox" checked /></div>
             <ul>
                 <li class="fi">개인정보동의<span>/</span></li>
-                <li class="ti">개인정보이용약관</li>
+                <li class="ti"><a href="#" onclick="show_term();">개인정보이용약관</a></li>
             </ul>
         </div>
         <div class="summitbut"><a href="#" onclick="update_user_email();"><img src="images/summit_but.png"/></a></div>
@@ -101,7 +119,7 @@
 </div>
 <!--thanks box-->
 <div id="donation_div" class="thankspupup">
-	<div class="closeicon"><a href=""><img src="images/popup_closeicon.png"/></a></div>
+	<div class="closeicon"><a href="javascript:close_popup2();"><img src="images/popup_closeicon.png"/></a></div>
     <div class="bigtext"><img src="images/h_iconpopup.jpg"/></div>
     <div class="smtext">아이들을 <span class="smtext_in">2배</span> 더<br/>
 후원하고 싶은 분은<br/>
@@ -110,6 +128,18 @@
     </div>
     <div class="summitbut"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_but.jpg"/></a></div>
 </div>
+<!--privacy box-->
+<div id="privacy_term" class="thankspupup">
+	<div class="closeicon"><a href="javascript:close_popup3();"><img src="images/popup_closeicon.png"/></a></div>
+    <div class="smtext">사단법인 부스러기사랑나눔회 귀하</div>
+    <div class="provbox hidden">
+      <p>본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.</p>
+      <p>1. 수집하는 개인정보의 항목 : 이메일 주소</p>
+      <p>2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림</p>
+      <p>3. 개인정보 보유.이용기간 : 캠페인 종료일로부터 1년간 보관됩니다.</p>
+    </div>
+</div>
+
 <div class="mask"></div>
 </body>
 </html>
@@ -131,4 +161,10 @@
         $(".thankspupup").fadeOut(500);
     });
     });
+
+	function show_term()
+	{
+		$("#privacy_term").show();
+	}
+
 </script>

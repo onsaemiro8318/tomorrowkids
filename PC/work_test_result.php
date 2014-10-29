@@ -14,8 +14,8 @@
 	$t_count4 = substr($total_count,3,1);
 
 ?>
-<script>
-    window.history.forward(0);
+<script type="text/javascript">
+	window.history.forward(0);
 
 	function close_popup()
 	{
