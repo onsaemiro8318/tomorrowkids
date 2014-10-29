@@ -58,8 +58,9 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .donation .donationbutton{ width:450px; margin:0 auto; padding:50px 0 128px 0; overflow:hidden;}
 .donation .donationbutton .pinkbut{ margin-right:29px;}
 
-.subtopinbg1{ background:url(../images/m_top2.jpg) no-repeat left top; height:235px; width:1023px; margin:0 auto;}
+.subtopinbg1{ background:url(../images/m_top3.jpg) no-repeat left top; height:235px; width:1023px; margin:0 auto;}
 .subtopinbg1 h1{ padding:30px 0 0 82px;}
+.subtopinbg1 .tomrlogo{padding:30px 0 0 82px;}
 .toptext{ color:#222; font-size:13px; font-family:'NanumGothic'; text-align:right !important;}
 .number_sub{ background:url(../images/number_bg_sub.png) no-repeat; width:154px; height:42px; margin-top:10px;}
 .number_sub ul li{float:left; color:#fff; font-size:40px; line-height:40px; width:32px; text-align:center;}
