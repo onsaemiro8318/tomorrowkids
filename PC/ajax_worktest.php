@@ -21,7 +21,17 @@
       <p><div class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><?=$answer_data[1][test_value]?></span></p>
     </div>
   </div>
+<?
+    if($next_num == 11){
+?>
+  <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');"><img src="images/go_result_bt_pc.png" alt="결과 보기"/></a></div>
+<?
+    }else{
+?>
   <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST[selected_val]?>');"><img src="images/next_but.jpg" alt="다음 질문"/></a></div>
+<?
+    }
+?>
 
 <script type="text/javascript">
 	function select_answer(answer_id, event_id)
