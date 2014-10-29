@@ -117,7 +117,7 @@
       <div class="fl_left"><input type="checkbox" class="checkboxw" checked /></div>
       <ul>
         <li class="fi">개인정보동의<span>/</span></li>
-        <li class="ti" onclick="show_term();">개인정보이용약관</li>
+        <li class="ti"><a href="#" onclick="show_term();">개인정보이용약관</a></li>
       </ul>
     </div>
   <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');"><img src="images/pu_summitbut.jpg"/></a></div>
