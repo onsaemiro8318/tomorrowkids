@@ -62,7 +62,7 @@ var browser = {
 			var bodyHeight = document.body.clientHeight;
 			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
 		}
-
+alert(height);
         $(".mask").width(width).height(height);
     });
     $(document).keydown(function(event){
