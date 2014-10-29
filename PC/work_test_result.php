@@ -8,6 +8,11 @@
 
 	$test_idx	= $_REQUEST[idx];
 
+	$t_count1 = substr($total_count,0,1);
+	$t_count2 = substr($total_count,1,1);
+	$t_count3 = substr($total_count,2,1);
+	$t_count4 = substr($total_count,3,1);
+
 ?>
 <script>
     window.history.forward(0);
@@ -17,15 +22,15 @@
 <!--Line1 start-->
 <div class="main_top1">
 	<div class="subtopinbg1">
-    	<h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
+    	<h1><a href="http://www.dreamfull.or.kr/"><img src="images/logo.png" alt="dreamfull"/></a></h1>
         <div class="fl_right sub_toprite">
         	<span class="toptext">1,000명의 내일이 모이면<br/>아이들의 내일을 위한<br/>특별 강연회가 열립니다!</span>
             <div class="number_sub">
             	<ul>
-            	<li>1</li>
-                <li class="number2">0</li>
-                <li class="number3">0</li>
-                <li class="number4">0</li>
+            	<li><?=$t_count1?></li>
+                <li class="number2"><?=$t_count2?></li>
+                <li class="number3"><?=$t_count3?></li>
+                <li class="number4"><?=$t_count4?></li>
             </ul>
             </div>
         </div>

@@ -36,7 +36,7 @@
   <input type="text" name="selected_answer" id="selected_answer" value="">
   <div class="main_top1">
     <div class="subtopinbg1">
-      <h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
+      <h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png" alt="dreamfull"/></a></h1>
       <div class="fl_right sub_toprite">
         <span class="toptext">1,000명의 내일이 모이면<br/>아이들의 내일을 위한<br/>특별 강연회가 열립니다!</span>
         <div class="number_sub">
@@ -70,7 +70,7 @@
             <div class="fl_left textinbox">
               <p class="bluetext"><?=$question_data[test_value]?></p>
               <p>
-			    <div class="fl_left tag">A.</div><span class="anstextone fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;padding-bottom:20px"><?=$answer_data[0][test_value]?></span></p>
+                <div class="fl_left tag">A.</div><span class="anstextone fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;padding-bottom:20px"><?=$answer_data[0][test_value]?></span></p>
               <p><div class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;"><?=$answer_data[1][test_value]?></span></p>
             </div>
           </div>
