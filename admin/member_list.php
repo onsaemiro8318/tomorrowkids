@@ -133,7 +133,7 @@
 <?php 
 	}
 ?>
-              <tr><td colspan="12"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
+              <tr><td colspan="9"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
             </tbody>
           </table>
         </div>
