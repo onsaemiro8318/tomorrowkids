@@ -113,7 +113,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .checkbox{ width:30px; height:30px; margin-top:3px; margin-right:20px;}
 .summitbut{ width:24%; margin:0 auto; padding:5% 0 3% 0;}
 .summitbut img{ width:100%;}
-.mask{position:fixed;top:0;left:0;width:100%;height:100%;background:url(../images/mask_bg.png) repeat;z-index:10}
+.mask{display:none; position:absolute;top:0;left:0;width:100%;height:100%;background:url(../images/mask_bg.png) repeat;z-index:999}
 .smtext_in{ color:#fc7a85; font-size:136%;}
 
 @media(max-width:870px){
