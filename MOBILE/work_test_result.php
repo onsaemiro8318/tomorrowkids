@@ -78,9 +78,9 @@
 </div>
 <div class="mailbox hidden">
 	<div class="mail_inputbox fl_left"><form action="" method="post">
-				<input type="text" class="input" onfocus="this.value=''; return ture" value="">
+				<input type="text" name="email1" id="email1" class="input" onfocus="this.value=''; return true" value="">
 			</form></div><div class="fl_left mail_ic"><img src="images/mail_icong.png"/></div><div class="mail_inputbox fl_left"><form action="" method="post">
-				<input type="text" class="input" onfocus="this.value=''; return ture" value="직접입력">
+				<input type="text" name="email2" id="email2" class="input" onfocus="this.value=''; return true" value="직접입력">
 			</form></div>
     </div>
     <div class="provbox hidden">
@@ -90,7 +90,7 @@
             <li class="ti">개인정보이용약관</li>
         </ul>
     </div>
-     <div class="summitbut"><a href=""><img src="images/summit_but.png"/></a></div>
+     <div class="summitbut"><a href="#" onclick="update_user_email();"><img src="images/summit_but.png"/></a></div>
     </div>
 </div>
 </div>
@@ -103,7 +103,7 @@
 아래 직접 기부하기에도<br/>
 참여해보세요! 
 </div>
-     <div class="summitbut"><a href=""><img src="images/donation_but.jpg"/></a></div>
+     <div class="summitbut"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_but.jpg"/></a></div>
     </div>
 </div>
 </div>
