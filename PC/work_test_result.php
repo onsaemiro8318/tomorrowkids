@@ -16,6 +16,11 @@
 ?>
 <script>
     window.history.forward(0);
+
+	function close_popup()
+	{
+		$("#email_div").hide();
+	}
 </script>
 <body>
 <div class="main_wrapper">
@@ -67,23 +72,30 @@
 	}
 ?>
 <div class="popupbg1" id="email_div">
-  <div class="closeic"><a href=""><img src="images/close_icon.gif"/></a></div>
+  <div class="closeic"><a href="javascript:close_popup()"><img src="images/close_icon.gif"/></a></div>
   <div class="mailboxw hidden">
     <div class="fl_left mailbox">
       <form action="" method="post">
-        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="">
+        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="" name="email1" id="email1">
       </form>
     </div>
     <div class="fl_left mailcion"><img src="images/mail_icon.gif"/></div>
     <div class="fl_left mailbox">
       <form action="" method="post">
-        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="직접입력">
+        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="직접입력" name="email2" id="email2">
       </form>
     </div>
     <div class="selectbox fl_left">
-      <select>
+      <select name="sel_email" onchange="input_email(this.value)">
         <option>전체</option>
-        <option>전체</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+        <option value="hitel.net">hitel.net</option>
+        <option value="hotmail.com">hotmail.com</option>
+        <option value="korea.com">korea.com</option>
+        <option value="nate.com">nate.com</option>
+        <option value="naver.com">naver.com</option>
+        <option value="outlook.com">outlook.com</option>
       </select>
     </div>
     <div class="provboxw hidden">
@@ -93,7 +105,7 @@
         <li class="ti">개인정보이용약관</li>
       </ul>
     </div>
-  <div class="summitbt"><a href=""><img src="images/pu_summitbut.jpg"/></a></div>
+  <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');"><img src="images/pu_summitbut.jpg"/></a></div>
   </div>
 </div>
 
