@@ -66,23 +66,6 @@
 <?
 	}
 ?>
-    </div>
-</div>
-<!--Line2 end-->
-<!--Line3 start-->
-<div class="main_top3">
-<!--Footer start-->
-<div class="footer">
-	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
-    <div class="linetwo">
-    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
-    </div>
-</div>
-<!--Footer end-->
-</div>
-<!--Line3 end-->
-</div>
-
 <div class="popupbg1">
   <div class="closeic"><a href=""><img src="images/close_icon.gif"/></a></div>
   <div class="mailboxw hidden">
@@ -112,6 +95,24 @@
     </div>
   <div class="summitbt"><a href=""><img src="images/pu_summitbut.jpg"/></a></div>
   </div>
+</div>
+
+
+    </div>
+</div>
+<!--Line2 end-->
+<!--Line3 start-->
+<div class="main_top3">
+<!--Footer start-->
+<div class="footer">
+	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
+    <div class="linetwo">
+    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
+    </div>
+</div>
+<!--Footer end-->
+</div>
+<!--Line3 end-->
 </div>
 
 <div class="mask"></div>
