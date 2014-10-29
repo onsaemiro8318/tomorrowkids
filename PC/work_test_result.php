@@ -29,7 +29,7 @@
 		$(".mask").fadeOut(500);
 	}
 
-	function close_popup2()
+	function close_popup3()
 	{
 		$("#privacy_term").fadeOut(500);
 		$(".mask").fadeOut(500);
@@ -129,14 +129,14 @@
   <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_pbut.jpg"/></a></div>
 </div>
 
-<div class="popupbg2" id="privacy_term" style="display:none">
+<div class="popupbg3" id="privacy_term">
   <div class="closeic"><a href="javascript:close_popup3()"><img src="images/close_icon.gif"/></a></div>
   <div class="donationbt">
-  사단법인 부스러기사랑나눔회 귀하
-  본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.
-  1. 수집하는 개인정보의 항목 : 이메일 주소
-  2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림
-  3. 개인정보 보유.이용기간 : 캠페인 종료일로부터 1년간 보관됩니다.
+    <p><font style="font-size:12px">사단법인 부스러기사랑나눔회 귀하</font></p>
+    본인은 귀단체가 본인 및 기타 적합한 경로를 통해<br /> 수집한 본인의 개인정보를 활용하는데 동의합니다.<br />
+    1. 수집하는 개인정보의 항목 : 이메일 주소<br />
+    2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림<br />
+    3. 개인정보 보유.이용기간 : 캠페인 종료일로부터 1년간 보관됩니다.<br />
   </div>
 </div>
     </div>
