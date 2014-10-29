@@ -45,7 +45,7 @@
         <div class="result_box"><div class="bluebox_result fl_left"><img src="images/result_img1.jpg"/></div>
         	 <div class="fl_left">
         		<div class="re_text">당신의 내일(Work) 테스트 결과입니다.</div>
-                <div class="resulttwotext" style="width:480px;height:230px">
+                <div class="resulttwotext" style="width:460px;height:230px">
                 	<p class="big">"<?=$user_job[job];?>"</p>
                     <p class="sm"><?=$user_job[job_explain];?></p>
                 </div>
