@@ -470,7 +470,7 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
-				$("#selected_answer").val();
+				$("#selected_answer").val("");
 				$("#test_div").html(response);
 			}
 		});
