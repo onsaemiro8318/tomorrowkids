@@ -107,7 +107,7 @@
         </div>
     </div>
     <div class="provbox hidden">
-        <div class="fl_left"><input type="checkbox" class="checkbox" checked /></div>
+        <div class="fl_left"><input type="checkbox" class="checkbox" id="chk_privacy" checked /></div>
             <ul>
                 <li class="fi">개인정보동의<span>/</span></li>
                 <li class="ti"><a href="#" onclick="show_term();">개인정보이용약관</a></li>
@@ -129,9 +129,9 @@
     <div class="summitbut"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_but.jpg"/></a></div>
 </div>
 <!--privacy box-->
-<div id="privacy_term" class="thankspupup">
-	<div class="closeicon"><a href="javascript:close_popup3();"><img src="images/popup_closeicon.png"/></a></div>
-    <div class="smtext">사단법인 부스러기사랑나눔회 귀하</div>
+<div id="privacy_term" class="thankspupup" style="top:400px">
+    <div class="closeicon"><a href="javascript:close_popup3();"><img src="images/popup_closeicon.png"/></a></div>
+    <div class="smtext" style="margin-top:50px">사단법인 부스러기사랑나눔회 귀하</div>
     <div class="provbox hidden">
       <p>본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.</p>
       <p>1. 수집하는 개인정보의 항목 : 이메일 주소</p>
