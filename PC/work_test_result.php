@@ -32,22 +32,23 @@
 <body>
 <div class="main_wrapper">
 <!--Line1 start-->
-<div class="main_top1">
-	<div class="subtopinbg1">
-    	<h1><a href="http://www.dreamfull.or.kr/"><img src="images/logo.png" alt="dreamfull"/></a></h1>
-        <div class="fl_right sub_toprite">
-        	<span class="toptext">1,000명의 내일이 모이면<br/>아이들의 내일을 위한<br/>특별 강연회가 열립니다!</span>
-            <div class="number_sub">
-            	<ul>
-            	<li><?=$t_count1?></li>
-                <li class="number2"><?=$t_count2?></li>
-                <li class="number3"><?=$t_count3?></li>
-                <li class="number4"><?=$t_count4?></li>
-            </ul>
-            </div>
+  <div class="main_top1">
+    <div class="subtopinbg1">
+      <h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
+      <div class="fl_left tomrlogo"><a href="index.php"><img src="images/tomrr_logo.png"/></a></div>
+      <div class="fl_right sub_toprite">
+        <span class="toptext">1,000명의 내일이 모이면<br/>아이들의 내일을 위한<br/>특별 강연회가 열립니다!</span>
+        <div class="number_sub">
+          <ul>
+            <li><?=$t_count1?></li>
+            <li class="number2"><?=$t_count2?></li>
+            <li class="number3"><?=$t_count3?></li>
+            <li class="number4"><?=$t_count4?></li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 <!--Line1 end-->
 <!--Line2 start-->
 <div class="sub_top2">
