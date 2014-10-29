@@ -101,3 +101,22 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .result_box2 .textinbox{}
 .result_box2 .nextbut{ width:158px; margin:26px 0 0 232px;}
 
+.popupbg1{ background:url(../images/popup1_bg.png) no-repeat; width:587px; height:417px; position:absolute; top:325px; margin-left:150px; z-index: 1000;display:none}
+.popupbg2{ background:url(../images/popup2_bg.png) no-repeat; width:588px; height:362px; position:absolute; top:325px; left:390px; z-index: 1000;}
+.closeic{ position:absolute; right:20px; top:20px;}
+.mailbox{ width:145px;}
+.mailboxw{padding:210px 0 0 55px;}
+.mailbox .inputw{ border:0 !important; background-color:#b1dcd5; line-height:37px; height:37px; width:145px; color:#585858; font-size:16px; font-family: 'NanumGothic-Bold';}
+.mailboxw .mailcion img{ padding:0 3px;}
+.selectbox, .select {background:#b1dcd5 url(../images/sel_but.png) no-repeat right center; height:37px; width:140px; margin-left:10px; line-height:37px;}
+.selectbox select{ border:none; background:none; width:140px; height:37px;}
+
+
+.provboxw{ margin:0 auto; width:220px; padding:20px 0 35px 0;}
+.provboxw ul li{ float:left;}
+.provboxw ul li span{ padding:0 5px;}
+.provboxw ul .fi{ color:#585858; font-size:12px; font-family: 'NanumGothic-Bold'; letter-spacing:-0.1px;}
+.provboxw ul .ti{ color:#5db3a3; font-size:12px; text-decoration:underline; font-family: 'NanumGothic-Bold'; letter-spacing:-0.1px;}
+.checkboxw{ width:13px; height:13px; margin-right:10px;}
+.summitbt{ width:103px; margin:0 auto;}
+.donationbt{ width:186px; margin:0 auto; padding-top:240px;}

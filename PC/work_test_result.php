@@ -66,6 +66,37 @@
 <?
 	}
 ?>
+<div class="popupbg1" id="email_div">
+  <div class="closeic"><a href=""><img src="images/close_icon.gif"/></a></div>
+  <div class="mailboxw hidden">
+    <div class="fl_left mailbox">
+      <form action="" method="post">
+        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="">
+      </form>
+    </div>
+    <div class="fl_left mailcion"><img src="images/mail_icon.gif"/></div>
+    <div class="fl_left mailbox">
+      <form action="" method="post">
+        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="직접입력">
+      </form>
+    </div>
+    <div class="selectbox fl_left">
+      <select>
+        <option>전체</option>
+        <option>전체</option>
+      </select>
+    </div>
+    <div class="provboxw hidden">
+      <div class="fl_left"><input type="checkbox" class="checkboxw" checked /></div>
+      <ul>
+        <li class="fi">개인정보동의<span>/</span></li>
+        <li class="ti">개인정보이용약관</li>
+      </ul>
+    </div>
+  <div class="summitbt"><a href=""><img src="images/pu_summitbut.jpg"/></a></div>
+  </div>
+</div>
+
 
     </div>
 </div>
