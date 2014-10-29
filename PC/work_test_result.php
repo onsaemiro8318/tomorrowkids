@@ -129,7 +129,7 @@
   <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_pbut.jpg"/></a></div>
 </div>
 
-<div class="popupbg3" id="privacy_term">
+<div class="popupbg2" id="privacy_term">
   <div class="closeic"><a href="javascript:close_popup3()"><img src="images/close_icon.gif"/></a></div>
   <div class="donationbt">
     <p><font style="font-size:12px">사단법인 부스러기사랑나눔회 귀하</font></p>
