@@ -113,7 +113,7 @@
       </select>
     </div>
     <div class="provboxw hidden">
-      <div class="fl_left"><input type="checkbox" class="checkboxw" checked /></div>
+      <div class="fl_left"><input type="checkbox" class="checkboxw" id="chk_privacy" checked /></div>
       <ul>
         <li class="fi">개인정보동의<span>/</span></li>
         <li class="ti"><a href="#" onclick="show_term();">개인정보이용약관</a></li>

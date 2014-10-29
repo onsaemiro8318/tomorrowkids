@@ -21,6 +21,11 @@ function update_user_email(){
     	return false;
     }
     
+	if ($("input:checkbox[id='chk_privacy']").is(":checked") == false)
+	{
+		alert("개인정보동의에 체크해 주세요. ");
+	}
+
     $.ajax({
     	type:"POST",
     	data:{
