@@ -19,7 +19,8 @@
 
 	function close_popup()
 	{
-		$("#email_div").hide();
+		$("#email_div").fadeOut(500);
+        $(".mask").fadeOut(500);
 	}
 </script>
 <body>
@@ -130,3 +131,12 @@
 <div class="mask"></div>
 </body>
 </html>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $(".mask").click(function(){
+        $(".mask").fadeOut(500);
+        $(".popupbg1").fadeOut(500);
+    });
+    });
+
+</script>
