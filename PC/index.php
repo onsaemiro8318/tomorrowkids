@@ -51,7 +51,7 @@ var browser = {
 		if( browser.msie ){ //IE
 			var scrollHeight = document.documentElement.scrollHeight;
 			var browserHeight = document.documentElement.clientHeight;
-			height = scrollHeight < browserHeight ? browserHeight : scrollHeight;
+			height = scrollHeight;
 
 		} else if ( browser.safari ){ //Chrome || Safari
 			height = document.body.scrollHeight;
