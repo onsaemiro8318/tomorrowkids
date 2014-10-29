@@ -34,9 +34,35 @@
 		}
 	}, 3000)
 
+var userAgent = navigator.userAgent.toLowerCase();
+ 
+var browser = {
+    msie    : /msie/.test( userAgent ) && !/opera/.test( userAgent ),
+    safari  : /webkit/.test( userAgent ),
+    firefox : /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test( userAgent ),
+    opera   : /opera/.test( userAgent )
+};   
+
 	$(window).resize(function(){
         var width = $(window).width();
-        var height = $(window).height();
+        //var height = $(window).height();
+		var height = 0;
+
+		if( browser.msie ){ //IE
+			var scrollHeight = document.documentElement.scrollHeight;
+			var browserHeight = document.documentElement.clientHeight;
+			height = scrollHeight < browserHeight ? browserHeight : scrollHeight;
+
+		} else if ( browser.safari ){ //Chrome || Safari
+			height = document.body.scrollHeight;
+		} else if ( browser.firefox ){ // Firefox || NS
+			var bodyHeight = document.body.clientHeight;
+			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+		} else if ( browser.opera ){ // Opera
+			var bodyHeight = document.body.clientHeight;
+			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+		}
+
         $(".mask").width(width).height(height);
     });
     $(document).keydown(function(event){

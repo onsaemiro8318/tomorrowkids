@@ -144,6 +144,7 @@
 </body>
 </html>
 <script type="text/javascript">
+
 	$(window).resize(function(){
         var width = $(window).width();
         var height = $(window).height();
