@@ -22,7 +22,7 @@
 
 	};
 	function onYouTubeIframeAPIReady() {
-	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+	var controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
 	}
 
 	if(window.opera ){
