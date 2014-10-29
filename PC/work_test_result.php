@@ -20,7 +20,13 @@
 	function close_popup()
 	{
 		$("#email_div").fadeOut(500);
-        $(".mask").fadeOut(500);
+		$(".mask").fadeOut(500);
+	}
+
+	function close_popup2()
+	{
+		$("#donation_div").fadeOut(500);
+		$(".mask").fadeOut(500);
 	}
 </script>
 <body>
@@ -110,6 +116,10 @@
   </div>
 </div>
 
+<div class="popupbg2" id="donation_div">
+  <div class="closeic"><a href="javascript:close_popup2()"><img src="images/close_icon.gif"/></a></div>
+  <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_pbut.jpg"/></a></div>
+</div>
 
     </div>
 </div>
