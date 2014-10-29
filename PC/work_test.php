@@ -33,7 +33,7 @@
 <!----Line1 start--->
   <input type="hidden" name="sel_value" id="sel_value">
   <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
-  <input type="hidden" name="selected_answer" id="selected_answer" value="">
+  <input type="text" name="selected_answer" id="selected_answer" value="">
   <div class="main_top1">
     <div class="subtopinbg1">
       <h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
