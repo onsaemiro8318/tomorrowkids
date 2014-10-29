@@ -11,6 +11,8 @@
 	$thumb = new Image("images/result_img1.jpg");
 	$thumb->width(200);
 	$thumb->save();
+
+	print_r($thumb);
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
