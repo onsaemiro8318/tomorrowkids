@@ -563,10 +563,8 @@ function go_next_question(num, selected_val)
 	if (sel_val == "")
 	{
 		alert('하나의 답변을 꼭 선택해 주세요.');
-		if (num == 1)
-			history.back();
-		else
-			return false;
+		location.href="work_test.php";
+		return false;
 	}
 
 	if (num > 10)
