@@ -167,6 +167,6 @@
 
 	function show_term()
 	{
-		$("privacy_term").show();
+		$("#privacy_term").show();
 	}
 </script>
