@@ -69,11 +69,11 @@
             <div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
             <div class="fl_left textinbox">
               <p class="bluetext"><?=$question_data[test_value]?></p>
-              <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;">
+              <p id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');">
                 <div class="fl_left tag">A.</div>
                 <span class="anstext fl_left"><?=$answer_data[0][test_value]?></span>
               </p>
-              <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;">
+              <p id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');">
                 <div class="fl_left tag">B.</div><span class="anstextone fl_left"><?=$answer_data[1][test_value]?></span>
               </p>
             </div>
@@ -109,8 +109,6 @@
 
 	function select_answer(answer_id, event_id)
 	{
-		alert('111');
-		/*
 		var sel_answer = $("#selected_answer").val();
 		if (event_id == "over"){
 			$("#"+answer_id).attr('class','anstext fl_left');
@@ -126,7 +124,6 @@
 				$("#"+answer_id).attr('class','anstextone fl_left');
 			}
 		}
-		*/
 	}
 
 </script>
