@@ -96,7 +96,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .mob_sub_top2 .white1{font-family: 'NanumGothic-Bold'; font-size:36px; color:#fff; text-align:center; padding:3% 0 5% 0; line-height:135%;}
 .next_but{ width:189px; margin:0 auto; padding-top:5%;}
 
-.thankspupup{background-color: #fff;position: absolute;z-index: 1000;top: 103px;left:2%;width: 96%;overflow: hidden;}
+.thankspupup{display:none; background-color: #fff;position: absolute;z-index: 1000;top: 103px;left:2%;width: 96%;overflow: hidden;}
 .thankspupup .closeicon{ position:absolute; top:20px; right:20px;}
 .thankspupup .bigtext{ color:#253f71; font-size:100px; font-family: 'NanumGothic-Bold'; text-align:center; padding-top:16%;}
 .thankspupup .bigtext span{ text-indent:inherit;}
