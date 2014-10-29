@@ -22,16 +22,13 @@
 
 	};
 	function onYouTubeIframeAPIReady() {
-	var controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
 	}
 
 	if(window.opera ){
 	addEventListener('load', onYouTubeIframeAPIReady, false);
 	}
 
-	if( browser.msie ){
-		onYouTubeIframeAPIReady();
-	}
 	setTimeout(function(){
 		if (typeof(controllable_player) == 'undefined'){
 			onYouTubeIframeAPIReady();
