@@ -90,13 +90,13 @@
   <div class="mailboxw hidden">
     <div class="fl_left mailbox">
       <form action="" method="post">
-        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="" name="email1" id="email1">
+        <input type="text" class="inputw" onfocus="this.value=''; return true" value="" name="email1" id="email1">
       </form>
     </div>
     <div class="fl_left mailcion"><img src="images/mail_icon.gif"/></div>
     <div class="fl_left mailbox">
       <form action="" method="post">
-        <input type="text" class="inputw" onfocus="this.value=''; return ture" value="직접입력" name="email2" id="email2">
+        <input type="text" class="inputw" onfocus="this.value=''; return true" value="직접입력" name="email2" id="email2">
       </form>
     </div>
     <div class="selectbox fl_left">
