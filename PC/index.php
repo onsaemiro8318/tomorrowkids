@@ -22,7 +22,7 @@
 
 	};
 	function onYouTubeIframeAPIReady() {
-	var controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
+	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
 	}
 
 	if(window.opera ){
@@ -30,6 +30,7 @@
 	}
 	setTimeout(function(){
 		if (typeof(controllable_player) == 'undefined'){
+			alert('111');
 			onYouTubeIframeAPIReady();
 		}
 	}, 3000)
