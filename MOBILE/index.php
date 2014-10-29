@@ -12,7 +12,7 @@
 	$t_count4 = substr($total_count,3,1);
 
 	$left_per	= ($total_count / 1000) * 100;
-	$right_per	= 100 - $left_per - 0.3;
+	$right_per	= 100 - $left_per - 1.3;
 
 ?>
     <script type='text/javascript'>
@@ -42,13 +42,13 @@
 		var youtube_height = (width / 16) * 9;
 		$("#ytplayer").height(youtube_height);
 	});
-/*
+
 	$(document).ready(function(){
 		$(".greenco_left").css("width","<?=$left_per?>%");
 		$(".greenco_right").css("width","<?=$right_per?>%");
 		$(".peopleic").css("left","<?=$left_per?>%");
 	});
-*/
+
     </script>
 <body>
 	<div class="mob_top1box">
