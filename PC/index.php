@@ -28,9 +28,12 @@
 	if(window.opera ){
 	addEventListener('load', onYouTubeIframeAPIReady, false);
 	}
+
+	if( browser.msie ){
+		onYouTubeIframeAPIReady();
+	}
 	setTimeout(function(){
 		if (typeof(controllable_player) == 'undefined'){
-			alert('111');
 			onYouTubeIframeAPIReady();
 		}
 	}, 3000)
