@@ -12,8 +12,8 @@
 서울시 용산구 청파로 46 한통빌딩 10층 / 문의 : 070-7164-7215/7209 / 카카오톡 ID : @드림풀</span>
 <span class="fl_right linkligo">
 	<ul>
-    	<li><a href=""><img src="images/line2_logo1.png"/></a></li>
-        <li><a href=""><img src="images/line2_logo2.png"/></a></li>
+    	<li><a href="http://www.busrugy.or.kr/"><img src="images/line2_logo1.png"/></a></li>
+        <li><a href="http://kr.hankooktire.com/"><img src="images/line2_logo2.png"/></a></li>
     </ul>
 </span></div>
     </div>
