@@ -28,6 +28,13 @@
 		$("#donation_div").fadeOut(500);
 		$(".mask").fadeOut(500);
 	}
+
+	function close_popup2()
+	{
+		$("#privacy_term").fadeOut(500);
+		$(".mask").fadeOut(500);
+	}
+
 </script>
 <body>
 <div class="main_wrapper">
@@ -122,9 +129,8 @@
   <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_pbut.jpg"/></a></div>
 </div>
 
-////////////////
-<div class="popupbg3" id="privacy_term">
-  <div class="closeic"><a href="javascript:close_popup2()"><img src="images/close_icon.gif"/></a></div>
+<div class="popupbg2" id="privacy_term" style="display:none">
+  <div class="closeic"><a href="javascript:close_popup3()"><img src="images/close_icon.gif"/></a></div>
   <div class="donationbt">
   사단법인 부스러기사랑나눔회 귀하
   본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.
@@ -133,7 +139,6 @@
   3. 개인정보 보유.이용기간 : 캠페인 종료일로부터 1년간 보관됩니다.
   </div>
 </div>
-////////////
     </div>
 </div>
 <!--Line2 end-->
