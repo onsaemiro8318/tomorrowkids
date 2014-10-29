@@ -571,11 +571,12 @@ function go_next_question(num, selected_val)
 
 	if (num > 10)
 	{
-		if (flag_num == 1)
+		flag_num = flag_num + 1;
+
+		if (flag_num > 1)
 		{
 			return false;
 		}
-		flag_num = 1;
 
 		$(".mask").fadeTo(1000,0.7);
 	}
