@@ -127,12 +127,9 @@
 <!--Line3 start-->
 <div class="main_top3">
 <!--Footer start-->
-<div class="footer">
-	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
-    <div class="linetwo">
-    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
-    </div>
-</div>
+<?
+	include_once "footer.php";
+?>
 <!--Footer end-->
 </div>
 <!--Line3 end-->
