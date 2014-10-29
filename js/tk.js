@@ -560,6 +560,7 @@ function go_next_question(num, selected_val)
 {
 	var sel_val = $("#sel_value").val();
 	var gubun   = "";
+	var flag_num = 0;
 	if (sel_val == "")
 	{
 		alert('하나의 답변을 꼭 선택해 주세요.');
@@ -570,6 +571,12 @@ function go_next_question(num, selected_val)
 
 	if (num > 10)
 	{
+		if (flag_num == 1)
+		{
+			return false;
+		}
+		flag_num = 1;
+
 		$(".mask").fadeTo(1000,0.7);
 	}
   
