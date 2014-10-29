@@ -74,7 +74,7 @@
 <?
 	}else{
 ?>
-	<div class="kakaostorybut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/facebook_sub.png"/></a></div>
+	<div class="kakaostorybut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/ks_sub.png"/></a></div>
 <?
 	}
 ?>
