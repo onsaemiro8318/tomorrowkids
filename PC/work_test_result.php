@@ -47,7 +47,7 @@
         		<div class="re_text">당신의 내일(Work) 테스트 결과입니다.</div>
                 <div class="resulttwotext">
                 	<p class="big">"<?=$user_job[job];?>"</p>
-                    <p class="sm"><?=$user_job[job_explain];?></p>
+                    <p class="sm"></p>
                 </div>
       		 </div>
         </div>
