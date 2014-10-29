@@ -25,8 +25,8 @@
 	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
 	}
 
-	if(window.opera){
-	addEventListener('load', onYouTubeIframeAPIReady, false);
+	if(window.opera || browser.msie){
+		addEventListener('load', onYouTubeIframeAPIReady, false);
 	}
 	setTimeout(function(){
 		if (typeof(controllable_player) == 'undefined'){
