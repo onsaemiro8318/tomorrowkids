@@ -12,7 +12,7 @@
 	$thumb->width(200);
 	$thumb->save();
 
-	print_r($thumb);
+	print_r($thumb[file]);
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
