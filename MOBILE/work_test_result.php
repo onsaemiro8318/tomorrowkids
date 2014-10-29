@@ -8,7 +8,7 @@
 
 	$test_idx	= $_REQUEST[idx];
 
-	$thumb = new Image("images/result_img1.png");
+	$thumb = new Image("images/result_img1.jpg");
 	$thumb->width(200);
 	$thumb->save();
 ?>
