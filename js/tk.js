@@ -227,7 +227,25 @@ function ks_share(job, job_explain, test_idx)
 								}),
 								success: function(response){
 									var width = $(window).width();
-									var height = $(window).height();
+									//var height = $(window).height();
+
+									var height = 0;
+
+									if( browser.msie ){ //IE
+										var scrollHeight = document.documentElement.scrollHeight;
+										var browserHeight = document.documentElement.clientHeight;
+										height = scrollHeight;
+
+									} else if ( browser.safari ){ //Chrome || Safari
+										height = document.body.scrollHeight;
+									} else if ( browser.firefox ){ // Firefox || NS
+										var bodyHeight = document.body.clientHeight;
+										height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+									} else if ( browser.opera ){ // Opera
+										var bodyHeight = document.body.clientHeight;
+										height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+									}
+
 									$(".mask").width(width);
 									$(".mask").height(height);
 									$(".mask").fadeTo(1000, 0.7);
@@ -275,9 +293,28 @@ function fb_share(job, job_explain, test_idx)
 					})
 				});
 				var width = $(window).width();
-				var height = $(window).height();
+				//var height = $(window).height();
+				
+				var height = 0;
+
+				if( browser.msie ){ //IE
+					var scrollHeight = document.documentElement.scrollHeight;
+					var browserHeight = document.documentElement.clientHeight;
+					height = scrollHeight;
+
+				} else if ( browser.safari ){ //Chrome || Safari
+					height = document.body.scrollHeight;
+				} else if ( browser.firefox ){ // Firefox || NS
+					var bodyHeight = document.body.clientHeight;
+					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+				} else if ( browser.opera ){ // Opera
+					var bodyHeight = document.body.clientHeight;
+					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+				}
+
 				$(".mask").width(width);
 				$(".mask").height(height);
+
 				$(".mask").fadeTo(1000, 0.7);
 				$("#email_div").fadeIn(500);
 
