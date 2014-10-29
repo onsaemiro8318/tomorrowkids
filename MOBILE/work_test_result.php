@@ -12,7 +12,7 @@
 	$thumb->width(200);
 	$thumb->save();
 
-	print_r($thumb);
+	//print_r($thumb);
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -58,7 +58,7 @@
 	    <p class="blue">STEP 2</p>
         <p class="white">내일 (Work) 공유로 기부하기</p>
 	    <div class="top3_content">
-    	    <div class="imgbox"><img src="images/result_img1.jpg"></div>
+    	    <div class="imgbox">작업 이미지</div>
             <div>
                 <div class="fl_left arrow"><img src="images/rihgt_arrowicon.png"/></div>
                 <div class="bluetext">당신의 내일(Work) 테스트 결과입니다.</div>
