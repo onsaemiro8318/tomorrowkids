@@ -27,6 +27,7 @@
 <script>
 	// 테스트 결과 페이지에서 뒤로가기 버튼을 이용해 테스트 페이지로 이동 막기
 	window.history.forward(0);
+	$("body").css("display", "none");
 </script>
 
 <body>
@@ -117,5 +118,9 @@
 			}
 		}
 	}
+
+    $(document).ready(function(){
+		$("body").css("display", "block");
+    });
 
 </script>
