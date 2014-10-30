@@ -95,7 +95,20 @@ if ($result_save === false) die($GLOBALS['errormsg'] . "<br />\n");
 //성공하였다면 이미지 출력
 
 ?>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
 원본 이미지 <br />
 <img src='<?=$path_file?>'> <br />
 썸네일 이미지 <br />
 <img src='<?=$path_resizefile?>'> <br />
+ </body>
+</html>
