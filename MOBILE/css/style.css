@@ -127,6 +127,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .mail_ic{ padding:0 2%;}
 .provbox{ margin:0 auto; width:45%;}
 .provbox ul li{ float:left;}
+.provbox ul .privacy_li {margin-right: 2%;}
 .provbox ul li span{ padding:0 5%;}
 .provbox ul .fi{ color:#585858; font-size:26px; font-family: 'NanumGothic-Bold'; letter-spacing:-0.1px;}
 .provbox ul .ti{ color:#5db3a3; font-size:26px; text-decoration:underline; font-family: 'NanumGothic-Bold'; letter-spacing:-0.1px;}

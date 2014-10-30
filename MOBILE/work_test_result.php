@@ -101,8 +101,8 @@
 	<div class="closeicon"><a href="javascript:close_popup();"><img src="images/popup_closeicon.png"/></a></div>
     <div class="bigtext">감사합니다<span>!</span></div>
     <div class="smtext">공유로 기부가 완료되셨습니다.<br/>
-캠페인 결과와 강연회 소식을 이메일로<br/>
-알려드립니다’
+캠페인 결과와 강연회 소식을<br/>
+이메일로 알려드립니다.
     </div>
     <div class="mailbox hidden">
         <div class="mail_inputbox fl_left">
@@ -116,7 +116,7 @@
     <div class="provbox hidden">
         <div class="fl_left"><input type="checkbox" class="checkbox" id="chk_privacy" checked /></div>
             <ul>
-                <li class="fi">개인정보동의<span>/</span></li>
+                <li class="fi privacy_li">개인정보동의 /</li>
                 <li class="ti"><a href="#" onclick="show_term();">개인정보이용약관</a></li>
             </ul>
         </div>
@@ -136,14 +136,16 @@
     <div class="summitbut"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_but.jpg"/></a></div>
 </div>
 <!--privacy box-->
-<div id="privacy_term" class="thankspupup" style="top:400px">
+<div id="privacy_term" class="thankspupup">
     <div class="closeicon"><a href="javascript:close_popup3();"><img src="images/popup_closeicon.png"/></a></div>
-    <div class="smtext" style="margin-top:50px">사단법인 부스러기사랑나눔회 귀하</div>
+    <div class="bigtext">개인정보약관</div>
     <div class="provbox hidden">
-      <p>본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.</p>
-      <p>1. 수집하는 개인정보의 항목 : 이메일 주소</p>
-      <p>2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림</p>
-      <p>3. 개인정보 보유.이용기간 : 캠페인 종료일로부터 1년간 보관됩니다.</p>
+     <ul>    
+      <li class="fi">본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.</li>
+      <li class="fi">1. 수집하는 개인정보의 항목 : 이메일 주소</li>
+      <li class="fi">2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림</li>
+      <li class="fi">3. 개인정보 보유.이용기간 : 캠페인 종료일로부터 1년간 보관됩니다.</li>
+     </ul>
     </div>
 </div>
 
