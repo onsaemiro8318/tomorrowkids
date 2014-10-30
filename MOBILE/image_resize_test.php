@@ -74,6 +74,25 @@ $dst_w = 200;//만들어질 이미지의 너비 지정, 픽셀단위의 0이상�
 
 //이미지 리소스를 받아온다.
 list($src, $src_w, $src_h) = get_image_resource_from_file ($path_file);
+if (empty($src)) die($GLOBALS['errormsg'] . "<br />\n");
+
+//만들어질 이미지의 높이를 결정한다.
+$resize_rule = $dst_w / $src_w;
+$dst_h = ceil($resize_rule * $src_h);//소숫점이 나올것을 대비하여 무조건 올림을 한다.
+
+$dst = @imagecreatetruecolor ($dst_w , $dst_h);//만드어질 $dst_w , $dst_h 크기의 이미지 리소스를 생성한다.
+if ($dst === false) die("$dst_w , $dst_h 크기의 썸네일 이미지의 리소스를 생성하지 못했습니다.<br />\n");
+
+$result_resize = imagecopyresampled ($dst , $src , 0 , 0 , 0 , 0 , $dst_w , $dst_h , $src_w , $src_h );
+if ($result_resize === false) die("리사이즈에 실패하였습니다.<br />\n");
+
+$result_save = save_image_from_resource ($dst, $path_resizefile);//저장
+if ($result_save === false) die($GLOBALS['errormsg'] . "<br />\n");
+
+@imagedestroy($src);
+@imagedestroy($dst);
+
+//성공하였다면 이미지 출력
 
 ?>
 <!doctype html>
