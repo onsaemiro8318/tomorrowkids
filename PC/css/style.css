@@ -118,8 +118,8 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .mailboxw{padding:210px 0 0 55px;}
 .mailbox .inputw{ border:0 !important; background-color:#b1dcd5; line-height:37px; height:37px; width:145px; color:#585858; font-size:16px; font-family: 'NanumGothic-Bold';}
 .mailboxw .mailcion img{ padding:0 3px;}
-.selectbox, .select {background:#b1dcd5 url(../images/sel_but.png) no-repeat right center; height:37px; width:140px; margin-left:10px; line-height:37px;}
-.selectbox select{ border:none; background:none; width:140px; height:37px;}
+.selectbox, .select {background:#b1dcd5 url(../images/sel_but.png) no-repeat right center; height:37px; width:140px; margin-left:10px; line-height:37px; -webkit-appearance:none;}
+.selectbox select{ border:none; background:none; width:140px; height:37px; padding:5px 0; -webkit-appearance:none; font-size:16px; font-family:'NanumGothic-Bold'; color:#585858;}
 
 
 .provboxw{ margin:0 auto; width:220px; padding:20px 0 35px 0;}
