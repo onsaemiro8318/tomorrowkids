@@ -25,7 +25,7 @@ wptg_tagscript_vars.push(
 	return {
 		ti:"21002",	/*광고주 코드*/
 		ty:"Home",	/*트래킹태그 타입*/
-		device:"web"	/*디바이스 종류 (web 또는 mobile)*/
+		device:"mobile"	/*디바이스 종류 (web 또는 mobile)*/
 	}; 
 }));
 </script> 
