@@ -101,7 +101,7 @@
     </div>
     <div class="selectbox fl_left">
       <select name="sel_email" onchange="input_email(this.value)">
-        <option>전체</option>
+        <option>직접입력</option>
         <option value="gmail.com">gmail.com</option>
         <option value="hanmail.net">hanmail.net</option>
         <option value="hitel.net">hitel.net</option>
