@@ -13,6 +13,8 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
+	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
+	$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_2.jpg";
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -61,7 +63,7 @@
 	<div class="sub_top2in">
     	<p class="bluetext">STEP2</p>
         <p class="whitetext">내일 (Work) 공유로 기부하기</p>
-        <div class="result_box"><div class="bluebox_result fl_left"><img src="images/result_img1.jpg"/></div>
+        <div class="result_box"><div class="bluebox_result fl_left"><img src="<?=$job_imgurl?>"/></div>
         	 <div class="fl_left">
         		<div class="re_text">당신의 내일(Work) 테스트 결과입니다.</div>
                 <div class="resulttwotext" style="width:460px;height:230px">
@@ -77,11 +79,11 @@
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>
-	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/facebook_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');return false;"><img src="images/facebook_sub.png"/></a></div>
 <?
 	}else{
 ?>
-	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/ks_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');return false;"><img src="images/ks_sub.png"/></a></div>
 <?
 	}
 ?>
@@ -116,22 +118,23 @@
       <div class="fl_left"><input type="checkbox" class="checkboxw" id="chk_privacy" checked /></div>
       <ul>
         <li class="fi">개인정보동의<span>/</span></li>
-        <li class="ti"><a href="#" onclick="show_term();">개인정보이용약관</a></li>
+        <li class="ti"><a href="#" onclick="show_term();return false;">개인정보이용약관</a></li>
       </ul>
     </div>
-  <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');"><img src="images/pu_summitbut.jpg"/></a></div>
+  <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');return false;"><img src="images/pu_summitbut.jpg"/></a></div>
   </div>
 </div>
 
 <div class="popupbg2" id="donation_div">
   <div class="closeic"><a href="javascript:close_popup2()"><img src="images/close_icon.gif"/></a></div>
-  <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_pbut.jpg"/></a></div>
+  <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');return false;"><img src="images/donation_pbut.jpg"/></a></div>
 </div>
 
 <div class="popupbg3" id="privacy_term">
   <div class="closeic"><a href="javascript:close_popup3()"><img src="images/close_icon.gif"/></a></div>
-  <div class="donationbt" style="width:400px;padding-top:80px">
-    <p style="margin-bottom:10px"><font style="font-size:20px"><b>사단법인 부스러기사랑나눔회 귀하</b></font></p>
+  <!-- <div class="privacybt" style="width:400px;padding-top:80px"> -->
+  <div class="privacy_content">
+    <p class="privacy_title">개인정보약관</p>
     <p>본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.</p>
     <p>1. 수집하는 개인정보의 항목 : 이메일 주소</p>
     <p>2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림</p>

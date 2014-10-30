@@ -78,7 +78,7 @@ function play_movie(gubun){
 	$(".mask").height(height);
 	$(".mask").fadeTo(1000, 0.7);
 	$(".video_fremebox").fadeTo(1000,1);
-	$(".video_but").hide();
+	//$(".video_but").hide();
 	if (gubun == "PC")
 		controllable_player.playVideo();
 }
@@ -144,18 +144,18 @@ function show_sns_select_box(media)
 	}
 }
 
-function kt_share(job, job_explain, test_idx)
+function kt_share(job, job_explain, test_idx, job_imgurl)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: job + " - " + job_explain,
+		label: "당신에게 어울리는 직업은 " + job + "입니다!",
 		image: {
-			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+			src: job_imgurl,
 			width: '300',
 			height: '200'
 		},
 		webButton: {
-			text: 'Tomorrow Kids',
+			text: '내일을 부탁해',
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
@@ -187,7 +187,7 @@ function kt_ajax(test_idx)
 	});
 }
 
-function ks_share(job, job_explain, test_idx)
+function ks_share(job, job_explain, test_idx, job_imgurl)
 {
 	Kakao.API.request({
 		url: '/v1/api/story/isstoryuser',
@@ -211,12 +211,13 @@ function ks_share(job, job_explain, test_idx)
 						link_info : {
 							url : 'http://www.tomorrowkids.or.kr',
 							host : 'www.tomorrowkids.or.kr',
-							title : 'Tomorrow Kids',
+							title : '내일을 부탁해',
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
-						content : job + " - " + job_explain
+						content : "당신에게 어울리는 직업은 " + job + "입니다!"
 						},
 						success: function(res) {
+							alert("카카오스토리에 당신에게 어울리는 직업이 공유 되었습니다.");
 							$.ajax({
 								type     : "POST",
 								async    : false,
@@ -270,16 +271,17 @@ function ks_share(job, job_explain, test_idx)
 	});
 }
 
-function fb_share(job, job_explain, test_idx)
+function fb_share(job, job_explain, test_idx, job_imgurl)
 {
 	FB.ui(
 	{
 		method: 'feed',
-		name: 'Tomorrow Kids',
+		name: '내일을 부탁해',
 		link: 'http://www.tomorrowkids.or.kr',
-		picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+		picture: job_imgurl,
 		caption: 'http://www.tomorrowkids.or.kr',
-		description: job + " - " + job_explain
+		//description: job + " - " + job_explain
+		description: "당신에게 어울리는 직업은 " + job + "입니다!"
 	},
 		function(response) {
 			if (response && response.post_id) {
@@ -602,3 +604,36 @@ function input_email(val)
     $("#email2").attr('readonly',true);    
   }
 }
+
+// 이미지 리사이징 함수
+function fitImageSize(obj, href) {
+	var image = new Image();
+
+	image.onload = function(){
+
+		var maxWidth = $(".imgbox").width();
+		var maxHeight = $(".imgbox").height();
+
+		var width = image.width;
+		var height = image.height;
+		
+		var scalex = maxWidth / width;
+		var scaley = maxHeight / height;
+		
+		var scale = (scalex < scaley) ? scalex : scaley;
+		if (scale > 1) 
+			scale = 1;
+		
+		obj.width = scale * width;
+		obj.height = scale * height;
+		
+		var div_height = scale * height;
+		var div_width = scale * width + 2;
+		obj.style.display = "";
+	
+		$(".imgbox").css("height", div_height);
+		$(".imgbox").css("width", div_width);
+	}
+	image.src = href;
+}
+
