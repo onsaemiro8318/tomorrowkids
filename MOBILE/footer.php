@@ -5,8 +5,8 @@
       </div>
       <div class="line2">
     	<div class="logoline hidden">
-        	<span class="link1"><a href=""><img src="images/line2_logo1.png"/></a></span>
-              <span class="link2"><a href=""><img src="images/line2_logo2.png"/></a></span>
+        	<span class="link1"><a href="http://www.busrugy.or.kr/" target="_blank"><img src="images/line2_logo1.png"/></a></span>
+              <span class="link2"><a href="http://kr.hankooktire.com/" target="_blank"><img src="images/line2_logo2.png"/></a></span>
         </div>
         <div class="textline2"><a href="http://www.busrugy.or.kr/USR_main.asp??=Aboutus/index" target="_blank">부스러기사랑나눔회 소개</a> | <a href="http://www.dreamfull.or.kr/app/newdf/popup/agreement" target="_blank">이용약관</a> | <a href="http://www.dreamfull.or.kr/app/newdf/popup/personal_policy" target="_blank">개인정보처리방침</a> | <a href="http://www.dreamfull.or.kr/app/newdf/popup/donation_policy" target="_blank">기부정책</a> | 
 본 사이트는 [㈜엠프론티어]의 재능기부로 제작되었습니다.
