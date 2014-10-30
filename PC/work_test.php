@@ -119,7 +119,7 @@
 		}
 	}
 
-    $(document).ready(function(){
+    $(window).load(function(){
 		$("body").css("display", "block");
     });
 
