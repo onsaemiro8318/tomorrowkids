@@ -25,10 +25,9 @@
 	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
 	}
 
-	if(window.opera ){
+	if(window.opera){
 	addEventListener('load', onYouTubeIframeAPIReady, false);
 	}
-
 	setTimeout(function(){
 		if (typeof(controllable_player) == 'undefined'){
 			onYouTubeIframeAPIReady();
@@ -37,37 +36,20 @@
 
 	$(window).resize(function(){
         var width = $(window).width();
-        //var height = $(window).height();
-		var height = 0;
-
-		if( browser.msie ){ //IE
-			var scrollHeight = document.documentElement.scrollHeight;
-			var browserHeight = document.documentElement.clientHeight;
-			height = scrollHeight;
-
-		} else if ( browser.safari ){ //Chrome || Safari
-			height = document.body.scrollHeight;
-		} else if ( browser.firefox ){ // Firefox || NS
-			var bodyHeight = document.body.clientHeight;
-			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-		} else if ( browser.opera ){ // Opera
-			var bodyHeight = document.body.clientHeight;
-			height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-		}
-
-		$(".mask").width(width).height(height);
+        var height = $(window).height();
+        $(".mask").width(width).height(height);
     });
     $(document).keydown(function(event){
         if(event.which=='27'){
 			$(".video_fremebox").fadeOut(500);
 			$(".mask").fadeOut(500);
-		//	$(".video_but").show();
+			$(".video_but").show();
         }
     });
 	$(document).ready(function(){
 		$(".mask").click(function(){
 			$(".mask").fadeOut(500);
-		//	$(".video_but").show();
+			$(".video_but").show();
 			$(".video_fremebox").fadeOut(500);
 			controllable_player.stopVideo();
 		});
@@ -83,7 +65,7 @@
 <div class="main_wrapper">
 <div class="main_top1">
 	<div class="main_topinbg1">
-    	<h1><a href="http://www.dreamfull.or.kr" target="_blank"><img src="images/logo.png" alt="dreamfull"/></a></h1>
+    	<h1><a href=""><img src="images/logo.png" alt="dreamfull"/></a></h1>
         <div class="videobox"><div class="video_but"><a href="#" onclick="play_movie('<?=$gubun?>');"><img src="images/play_but.png"/></a></div></div>
     </div>
 </div>
@@ -124,19 +106,23 @@
                 <li class="stept3">세상을 바꾸는 시간,15분 과<br/>함께 하는 아이들 교육<br/>프로그램 제작</li>
             </ul>
     </div>
-    <div class="donation"><img src="images/donation_img.png"/><div class="donationbutton"><span class="fl_left pinkbut"><a href="http://www.dreamfull.or.kr/app/newdf/donation/donation" target="_blank"><img src="images/donation_but_pink.png"/></a></span><span class="fl_left"><a href="http://www.dreamfull.or.kr/app/newdf/donation/collection_box" target="_blank"><img src="images/donation_but_green.png"/></a></span></div>
+    <div class="donation"><img src="images/donation_img.png"/><div class="donationbutton"><span class="fl_left pinkbut"><a href=""><img src="images/donation_but_pink.png"/></a></span><span class="fl_left"><a href=""><img src="images/donation_but_green.png"/></a></span></div>
     </div>
 <!--Footer start-->
-<?
-	include_once "footer.php";
-?>
+<div class="footer">
+	<div class="lineone"><div class="img"><img src="images/footer_line1_text.png"/></div></div>
+    <div class="linetwo">
+    	<div class="inbox"><span class="fl_left"><img src="images/footer_line2_text.png"/></span><span class="fl_right"><img src="images/footer_line2_logo.png"/></span></div>
+    </div>
+</div>
 <!--Footer end-->
 </div>
 <!--Line3 end-->
 </div>
-<div class="mask"></div>
-<div class="video_fremebox">
+<div class="video_fremebox" style="z-index:99999;">
 	<div class="video"><iframe id="ytplayer" width="951px" height="579px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
+<div class="mask"></div>
+
 </body>
 </html>
