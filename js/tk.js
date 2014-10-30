@@ -148,7 +148,7 @@ function kt_share(job, job_explain, test_idx)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: job + " - " + job_explain,
+		label: "당신에게 어울리는 직업은 " + job + "입니다!",
 		image: {
 			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
 			width: '300',
