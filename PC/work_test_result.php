@@ -13,6 +13,7 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
+	$job_imgurl	= "../images/jobimg_".$_REQUEST[job].".jpg";
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -61,7 +62,7 @@
 	<div class="sub_top2in">
     	<p class="bluetext">STEP2</p>
         <p class="whitetext">내일 (Work) 공유로 기부하기</p>
-        <div class="result_box"><div class="bluebox_result fl_left"><img src="images/result_img1.jpg"/></div>
+        <div class="result_box"><div class="bluebox_result fl_left"><img src="<?=$job_imgurl?>"/></div>
         	 <div class="fl_left">
         		<div class="re_text">당신의 내일(Work) 테스트 결과입니다.</div>
                 <div class="resulttwotext" style="width:460px;height:230px">
