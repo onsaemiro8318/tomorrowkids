@@ -121,6 +121,8 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .thankspupup .bigtext{ color:#253f71; font-size:100px; font-family: 'NanumGothic-Bold'; text-align:center; padding-top:16%;}
 .thankspupup .bigtext span{ text-indent:inherit;}
 .thankspupup .smtext{ color:#71b9ad; font-family: 'NanumGothic-Bold'; font-size:52px; text-align:center;}
+.privacy_content{padding-bottom:25%;}
+.privacy_content .fi{margin-bottom: 2%;}
 .mail_inputbox .input{ border:0 !important; background-color:#b1dcd5; line-height:37px; height:37px; width:145px; color:#585858; font-size:26px; font-family: 'NanumGothic-Bold';}
 .mailbox{ width:90%; margin:0 auto; padding:5% 0 5% 0;}
 .mail_inputbox{ width:45%;}
