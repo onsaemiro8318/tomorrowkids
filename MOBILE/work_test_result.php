@@ -14,7 +14,8 @@
 	$t_count4 = substr($total_count,3,1);
 
 	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
-	$job_imgurl	= "../images/jobimg_1.jpg";
+	$job_imgurl		= "../images/jobimg_1.jpg";
+	$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_1.jpg";
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -80,12 +81,12 @@
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>    
-        <div class="face_dt_button"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
+        <div class="face_dt_button"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl2?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
 <?
 	}else{
 ?>
-        <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
-        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
+        <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl2?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
+        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl2?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
 <?
 	}
 ?>    

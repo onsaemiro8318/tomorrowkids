@@ -144,13 +144,13 @@ function show_sns_select_box(media)
 	}
 }
 
-function kt_share(job, job_explain, test_idx)
+function kt_share(job, job_explain, test_idx, job_imgurl)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
 		label: "당신에게 어울리는 직업은 " + job + "입니다!",
 		image: {
-			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+			src: job_imgurl,
 			width: '300',
 			height: '200'
 		},
