@@ -13,7 +13,8 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	$job_imgurl	= "../images/jobimg_".$_REQUEST[job].".jpg";
+	//$job_imgurl	= "../images/jobimg_".$_REQUEST[job].".jpg";
+	$job_imgurl	= "../images/jobimg_1.jpg";
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -78,11 +79,11 @@
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>
-	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/facebook_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');"><img src="images/facebook_sub.png"/></a></div>
 <?
 	}else{
 ?>
-	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>');"><img src="images/ks_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');"><img src="images/ks_sub.png"/></a></div>
 <?
 	}
 ?>

@@ -187,7 +187,7 @@ function kt_ajax(test_idx)
 	});
 }
 
-function ks_share(job, job_explain, test_idx)
+function ks_share(job, job_explain, test_idx, job_imgurl)
 {
 	Kakao.API.request({
 		url: '/v1/api/story/isstoryuser',
@@ -270,14 +270,14 @@ function ks_share(job, job_explain, test_idx)
 	});
 }
 
-function fb_share(job, job_explain, test_idx)
+function fb_share(job, job_explain, test_idx, job_imgurl)
 {
 	FB.ui(
 	{
 		method: 'feed',
 		name: 'Tomorrow Kids',
 		link: 'http://www.tomorrowkids.or.kr',
-		picture: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+		picture: job_imgurl,
 		caption: 'http://www.tomorrowkids.or.kr',
 		description: job + " - " + job_explain
 	},
