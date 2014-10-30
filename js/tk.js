@@ -627,7 +627,7 @@ function fitImageSize(obj, href) {
 		obj.width = scale * width;
 		obj.height = scale * height;
 		
-		var div_height = scale * height - 2;
+		var div_height = scale * height;
 		obj.style.display = "";
 	
 		$(".imgbox").css("height", div_height);
