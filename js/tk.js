@@ -217,6 +217,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 						content : "당신에게 어울리는 직업은 " + job + "입니다!"
 						},
 						success: function(res) {
+							alert("카카오스토리에 당신에게 어울리는 직업이 공유 되었습니다.");
 							$.ajax({
 								type     : "POST",
 								async    : false,
