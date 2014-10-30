@@ -155,7 +155,7 @@ function kt_share(job, job_explain, test_idx)
 			height: '200'
 		},
 		webButton: {
-			text: 'Tomorrow Kids',
+			text: '내일을 부탁해',
 			url: 'http://www.tomorrowkids.or.kr'
 		}
 	});
@@ -211,10 +211,10 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 						link_info : {
 							url : 'http://www.tomorrowkids.or.kr',
 							host : 'www.tomorrowkids.or.kr',
-							title : 'Tomorrow Kids',
+							title : '내일을 부탁해',
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
-						content : job + " - " + job_explain
+						content : "당신에게 어울리는 직업은 " + job + "입니다!"
 						},
 						success: function(res) {
 							$.ajax({
@@ -275,11 +275,12 @@ function fb_share(job, job_explain, test_idx, job_imgurl)
 	FB.ui(
 	{
 		method: 'feed',
-		name: 'Tomorrow Kids',
+		name: '내일을 부탁해',
 		link: 'http://www.tomorrowkids.or.kr',
 		picture: job_imgurl,
 		caption: 'http://www.tomorrowkids.or.kr',
-		description: job + " - " + job_explain
+		//description: job + " - " + job_explain
+		description: "당신에게 어울리는 직업은 " + job + "입니다!"
 	},
 		function(response) {
 			if (response && response.post_id) {
