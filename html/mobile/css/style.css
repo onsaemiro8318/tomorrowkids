@@ -75,7 +75,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .mob_sub_top1{ background:url(../images/mob_sub_top1bg.jpg) repeat-x; overflow:hidden; padding-bottom:5%;}
 .mob_sub_top1 .tmor_text{ width:50%; padding:4% 0 0 4%;}
 .mob_sub_top1 .tmor_text img{ width:100%;}
-.mob_sub_top1 h1{ padding:4% 0 0 4%;}
+.mob_sub_top1 h1{}
 .mob_sub_number{ padding-top:3%;}
 .mob_sub_number .numberbox{ background:url(../images/number_bg_mob.png) no-repeat; background-size:95%; width:325px; overflow:hidden;}
 .mob_sub_number .numberbox ul li{ color:#fff; font-size:82px; float:left; text-align:center; width:21%; line-height:85px;}
@@ -224,6 +224,17 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mail_inputbox .input{ width:100%; line-height:44px;}
 	.summitbut{ width:34%;}
 	.mob_sub_top3 .white{ font-size:32px;}
+	.top3_content{ padding:7% 7% 0 7%; width:81%; margin-top:3%; height:406px;}
+	.top3_content .imgbox{ height:162px;}
+	.top3_content .arrow img{ width:66%;}
+	.top3_content .bluetext{ font-size:16px;}
+	.top3_content .title_work{ font-size:24px; padding:5% 0;}
+	.top3_content .summary{ font-size:14px; line-height:135%;}
+	.mob_sub_top3 .white{ font-size:28px;}
+	.mob_sub_top3 .blue{ font-size:28px;}
+	.summary2{ font-size:14px;}
+	.face_dt_button{ width:295px;}
+	.face_dt_button img{ width:100%;}
 }
 @media(max-width:420px){
 	.sum_text{ font-size:16px; line-height:120%;}
@@ -256,15 +267,15 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_number .numberbox ul li{ width:21%; line-height:36px; font-size:40px;}
 	.mob_sub_number .peopletitle{ font-size:14px;}
 	.mob_sub_number{ padding-top:0 !important;}
-	.mob_sub_top2 .blue{ font-size:28px;}
-	.mob_sub_top2 .white{ font-size:28px;}
+	.mob_sub_top2 .blue{ font-size:24px;}
+	.mob_sub_top2 .white{ font-size:24px;}
 	.mob_sub_top2 .white1{ font-size:14px; padding:3% 2% 4% 2%;}
 	.top2_content{ padding:5% 5% 0 5%; height:480px;}
 	.top2_content .quas{ font-size:14px;}
 	.top2_content .tagtext{  font-size:14px;}
 	.top2_content .tagtext2{ font-size:14px;}
 	.top2_content .tag{ font-size:14px;}
-	.next_but{ margin:0 auto; width:40%; padding-top:3%;}
+	.next_but{ margin:0 auto; width:40%; padding-top:8%;}
 	.next_but img{ width:100%;}
 	.thankspupup .bigtext{ font-size:46px; padding-bottom:5%;}
 	.thankspupup .smtext{ font-size:22px; padding:0 2%; letter-spacing:-1px;}
@@ -285,11 +296,12 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.top3_content .bluetext{ font-size:16px;}
 	.top3_content .title_work{ font-size:24px; padding:5% 0;}
 	.top3_content .summary{ font-size:14px; line-height:135%;}
-	.mob_sub_top3 .white{ font-size:28px;}
-	.mob_sub_top3 .blue{ font-size:28px;}
+	.mob_sub_top3 .white{ font-size:24px;}
+	.mob_sub_top3 .blue{ font-size:24px;}
 	.summary2{ font-size:14px;}
 	.face_dt_button{ width:295px;}
 	.face_dt_button img{ width:100%;}
+	.mob_sub_top1 .tmor_text{ width:47%; padding:5% 0 0 6%;}
 }
 @media(max-width:320px){
 	.sum_text{ font-size:12px;}
@@ -342,4 +354,15 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.checkbox{ width:20px; height:20px; margin-right:5px;}
 	.provbox{ width:80%;}
 	.summitbut{ width:52%;}
+	.top3_content{ padding:5% 7% 0 7%; width:81%; margin-top:3%; height:343px;}
+	.top3_content .imgbox{ height:162px;}
+	.top3_content .arrow img{ width:54%;}
+	.top3_content .bluetext{ font-size:14px;}
+	.top3_content .title_work{ font-size:22px; padding:5% 0;}
+	.top3_content .summary{ font-size:12px; line-height:130%;}
+	.mob_sub_top3 .white{ font-size:18px;}
+	.mob_sub_top3 .blue{ font-size:18px;}
+	.summary2{ font-size:12px;}
+	.face_dt_button{ width:280px;}
+	.face_dt_button img{ width:100%;}
 }
