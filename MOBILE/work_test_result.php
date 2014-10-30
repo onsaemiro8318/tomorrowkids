@@ -139,7 +139,7 @@
 <div id="privacy_term" class="thankspupup">
     <div class="closeicon"><a href="javascript:close_popup3();"><img src="images/popup_closeicon.png"/></a></div>
     <div class="bigtext">개인정보약관</div>
-    <div class="provbox hidden">
+    <div class="provbox hidden privacy_content">
      <ul>    
       <li class="fi">본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.</li>
       <li class="fi">1. 수집하는 개인정보의 항목 : 이메일 주소</li>
