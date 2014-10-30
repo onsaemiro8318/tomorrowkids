@@ -79,11 +79,11 @@
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>
-	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');"><img src="images/facebook_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');return false;"><img src="images/facebook_sub.png"/></a></div>
 <?
 	}else{
 ?>
-	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');"><img src="images/ks_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');return false;"><img src="images/ks_sub.png"/></a></div>
 <?
 	}
 ?>
@@ -118,16 +118,16 @@
       <div class="fl_left"><input type="checkbox" class="checkboxw" id="chk_privacy" checked /></div>
       <ul>
         <li class="fi">개인정보동의<span>/</span></li>
-        <li class="ti"><a href="#" onclick="show_term();">개인정보이용약관</a></li>
+        <li class="ti"><a href="#" onclick="show_term();return false;">개인정보이용약관</a></li>
       </ul>
     </div>
-  <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');"><img src="images/pu_summitbut.jpg"/></a></div>
+  <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');return false;"><img src="images/pu_summitbut.jpg"/></a></div>
   </div>
 </div>
 
 <div class="popupbg2" id="donation_div">
   <div class="closeic"><a href="javascript:close_popup2()"><img src="images/close_icon.gif"/></a></div>
-  <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_pbut.jpg"/></a></div>
+  <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');return false;"><img src="images/donation_pbut.jpg"/></a></div>
 </div>
 
 <div class="popupbg3" id="privacy_term">
