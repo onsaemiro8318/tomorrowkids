@@ -12,7 +12,9 @@ function fitImageSize(obj, href, maxWidth, maxHeight) {
 	var image = new Image();
 
 	image.onload = function(){
-	
+		
+		maxWidth = $("#div2").width();
+		maxHeight = $("#div2").height();
 		var width = image.width;
 		var height = image.height;
 		
@@ -29,7 +31,8 @@ function fitImageSize(obj, href, maxWidth, maxHeight) {
 		obj.style.display = "";
 	}
 	image.src = href;
-}  </script>
+}
+</script>
  </head>
  <body>
 원본 이미지 <br />

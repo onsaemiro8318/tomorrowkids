@@ -604,3 +604,31 @@ function input_email(val)
     $("#email2").attr('readonly',true);    
   }
 }
+
+// 이미지 리사이징 함수
+function fitImageSize(obj, href) {
+	var image = new Image();
+
+	image.onload = function(){
+
+		var maxWidth = $(".imgbox").width();
+		var maxHeight = $(".imgbox").height();
+
+		var width = image.width;
+		var height = image.height;
+		
+		var scalex = maxWidth / width;
+		var scaley = maxHeight / height;
+		
+		var scale = (scalex < scaley) ? scalex : scaley;
+		if (scale > 1) 
+			scale = 1;
+		
+		obj.width = scale * width;
+		obj.height = scale * height;
+		
+		obj.style.display = "";
+	}
+	image.src = href;
+}
+

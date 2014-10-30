@@ -8,16 +8,13 @@
 
 	$test_idx	= $_REQUEST[idx];
 
-	$thumb = new Image("images/result_img1.jpg");
-	$thumb->width(200);
-	$thumb->save();
-
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	//print_r($thumb);
+	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
+	$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_1.jpg";
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -63,7 +60,7 @@
 	    <p class="blue">STEP 2</p>
         <p class="white">내일 (Work) 공유로 기부하기</p>
 	    <div class="top3_content">
-    	    <div class="imgbox">작업 이미지</div>
+    	    <div class="imgbox"><img src="<?=$job_imgurl?>" onload="javascript:fitImageSize(this, '<?=$job_imgurl?>');" style="display:none" ></div>
             <div>
                 <div class="fl_left arrow"><img src="images/rihgt_arrowicon.png"/></div>
                 <div class="bluetext">당신의 내일(Work) 테스트 결과입니다.</div>
