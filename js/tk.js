@@ -627,9 +627,10 @@ function fitImageSize(obj, href) {
 		obj.width = scale * width;
 		obj.height = scale * height;
 		
+		var div_height = scale * height;
 		obj.style.display = "";
 	
-		$(".imgbox").height(obj.height);
+		$(".imgbox").css("height", div_height);
 	}
 	image.src = href;
 }
