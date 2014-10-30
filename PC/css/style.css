@@ -128,6 +128,8 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .provboxw ul .fi{ color:#585858; font-size:12px; font-family: 'NanumGothic-Bold'; letter-spacing:-0.1px;}
 .provboxw ul .ti{ color:#5db3a3; font-size:12px; text-decoration:underline; font-family: 'NanumGothic-Bold'; letter-spacing:-0.1px;}
 .checkboxw{ width:13px; height:13px; margin-right:10px;}
-/*.summitbt{ width:103px; margin:0 auto;}*/
-.summitbt{ width:103px; margin-left:185px;}
+.summitbt{ width:103px; margin:0 auto;}
 .donationbt{ width:186px; margin:0 auto; padding-top:240px;}
+.privacy_content{ width:186px; margin:0 auto; padding-top:240px;}
+.privacy_content p {margin-bottom:10px; color:#70b8ac; font-family: 'NanumGothic-Bold';}
+.privacy_title {font-size:20px; color:#33528d; font-family: 'NanumGothic-ExtraBold'; }

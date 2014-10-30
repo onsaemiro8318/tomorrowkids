@@ -132,8 +132,9 @@
 
 <div class="popupbg3" id="privacy_term">
   <div class="closeic"><a href="javascript:close_popup3()"><img src="images/close_icon.gif"/></a></div>
-  <div class="donationbt" style="width:400px;padding-top:80px">
-    <p style="margin-bottom:10px"><font style="font-size:20px"><b>사단법인 부스러기사랑나눔회 귀하</b></font></p>
+  <!-- <div class="privacybt" style="width:400px;padding-top:80px"> -->
+  <div class="privacy_content">
+    <p class="privacy_title">개인정보약관</p>
     <p>본인은 귀단체가 본인 및 기타 적합한 경로를 통해 수집한 본인의 개인정보를 활용하는데 동의합니다.</p>
     <p>1. 수집하는 개인정보의 항목 : 이메일 주소</p>
     <p>2. 개인정보 수집.이용목적 : 드림풀 캠페인 정보 알림</p>

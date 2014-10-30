@@ -8,5 +8,6 @@
     <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+    <link rel="shortcut icon" href="./images/tomorrow.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
