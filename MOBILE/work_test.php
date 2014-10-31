@@ -79,6 +79,48 @@
 	$(document).ready(function(){
 		if ($("#selected_answer").val() != "")
 			$("#"+ sel_answer).css("font-weight","bold");
+	
+		if( navigator.userAgent.match('CriOS') ){
+			_fbUserId = response.authResponse.userID;
+			accessToken = response.authResponse.accessToken;
+			$.ajax({
+				type     : "POST",
+				async    : false,
+				url      : "../main_exec.php",
+				data     : ({
+					"exec" : "fb_user_info" ,
+					"fbUserId" : _fbUserId,
+					"fbUserImage" : _fbUserImage
+				}),
+				success: function(response){
+					$.ajax({
+						type		: "POST",
+						async		: false,
+						url			: "../main_exec.php",
+						data		: ({
+							"exec"         : "user_test_check"
+						}),
+						success: function(response){
+							if (response == "Y")
+							{
+								location.href="work_test.php"; 
+							}else{
+								alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+							}
+						}
+					});
+					/*
+					if(response == "Y"){
+						testAPI();
+						return;
+					}else{
+						return;
+					}
+					*/
+				}
+			}); 
+		
+		}
 	});
 
 

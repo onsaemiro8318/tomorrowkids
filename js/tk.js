@@ -458,52 +458,52 @@ function testAPI() {
 // 페이스북 로그인
 function facebook_login()
 {
-  if( navigator.userAgent.match('CriOS') ){
-    window.open('https://www.facebook.com/dialog/oauth?client_id=293604627507652&redirect_uri=http://www.tomorrowkids.or.kr/MOBILE/work_test.php&scope=public_profile,email', '', null);
-  }else{
-	FB.login(function(response){
-		_fbUserId = response.authResponse.userID;
-		accessToken = response.authResponse.accessToken;
-    _fbUserImage = "http://graph.facebook.com/" + _fbUserId + "/picture?type=square"
-		$.ajax({
-			type     : "POST",
-			async    : false,
-			url      : "../main_exec.php",
-			data     : ({
-				"exec" : "fb_user_info" ,
-				"fbUserId" : _fbUserId,
-        "fbUserImage" : _fbUserImage
-			}),
-			success: function(response){
-				$.ajax({
-					type		: "POST",
-					async		: false,
-					url			: "../main_exec.php",
-					data		: ({
-						"exec"         : "user_test_check"
-					}),
-					success: function(response){
-						if (response == "Y")
-						{
-							location.href="work_test.php"; 
-						}else{
-							alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+	if( navigator.userAgent.match('CriOS') ){
+		window.open('https://www.facebook.com/dialog/oauth?client_id=293604627507652&redirect_uri=http://www.tomorrowkids.or.kr/MOBILE/work_test.php&scope=public_profile,email', '', null);
+	}else{
+		FB.login(function(response){
+			_fbUserId = response.authResponse.userID;
+			accessToken = response.authResponse.accessToken;
+		_fbUserImage = "http://graph.facebook.com/" + _fbUserId + "/picture?type=square"
+			$.ajax({
+				type     : "POST",
+				async    : false,
+				url      : "../main_exec.php",
+				data     : ({
+					"exec" : "fb_user_info" ,
+					"fbUserId" : _fbUserId,
+					"fbUserImage" : _fbUserImage
+				}),
+				success: function(response){
+					$.ajax({
+						type		: "POST",
+						async		: false,
+						url			: "../main_exec.php",
+						data		: ({
+							"exec"         : "user_test_check"
+						}),
+						success: function(response){
+							if (response == "Y")
+							{
+								location.href="work_test.php"; 
+							}else{
+								alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+							}
 						}
+					});
+					/*
+					if(response == "Y"){
+						testAPI();
+						return;
+					}else{
+						return;
 					}
-				});
-				/*
-				if(response == "Y"){
-					testAPI();
-					return;
-				}else{
-					return;
+					*/
 				}
-				*/
-			}
-		}); 
-		//location.href="work_test.php"; 
-	},{scope: 'public_profile,email'});
-  }
+			}); 
+			//location.href="work_test.php"; 
+		},{scope: 'public_profile,email'});
+	}
 }
 
 function facebook_logout()
