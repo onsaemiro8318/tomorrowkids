@@ -458,9 +458,9 @@ function testAPI() {
 // 페이스북 로그인
 function facebook_login()
 {
-	if( navigator.userAgent.match('CriOS') ){
-		window.open('https://www.facebook.com/dialog/oauth?client_id=293604627507652&redirect_uri='+ document.location.href +'&scope=public_profile,email', '', null);
-	}else{
+	//if( navigator.userAgent.match('CriOS') ){
+	//	window.open('https://www.facebook.com/dialog/oauth?client_id=293604627507652&redirect_uri='+ document.location.href +'&scope=public_profile,email', '', null);
+	//}else{
 		FB.login(function(response){
 			_fbUserId = response.authResponse.userID;
 			accessToken = response.authResponse.accessToken;
@@ -503,7 +503,7 @@ function facebook_login()
 			}); 
 			//location.href="work_test.php"; 
 		},{scope: 'public_profile,email'});
-	}
+	//}
 }
 
 function facebook_logout()
