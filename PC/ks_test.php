@@ -8,7 +8,6 @@
    $postResult = curl_exec($ch);
    curl_close($ch);
    print_r($postResult);
-	phpinfo();
 ?>
 <!doctype HTML>
 <html>
