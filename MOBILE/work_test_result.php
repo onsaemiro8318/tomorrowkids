@@ -13,9 +13,10 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
-	$job_imgurl		= "../images/jobimg_1.jpg";
-	$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_1.jpg";
+	$job_imgurl		= "../images/jobimg_".$_REQUEST[job].".jpg";
+	$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
+	//$job_imgurl		= "../images/jobimg_1.jpg";
+	//$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_1.jpg";
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
