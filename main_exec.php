@@ -15,7 +15,7 @@ switch ($_REQUEST['exec'])
 		$userid	= $_REQUEST['kaUserId'];
 		$media = $_gl[login_media]['kakao'];
         $user_img = $_REQUEST['kaUserImage'];
-        $user_name = $_REQUEST['kaUserNickname'];
+        $user_name = $_REQUEST['kaNickname'];
         
 		unset($_SESSION['ss_mb_id']);
 		unset($_SESSION['ss_media']);
