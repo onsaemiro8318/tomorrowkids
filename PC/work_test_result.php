@@ -172,7 +172,7 @@
 	function fncSelectFile(){
 
 		$("#schemeFileDiv").innerHTML = "<input type='file' name='file-input' id='file-input' value='<?=$job_imgurl?>'>";		
-		document.getElementById('file-input').click();
+		$("#file-input").click();
 		
 	 }
 	function show_term()
