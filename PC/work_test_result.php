@@ -154,7 +154,6 @@
 </div>
 <!--Line3 end-->
 </div>
-      <input id="file-input" type="file" multiple value="">
 
 <div class="mask"></div>
 </body>
