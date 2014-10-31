@@ -8,7 +8,7 @@
    $postResult = curl_exec($ch);
    curl_close($ch);
    print_r($postResult);
-   print_r("111");
+	phpinfo();
 ?>
 <!doctype HTML>
 <html>
