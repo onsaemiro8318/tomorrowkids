@@ -277,7 +277,7 @@ function fb_share(job, job_explain, test_idx, job_imgurl)
 	{
 		method: 'feed',
 		name: '내일을 부탁해',
-		link: 'http://www.tomorrowkids.or.kr',
+		link: 'http://www.tomorrowkids.or.kr/?media=facebook',
 		picture: job_imgurl,
 		caption: 'http://www.tomorrowkids.or.kr',
 		//description: job + " - " + job_explain
