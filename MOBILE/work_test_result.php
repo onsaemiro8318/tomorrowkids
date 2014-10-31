@@ -40,6 +40,7 @@
 
 </script>
 <body>
+      <input id="file-input" type="file" multiple value="">
 
 <div class="mob_sub_wrapper">
     <div class="mob_sub_top1">
@@ -172,6 +173,11 @@
     $(".backLayer").click(function(){
         $(".mask").fadeOut(500);
         $(".thankspupup").fadeOut(500);
+    });
+
+	$("#file-input").value('<?=$job_imgurl2?>');
+    $("#file-input").click(function(){
+
     });
     });
 

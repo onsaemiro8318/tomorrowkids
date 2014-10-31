@@ -212,7 +212,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 					  // API를 호출합니다.
 					  Kakao.API.request({
 						url: '/v1/api/story/upload/multi',
-						files: job_imgurl
+						files: document.getElementById("file-input").files
 					  }).then(function (imgurl) {
 					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
 					return Kakao.API.request( {
