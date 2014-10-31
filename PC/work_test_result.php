@@ -166,12 +166,13 @@
         $(".popupbg1").fadeOut(500);
         $(".popupbg2").fadeOut(500);
     });
-    });
-
 	$("#file-input").value('<?=$job_imgurl2?>');
     $("#file-input").click(function(){
 
     });
+
+    });
+
 
 	function show_term()
 	{
