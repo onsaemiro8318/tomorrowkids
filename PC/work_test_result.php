@@ -165,11 +165,7 @@
         $(".popupbg1").fadeOut(500);
         $(".popupbg2").fadeOut(500);
     });
-    $("#file-input").click(function(){
-	$("#file-input").value('<?=$job_imgurl2?>');
-
-    });
-
+	fncSelectFile();
     });
 
 	function fncSelectFile(){
