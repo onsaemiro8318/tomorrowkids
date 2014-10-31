@@ -144,19 +144,19 @@ function show_sns_select_box(media)
 	}
 }
 
-function kt_share(job, job_explain, test_idx)
+function kt_share(job, job_explain, test_idx, job_imgurl, user_nickname)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: "당신에게 어울리는 직업은 " + job + "입니다!",
+		label: user_nickname + "님에게 어울리는 직업은 " + job + "입니다! 당신도 한번 테스트해 보세요.",
 		image: {
-			src: 'http://topgirl.thefaceshop.com/philippines/PC/images/sns/gift_for_voter_mini.png',
+			src: job_imgurl,
 			width: '300',
 			height: '200'
 		},
 		webButton: {
 			text: '내일을 부탁해',
-			url: 'http://www.tomorrowkids.or.kr'
+			url: 'http://www.tomorrowkids.or.kr/?media=kt'
 		}
 	});
   
@@ -201,7 +201,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 				Kakao.API.request( {
 					url : '/v1/api/story/linkinfo',
 					data : {
-						url : 'http://www.tomorrowkids.or.kr'
+						url : 'http://www.tomorrowkids.or.kr/?media=ks'
 					}
 				}).then(function(res) {
 					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
@@ -209,7 +209,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 						url : '/v1/api/story/post/link',
 						data : {
 						link_info : {
-							url : 'http://www.tomorrowkids.or.kr',
+							url : 'http://www.tomorrowkids.or.kr/?media=ks',
 							host : 'www.tomorrowkids.or.kr',
 							title : '내일을 부탁해',
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
@@ -277,7 +277,7 @@ function fb_share(job, job_explain, test_idx, job_imgurl)
 	{
 		method: 'feed',
 		name: '내일을 부탁해',
-		link: 'http://www.tomorrowkids.or.kr',
+		link: 'http://www.tomorrowkids.or.kr/?media=fb',
 		picture: job_imgurl,
 		caption: 'http://www.tomorrowkids.or.kr',
 		//description: job + " - " + job_explain
@@ -354,6 +354,7 @@ function kakao_login(){
 							profileJsonStr = JSON.stringify(res);
 							profileObj = JSON.parse(profileJsonStr);
 							kaUserImage = profileObj.thumbnailURL;
+							kaUserProfile = profileObj.nickName;
 							$.ajax({
 								type     : "POST",
 								async    : false,
@@ -361,7 +362,8 @@ function kakao_login(){
 								data     : ({
 									"exec" : "ka_user_info" ,
 									"kaUserId" : obj.id,
-									"kaUserImage" : kaUserImage
+									"kaUserImage" : kaUserImage,
+									"kaNickname"  : kaUserProfile
 								}),
 								success: function(response){
 									$.ajax({

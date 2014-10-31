@@ -15,6 +15,7 @@ switch ($_REQUEST['exec'])
 		$userid	= $_REQUEST['kaUserId'];
 		$media = $_gl[login_media]['kakao'];
         $user_img = $_REQUEST['kaUserImage'];
+        $user_name = $_REQUEST['kaNickname'];
         
 		unset($_SESSION['ss_mb_id']);
 		unset($_SESSION['ss_media']);
@@ -25,10 +26,10 @@ switch ($_REQUEST['exec'])
 		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
-			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img);
+			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img,$user_name);
 			$flag = "Y";
 		}else {
-            TK_UpdateUserInfo($userid,$user_img);
+            TK_UpdateUserInfo($userid,$user_img,$user_name);
 			$flag = "N";
 		}
 
@@ -40,7 +41,8 @@ switch ($_REQUEST['exec'])
 		$userid	= $_REQUEST['fbUserId'];
 		$media = $_gl[login_media]['facebook'];
         $user_img = $_REQUEST['fbUserImage'];
-        
+        $user_name = "";
+
 		unset($_SESSION['ss_mb_id']);
 		unset($_SESSION['ss_media']);
 		// 회원아이디 세션 생성
@@ -50,10 +52,10 @@ switch ($_REQUEST['exec'])
 		$info = TK_GetUserCnt($userid);
 
 		if ($info == 0){
-			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img);
+			TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img,$user_name);
 			$flag = "Y";
 		}else {
-			TK_UpdateUserInfo($userid,$user_img);
+			TK_UpdateUserInfo($userid,$user_img,$user_name);
 			$flag = "N";
 		}
 
@@ -88,7 +90,7 @@ switch ($_REQUEST['exec'])
 
 			// 직업 선택 로직
 			$worker_array	= explode("|",$selected_val);
-			if ($worker_array[4]%2 == 0)
+			if ($worker_array[0]%2 == 0)
 				$test_point = $test_point + 2;
 			else
 				$test_point = $test_point + 1;

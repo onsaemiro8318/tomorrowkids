@@ -18,3 +18,18 @@
 </span></div>
     </div>
 </div>
+<!-- WIDERPLANET  SCRIPT START 2014.10.30 -->
+<div id="wp_tg_cts" style="display:none;"></div>
+<script type="text/javascript">
+var wptg_tagscript_vars = wptg_tagscript_vars || [];
+wptg_tagscript_vars.push(
+(function() {
+	return {
+		ti:"21002",	/*광고주 코드*/
+		ty:"Home",	/*트래킹태그 타입*/
+		device:"web"	/*디바이스 종류 (web 또는 mobile)*/
+	}; 
+}));
+</script> 
+<script type="text/javascript" async defer  src="//astg.widerplanet.com/js/wp_astg_3.0.js"></script>
+<!-- // WIDERPLANET  SCRIPT END 2014.10.30 -->
