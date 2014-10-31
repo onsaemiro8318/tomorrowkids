@@ -1,3 +1,13 @@
+<?php
+   $uploadfile1="http://www.tomorrowkids.or.kr/images/jobimg_49.png";
+   $ch = curl_init("https://kapi.kakao.com/v1/api/story/upload/multi");
+   curl_setopt($ch, CURLOPT_HTTPHEADER, array("Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"));
+   curl_setopt($ch, CURLOPT_POSTFIELDS, array('file[0]'=>"@$uploadfile1"));
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+   $postResult = curl_exec($ch);
+   curl_close($ch);
+   print "$postResult";
+?>
 <!doctype HTML>
 <html>
 <head>
@@ -147,7 +157,7 @@ function _storyPhoto() {
    // API를 호출합니다.
    Kakao.API.request({
     url   : '/v1/api/story/upload/multi',
-    files : document.getElementById("storyFile").files
+    files : '<?=$postResult?>'
    }).then(function (res) {
     // 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
     return Kakao.API.request({
