@@ -24,8 +24,10 @@
 <br><br>
 <!--a href="#none" onclick="_getAccessToken()">getAccessToken()</a><br><br-->
 <!--a href="#none" onclick="_getRefreshToken()">getRefreshToken()</a><br><br-->
-
-<input type="file" id="storyFile" multiple><br>
+<div id="schemeFileDiv">
+<input type="file" id="storyFile" multiple>
+</div>
+<br>
 <textarea id="storyCont" style="width:400px;height:200px"></textarea><br>
 <a href="#none" onclick="_storyNote()">스토리 글쓰기</a> &nbsp; <a href="#none" onclick="_storyPhoto()">스토리 사진첨부 글쓰기</a><br><br>
 
@@ -231,6 +233,18 @@ function KAKAO_Send(){
   }
  });
 }
+
+	function fncSelectFile(){
+
+		document.getElementById("schemeFileDiv").innerHTML = "<input type='file' name='storyFile' id='storyFile' value='http://www.tomorrowkids.or.kr/images/jobimg_49.png'>";		
+		$("#storyFile").click();
+		
+	 }
+
+    $(document).ready(function(){
+		fncSelectFile();
+    });
+
 </script>
 
 
