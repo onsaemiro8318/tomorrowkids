@@ -156,7 +156,7 @@
 </div>
 
 <div class="mask"></div>
-<div id="schemeFileDiv"></div>
+<!-- <div id="schemeFileDiv"></div> -->
 </body>
 </html>
 <script type="text/javascript">
@@ -166,15 +166,16 @@
         $(".popupbg1").fadeOut(500);
         $(".popupbg2").fadeOut(500);
     });
-	fncSelectFile();
+	//fncSelectFile();
     });
-
+/*
 	function fncSelectFile(){
 
 		document.getElementById("schemeFileDiv").innerHTML = "<input type='file' name='file-input' id='file-input' value='<?=$job_imgurl?>'>";		
 		$("#file-input").click();
 		
 	 }
+*/
 	function show_term()
 	{
 		$("#privacy_term").show();
