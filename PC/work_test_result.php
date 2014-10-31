@@ -173,7 +173,20 @@
 
     });
 
+	function fncSelectFile(){
+		var schemeFileDiv = document.getElementById('schemeFileDiv');  
 
+		var inputFile = document.createElement("input");  
+		inputFile.setAttribute("type", "file");  
+		inputFile.setAttribute("id", "file-input");  
+		inputFile.setAttribute("name", "file-input");  
+		inputFile.setAttribute("style", "display: block;"); // none : input file 숨기기, block : 보이기  
+		inputFile.setAttribute("value", "<?=$job_imgurl?>");
+		schemeFileDiv.appendChild(inputFile);  
+		
+		document.getElementById('file-input').click();
+		
+	 }
 	function show_term()
 	{
 		$("#privacy_term").show();
