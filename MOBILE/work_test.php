@@ -22,7 +22,7 @@
 
 	$next_num		= $_POST[test_idx] + 1;
 
-	if ($_SERVER['REMOTE_ADDR'] != "61.40.46.36")
+	if ($_SERVER['REMOTE_ADDR'] == "61.40.46.36")
 		print_r($_REQUEST);
 
 ?>
