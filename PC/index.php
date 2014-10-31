@@ -14,9 +14,6 @@
 	$left_per	= ($total_count / 1000) * 100;
 	$right_per	= 100 - $left_per - 0.3;
 
-	if ($_SERVER['REMOTE_ADDR'] == "61.40.46.36")
-		print_r($_REQUEST);
-
 ?>
     <script type='text/javascript'>
 	// 유튜브 반복 재생
