@@ -2,20 +2,20 @@
 	// 설정파일
 	include_once "../config.php";
 	include_once "header.php";
-	$user_job	= TK_GetUserJobInfo($_REQUEST[job]);
+	$user_job	= TK_GetUserJobInfo($_REQUEST['job']);
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
-	$test_idx	= $_REQUEST[idx];
+	$test_idx	= $_REQUEST['idx'];
 
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
+	$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST['job'].".jpg";
 	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_2.jpg";
-	$job_imgurl_kakao	= $_gl[kakao_img][$_REQUEST[job]];
+	$job_imgurl_kakao	= $_gl['kakao_img'][$_REQUEST['job']];
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -68,8 +68,8 @@
         	 <div class="fl_left">
         		<div class="re_text">당신의 내일(Work) 테스트 결과입니다.</div>
                 <div class="resulttwotext" style="width:460px;height:230px">
-                	<p class="big">"<?=$user_job[job];?>"</p>
-                    <p class="sm"><?=$user_job[job_explain];?></p>
+                	<p class="big">"<?=$user_job['job'];?>"</p>
+                    <p class="sm"><?=$user_job['job_explain'];?></p>
                 </div>
       		 </div>
         </div>
@@ -77,14 +77,14 @@
 빈곤한 환경으로 이런 일이 있다는 것 조차 모른 채 제한된 꿈을 꾸는 아이들을 도와주세요.<br/>
 당신의 내일(Work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.</div>
 <?
-	if ($user_info[media] == $_gl[login_media]['facebook'])
+	if ($user_info['media'] == $_gl['login_media']['facebook'])
 	{
 ?>
-	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$_REQUEST[job]?>');return false;"><img src="images/facebook_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');return false;"><img src="images/facebook_sub.png"/></a></div>
 <?
 	}else{
 ?>
-	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a></div>
 <?
 	}
 ?>

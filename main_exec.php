@@ -39,7 +39,7 @@ switch ($_REQUEST['exec'])
 	case "fb_user_info" :
 		$ip_addr = $_SERVER['REMOTE_ADDR'];
 		$userid	= $_REQUEST['fbUserId'];
-		$media = $_gl[login_media]['facebook'];
+		$media = $_gl['login_media']['facebook'];
         $user_img = $_REQUEST['fbUserImage'];
         $user_name = "";
 
@@ -109,7 +109,7 @@ switch ($_REQUEST['exec'])
 
 			$test_result_idx = TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job[idx],$media,$gubun);
 
-			echo $selected_job[idx]."|".$test_result_idx;
+			echo $selected_job['idx']."|".$test_result_idx;
 		//}
 	break;
 
