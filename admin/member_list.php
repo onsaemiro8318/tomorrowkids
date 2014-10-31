@@ -91,7 +91,7 @@
 
 	if ($sDate)
 		$where	= " AND created_at >= '".$sDate."' AND created_at <= '".$eDate." 23:59:59'";
-	else if ($search_type)
+	else if ($search_txt)
 		$where	= " AND ".$search_type." like '%".$search_txt."%'";
 	else if ($search_media)
 		$where	= " AND media = '".$search_media."'";
