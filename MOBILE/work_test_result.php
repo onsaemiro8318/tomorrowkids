@@ -2,22 +2,22 @@
 	// 설정파일
 	include_once "../config.php";
 	include_once "header.php";
-	$user_job		= TK_GetUserJobInfo($_REQUEST[job]);
+	$user_job		= TK_GetUserJobInfo($_REQUEST['job']);
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
-	$test_idx	= $_REQUEST[idx];
+	$test_idx	= $_REQUEST['idx'];
 
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	$job_imgurl		= "../images/jobimg_".$_REQUEST[job].".jpg";
-	$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
+	$job_imgurl		= "../images/jobimg_".$_REQUEST['job'].".jpg";
+	$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST['job'].".jpg";
 	//$job_imgurl		= "../images/jobimg_1.jpg";
 	//$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_1.jpg";
-	$job_imgurl_kakao	= $_gl[kakao_img][$_REQUEST[job]];
+	$job_imgurl_kakao	= $_gl['kakao_img'][$_REQUEST['job']];
 
 ?>
 <script type="text/javascript">
@@ -70,8 +70,8 @@
                 <div class="fl_left arrow"><img src="images/rihgt_arrowicon.png"/></div>
                 <div class="bluetext">당신의 내일(Work) 테스트 결과입니다.</div>
             </div>
-		    <div class="title_work">“<?=$user_job[job];?>”</div>
-            <div class="summary"><?=$user_job[job_explain];?></div>
+		    <div class="title_work">“<?=$user_job['job'];?>”</div>
+            <div class="summary"><?=$user_job['job_explain'];?></div>
         </div>
         <div class="summary2">
 세상에는 이처럼 당신이 하고 있는 일, 상상치도 못했던
@@ -82,15 +82,15 @@
 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.
         </div>
 <?
-	if ($user_info[media] == $_gl[login_media]['facebook'])
+	if ($user_info['media'] == $_gl['login_media']['facebook'])
 	{
 ?>    
-        <div class="face_dt_button"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$_REQUEST[job]?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
+        <div class="face_dt_button"><a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
 <?
 	}else{
 ?>
-        <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl2?>','<?=$user_info[mb_nickname]?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
-        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
+        <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl2?>','<?=$user_info['mb_nickname']?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
+        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
 <?
 	}
 ?>    
