@@ -34,12 +34,6 @@
 			alert("검색 시작일은 종료일보다 작아야 합니다.");
 			return false;
 		}
-
-		if ($("#sDate").val() == "" || $("#eDate").val() == "")
-		{
-			alert("검색 시작일과 종료일은 모두 포함 되어야 합니다.");
-			return false;
-		}
 	}
 </script>
 
