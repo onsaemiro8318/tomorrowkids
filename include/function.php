@@ -90,7 +90,7 @@
 
 		if ($job_yn != 0 && $job_idx != 0)
 		{
-			$query		= "SELECT * FROM ".$_gl['tk_works_table']." WHERE idx = '".$job_yn[idx]."'";
+			$query		= "SELECT * FROM ".$_gl['tk_works_table']." WHERE idx = '".$job_yn['idx']."'";
 			$result		= mysqli_query($my_db, $query);
 			$info		= mysqli_fetch_array($result);
 		}else{
