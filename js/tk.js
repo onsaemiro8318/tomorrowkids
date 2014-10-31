@@ -287,14 +287,14 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 	});
 }
 
-function fb_share(job, job_explain, test_idx, job_imgurl)
+function fb_share(job, job_explain, test_idx, job_num)
 {
 	FB.ui(
 	{
 		method: 'feed',
 		name: '내일을 부탁해',
 		link: 'http://www.tomorrowkids.or.kr/?media=fb',
-		picture: 'http://www.tomorrowkids.or.kr/PC/images/1200.jpg',
+		picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg',
 		caption: 'http://www.tomorrowkids.or.kr',
 		//description: job + " - " + job_explain
 		description: "당신에게 어울리는 직업은 " + job + "입니다!"
