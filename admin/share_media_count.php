@@ -26,13 +26,11 @@
                 </thead>
                 <tbody>
 <?php
-		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_test_result_table]." GROUP BY media";
+		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_test_result_table]." WHERE share='Y' GROUP BY media";
 		$media_res		= mysqli_query($my_db, $media_query);
-		
-		unset($media_name);
-		unset($media_cnt);
-		unset($pc_cnt);
-		unset($mobile_cnt);
+
+        $total_mobile_cnt = 0;
+        $total_pc_cnt = 0;
 		$total_media_cnt = 0;
 		while ($media_data = mysqli_fetch_array($media_res))
 		{
@@ -46,7 +44,6 @@
 			$mobile_cnt[]	= $mobile_count;
 		}
 
-		$rowspan_cnt =  count($media_name);
 		$i = 0;
 		foreach($media_name as $key => $val)
 		{
