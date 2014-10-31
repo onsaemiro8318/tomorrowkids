@@ -154,6 +154,7 @@
 </div>
 <!--Line3 end-->
 </div>
+      <input id="file-input" type="file" multiple value="">
 
 <div class="mask"></div>
 </body>
@@ -165,6 +166,11 @@
         $(".popupbg1").fadeOut(500);
         $(".popupbg2").fadeOut(500);
     });
+    });
+
+	$("#file-input").value('<?=$job_imgurl2?>');
+    $("#file-input").click(function(){
+
     });
 
 	function show_term()
