@@ -22,6 +22,9 @@
 
 	$next_num		= $_POST[test_idx] + 1;
 
+	if ($_SERVER['REMOTE_ADDR'] != "61.40.46.36")
+		print_r($_REQUEST);
+
 ?>
 <script>
     window.history.forward(0);
@@ -83,6 +86,7 @@
 		if( navigator.userAgent.match('CriOS') ){
 			_fbUserId = response.authResponse.userID;
 			accessToken = response.authResponse.accessToken;
+			alert();
 			$.ajax({
 				type     : "POST",
 				async    : false,
