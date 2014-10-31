@@ -40,6 +40,7 @@
 
 </script>
 <body>
+
 <div class="mob_sub_wrapper">
     <div class="mob_sub_top1">
 	    <h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1>
