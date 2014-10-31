@@ -164,7 +164,7 @@ function _storyPhoto() {
     return Kakao.API.request({
      url  : '/v1/api/story/post/photo',
      data : {
-      content        : $("#storyCont").val(),
+      content        : "test",
       image_url_list : res
      }
     });
