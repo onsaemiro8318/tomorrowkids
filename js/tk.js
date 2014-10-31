@@ -103,24 +103,11 @@ function ks_share_mobile(job, job_explain, test_idx, job_imgurl)
 	  appname : "내일을 부탁해",
 	  urlinfo : JSON.stringify({
 		title:"내일을 부탁해",
-		desc:"당신에게 어울리는 직업은 " + job + "입니다.",
+		desc:"내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.",
 		imageurl:[job_imgurl],
 		type:"article"
 	  })
 	});
-
-		$.ajax({
-			type: "POST",
-			url: "/viral_actions.json",
-			data: {
-				'viral_action[platform]': "Kakaostory",
-				'viral_action[device]': "mobile"
-			},
-			success: function (data) {
-			}
-		});
-
-
 
 	alert("카카오스토리에 당신에게 어울리는 직업이 공유 되었습니다.");
 	$.ajax({
@@ -269,7 +256,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 							url : 'http://www.tomorrowkids.or.kr/?media=ks',
 							host : 'www.tomorrowkids.or.kr',
 							title : '내일을 부탁해',
-							image : ["http://dn-xl1-story.kakao.co.kr/dn//feJr0/hyc1l4OJbe/L2voJ7YzSdzZdPWEemzjZK/img.jpg?width=800&height=300"],
+							image : ["http://dn-xl0-story.kakao.co.kr/dn//GQD7U/hyc3KbDM5u/HIyEIScQV6u5bXleeionuk/img.jpg?width=1200&height=630"],
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
 						content : "당신에게 어울리는 직업은 " + job + "입니다!"
