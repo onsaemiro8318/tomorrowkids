@@ -79,7 +79,7 @@
 	if ($user_info[media] == $_gl[login_media]['facebook'])
 	{
 ?>
-	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');return false;"><img src="images/facebook_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="fb_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$_REQUEST[job]?>');return false;"><img src="images/facebook_sub.png"/></a></div>
 <?
 	}else{
 ?>
