@@ -15,6 +15,7 @@
 
 	$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
 	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_2.jpg";
+	$job_imgurl_kakao	= $_gl[kakao_img][$_REQUEST[job]];
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -83,7 +84,7 @@
 <?
 	}else{
 ?>
-	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl?>');return false;"><img src="images/ks_sub.png"/></a></div>
+	<div class="facebookbut"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a></div>
 <?
 	}
 ?>

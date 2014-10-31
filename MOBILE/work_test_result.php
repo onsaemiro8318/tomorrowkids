@@ -17,6 +17,8 @@
 	$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST[job].".jpg";
 	//$job_imgurl		= "../images/jobimg_1.jpg";
 	//$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_1.jpg";
+	$job_imgurl_kakao	= $_gl[kakao_img][$_REQUEST[job]];
+
 ?>
 <script type="text/javascript">
 	window.history.forward(0);
@@ -88,7 +90,7 @@
 	}else{
 ?>
         <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl2?>','<?=$user_info[mb_nickname]?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
-        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl2?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
+        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job[job]?>','<?=$user_job[job_explain]?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
 <?
 	}
 ?>    
