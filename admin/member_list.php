@@ -90,20 +90,20 @@
 <?php 
 
 	if ($sDate)
-		$where	= " AND created_at >= '".$sDate."' AND created_at <= '".$eDate."'";
+		$where	= " AND created_at >= '".$sDate."' AND created_at <= '".$eDate." 23:59:59'";
 	else if ($search_type)
 		$where	= " AND ".$search_type." like '%".$search_txt."%'";
 	else if ($search_media)
 		$where	= " AND media = '".$search_media."'";
 
-	$member_count_query = "SELECT count(*) FROM ".$_gl[tk_member_table]." WHERE 1";
+	$member_count_query = "SELECT count(*) FROM ".$_gl[tk_member_table]." WHERE 1".$where."";
 	list($member_count) = mysqli_fetch_array(mysqli_query($my_db, $member_count_query));
 
 	$PAGE_CLASS = new Page($pg,$member_count,$page_size,$block_size);
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
-	$member_list_query = "SELECT * FROM ".$_gl[tk_member_table]." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$member_list_query = "SELECT * FROM ".$_gl[tk_member_table]." WHERE 1".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $member_list_query);
 
 	while($member_data = mysqli_fetch_array($res))
