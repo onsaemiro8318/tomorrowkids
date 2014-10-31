@@ -7,7 +7,8 @@
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
    $postResult = curl_exec($ch);
    curl_close($ch);
-   print "$postResult";
+   print_r($postResult);
+   print_r("111");
 ?>
 <!doctype HTML>
 <html>
@@ -158,7 +159,7 @@ function _storyPhoto() {
    // API를 호출합니다.
    Kakao.API.request({
     url   : '/v1/api/story/upload/multi',
-    files : '<?=$postResult?>'
+    files : document.getElementById("storyFile").files
    }).then(function (res) {
     // 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
     return Kakao.API.request({
