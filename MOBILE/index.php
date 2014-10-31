@@ -52,7 +52,7 @@
     </script>
 <body>
 	<div class="mob_top1box">
-        <div class="content"><h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1>
+        <div class="content"><div><h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1></div>
         	<!--<div class="text1_cont"><img src="images/mob_top1_text1.png"/></div>
             <div class="text2_cont"><img src="images/page_title.png"/></div>-->
             <div class="sum_text"><!-- 약 100만 명의 우리 아이들이 빈곤한 환경 탓에
