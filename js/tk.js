@@ -204,6 +204,16 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 						url : 'http://www.tomorrowkids.or.kr/?media=ks'
 					}
 				}).then(function(res) {
+				  Kakao.Auth.getStatus(function(statusObj) {
+					if (statusObj.status == "not_connected") {
+					  alert('You should log in first.');
+					} else {
+
+					  // API를 호출합니다.
+					  Kakao.API.request({
+						url: '/v1/api/story/upload/multi',
+						files: job_imgurl
+					  }).then(function (imgurl) {
 					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
 					return Kakao.API.request( {
 						url : '/v1/api/story/post/link',
@@ -212,6 +222,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 							url : 'http://www.tomorrowkids.or.kr/?media=ks',
 							host : 'www.tomorrowkids.or.kr',
 							title : '내일을 부탁해',
+							image : [imgurl],
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
 						content : "당신에게 어울리는 직업은 " + job + "입니다!"
@@ -261,6 +272,11 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 							}); 
 						}
 					});
+
+					  });
+					}
+				  });
+
 				});
 			// 카카오스토리 유저 아닐 때
 			}else { 
