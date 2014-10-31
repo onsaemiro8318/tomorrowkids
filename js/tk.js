@@ -210,7 +210,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 						data : {
 						link_info : {
 							url : 'http://www.tomorrowkids.or.kr/?media=ks',
-							host : 'http://www.tomorrowkids.or.kr/?media=ks',
+							host : 'www.tomorrowkids.or.kr',
 							title : '내일을 부탁해',
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
