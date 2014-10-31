@@ -23,8 +23,8 @@
 	else
 		$gubun = "PC";
 
-	if ($_SERVER['REMOTE_ADDR'] != "61.40.46.36")
-		exit;
+	//if ($_SERVER['REMOTE_ADDR'] != "61.40.46.36")
+	//	exit;
 
 
 	$total_count	= TK_GetTestTotalCount();
