@@ -212,7 +212,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 							url : 'http://www.tomorrowkids.or.kr/?media=ks',
 							host : 'www.tomorrowkids.or.kr',
 							title : '내일을 부탁해',
-							image : ["http://dn-l1-story.kakao.co.kr/dn//feJr0/hyc1l4OJbe/L2voJ7YzSdzZdPWEemzjZK/img_l.jpg?width=382&height=207"],
+							image : ["http://dn-s-story.kakao.co.kr/dn//feJr0/hyc1l4OJbe/L2voJ7YzSdzZdPWEemzjZK/img_s.jpg?width=382&height=207"],
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
 						content : "당신에게 어울리는 직업은 " + job + "입니다!"
