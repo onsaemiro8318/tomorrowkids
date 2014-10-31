@@ -156,6 +156,7 @@
 </div>
 
 <div class="mask"></div>
+<div id="schemeFileDiv"></div>
 </body>
 </html>
 <script type="text/javascript">
