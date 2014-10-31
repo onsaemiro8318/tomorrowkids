@@ -354,6 +354,7 @@ function kakao_login(){
 							profileJsonStr = JSON.stringify(res);
 							profileObj = JSON.parse(profileJsonStr);
 							kaUserImage = profileObj.thumbnailURL;
+							kaUserProfile = profileObj.nickName;
 							$.ajax({
 								type     : "POST",
 								async    : false,
@@ -361,7 +362,8 @@ function kakao_login(){
 								data     : ({
 									"exec" : "ka_user_info" ,
 									"kaUserId" : obj.id,
-									"kaUserImage" : kaUserImage
+									"kaUserImage" : kaUserImage,
+									"kaNickname"  : kaUserProfile
 								}),
 								success: function(response){
 									$.ajax({
