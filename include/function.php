@@ -5,7 +5,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl[tk_worktest_table]." WHERE idx='".$idx."'";
+		$query 		= "SELECT * FROM ".$_gl['tk_worktest_table']." WHERE idx='".$idx."'";
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_fetch_array($result);
 
@@ -18,7 +18,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl[tk_worktest_table]." WHERE parent_idx='".$idx."'";
+		$query 		= "SELECT * FROM ".$_gl['tk_worktest_table']." WHERE parent_idx='".$idx."'";
 		$result 	= mysqli_query($my_db, $query);
 		while($data = mysqli_fetch_array($result))
 			$info[] = $data;
@@ -32,7 +32,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 			= "SELECT count(*) cnt FROM ".$_gl[tk_test_result_table]." WHERE user_id = '".$userid."'";
+		$query 			= "SELECT count(*) cnt FROM ".$_gl['tk_test_result_table']." WHERE user_id = '".$userid."'";
 		$result 		= mysqli_query($my_db, $query);
 		list($info)		= mysqli_fetch_array($result);
 
@@ -59,7 +59,7 @@
 			$group_min_range	= 46;
 			$group_max_range	= 60;
 		}
-		$query 				= "SELECT job FROM ".$_gl[tk_test_result_table]." WHERE job between '".$group_min_range."' AND '".$group_max_range."' ORDER BY idx DESC limit 1";
+		$query 				= "SELECT job FROM ".$_gl['tk_test_result_table']." WHERE job between '".$group_min_range."' AND '".$group_max_range."' ORDER BY idx DESC limit 1";
 		$result 			= mysqli_query($my_db, $query);
 		if ($result)
 			list($job_idx)		= mysqli_fetch_array($result);
@@ -69,7 +69,7 @@
 		if ($job_idx != 0)
 		{
 
-			$query				= "SELECT `group` FROM ".$_gl[tk_works_table]." WHERE idx='".$job_idx."'";
+			$query				= "SELECT `group` FROM ".$_gl['tk_works_table']." WHERE idx='".$job_idx."'";
 			$result				= mysqli_query($my_db, $query);
 			list($job_group)	= mysqli_fetch_array($result);
 
@@ -77,7 +77,7 @@
 			{
 				$job_idx = $job_idx + 1;
 
-				$query				= "SELECT * FROM ".$_gl[tk_works_table]." WHERE `group`='".$job_group."' AND idx = '".$job_idx."'";
+				$query				= "SELECT * FROM ".$_gl['tk_works_table']." WHERE `group`='".$job_group."' AND idx = '".$job_idx."'";
 				$result				= mysqli_query($my_db, $query);
 				if ($result)
 					$job_yn			= mysqli_fetch_array($result);
@@ -90,7 +90,7 @@
 
 		if ($job_yn != 0 && $job_idx != 0)
 		{
-			$query		= "SELECT * FROM ".$_gl[tk_works_table]." WHERE idx = '".$job_yn[idx]."'";
+			$query		= "SELECT * FROM ".$_gl['tk_works_table']." WHERE idx = '".$job_yn[idx]."'";
 			$result		= mysqli_query($my_db, $query);
 			$info		= mysqli_fetch_array($result);
 		}else{
@@ -103,7 +103,7 @@
 			else
 				$job_idx	= 46;
 
-			$query		= "SELECT * FROM ".$_gl[tk_works_table]." WHERE idx = '".$job_idx."'";
+			$query		= "SELECT * FROM ".$_gl['tk_works_table']." WHERE idx = '".$job_idx."'";
 			$result		= mysqli_query($my_db, $query);
 			$info		= mysqli_fetch_array($result);
 		}
@@ -117,7 +117,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query		= "INSERT INTO ".$_gl[tk_tracking_info_table]."(media, ip_addr, reg_date, gubun) values('".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
+		$query		= "INSERT INTO ".$_gl['tk_tracking_info_table']."(media, ip_addr, reg_date, gubun) values('".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
 		$result		= mysqli_query($my_db, $query);
 	}
 
@@ -127,7 +127,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl[tk_test_result_table]."";
+		$query 		= "SELECT * FROM ".$_gl['tk_test_result_table']."";
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_num_rows($result);
 
@@ -143,7 +143,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl[tk_works_table]." WHERE idx='".$idx."'";
+		$query 		= "SELECT * FROM ".$_gl['tk_works_table']." WHERE idx='".$idx."'";
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_fetch_array($result);
 
@@ -155,7 +155,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl[tk_member_table]." WHERE user_id = '".$userid."'";
+		$query 		= "SELECT * FROM ".$_gl['tk_member_table']." WHERE user_id = '".$userid."'";
 		$result 	= mysqli_query($my_db, $query);
 		$info = mysqli_num_rows($result);
 
@@ -167,7 +167,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl[tk_member_table]." WHERE user_id = '".$userid."'";
+		$query 		= "SELECT * FROM ".$_gl['tk_member_table']." WHERE user_id = '".$userid."'";
 		$result 	= mysqli_query($my_db, $query);
 		$info = mysqli_fetch_array($result);
 
@@ -179,7 +179,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query = "INSERT INTO ".$_gl[tk_member_table]." (user_id, ip_addr, created_at, updated_at, media, gubun, mb_image, mb_nickname) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."','".$user_img."','".$user_name."')";
+		$query = "INSERT INTO ".$_gl['tk_member_table']." (user_id, ip_addr, created_at, updated_at, media, gubun, mb_image, mb_nickname) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."','".$user_img."','".$user_name."')";
 		$result = mysqli_query($my_db, $query);
 	}
 
@@ -188,7 +188,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query = "UPDATE ".$_gl[tk_member_table]." SET updated_at = now() , mb_image = '".$user_img."', mb_nickname = '".$user_name."' WHERE user_id = '".$userid."'";
+		$query = "UPDATE ".$_gl['tk_member_table']." SET updated_at = now() , mb_image = '".$user_img."', mb_nickname = '".$user_name."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);  
 	}
     
@@ -197,7 +197,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query = "UPDATE ".$_gl[tk_member_table]." SET mb_email = '".$email."' WHERE user_id = '".$userid."'";
+		$query = "UPDATE ".$_gl['tk_member_table']." SET mb_email = '".$email."' WHERE user_id = '".$userid."'";
 		$result = mysqli_query($my_db, $query);
 
 	}
@@ -207,18 +207,18 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "INSERT INTO ".$_gl[tk_test_result_table]." (user_id, answer, job, media, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
+		$query = "INSERT INTO ".$_gl['tk_test_result_table']." (user_id, answer, job, media, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
 		$result = mysqli_query($my_db, $query);
 		$test_result = mysqli_insert_id($my_db);
 
 		$answer_array = explode("|",$selected_val);
 		foreach ($answer_array as $key => $val)
 		{
-			$query = "UPDATE ".$_gl[tk_worktest_table]." SET select_cnt=select_cnt+1 WHERE idx='".$val."'";
+			$query = "UPDATE ".$_gl['tk_worktest_table']." SET select_cnt=select_cnt+1 WHERE idx='".$val."'";
 			$result = mysqli_query($my_db, $query);
 		}
 
-		$query = "UPDATE ".$_gl[tk_works_table]." SET sel_count=sel_count+1 WHERE idx='".$selected_job."'";
+		$query = "UPDATE ".$_gl['tk_works_table']." SET sel_count=sel_count+1 WHERE idx='".$selected_job."'";
 		$result = mysqli_query($my_db, $query);
 
 		return $test_result;
@@ -229,7 +229,7 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "UPDATE ".$_gl[tk_test_result_table]." SET share = '".$share_on."' WHERE idx= '".$test_idx."'";
+		$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."' WHERE idx= '".$test_idx."'";
 		$result = mysqli_query($my_db, $query);  
 	}
 
@@ -238,7 +238,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query = "UPDATE ".$_gl[tk_test_result_table]." SET direct = '".$direct_on."' WHERE idx = '".$test_idx."'";
+		$query = "UPDATE ".$_gl['tk_test_result_table']." SET direct = '".$direct_on."' WHERE idx = '".$test_idx."'";
 		$result = mysqli_query($my_db, $query);  
 	}
 
