@@ -204,7 +204,7 @@ function kt_share(job, job_explain, test_idx, job_imgurl, user_nickname)
 		},
 		webButton: {
 			text: '내일을 부탁해',
-			url: 'http://www.tomorrowkids.or.kr/?media=kt'
+			url: 'http://www.dreamfull.or.kr/tomorrowkids/kt'
 		}
 	});
   
@@ -249,7 +249,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 				Kakao.API.request( {
 					url : '/v1/api/story/linkinfo',
 					data : {
-						url : 'http://www.tomorrowkids.or.kr/?media=ks'
+						url : 'http://www.dreamfull.or.kr/tomorrowkids/ks'
 					}
 				}).then(function(res) {
 					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
@@ -257,7 +257,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 						url : '/v1/api/story/post/link',
 						data : {
 						link_info : {
-							url : 'http://www.tomorrowkids.or.kr/?media=ks',
+							url : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
 							host : 'www.tomorrowkids.or.kr',
 							title : '내일을 부탁해',
 							image : [job_imgurl],
@@ -326,9 +326,9 @@ function fb_share(job, job_explain, test_idx, job_num)
 	{
 		method: 'feed',
 		name: '내일을 부탁해',
-		link: 'http://www.tomorrowkids.or.kr/?media=fb',
+		link: 'www.dreamfull.or.kr/tomorrowkids/fb',
 		picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg',
-		caption: 'http://www.tomorrowkids.or.kr',
+		caption: 'www.dreamfull.or.kr/tomorrowkids/fb',
 		//description: job + " - " + job_explain
 		description: "당신에게 어울리는 직업은 " + job + "입니다!"
 	},
