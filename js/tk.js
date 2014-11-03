@@ -617,12 +617,10 @@ var flag_num = 0;
 
 function go_next_question(idx,num, selected_val)
 {
-alert(idx);
 	var sel_val = idx;
 	var gubun   = "";
 	if (sel_val == "")
 	{
-alert("111");
 		alert('하나의 답변을 꼭 선택해 주세요.');
 		if (num == 2)
 			location.href="work_test.php";
