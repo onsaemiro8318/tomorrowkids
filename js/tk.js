@@ -96,12 +96,12 @@ function ks_share_mobile(job, job_explain, test_idx, job_imgurl)
 		appid : "www.tomorrowkids.or.kr",
 		appver : "1.0",
 		appname : "내일을 부탁해",
-		urlinfo : JSON.stringify({title:curTitle, desc:"당신에게 어울리는 직업은 " + job + ".", imageurl:[job_imgurl], type:"article"})
+		urlinfo : JSON.stringify({title:curTitle, desc:"당신에게 어울리는 내일은 " + job + ".", imageurl:[job_imgurl], type:"article"})
 	});
 	*/
 
 	kakao.link("story").send({
-	  post : "당신에게 어울리는 직업은 " + job + "입니다.\n\nhttp://goo.gl/9NAXQD",
+	  post : "당신에게 어울리는 내일은 " + job + "입니다.\n\nhttp://goo.gl/9NAXQD",
 	  appid : "www.tomorrowkids.or.kr",
 	  appver : "1.0",
 	  appname : "내일을 부탁해",
@@ -113,7 +113,7 @@ function ks_share_mobile(job, job_explain, test_idx, job_imgurl)
 	  })
 	});
 
-	alert("카카오스토리에 당신에게 어울리는 직업이 공유 되었습니다.");
+	alert("카카오스토리에 당신에게 어울리는 내일이 공유 되었습니다.");
 	$.ajax({
 		type     : "POST",
 		async    : false,
@@ -199,7 +199,7 @@ function kt_share(job, job_explain, test_idx, job_imgurl, user_nickname)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: user_nickname + "님에게 어울리는 직업은 " + job + "입니다. 당신도 한번 테스트해 보세요.",
+		label: user_nickname + "님에게 어울리는 내일은 " + job + "입니다. 당신도 한번 테스트해 보세요.",
 		image: {
 			src: job_imgurl,
 			width: '300',
@@ -266,10 +266,10 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 							image : [job_imgurl],
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
-						content : "당신에게 어울리는 직업은 " + job + "입니다!"
+						content : "당신에게 어울리는 내일은 " + job + "입니다!"
 						},
 						success: function(res) {
-							alert("카카오스토리에 당신에게 어울리는 직업이 공유 되었습니다.");
+							alert("카카오스토리에 당신에게 어울리는 내일이 공유 되었습니다.");
 							$.ajax({
 								type     : "POST",
 								async    : false,
@@ -333,7 +333,7 @@ function fb_share(job, job_explain, test_idx, job_num)
 		picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg',
 		caption: 'www.dreamfull.or.kr/tomorrowkids/fb',
 		//description: job + " - " + job_explain
-		description: "당신에게 어울리는 직업은 " + job + "입니다!"
+		description: "당신에게 어울리는 내일은 " + job + "입니다!"
 	},
 		function(response) {
 			if (response && response.post_id) {
