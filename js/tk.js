@@ -591,6 +591,7 @@ function go_test(num, val)
 			}
 		});
 	}else{
+		alert(val);
 		$.ajax({
 			type		: "POST",
 			async		: false,
