@@ -611,9 +611,10 @@ function save_info(idx)
 
 var flag_num = 0;
 
-function go_next_question(num, selected_val)
+function go_next_question(idx,num, selected_val)
 {
-	var sel_val = $("#sel_value").val();
+
+	var sel_val = idx;
 	var gubun   = "";
 	if (sel_val == "")
 	{
