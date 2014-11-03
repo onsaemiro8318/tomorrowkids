@@ -5,9 +5,9 @@
 	include "./head.php";
 
 	if(isset($_REQUEST['sDate']) == false)
-		$sdate = "";
+		$sDate = "";
 	else
-		$sdate = $_REQUEST['sDate'];
+		$sDate = $_REQUEST['sDate'];
 	
 	if(isset($_REQUEST['eDate']) == false)
 		$eDate = "";
