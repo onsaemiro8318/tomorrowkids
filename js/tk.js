@@ -258,7 +258,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 						data : {
 						link_info : {
 							url : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
-							host : 'www.tomorrowkids.or.kr',
+							host : 'www.dreamfull.or.kr',
 							title : '내일을 부탁해',
 							image : [job_imgurl],
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
