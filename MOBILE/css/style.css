@@ -85,7 +85,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .mob_sub_top1 h1{}
 .mob_sub_number{ padding-top:3%;}
 .mob_sub_number .numberbox{ background:url(../images/number_bg_mob.png) no-repeat; background-size:95%; width:325px; overflow:hidden;}
-.mob_sub_number .numberbox ul li{ color:#fff; font-size:70px; float:left; text-align:center; width:16%; line-height:70px; margin-top: -3px;}
+.mob_sub_number .numberbox ul li{ color:#fff; font-size:70px; float:left; text-align:center; width:16%; line-height:70px;}
 .mob_sub_number .numberbox .number2{ margin-left:2%;}
 .mob_sub_number .numberbox .number3{ margin-left:8%;}
 .mob_sub_number .numberbox .number4{ margin-left:2%;}
