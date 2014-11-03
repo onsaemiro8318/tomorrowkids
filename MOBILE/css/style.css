@@ -45,7 +45,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .main_top2 .gr_box .peopleic{ position:absolute; left:92px; top:-32px;}
 .main_top2 .peoplenumber{ font-size:22px; color:#444; line-height:70px; padding-right:20px;  font-family: 'NanumGothic'; padding-top:15%;}
 .number_box_mob{ background:url(../images/number_bg_mob.png) no-repeat left; margin-top:11%; background-size:100%; width:425px; height:124px;}
-.number_box_mob ul li{ float:left; color:#fff; font-size:105px; text-align:center; line-height:120px; width:73px;}
+.number_box_mob ul li{ float:left; color:#fff; font-size:95px; text-align:center; line-height:120px; width:73px;}
 .number_box_mob .number2{ margin-left:10px;}
 .number_box_mob .number3{ margin-left:34px;}
 .number_box_mob .number4{ margin-left:8px;}
@@ -185,7 +185,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.main_top2 .peoplenumber{ font-size:14px; letter-spacing:-0.1px; padding-right:2%;}
 	.number_boxwr{ width:102%;}
 	.number_box_mob{ width:68%;}
-	.number_box_mob ul li{ font-size:90px;}
+	.number_box_mob ul li{ font-size:80px;}
 	.number_box_mob ul li{ width:18%;}
 	.number_box_mob .number2{ margin-left:1% !important;}
 	.number_box_mob .number3{ margin-left:7% !important;}
@@ -217,7 +217,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.main_top2 .peoplenumber{ font-size:14px; letter-spacing:-0.1px; padding-right:2%;}
 	.number_boxwr{ width:102%;}
 	.number_box_mob{ width:68%;}
-	.number_box_mob ul li{ font-size:55px;}
+	.number_box_mob ul li{ font-size:50px;}
 	.number_box_mob ul li{ width:17%;}
 	.number_box_mob .number2{ margin-left:9% !important;}
 	.number_box_mob .number3{ margin-left:2% !important;}
@@ -285,7 +285,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.main_top2 .peoplenumber{ font-size:14px; letter-spacing:-0.1px; padding-right:2%;}
 	.number_boxwr{ width:102%;}
 	.number_box_mob{ width:68%;}
-	.number_box_mob ul li{ font-size:55px;}
+	.number_box_mob ul li{ font-size:50px;}
 	.number_box_mob ul li{ width:17%;}
 	.number_box_mob .number2{ margin-left:2% !important;}
 	.number_box_mob .number3{ margin-left:9% !important;}
@@ -358,7 +358,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.main_top2 .peoplenumber{ font-size:14px; letter-spacing:-0.1px; padding-right:2%;}
 	.number_boxwr{ width:102%;}
 	.number_box_mob{ width:68%;}
-	.number_box_mob ul li{ font-size:55px;}
+	.number_box_mob ul li{ font-size:50px;}
 	.number_box_mob ul li{ width:17%;}
 	.number_box_mob .number2{ margin-left:2% !important;}
 	.number_box_mob .number3{ margin-left:9% !important;}
