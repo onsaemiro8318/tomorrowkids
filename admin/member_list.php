@@ -34,12 +34,6 @@
 			alert("검색 시작일은 종료일보다 작아야 합니다.");
 			return false;
 		}
-
-		if ($("#sDate").val() == "" || $("#eDate").val() == "")
-		{
-			alert("검색 시작일과 종료일은 모두 포함 되어야 합니다.");
-			return false;
-		}
 	}
 </script>
 
@@ -88,13 +82,16 @@
             </thead>
             <tbody>
 <?php 
+	$where = "";
 
 	if ($sDate)
-		$where	= " AND created_at >= '".$sDate."' AND created_at <= '".$eDate." 23:59:59'";
-	else if ($search_type)
-		$where	= " AND ".$search_type." like '%".$search_txt."%'";
-	else if ($search_media)
-		$where	= " AND media = '".$search_media."'";
+		$where	.= " AND created_at >= '".$sDate."' AND created_at <= '".$eDate." 23:59:59'";
+	
+	if ($search_txt)
+		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
+	
+	if ($search_media)
+		$where	.= " AND media = '".$search_media."'";
 
 	$member_count_query = "SELECT count(*) FROM ".$_gl[tk_member_table]." WHERE 1".$where."";
 	list($member_count) = mysqli_fetch_array(mysqli_query($my_db, $member_count_query));

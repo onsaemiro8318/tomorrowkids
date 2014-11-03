@@ -13,7 +13,7 @@ switch ($_REQUEST['exec'])
 	case "ka_user_info" :
 		$ip_addr = $_SERVER['REMOTE_ADDR'];
 		$userid	= $_REQUEST['kaUserId'];
-		$media = $_gl[login_media]['kakao'];
+		$media = $_gl['login_media']['kakao'];
         $user_img = $_REQUEST['kaUserImage'];
         $user_name = $_REQUEST['kaNickname'];
         
@@ -39,7 +39,7 @@ switch ($_REQUEST['exec'])
 	case "fb_user_info" :
 		$ip_addr = $_SERVER['REMOTE_ADDR'];
 		$userid	= $_REQUEST['fbUserId'];
-		$media = $_gl[login_media]['facebook'];
+		$media = $_gl['login_media']['facebook'];
         $user_img = $_REQUEST['fbUserImage'];
         $user_name = "";
 
@@ -107,9 +107,9 @@ switch ($_REQUEST['exec'])
 
 			$selected_job	= TK_GetTestResultInfo($test_point);
 
-			$test_result_idx = TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job[idx],$media,$gubun);
+			$test_result_idx = TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job['idx'],$media,$gubun);
 
-			echo $selected_job[idx]."|".$test_result_idx;
+			echo $selected_job['idx']."|".$test_result_idx;
 		//}
 	break;
 

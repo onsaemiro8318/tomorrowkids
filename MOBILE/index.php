@@ -14,9 +14,6 @@
 	$left_per	= ($total_count / 1000) * 100;
 	$right_per	= 100 - $left_per - 1.3;
 
-	if ($_SERVER['REMOTE_ADDR'] == "61.40.46.36")
-		print_r($_REQUEST);
-
 
 ?>
     <script type='text/javascript'>
@@ -95,7 +92,7 @@
         </div>
         </div>
         <div class="youtubebox">
-          <iframe id="ytplayer" width="100%" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe>
+          <iframe id="ytplayer" width="100%" src="<?=$_gl['youtube_url']?>" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
     <!--Line2 end-->

@@ -13,14 +13,14 @@
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
 
-	if (!$_POST[test_idx])
-		$_POST[test_idx] = "1";
+	if (isset($_POST['test_idx']) == false)
+		$_POST['test_idx'] = "1";
 	// 질문 정보
-	$question_data	= TK_GetTestQuestionInfo($_POST[test_idx]);
+	$question_data	= TK_GetTestQuestionInfo($_POST['test_idx']);
 
-	$answer_data	= TK_GetTestAnswerInfo($_POST[test_idx]);
+	$answer_data	= TK_GetTestAnswerInfo($_POST['test_idx']);
 
-	$next_num		= $_POST[test_idx] + 1;
+	$next_num		= $_POST['test_idx'] + 1;
 
 
 ?>
@@ -30,7 +30,7 @@
 
 <body>
   <input type="hidden" name="sel_value" id="sel_value">
-  <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST[selected_val]?>">
+  <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST['selected_val']?>">
   <input type="hidden" name="selected_answer" id="selected_answer" value="">
   <div class="mob_sub_top1">
     <h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1>
@@ -58,15 +58,15 @@
     </div>
     <div class="top2_content" id="test_div">
       <div class="quas">
-        <?=$question_data[test_value]?>
+        <?=$question_data['test_value']?>
       </div>
-      <div class="ansbox" onclick="save_info('<?=$answer_data[0][idx]?>')" style="cursor:pointer;">
+      <div class="ansbox" onclick="save_info('<?=$answer_data[0]['idx']?>')" style="cursor:pointer;">
         <div class="fl_left tag">A.</div>
-        <div class="fl_left tagtext2" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[0][test_value]?></div>
+        <div class="fl_left tagtext2" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[0]['test_value']?></div>
       </div>
-      <div class="ansbox" onclick="save_info('<?=$answer_data[1][idx]?>')" style="cursor:pointer;">
+      <div class="ansbox" onclick="save_info('<?=$answer_data[1]['idx']?>')" style="cursor:pointer;">
         <div class="fl_left tag">B.</div>
-        <div class="fl_left tagtext2" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[1][test_value]?></div>
+        <div class="fl_left tagtext2" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="select_answer(this.id,'click');"><?=$answer_data[1]['test_value']?></div>
       </div>
       <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','');"><img src="images/next_qu_but.jpg"/></a></div>
     </div>
