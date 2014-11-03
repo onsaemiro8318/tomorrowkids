@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>TomorrowKids - 내일을 부탁해</title>
+    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
