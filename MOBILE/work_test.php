@@ -19,9 +19,7 @@
 	$question_data	= TK_GetTestQuestionInfo($_POST['test_idx']);
 
 	$answer_data	= TK_GetTestAnswerInfo($_POST['test_idx']);
-print_r($answer_data);
 	$next_num		= $_POST['test_idx'] + 1;
-
 
 ?>
 <script>
