@@ -44,6 +44,7 @@
 	{
 		global $_gl;
 		global $my_db;
+			$job_yn = 0;
 
 		if ($point == 3)
 		{
@@ -68,7 +69,6 @@
 
 		if ($job_idx != 0)
 		{
-			$job_yn = 0;
 			$query				= "SELECT `group` FROM ".$_gl['tk_works_table']." WHERE idx='".$job_idx."'";
 			$result				= mysqli_query($my_db, $query);
 			list($job_group)	= mysqli_fetch_array($result);

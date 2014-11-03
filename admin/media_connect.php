@@ -4,8 +4,15 @@
 	include_once "../config.php";
 	include "./head.php";
 
-	if(isset($_REQUEST['sDate']) == false) $sdate = $_REQUEST['sDate'];
-    if(isset($_REQUEST['eDate']) == false) $eDate = $_REQUEST['eDate'];
+	if(isset($_REQUEST['sDate']) == false)
+		$sDate = "";
+	else
+		$sDate = $_REQUEST['sDate'];
+	
+	if(isset($_REQUEST['eDate']) == false)
+		$eDate = "";
+	else
+		$eDate = $_REQUEST['eDate'];
 ?>
 <script>
 	$(function() {
@@ -61,8 +68,8 @@
 <?php 
     $where = "";
     
-	if (isset($sDate) == true)
-	$where	= " AND reg_date >= '".$sDate."' AND reg_date <= '".$eDate." 23:59:59'";
+	if ($sDate != "")
+		$where	= " AND reg_date >= '".$sDate."' AND reg_date <= '".$eDate." 23:59:59'";
 	$media_query = "SELECT * FROM ".$_gl['tk_tracking_info_table']." WHERE 1 ".$where." GROUP BY media";
 	$media_res = mysqli_query($my_db, $media_query);
 
