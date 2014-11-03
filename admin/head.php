@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!$_SESSION['ss_mb_name'])
+if (isset($_SESSION['ss_mb_name']) == false)
 	exit;
 
 ?>
