@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 if (isset($_SESSION['ss_mb_name']) == false)
 	exit;
