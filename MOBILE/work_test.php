@@ -58,13 +58,13 @@
       <div class="quas">
         <?=$question_data['test_value']?>
       </div>
-      <div class="ansbox">
+      <div class="ansbox" onclick="javascript:go_next_question('<?=$answer_data[0]["idx"]?>','<?=$next_num?>','')">
         <div class="fl_left tag">A.</div>
-        <div class="fl_left tagtext2" id="answer1" onclick="javascript:go_next_question('<?=$answer_data[0]["idx"]?>','<?=$next_num?>','')" ><?=$answer_data[0]['test_value']?></div>
+        <div class="fl_left tagtext2" id="answer1" ><?=$answer_data[0]['test_value']?></div>
       </div>
-      <div class="ansbox">
+      <div class="ansbox" onclick="javascript:go_next_question('<?=$answer_data[1]["idx"]?>','<?=$next_num?>','')">
         <div class="fl_left tag">B.</div>
-        <div class="fl_left tagtext2" id="answer2" onclick="javascript:go_next_question('<?=$answer_data[1]["idx"]?>','<?=$next_num?>','')" ><?=$answer_data[1]['test_value']?></div>
+        <div class="fl_left tagtext2" id="answer2" ><?=$answer_data[1]['test_value']?></div>
       </div>
       <!-- <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','');"><img src="images/next_qu_but.jpg"/></a></div> -->
     </div>
