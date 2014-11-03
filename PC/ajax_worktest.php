@@ -10,8 +10,8 @@
 	$next_num		= $_POST['test_idx'] + 1;
 ?>
   <input type="hidden" name="sel_value" id="sel_value">
-  <input type="hidden" name="selected_value" id="selected_value" value="<?=$_POST['selected_val']?>">
-  <input type="text" name="selected_answer" id="selected_answer" value="">
+  <input type="text" name="selected_value" id="selected_value" value="<?=$_POST['selected_val']?>">
+  <input type="hidden" name="selected_answer" id="selected_answer" value="">
   <div class="hidden">
     <div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
     <div class="fl_left textinbox">
