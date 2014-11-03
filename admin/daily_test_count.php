@@ -39,6 +39,7 @@
 		unset($mobile_cnt);
 		unset($share_cnt);
 		$total_media_cnt = 0;
+        $total_share_cnt = 0;
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
 			$media_name[]	= $media_daily_data['media'];
