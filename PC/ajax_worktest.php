@@ -17,20 +17,20 @@
     <div class="fl_left textinbox">
       <p class="bluetext"><?=$question_data['test_value']?></p>
       <p>
-        <div class="fl_left tag">A.</div><span class="anstextone fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>')" style="cursor:pointer;padding-bottom:20px"><?=$answer_data[0]['test_value']?></span></p>
-      <p><div class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>')" style="cursor:pointer;"><?=$answer_data[1]['test_value']?></span></p>
+        <div class="fl_left tag">A.</div><span class="anstextone fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$answer_data[0]['idx']?>','<?=$next_num?>','<?=$_POST['selected_val']?>')" style="cursor:pointer;padding-bottom:20px"><?=$answer_data[0]['test_value']?></span></p>
+      <p><div class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$answer_data[0]['idx']?>','<?=$next_num?>','<?=$_POST['selected_val']?>')" style="cursor:pointer;"><?=$answer_data[1]['test_value']?></span></p>
     </div>
   </div>
 <?
-    if($next_num == 11){
+    //if($next_num == 11){
 ?>
-  <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/go_result_bt_pc.png" alt="결과 보기"/></a></div>
+  <!-- <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/go_result_bt_pc.png" alt="결과 보기"/></a></div> -->
 <?
-    }else{
+    //}else{
 ?>
-  <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/next_but.jpg" alt="다음 질문"/></a></div>
+  <!-- <div class="hidden nextbut"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/next_but.jpg" alt="다음 질문"/></a></div> -->
 <?
-    }
+    //}
 ?>
 
 <script type="text/javascript">
