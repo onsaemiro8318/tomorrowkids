@@ -4,8 +4,15 @@
 	include_once "../config.php";
 	include "./head.php";
 
-	if(isset($_REQUEST['sDate']) == false) $sdate = $_REQUEST['sDate'];
-    if(isset($_REQUEST['eDate']) == false) $eDate = $_REQUEST['eDate'];
+	if(isset($_REQUEST['sDate']) == false)
+		$sdate = "";
+	else
+		$sdate = $_REQUEST['sDate'];
+	
+	if(isset($_REQUEST['eDate']) == false)
+		$eDate = "";
+	else
+		$eDate = $_REQUEST['eDate'];
 ?>
 <script>
 	$(function() {
