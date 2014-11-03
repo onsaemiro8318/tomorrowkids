@@ -162,7 +162,7 @@ function ks_share_mobile(job, job_explain, test_idx, job_imgurl)
 var curURL=location.href;
 var curTitle = document.getElementsByTagName("TITLE")[0].text;
 
-function go_direct_donation(test_idx)
+function go_direct_donation(test_idx,gubun)
 {
 	$.ajax({
 		type		: "POST",
@@ -176,7 +176,10 @@ function go_direct_donation(test_idx)
       $("#donation_div").fadeOut(500);
       $(".mask").fadeOut(500);
       location.href="index.php";
-      window.open("http://www.dreamfull.or.kr/app/newdf/main");
+	  if (gubun == "PC")
+		window.open("http://www.dreamfull.or.kr/app/newdf/donation/collection_box_detail?themeNo=201401070002");
+	  else
+		window.open("http://dreamfull.mobilefarms.com/?link=by6och9o");
     }
     
 	});

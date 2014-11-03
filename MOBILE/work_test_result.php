@@ -140,7 +140,7 @@
 아래 직접 기부하기에도<br/>
 참여해보세요! 
     </div>
-    <div class="summitbut"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');"><img src="images/donation_but.jpg"/></a></div>
+    <div class="summitbut"><a href="#" onclick="go_direct_donation('<?=$test_idx?>','<?=$gubun?>');"><img src="images/donation_but.jpg"/></a></div>
 </div>
 <!--privacy box-->
 <div id="privacy_term" class="thankspupup">
