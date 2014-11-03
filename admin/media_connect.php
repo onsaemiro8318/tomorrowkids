@@ -61,7 +61,7 @@
 <?php 
     $where = "";
     
-	if ($sDate)
+	if (isset($sDate) == true)
 	$where	= " AND reg_date >= '".$sDate."' AND reg_date <= '".$eDate." 23:59:59'";
 	$media_query = "SELECT * FROM ".$_gl['tk_tracking_info_table']." WHERE 1 ".$where." GROUP BY media";
 	$media_res = mysqli_query($my_db, $media_query);

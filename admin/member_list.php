@@ -4,12 +4,12 @@
 	include_once "../config.php";
 	include "./head.php";
 
-	if(isset($_REQUEST['search_type']) == true) $search_type =$_REQUEST['search_type'];   
-	if(isset($_REQUEST['search_txt']) == true) $search_txt	= $_REQUEST['search_txt'];
-	if(isset($_REQUEST['search_media']) == true) $search_media = $_REQUEST['search_media'];   
-	if(isset($_REQUEST['search_share']) == true) $search_share = $_REQUEST['search_share'];
-	if(isset($_REQUEST['sDate']) == true) $sDate = $_REQUEST['sDate'];
-    if(isset($_REQUEST['eDate']) == true) $eDate = $_REQUEST['eDate'];
+	if(isset($_REQUEST['search_type']) == false) $search_type =$_REQUEST['search_type'];   
+	if(isset($_REQUEST['search_txt']) == false) $search_txt	= $_REQUEST['search_txt'];
+	if(isset($_REQUEST['search_media']) == false) $search_media = $_REQUEST['search_media'];   
+	if(isset($_REQUEST['search_share']) == false) $search_share = $_REQUEST['search_share'];
+	if(isset($_REQUEST['sDate']) == false) $sDate = $_REQUEST['sDate'];
+    if(isset($_REQUEST['eDate']) == false) $eDate = $_REQUEST['eDate'];
 
 	if(isset($_REQUEST['pg']) == false) $pg = $_REQUEST['pg'];
 
@@ -83,13 +83,13 @@
 <?php 
 	$where = "";
 
-	if ($sDate)
+	if (isset($sDate) == true)
 		$where	.= " AND created_at >= '".$sDate."' AND created_at <= '".$eDate." 23:59:59'";
 	
-	if ($search_txt)
+	if (isset($search_txt) == true)
 		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
 	
-	if ($search_media)
+	if (isset($search_media) == true)
 		$where	.= " AND media = '".$search_media."'";
 
 	$member_count_query = "SELECT count(*) FROM ".$_gl['tk_member_table']." WHERE 1".$where."";
