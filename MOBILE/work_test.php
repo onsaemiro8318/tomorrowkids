@@ -60,11 +60,11 @@
       <div class="quas">
         <?=$question_data['test_value']?>
       </div>
-      <div class="ansbox" onclick="save_info('<?=$answer_data[0]['idx']?>')" style="cursor:pointer;">
+      <div class="ansbox" style="cursor:pointer;">
         <div class="fl_left tag">A.</div>
         <div class="fl_left tagtext2" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$answer_data[0]['idx']?>','<?=$next_num?>','')"><?=$answer_data[0]['test_value']?></div>
       </div>
-      <div class="ansbox" onclick="save_info('<?=$answer_data[1]['idx']?>')" style="cursor:pointer;">
+      <div class="ansbox" style="cursor:pointer;">
         <div class="fl_left tag">B.</div>
         <div class="fl_left tagtext2" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$answer_data[1]['idx']?>','<?=$next_num?>','')"><?=$answer_data[1]['test_value']?></div>
       </div>
@@ -80,49 +80,7 @@
 	$(document).ready(function(){
 		if ($("#selected_answer").val() != "")
 			$("#"+ sel_answer).css("font-weight","bold");
-	
-		if( navigator.userAgent.match('CriOS') ){
-			_fbUserId = response.authResponse.userID;
-			accessToken = response.authResponse.accessToken;
-			alert();
-			$.ajax({
-				type     : "POST",
-				async    : false,
-				url      : "../main_exec.php",
-				data     : ({
-					"exec" : "fb_user_info" ,
-					"fbUserId" : _fbUserId,
-					"fbUserImage" : _fbUserImage
-				}),
-				success: function(response){
-					$.ajax({
-						type		: "POST",
-						async		: false,
-						url			: "../main_exec.php",
-						data		: ({
-							"exec"         : "user_test_check"
-						}),
-						success: function(response){
-							if (response == "Y")
-							{
-								location.href="work_test.php"; 
-							}else{
-								alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
-							}
-						}
-					});
-					/*
-					if(response == "Y"){
-						testAPI();
-						return;
-					}else{
-						return;
-					}
-					*/
-				}
-			}); 
-		
-		}
+
 	});
 
 
