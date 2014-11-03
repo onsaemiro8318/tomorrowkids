@@ -23,13 +23,13 @@
       <div class="fl_left tagtext2" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$answer_data[1]['idx']?>','<?=$next_num?>','<?=$_POST['selected_val']?>')"><?=$answer_data[1]['test_value']?></div>
     </div>
 <?
-    if($next_num == 11){
+    //if($next_num == 11){
 ?>
-    <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/go_result_bt_mob.png"/></a></div>
+    <!-- <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/go_result_bt_mob.png"/></a></div> -->
 <?
-    }else{
+    //}else{
 ?>
-    <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/next_qu_but.jpg"/></a></div>
+    <!-- <div class="next_but"><a href="javascript:go_next_question('<?=$next_num?>','<?=$_POST['selected_val']?>');"><img src="images/next_qu_but.jpg"/></a></div> -->
 <?
-    }
+    //}
 ?>    
