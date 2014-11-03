@@ -12,7 +12,7 @@
 	$t_count4 = substr($total_count,3,1);
 	$t_count5 = substr($total_count,4,1);
 
-	$left_per	= ($total_count / 1000) * 100;
+	$left_per	= ($total_count / 10000) * 100;
 	$right_per	= 100 - $left_per - 1.3;
 
 
