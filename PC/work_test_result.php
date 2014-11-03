@@ -89,7 +89,7 @@
 	}
 ?>
 <div class="popupbg1" id="email_div">
-  <div class="closeic"><a href="javascript:close_popup()"><img src="images/close_icon.gif"/></a></div>
+  <div class="closeic"><a href="#" onclick="close_email();"><img src="images/close_icon.gif"/></a></div>
   <div class="mailboxw hidden">
     <div class="fl_left mailbox">
       <form action="" method="post">
@@ -122,13 +122,13 @@
         <li class="ti"><a href="#" onclick="show_term();return false;">개인정보이용약관</a></li>
       </ul>
     </div>
-  <div class="summitbt"><a href="#" onclick="update_user_email('<?=$test_idx?>');return false;"><img src="images/pu_summitbut.jpg"/></a></div>
+  <div class="summitbt"><a href="#" onclick="update_user_email();return false;"><img src="images/pu_summitbut.jpg"/></a></div>
   </div>
 </div>
 
 <div class="popupbg2" id="donation_div">
   <div class="closeic"><a href="javascript:close_popup2()"><img src="images/close_icon.gif"/></a></div>
-  <div class="donationbt"><a href="#" onclick="go_direct_donation('<?=$test_idx?>');return false;"><img src="images/donation_pbut.jpg"/></a></div>
+  <div class="donationbt"><a href="#" onclick="go_direct_donation();return false;"><img src="images/donation_pbut.jpg"/></a></div>
 </div>
 
 <div class="popupbg3" id="privacy_term">

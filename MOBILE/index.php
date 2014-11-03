@@ -104,6 +104,7 @@
         <p class="noticetext">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
         <div class="step_box_mob"><img src="images/step_mob.png"/></div>
         <div class="event"><img src="images/event_img.png"/></div>
+        <div class="donation_but"><img src="images/bt_01.png"/></div>
 <?
 	include_once "footer.php";
 ?>

@@ -103,7 +103,7 @@
 </div>
 <!--mail box-->
 <div id="email_div" class="thankspupup">
-	<div class="closeicon"><a href="javascript:close_popup();"><img src="images/popup_closeicon.png"/></a></div>
+	<div class="closeicon"><a href="#" onclick="javascript:close_email();"><img src="images/popup_closeicon.png"/></a></div>
     <div class="bigtext">감사합니다<span>!</span></div>
     <div class="smtext">공유로 기부가 완료되셨습니다.<br/>
 캠페인 결과와 강연회 소식을<br/>
