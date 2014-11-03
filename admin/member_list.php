@@ -4,15 +4,14 @@
 	include_once "../config.php";
 	include "./head.php";
 
-	if(isset($search_type) == false) $search_type	= $_REQUEST['search_type'];
-	if(isset($search_txt) == false) $search_txt		= $_REQUEST['search_txt'];
-	if(isset($search_media) == false) $search_media	= $_REQUEST['search_media'];
-	if(isset($search_share) == false) $search_share	= $_REQUEST['search_share'];
-	if(isset($sDate) == false) $sDate			= $_REQUEST['sDate'];
-    if(isset($eDate) == false)	$eDate			= $_REQUEST['eDate'];
+	if(isset($_REQUEST['search_type']) == true) $search_type =$_REQUEST['search_type'];   
+	if(isset($_REQUEST['search_txt']) == true) $search_txt	= $_REQUEST['search_txt'];
+	if(isset($_REQUEST['search_media']) == true) $search_media = $_REQUEST['search_media'];   
+	if(isset($_REQUEST['search_share']) == true) $search_share = $_REQUEST['search_share'];
+	if(isset($_REQUEST['sDate']) == true) $sDate = $_REQUEST['sDate'];
+    if(isset($_REQUEST['eDate']) == true) $eDate = $_REQUEST['eDate'];
 
-
-	if(isset($pg) == false) $pg = $_REQUEST['pg'];
+	if(isset($_REQUEST['pg']) == false) $pg = $_REQUEST['pg'];
 
 	if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
 	$page_size = 20;	// 한 페이지에 나타날 개수
