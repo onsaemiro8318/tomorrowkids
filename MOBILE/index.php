@@ -105,7 +105,7 @@
         <div class="step_box_mob"><img src="images/step_mob.png"/></div>
         <div class="event"><img src="images/event_img.png"/></div>
         <div class="so_butbox">
-            <div class="donation_but"><a href="http://www.dreamfull.or.kr/app/newdf/donation/donation" target="_blank"><img src="images/bt_01.png"/></a></div>
+            <div class="donation_but"><a href="http://dreamfull.mobilefarms.com/?link=by6och9o" target="_blank"><img src="images/bt_01.png"/></a></div>
         </div>
 <?
 	include_once "footer.php";
