@@ -104,7 +104,9 @@
         <p class="noticetext">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
         <div class="step_box_mob"><img src="images/step_mob.png"/></div>
         <div class="event"><img src="images/event_img.png"/></div>
-        <div class="donation_but"><img src="images/bt_01.png"/></div>
+        <div class="so_butbox">
+            <div class="donation_but"><a href="http://www.dreamfull.or.kr/app/newdf/donation/donation" target="_blank"><img src="images/bt_01.png"/></a></div>
+        </div>
 <?
 	include_once "footer.php";
 ?>
