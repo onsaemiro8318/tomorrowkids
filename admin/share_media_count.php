@@ -29,20 +29,20 @@
                 </thead>
                 <tbody>
 <?php
-		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_test_result_table]." WHERE share='Y' GROUP BY media";
+		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl['tk_test_result_table']." WHERE share='Y' GROUP BY media";
 		$media_res		= mysqli_query($my_db, $media_query);
 
 		while ($media_data = mysqli_fetch_array($media_res))
 		{
-			$pc_query		= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE media='".$media_data[media]."' AND gubun='PC' AND share='Y'";
+			$pc_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='PC' AND share='Y'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE media='".$media_data[media]."' AND gubun='MOBILE' AND share='Y'";
+			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='MOBILE' AND share='Y'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$total_count		= $pc_count + $mobile_count;
 
 ?>
                   <tr>
-                    <td><?=$media_data[media]?></td>
+                    <td><?=$media_data['media']?></td>
                     <td><?=number_format($pc_count)?></td>
                     <td><?=number_format($mobile_count)?></td>
                     <td><?=number_format($total_count)?></td>
@@ -66,20 +66,20 @@
                 </thead>
                 <tbody>
 <?php
-		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_test_result_table]." WHERE share='Y' GROUP BY media";
+		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl['tk_test_result_table']." WHERE share='Y' GROUP BY media";
 		$media_res		= mysqli_query($my_db, $media_query);
 
 		while ($media_data = mysqli_fetch_array($media_res))
 		{
-			$pc_query		= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE media='".$media_data[media]."' AND gubun='PC' AND direct='Y'";
+			$pc_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='PC' AND direct='Y'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE media='".$media_data[media]."' AND gubun='MOBILE' AND direct='Y'";
+			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='MOBILE' AND direct='Y'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$total_count		= $pc_count + $mobile_count;
 
 ?>
                   <tr>
-                    <td><?=$media_data[media]?></td>
+                    <td><?=$media_data['media']?></td>
                     <td><?=number_format($pc_count)?></td>
                     <td><?=number_format($mobile_count)?></td>
                     <td><?=number_format($total_count)?></td>

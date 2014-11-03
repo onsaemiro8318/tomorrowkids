@@ -62,19 +62,19 @@
 
 	if ($sDate)
 		$where	= " AND reg_date >= '".$sDate."' AND reg_date <= '".$eDate." 23:59:59'";
-	$media_query = "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE 1 ".$where." GROUP BY media";
+	$media_query = "SELECT * FROM ".$_gl['tk_tracking_info_table']." WHERE 1 ".$where." GROUP BY media";
 	$media_res = mysqli_query($my_db, $media_query);
 
 	while($media_data = mysqli_fetch_array($media_res))
 	{
-		$pc_result_query	= "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE media='".$media_data[media]."' ".$where." AND gubun='PC'";
+		$pc_result_query	= "SELECT * FROM ".$_gl['tk_tracking_info_table']." WHERE media='".$media_data['media']."' ".$where." AND gubun='PC'";
 		$pc_count			= mysqli_num_rows(mysqli_query($my_db, $pc_result_query));
-		$mobile_result_query= "SELECT * FROM ".$_gl[tk_tracking_info_table]." WHERE media='".$media_data[media]."' ".$where." AND gubun='MOBILE'";
+		$mobile_result_query= "SELECT * FROM ".$_gl['tk_tracking_info_table']." WHERE media='".$media_data['media']."' ".$where." AND gubun='MOBILE'";
 		$mobile_count		= mysqli_num_rows(mysqli_query($my_db, $mobile_result_query));
 		$total_count		= $pc_count + $mobile_count;
 ?>
               <tr>
-                <td><?=$media_data[media]?></td>	<!-- No. 하나씩 감소 -->
+                <td><?=$media_data['media']?></td>	<!-- No. 하나씩 감소 -->
                 <td><?=number_format($pc_count)?></td>
                 <td><?=number_format($mobile_count)?></td>
                 <td><?=number_format($total_count)?></td>

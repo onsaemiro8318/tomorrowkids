@@ -25,12 +25,12 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT regdate FROM ".$_gl[tk_test_result_table]." Group by substr(regdate,1,10)";
+	$daily_date_query	= "SELECT regdate FROM ".$_gl['tk_test_result_table']." Group by substr(regdate,1,10)";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
-		$daily_date		= substr($date_daily_data[regdate],0,10);
-		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl[tk_test_result_table]." WHERE regdate LIKE  '%".$daily_date."%' GROUP BY media";
+		$daily_date		= substr($date_daily_data['regdate'],0,10);
+		$media_query	= "SELECT media, COUNT( media ) media_cnt FROM ".$_gl['tk_test_result_table']." WHERE regdate LIKE  '%".$daily_date."%' GROUP BY media";
 		$media_res		= mysqli_query($my_db, $media_query);
 		
 		unset($media_name);
@@ -40,11 +40,11 @@
 		$total_media_cnt = 0;
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
-			$media_name[]	= $media_daily_data[media];
-			$media_cnt[]	= $media_daily_data[media_cnt];
-			$pc_query		= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE regdate LIKE  '%".$daily_date."%' AND media='".$media_daily_data[media]."' AND gubun='PC'";
+			$media_name[]	= $media_daily_data['media'];
+			$media_cnt[]	= $media_daily_data['media_cnt'];
+			$pc_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE regdate LIKE  '%".$daily_date."%' AND media='".$media_daily_data['media']."' AND gubun='PC'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE regdate LIKE  '%".$daily_date."%' AND media='".$media_daily_data[media]."' AND gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE regdate LIKE  '%".$daily_date."%' AND media='".$media_daily_data['media']."' AND gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;

@@ -22,18 +22,18 @@
                 </thead>
                 <tbody>
 <?php
-	$test_query		= "SELECT * FROM ".$_gl[tk_worktest_table]." WHERE parent_idx='0'";
+	$test_query		= "SELECT * FROM ".$_gl['tk_worktest_table']." WHERE parent_idx='0'";
 	$test_res		= mysqli_query($my_db, $test_query);
 	$i = 0;
 	while($test_data = mysqli_fetch_array($test_res))
 	{
-		$answer_query	= "SELECT * FROM ".$_gl[tk_worktest_table]." WHERE parent_idx='".$test_data[idx]."'";
+		$answer_query	= "SELECT * FROM ".$_gl['tk_worktest_table']." WHERE parent_idx='".$test_data['idx']."'";
 		$answer_res		= mysqli_query($my_db, $answer_query);
 		unset($answer_txt);
 		while ($answer_data = mysqli_fetch_array($answer_res))
 		{
-			$answer_txt[]	= $answer_data[test_value];
-			$answer_cnt[$answer_data[test_value]][]	= $answer_data[select_cnt];
+			$answer_txt[]	= $answer_data['test_value'];
+			$answer_cnt[$answer_data['test_value']][]	= $answer_data['select_cnt'];
 		}
 
 		$j = 0;
@@ -45,7 +45,7 @@
 			if ($j%2 == 0)
 			{
 ?>
-                    <td rowspan="2"><?=$test_data[test_value]?></td>
+                    <td rowspan="2"><?=$test_data['test_value']?></td>
 <?
 			}
 ?>

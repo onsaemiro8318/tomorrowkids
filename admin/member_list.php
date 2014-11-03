@@ -93,22 +93,22 @@
 	if ($search_media)
 		$where	.= " AND media = '".$search_media."'";
 
-	$member_count_query = "SELECT count(*) FROM ".$_gl[tk_member_table]." WHERE 1".$where."";
+	$member_count_query = "SELECT count(*) FROM ".$_gl['tk_member_table']." WHERE 1".$where."";
 	list($member_count) = mysqli_fetch_array(mysqli_query($my_db, $member_count_query));
 
 	$PAGE_CLASS = new Page($pg,$member_count,$page_size,$block_size);
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
-	$member_list_query = "SELECT * FROM ".$_gl[tk_member_table]." WHERE 1".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$member_list_query = "SELECT * FROM ".$_gl['tk_member_table']." WHERE 1".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $member_list_query);
 
 	while($member_data = mysqli_fetch_array($res))
 	{
 
-		$test_result_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE user_id='".$member_data[user_id]."' ".$where."";
+		$test_result_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE user_id='".$member_data['user_id']."' ".$where."";
 		$test_count			= mysqli_num_rows(mysqli_query($my_db, $test_result_query));
-		$share_result_query	= "SELECT * FROM ".$_gl[tk_test_result_table]." WHERE user_id='".$member_data[user_id]."' AND share='Y' ".$where."";
+		$share_result_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE user_id='".$member_data['user_id']."' AND share='Y' ".$where."";
 		$share_count		= mysqli_num_rows(mysqli_query($my_db, $share_result_query));
 
 		if ($share_count == 0)
@@ -118,14 +118,14 @@
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $member_data[user_id]?></td>
-                <td><?php echo $member_data[ip_addr]?></td>
-                <td><?php echo $member_data[media]?></td>
+                <td><?php echo $member_data['user_id']?></td>
+                <td><?php echo $member_data['ip_addr']?></td>
+                <td><?php echo $member_data['media']?></td>
                 <td><?php echo number_format($test_count)?></td>
                 <td><?php echo $share_txt?></td>
                 <td><?php echo number_format($share_count)?></td>
-                <td><?php echo $member_data[created_at]?></td>
-                <td><?php echo $member_data[updated_at]?></td>
+                <td><?php echo $member_data['created_at']?></td>
+                <td><?php echo $member_data['updated_at']?></td>
               </tr>
 <?php 
 	}

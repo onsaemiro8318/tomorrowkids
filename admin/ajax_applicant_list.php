@@ -64,32 +64,32 @@ $res = mysqli_query($my_db, $applicant_list_query);
 
 	while($applicant_data = mysqli_fetch_array($res))
 	{
-		if($applicant_data[TYPE]=="1"){
+		if($applicant_data['TYPE']=="1"){
 			$country = "필리핀";
-		}else if($applicant_data[TYPE]=="2"){
+		}else if($applicant_data['TYPE']=="2"){
 			$country = "대만";
-		}else if($applicant_data[TYPE]=="3"){
+		}else if($applicant_data['TYPE']=="3"){
 			$country = "인도네시아";
-		}else if($applicant_data[TYPE]=="4"){
+		}else if($applicant_data['TYPE']=="4"){
 			$country = "싱가폴";
 		}
 ?>
             <tr>
             <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-            <td><?php echo $applicant_data[strNAME]?></td>
-            <td><?php echo $applicant_data[strAGE]?></td>
-            <td><?php echo $applicant_data[PHONE]?></td>
-            <td><?php echo $applicant_data[EMAIL]?></td>
+            <td><?php echo $applicant_data['strNAME']?></td>
+            <td><?php echo $applicant_data['strAGE']?></td>
+            <td><?php echo $applicant_data['PHONE']?></td>
+            <td><?php echo $applicant_data['EMAIL']?></td>
             <td><?php echo $country?></td>
-            <td><?php echo $applicant_data[ADDRESS]?></td>
-            <td><?php echo $applicant_data[YOUTUBE]?></td>
-            <td><?php echo $applicant_data[LIKECOUNT]?></td>
-            <td><?php echo $applicant_data[REGDATE]?></td>
-            <td><?php echo $applicant_data[coupon_page]?></td>
+            <td><?php echo $applicant_data['ADDRESS']?></td>
+            <td><?php echo $applicant_data['YOUTUBE']?></td>
+            <td><?php echo $applicant_data['LIKECOUNT']?></td>
+            <td><?php echo $applicant_data['REGDATE']?></td>
+            <td><?php echo $applicant_data['coupon_page']?></td>
 <?php
-if($applicant_data[USED]=="1"){
+if($applicant_data['USED']=="1"){
 	$coupon_status = "사용완료";
-}else if($applicant_data[USED]=="0"){
+}else if($applicant_data['USED']=="0"){
 	$coupon_status = "미사용";
 }
 ?>
