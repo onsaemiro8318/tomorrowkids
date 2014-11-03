@@ -621,7 +621,7 @@ function go_next_question(idx,num, selected_val)
 	var gubun   = "";
 	if (sel_val == "")
 	{
-		alert('하나의 답변을 꼭 선택해 주세요.');
+		//alert('하나의 답변을 꼭 선택해 주세요.');
 		if (num == 2)
 			location.href="work_test.php";
 		return false;
