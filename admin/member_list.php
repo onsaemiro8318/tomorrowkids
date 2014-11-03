@@ -4,21 +4,47 @@
 	include_once "../config.php";
 	include "./head.php";
 
-	if(isset($_REQUEST['search_type']) == false) $search_type =$_REQUEST['search_type'];   
-	if(isset($_REQUEST['search_txt']) == false) $search_txt	= $_REQUEST['search_txt'];
-	if(isset($_REQUEST['search_media']) == false) $search_media = $_REQUEST['search_media'];   
-	if(isset($_REQUEST['search_share']) == false) $search_share = $_REQUEST['search_share'];
-	if(isset($_REQUEST['sDate']) == false) $sDate = $_REQUEST['sDate'];
-    if(isset($_REQUEST['eDate']) == false) $eDate = $_REQUEST['eDate'];
+	if(isset($_REQUEST['search_type']) == false)
+		$search_type = "search_by_name";
+	else
+		$search_type = $_REQUEST['search_type'];
 
-	if(isset($_REQUEST['pg']) == false) $pg = $_REQUEST['pg'];
+	if(isset($_REQUEST['search_txt']) == false)
+		$search_txt	= "";
+	else
+		$search_txt	= $_REQUEST['search_txt'];
 
-	if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
+	if(isset($_REQUEST['search_media']) == false)
+		$search_media = "";   
+	else
+		$search_media = $_REQUEST['search_media'];
+
+	if(isset($_REQUEST['search_share']) == false)
+		$search_share = "";
+	else
+		$search_share = $_REQUEST['search_share'];
+
+	if(isset($_REQUEST['sDate']) == false)
+		$sDate = "";
+	else
+		$sDate = $_REQUEST['sDate'];
+	
+	if(isset($_REQUEST['eDate']) == false)
+		$eDate = $_REQUEST['eDate'];
+	else
+		$eDate = $_REQUEST['eDate'];
+
+	if(isset($_REQUEST['pg']) == false)
+		$pg = "1";
+	else
+		$pg = $_REQUEST['pg'];
+
+	//if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
 	$page_size = 20;	// 한 페이지에 나타날 개수
 	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
-	if (isset($search_type) == false)
-		$search_type = "search_by_name";
+	//if (isset($search_type) == false)
+	//	$search_type = "search_by_name";
 ?>
 <script type="text/javascript">
 	$(function() {
