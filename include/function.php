@@ -131,7 +131,7 @@
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_num_rows($result);
 
-		$total = sprintf("%04d",$info);
+		$total = sprintf("%05d",$info);
 
 		return $total;
 	}
