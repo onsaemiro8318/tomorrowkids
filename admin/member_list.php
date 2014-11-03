@@ -30,7 +30,7 @@
 		$sDate = $_REQUEST['sDate'];
 	
 	if(isset($_REQUEST['eDate']) == false)
-		$eDate = $_REQUEST['eDate'];
+		$eDate = "";
 	else
 		$eDate = $_REQUEST['eDate'];
 
@@ -119,7 +119,8 @@
 		$where	.= " AND media = '".$search_media."'";
 
 	$member_count_query = "SELECT count(*) FROM ".$_gl['tk_member_table']." WHERE 1".$where."";
-	list($member_count) = mysqli_fetch_array(mysqli_query($my_db, $member_count_query));
+
+	list($member_count) = @mysqli_fetch_array(mysqli_query($my_db, $member_count_query));
 
 	$PAGE_CLASS = new Page($pg,$member_count,$page_size,$block_size);
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
@@ -128,7 +129,7 @@
 	$member_list_query = "SELECT * FROM ".$_gl['tk_member_table']." WHERE 1".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $member_list_query);
 
-	while($member_data = mysqli_fetch_array($res))
+	while($member_data = @mysqli_fetch_array($res))
 	{
 
 		$test_result_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE user_id='".$member_data['user_id']."' ".$where."";
