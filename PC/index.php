@@ -102,10 +102,10 @@
         <div class="number_box fl_left">
         	<ul>
             	<li><?=$t_count1?></li>
-            	<li class="number3"><?=$t_count2?></li>
-                <li class="number2"><?=$t_count3?></li>
-                <li class="number3"><?=$t_count4?></li>
-                <li class="number4"><?=$t_count5?></li>
+            	<li class="number2"><?=$t_count2?></li>
+                <li class="number3"><?=$t_count3?></li>
+                <li class="number4"><?=$t_count4?></li>
+                <li class="number5"><?=$t_count5?></li>
             </ul>
         </div>
     </div>
