@@ -16,6 +16,10 @@ var browser = {
 
 
 /********************** 이메일 입력 **********************/
+function close_email(){
+  $("#email_div").fadeOut(300);
+  $("#donation_div").fadeIn(300);
+}
 function update_user_email(){
     var EMAIL1	= $.trim($('#email1').val());
     var EMAIL2	= $.trim($('#email2').val());
