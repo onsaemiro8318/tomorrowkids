@@ -139,7 +139,7 @@
 </div>
 <div class="mask"></div>
 <div class="video_fremebox">
-	<div class="video"><iframe id="ytplayer" width="951px" height="579px" src="<?=$_gl[youtube_url]?>" frameborder="0" allowfullscreen></iframe></div>
+	<div class="video"><iframe id="ytplayer" width="951px" height="579px" src="<?=$_gl['youtube_url']?>" frameborder="0" allowfullscreen></iframe></div>
 </div>
 </body>
 </html>
