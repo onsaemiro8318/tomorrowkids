@@ -109,13 +109,13 @@
 <?php 
 	$where = "";
 
-	if (isset($sDate) == true)
+	if ($sDate != "")
 		$where	.= " AND created_at >= '".$sDate."' AND created_at <= '".$eDate." 23:59:59'";
 	
-	if (isset($search_txt) == true)
+	if (isset($search_txt) != "")
 		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
 	
-	if (isset($search_media) == true)
+	if (isset($search_media) != "")
 		$where	.= " AND media = '".$search_media."'";
 
 	$member_count_query = "SELECT count(*) FROM ".$_gl['tk_member_table']." WHERE 1".$where."";
