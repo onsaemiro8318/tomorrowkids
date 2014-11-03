@@ -617,7 +617,7 @@ var flag_num = 0;
 
 function go_next_question(idx,num, selected_val)
 {
-
+alert(idx);
 	var sel_val = idx;
 	var gubun   = "";
 	if (sel_val == "")
