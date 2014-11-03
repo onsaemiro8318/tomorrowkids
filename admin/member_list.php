@@ -14,11 +14,11 @@
 
 	$pg = $_REQUEST['pg'];
 
-	if(!$pg) $pg = 1;	// $pg가 없으면 1로 생성
+	if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
 	$page_size = 20;	// 한 페이지에 나타날 개수
 	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
-	if (!$search_type)
+	if (isset($search_type) == false)
 		$search_type = "search_by_name";
 ?>
 <script type="text/javascript">
