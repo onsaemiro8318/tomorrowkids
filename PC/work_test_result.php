@@ -12,6 +12,8 @@
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
+	$t_count5 = substr($total_count,4,1);
+
 
 	$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_".$_REQUEST['job'].".jpg";
 	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_2.jpg";

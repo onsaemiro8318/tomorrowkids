@@ -13,6 +13,7 @@
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
 	$t_count4 = substr($total_count,3,1);
+	$t_count5 = substr($total_count,4,1);
 
 	if (isset($_POST['test_idx']) == false)
 		$_POST['test_idx'] = "1";
