@@ -632,7 +632,7 @@ function go_next_question_mobile(idx,num, selected_val)
 		param1 = "answer_al_1";
 	}
 
-	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​").css("display","");}).promise().done(function() {
+	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​").css("visibility","hidden‌​");}).promise().done(function() {
 
 		if (sel_val == "")
 		{
