@@ -71,7 +71,7 @@
           <div class="hidden">
             <div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
             <div class="fl_left textinbox">
-              <p style="font-size:20px; color:#33528d; font-family: 'NanumGothic-ExtraBold'; padding-bottom:20px;">1. 당신의 성격을 설명하자면?</p>
+              <p class="bluetext">1. 당신의 성격을 설명하자면?</p>
               <p><div id="answer_al_1" class="fl_left tag">A.</div><span class="anstextone fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question2('11','<?=$next_num?>','')" style="cursor:pointer;padding-bottom:20px">계획하는 것을 좋아하고 차분한 편이다.</span></p>
               <p><div id="answer_al_2" class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question2('12','<?=$next_num?>','')" style="cursor:pointer;">마음이 가는 대로 선택하고, 활발한 편이다.</span></p>
             </div>
