@@ -697,7 +697,7 @@ function go_next_question2(idx,num, selected_val)
 	*/
 }
 
-function go_next_sub(){
+function go_next_sub(idx,num, selected_val){
 	var sel_val = idx;
 	var gubun   = "";
 	if (sel_val == "")
