@@ -657,9 +657,13 @@ function go_next_question2(idx,num, selected_val)
 	 //id="answer_al_1
 	var idx_gubun = num % 2;
 	if (idx_gubun > 0)
-		$('#answer_al_2').fadeOut(500,function(){$('#answer_al_2').css("visibility","hidden‌​").css("display","");});
-	else
-		$('#answer_al_1').fadeOut(500,function(){$('#answer_al_1').css("visibility","hidden‌​").css("display","");});
+	{
+		$('#answer_al_2').fadeOut(1000,function(){$('#answer_al_2').css("visibility","hidden‌​").css("display","");});
+		$('#answer2').fadeOut(1000,function(){$('#answer2').css("visibility","hidden‌​").css("display","");});
+	}else{
+		$('#answer_al_1').fadeOut(1000,function(){$('#answer_al_1').css("visibility","hidden‌​").css("display","");});
+		$('#answer1').fadeOut(1000,function(){$('#answer1').css("visibility","hidden‌​").css("display","");});
+	}
 	/*
 	var sel_val = idx;
 	var gubun   = "";
