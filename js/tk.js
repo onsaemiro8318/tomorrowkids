@@ -655,12 +655,11 @@ function go_next_question(idx,num, selected_val)
 function go_next_question2(idx,num, selected_val)
 {
 	 //id="answer_al_1
-	var idx_gubun = num% 2;
+	var idx_gubun = num % 2;
 	if (idx_gubun > 0)
-		$('#answer_al_1').css({opacity: 0.0, visibility: "hidden"}).animate({opacity: 1.0})}, 200);
+		$('#answer_al_1').css({opacity: 0.0, visibility: "hidden"}).animate({opacity: 1.0}), 200);
 	else
-		$('#answer_al_2').css({opacity: 0.0, visibility: "hidden"}).animate({opacity: 1.0})}, 200);
-	/*
+		$('#answer_al_2').css({opacity: 0.0, visibility: "hidden"}).animate({opacity: 1.0}), 200);
 	var sel_val = idx;
 	var gubun   = "";
 	if (sel_val == "")
@@ -690,7 +689,6 @@ function go_next_question2(idx,num, selected_val)
 
 	sel_val = selected_val + gubun + sel_val;
 	go_test(num, sel_val);
-	*/
 }
 
 // 이메일 입력
