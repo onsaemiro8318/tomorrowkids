@@ -4,10 +4,10 @@
 	include_once "header.php";
 
 	// 주소 바로 입력시 index로 이동
-	if ( !isset($_SERVER['HTTP_REFERER']) ) { 
-		header('Location: index.php'); 
-		exit; 
-	} 
+	//if ( !isset($_SERVER['HTTP_REFERER']) ) { 
+	//	header('Location: index.php'); 
+	//	exit; 
+	//} 
 
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
