@@ -620,36 +620,49 @@ var flag_num = 0;
 
 function go_next_question_mobile(idx,num, selected_val)
 {
-
+	var idx_gubun = idx % 2;
+	var param1 = "";
+	var param2 = "";
 	var sel_val = idx;
 	var gubun   = "";
-	if (sel_val == "")
+
+	if (idx_gubun > 0)
 	{
-		alert('하나의 답변을 꼭 선택해 주세요.');
-		if (num == 2)
-			location.href="work_test.php";
-		return false;
+		param1 = "answer_al_2";
+	}else{
+		param1 = "answer_al_1";
 	}
 
-	if (num > 10)
-	{
-		flag_num = flag_num + 1;
+	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​").css("display","");}).promise().done(function() {
 
-		if (flag_num > 1)
+		if (sel_val == "")
 		{
+			alert('하나의 답변을 꼭 선택해 주세요.');
+			if (num == 2)
+				location.href="work_test.php";
 			return false;
 		}
 
-		$(".mask").fadeTo(1000,0.7);
-	}
-  
-	if (selected_val == "")
-		gubun = "";
-	else
-		gubun = "|";
+		if (num > 10)
+		{
+			flag_num = flag_num + 1;
 
-	sel_val = selected_val + gubun + sel_val;
-	go_test(num, sel_val);
+			if (flag_num > 1)
+			{
+				return false;
+			}
+
+			$(".mask").fadeTo(1000,0.7);
+		}
+	  
+		if (selected_val == "")
+			gubun = "";
+		else
+			gubun = "|";
+
+		sel_val = selected_val + gubun + sel_val;
+		go_test(num, sel_val);
+	});
 }
 
 function go_next_question(idx,num, selected_val)
