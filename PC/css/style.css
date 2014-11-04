@@ -1,14 +1,13 @@
 @charset "utf-8";
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 /* CSS Document */
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, canvas, details, figcaption, figure{margin:0;padding:0;border:0;outline:0;font-size:100%; line-height:145%;}
 * {margin:0; padding:0;}
-/*
+
 @font-face { font-family:'NanumGothic'; src:url('../font/NanumGothic-Regular.eot'); src: url('../font/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), url('../font/NanumGothic-Regular.woff') format('woff'), url('../font/NanumGothic-Regular.ttf') format('truetype'), url('../font/NanumGothic-Regular.svg#NanumGothic') format('svg');}
 @font-face { font-family:'NanumGothic-Bold'; src: url('../font/NanumGothic-Bold.eot'); src: url('../font/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../font/NanumGothic-Bold.woff') format('woff'), url('../font/NanumGothic-Bold.ttf') format('truetype'), url('../font/NanumGothic-Bold.svg#NanumGothic-Bold') format('svg');}
 @font-face {font-family: 'NanumGothic-ExtraBold'; src: url('../font/NanumGothic-ExtraBold.eot'); src: url('../font/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../font/NanumGothic-ExtraBold.woff') format('woff'), url('../font/NanumGothic-ExtraBold.ttf') format('truetype'),  url('../font/NanumGothic-ExtraBold.svg#NanumGothic-ExtraBold') format('svg');}
-*/
+
 
 body{font: 12px/18px 'NanumGothic', Verdana;}
 ul, li {list-style:none;}
