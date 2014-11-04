@@ -620,9 +620,6 @@ var flag_num = 0;
 
 function go_next_question(idx,num, selected_val)
 {
-	 //id="answer_al_1
-	num = num% 2;
-	if (num > 0) {
 
 	var sel_val = idx;
 	var gubun   = "";
