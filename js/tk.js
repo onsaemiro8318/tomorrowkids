@@ -618,7 +618,7 @@ function save_info(idx)
 
 var flag_num = 0;
 
-function go_next_question(idx,num, selected_val)
+function go_next_question_mobile(idx,num, selected_val)
 {
 
 	var sel_val = idx;
@@ -652,7 +652,7 @@ function go_next_question(idx,num, selected_val)
 	go_test(num, sel_val);
 }
 
-function go_next_question2(idx,num, selected_val)
+function go_next_question(idx,num, selected_val)
 {
 	 //id="answer_al_1
 	var idx_gubun = idx % 2;
