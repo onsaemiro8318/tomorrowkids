@@ -9,6 +9,16 @@
     <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="./images/tomorrow.ico" />
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
+  <script type="text/javascript">
+  WebFont.load({
+    // For early access or custom font
+    custom: {
+        families: ['Nanum Gothic'],
+        urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
+    }
+  });
+  </script>
