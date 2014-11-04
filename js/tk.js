@@ -656,79 +656,53 @@ function go_next_question2(idx,num, selected_val)
 {
 	 //id="answer_al_1
 	var idx_gubun = num % 2;
+	var param1 = "";
+	var param2 = "";
+	var sel_val = idx;
+	var gubun   = "";
+
 	if (idx_gubun > 0)
 	{
-		$('#answer_al_2').fadeOut(1000,function(){$('#answer_al_2').css("visibility","hidden‌​").css("display","");});
-		$('#answer2').fadeOut(1000,function(){$('#answer2').css("visibility","hidden‌​").css("display","");}).done(go_next_sub(idx,num, selected_val));
+		param1 = "answer_al_2";
+		param2 = "answer2";
 	}else{
-		$('#answer_al_1').fadeOut(1000,function(){$('#answer_al_1').css("visibility","hidden‌​").css("display","");});
-		$('#answer1').fadeOut(1000,function(){$('#answer1').css("visibility","hidden‌​").css("display","");}).done(go_next_sub(idx,num, selected_val));
-	}
-	/*
-	var sel_val = idx;
-	var gubun   = "";
-	if (sel_val == "")
-	{
-		alert('하나의 답변을 꼭 선택해 주세요.');
-		if (num == 2)
-			location.href="work_test.php";
-		return false;
+		param1 = "answer_al_1";
+		param2 = "answer1";
 	}
 
-	if (num > 10)
-	{
-		flag_num = flag_num + 1;
-
-		if (flag_num > 1)
+	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​").css("display","");});
+	$('#' + param2).fadeOut(1000,function(){$('#' + param2).css("visibility","hidden‌​").css("display","");}).done(function() {
+		if (sel_val == "")
 		{
+			alert('하나의 답변을 꼭 선택해 주세요.');
+			if (num == 2)
+				location.href="work_test.php";
 			return false;
 		}
 
-		$(".mask").fadeTo(1000,0.7);
-	}
-  
-	if (selected_val == "")
-		gubun = "";
-	else
-		gubun = "|";
-
-	sel_val = selected_val + gubun + sel_val;
-	go_test(num, sel_val);
-	*/
-}
-
-function go_next_sub(idx,num, selected_val){
-	var sel_val = idx;
-	var gubun   = "";
-	if (sel_val == "")
-	{
-		alert('하나의 답변을 꼭 선택해 주세요.');
-		if (num == 2)
-			location.href="work_test.php";
-		return false;
-	}
-
-	if (num > 10)
-	{
-		flag_num = flag_num + 1;
-
-		if (flag_num > 1)
+		if (num > 10)
 		{
-			return false;
+			flag_num = flag_num + 1;
+
+			if (flag_num > 1)
+			{
+				return false;
+			}
+
+			$(".mask").fadeTo(1000,0.7);
 		}
+	  
+		if (selected_val == "")
+			gubun = "";
+		else
+			gubun = "|";
 
-		$(".mask").fadeTo(1000,0.7);
-	}
-  
-	if (selected_val == "")
-		gubun = "";
-	else
-		gubun = "|";
-
-	sel_val = selected_val + gubun + sel_val;
-	go_test(num, sel_val);
+		sel_val = selected_val + gubun + sel_val;
+		go_test(num, sel_val);
+	});
 
 }
+
 // 이메일 입력
 function input_email(val)
 {
