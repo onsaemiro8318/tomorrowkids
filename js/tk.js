@@ -580,7 +580,6 @@ function go_test(num, val)
 				"selected_val" : val
 			}),
 			success: function(response){
-				$(".mask").fadeOut(500);
 				var res_result = response.split("|");
 				/*
 				if (response == "N")
@@ -652,7 +651,6 @@ function go_next_question_mobile(idx,num, selected_val)
 				return false;
 			}
 
-			$(".mask").fadeTo(1000,0.7);
 		}
 	  
 		if (selected_val == "")
@@ -683,8 +681,8 @@ function go_next_question(idx,num, selected_val)
 		param2 = "answer1";
 	}
 
-	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​").css("display","");});
-	$('#' + param2).fadeOut(1000,function(){$('#' + param2).css("visibility","hidden‌​").css("display","");}).promise().done(function() {
+	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​");});
+	$('#' + param2).fadeOut(1000,function(){$('#' + param2).css("visibility","hidden‌​");}).promise().done(function() {
 		if (sel_val == "")
 		{
 			alert('하나의 답변을 꼭 선택해 주세요.');
@@ -702,7 +700,6 @@ function go_next_question(idx,num, selected_val)
 				return false;
 			}
 
-			$(".mask").fadeTo(1000,0.7);
 		}
 	  
 		if (selected_val == "")
