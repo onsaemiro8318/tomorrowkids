@@ -659,10 +659,10 @@ function go_next_question2(idx,num, selected_val)
 	if (idx_gubun > 0)
 	{
 		$('#answer_al_2').fadeOut(1000,function(){$('#answer_al_2').css("visibility","hidden‌​").css("display","");});
-		$('#answer2').fadeOut(1000,function(){$('#answer2').css("visibility","hidden‌​").css("display","");}).done(go_next_sub(idx,num, selected_val););
+		$('#answer2').fadeOut(1000,function(){$('#answer2').css("visibility","hidden‌​").css("display","");}).done(go_next_sub(idx,num, selected_val));
 	}else{
 		$('#answer_al_1').fadeOut(1000,function(){$('#answer_al_1').css("visibility","hidden‌​").css("display","");});
-		$('#answer1').fadeOut(1000,function(){$('#answer1').css("visibility","hidden‌​").css("display","");}).done(go_next_sub(idx,num, selected_val););
+		$('#answer1').fadeOut(1000,function(){$('#answer1').css("visibility","hidden‌​").css("display","");}).done(go_next_sub(idx,num, selected_val));
 	}
 	/*
 	var sel_val = idx;
