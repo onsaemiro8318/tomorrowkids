@@ -671,7 +671,7 @@ function go_next_question2(idx,num, selected_val)
 	}
 
 	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​").css("display","");});
-	$('#' + param2).fadeOut(1000,function(){$('#' + param2).css("visibility","hidden‌​").css("display","");}).done(function() {
+	$.when$('#' + param2).fadeOut(1000,function(){$('#' + param2).css("visibility","hidden‌​").css("display","");}).done(function() {
 		if (sel_val == "")
 		{
 			alert('하나의 답변을 꼭 선택해 주세요.');
