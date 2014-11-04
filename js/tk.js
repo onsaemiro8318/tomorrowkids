@@ -652,10 +652,10 @@ function go_next_question(idx,num, selected_val)
 	go_test(num, sel_val);
 }
 
-function go_next_question2(idx,num, selected_val)
+function go_next_question(idx,num, selected_val)
 {
 	 //id="answer_al_1
-	var idx_gubun = num % 2;
+	var idx_gubun = idx % 2;
 	var param1 = "";
 	var param2 = "";
 	var sel_val = idx;
