@@ -652,7 +652,7 @@ function go_next_question(idx,num, selected_val)
 	go_test(num, sel_val);
 }
 
-function go_next_question(idx,num, selected_val)
+function go_next_question2(idx,num, selected_val)
 {
 	 //id="answer_al_1
 	var idx_gubun = idx % 2;
