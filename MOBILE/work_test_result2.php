@@ -26,6 +26,7 @@
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="image_src" href="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg" />
 <meta property="fb:app_id" content="293604627507652" />
 
 	<meta property="og:title" content="test"/>
