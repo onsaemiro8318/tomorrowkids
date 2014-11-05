@@ -209,7 +209,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 							image : [job_imgurl],
 							description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
 						},
-						content : "당신에게 어울리는 내일은 " + job + "입니다!"
+						content : "당신에게 어울리는 내일은\n " + job + "입니다!"
 						},
 						success: function(res) {
 							alert("카카오스토리에 당신에게 어울리는 내일이 공유 되었습니다.");
