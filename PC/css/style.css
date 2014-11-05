@@ -103,7 +103,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 /*.result_box2{ background:url(../images/sub_top2_wbg2.png) no-repeat; width:941px; height:317px;  padding:50px 0 0 160px;}*/
 .result_box2{ background:url(../images/sub_top2_wbg2.png) no-repeat; width:941px; height:317px;  padding:50px 0 0 90px;}
 .result_box2 .plicon{ padding-right:20px;}
-.result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Nanum Gothic-ExtraBold'; padding-bottom:20px;}
+.result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Nanum Gothic'; padding-bottom:20px;}
 .result_box2 .tag{ color:#6e80a9; font-size:19px; font-family: 'Nanum Gothic'; padding-right:5px;}
 .result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:675px; font-family: 'Nanum Gothic';}
 .result_box2 .anstextone{ font-size:19px; color:#748bb7;width:675px; font-family: 'Nanum Gothic';}
@@ -134,4 +134,4 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .donationbt{ width:186px; margin:0 auto; padding-top:240px;}
 .privacy_content{ width:400px; margin:0 auto; padding-top:80px;}
 .privacy_content p {font-size:14px; margin-bottom:10px; color:#70b8ac; font-family: 'Nanum Gothic';}
-.privacy_content .privacy_title {font-size:32px; color:#33528d; font-family: 'Nanum Gothic-ExtraBold'; }
+.privacy_content .privacy_title {font-size:32px; color:#33528d; font-family: 'Nanum Gothic'; }
