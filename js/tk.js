@@ -426,12 +426,12 @@ function kakao_login(){
 											"exec"         : "user_test_check"
 										}),
 										success: function(response){
-											if (response == "Y")
-											{
+											//if (response == "Y")
+											//{
 												location.href="work_test.php";
-											}else{
-												alert("테스트는 3번까지만 하실 수 있습니다.");
-											}
+											//}else{
+											//	alert("테스트는 3번까지만 하실 수 있습니다.");
+											//}
 										}
 									});
 								}
@@ -535,12 +535,12 @@ function facebook_login()
 							"exec"         : "user_test_check"
 						}),
 						success: function(response){
-							if (response == "Y")
-							{
+							//if (response == "Y")
+							//{
 								location.href="work_test.php"; 
-							}else{
-								alert("테스트는 3번까지만 하실 수 있습니다.");
-							}
+							//}else{
+							//	alert("테스트는 3번까지만 하실 수 있습니다.");
+							//}
 						}
 					});
 					/*
