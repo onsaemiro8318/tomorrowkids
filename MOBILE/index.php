@@ -19,32 +19,6 @@
 
 ?>
     <script type='text/javascript'>
-	// 유튜브 반복 재생
-	var controllable_player,start, 
-	statechange = function(e){
-		if(e.data === 0){controllable_player.seekTo(0); controllable_player.playVideo()}
-
-	};
-	function onYouTubeIframeAPIReady() {
-	controllable_player = new YT.Player('ytplayer', {events: {'onStateChange': statechange}}); 
-	}
-
-	if(window.opera){
-	addEventListener('load', onYouTubeIframeAPIReady, false);
-	}
-	setTimeout(function(){
-		if (typeof(controllable_player) == 'undefined'){
-			onYouTubeIframeAPIReady();
-		}
-	}, 3000)
-
-	$(window).resize(function(){
-		var width = $(window).width();
-		//var height = $(window).height();
-
-		var youtube_height = (width / 16) * 9;
-		$("#ytplayer").height(youtube_height);
-	});
 
 	$(document).ready(function(){
 		$(".greenco_left").css("width","<?=$left_per?>%");
