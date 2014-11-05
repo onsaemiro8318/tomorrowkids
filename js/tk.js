@@ -270,15 +270,13 @@ function fb_share(job, job_explain, test_idx, job_num)
 {
 	FB.ui(
 	{
-		method: 'share_open_graph',
-		//name: '내일을 부탁해',
-  action_type: 'og.likes',
-  action_properties: JSON.stringify({
-      object:'https://developers.facebook.com/docs/',
-  })		//picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg',
-		//caption: 'www.dreamfull.or.kr/tomorrowkids/fb',
+		method: 'feed',
+		name: '내일을 부탁해',
+		link: 'www.dreamfull.or.kr/tomorrowkids/fb',
+		picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg',
+		caption: 'www.dreamfull.or.kr/tomorrowkids/fb',
 		//description: job + " - " + job_explain
-		//description: "당신에게 어울리는 내일은 " + job + "입니다!"
+		description: "당신에게 어울리는 내일은 " + job + "입니다!"
 	},
 		function(response) {
 			if (response && response.post_id) {
@@ -425,7 +423,7 @@ window.fbAsyncInit = function() {
 		cookie     : true,  // enable cookies to allow the server to access 
 						// the session
 		xfbml      : true,  // parse social plugins on this page
-		version    : 'v2.1' // use version 2.1
+		version    : 'v2.2' // use version 2.1
 	});
 
 	FB.getLoginStatus(function(response) {

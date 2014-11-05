@@ -28,10 +28,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
 
-<meta property="og:url" content="http://www.dreamfull.or.kr/tomorrowkids/fb" /> 
+<!-- <meta property="og:url" content="http://www.dreamfull.or.kr/tomorrowkids/fb" /> 
 <meta property="og:title" content="내일을 부탁해" />
 <meta property="og:description" content="당신에게 어울리는 내일은 입니다!" /> 
-<meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg" /> 
+<meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg" />  -->
 
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
