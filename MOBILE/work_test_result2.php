@@ -77,10 +77,18 @@
 		$("#privacy_term").fadeOut(500);
 	}
 
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=293604627507652&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 </script>
   </head>
 
 <body>
+<div id="fb-root"></div>
 
 <div class="mob_sub_wrapper">
     <div class="mob_sub_top1">
@@ -126,6 +134,7 @@
 	{
 ?>    
         <div class="face_dt_button"><a href="#" onclick="fb_share_test('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
+
 <?
 	}else{
 ?>

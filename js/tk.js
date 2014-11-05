@@ -329,15 +329,17 @@ function fb_share(job, job_explain, test_idx, job_num)
 
 function fb_share_test(job, job_explain, test_idx, job_num)
 {
+
 	url = "http://www.tomorrowkids.or.kr";
 	image = 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg';
 	title = "내일을 부탁해";
 	summary = "당신에게 어울리는 내일은 " + job + "입니다!";
-	var params = 'u='+encodeURIComponent(url+'?imgname='+image+'&msg='+summary+'&t='+title+"&passerby=1"); //passerby=1은 타인이 담벼락의 링크타고 들어올 때의 flag를 주는 것
-	window.open('https://www.facebook.com/sharer/sharer.php?'+params, 'sharer', 'width=626,height=1500');
+	//var params = 'u='+encodeURIComponent(url+'?imgname='+image+'&msg='+summary+'&t='+title+"&passerby=1"); //passerby=1은 타인이 담벼락의 링크타고 들어올 때의 flag를 주는 것
+	//window.open('https://www.facebook.com/sharer/sharer.php?'+params, 'sharer', 'width=626,height=1500');
 	//var goUrl = "http://www.facebook.com/sharer.php?u=" + encodeURIComponent(url) + "&t=" + encodeURIComponent(summary) + "&imgname=" + encodeURIComponent(image);
 	//var win = window.open(goUrl, "viewTrace", "resizable=yes, width=660, height=310,status=no,toolbar=no,location=no,scrollbars=no,menubar=no,titlebar=no");
 
+window.open('https://www.facebook.com/sharer.php?app_id=293604627507652&sdk=joey&u=' + encodeURIComponent(url) + '&display=popup&ref=plugin', 'sharer', 'width=626,height=1500');
 }
 
 /********************** 카카오톡 **********************/
@@ -436,7 +438,7 @@ window.fbAsyncInit = function() {
 		cookie     : true,  // enable cookies to allow the server to access 
 						// the session
 		xfbml      : true,  // parse social plugins on this page
-		version    : 'v2.2' // use version 2.1
+		version    : 'v2.0' // use version 2.1
 	});
 
 	FB.getLoginStatus(function(response) {
@@ -450,7 +452,7 @@ window.fbAsyncInit = function() {
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;
 	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js";
+	js.src = "//connect.facebook.net/ko_KR/sdk.js";
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
