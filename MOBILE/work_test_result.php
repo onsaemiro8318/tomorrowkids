@@ -48,7 +48,7 @@
     <div class="mob_sub_top1">
 	    <h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1>
         <div>
-        	<div class="tmor_text fl_left"><a href="http://www.tomorrowkids.or.kr/"><img src="images/page_title.png"/></a></div>
+        	<div class="tmor_text fl_left"><a href="index.php"><img src="images/page_title.png"/></a></div>
             <div class="mob_sub_number fl_right">
                 <div class="peopletitle">현재 참여자</div>
                 <div class="numberbox">
