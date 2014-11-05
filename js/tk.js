@@ -270,7 +270,7 @@ function fb_share(job, job_explain, test_idx, job_num)
 {
 	FB.ui(
 	{
-		method: 'feed',
+		method: 'share',
 		name: '내일을 부탁해',
 		link: 'www.dreamfull.or.kr/tomorrowkids/fb',
 		picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg',
