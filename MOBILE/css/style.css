@@ -94,7 +94,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .mob_sub_top2{ background:url(../images/sub_top2bg.jpg) repeat-x; }
 .mob_sub_top3{ background:url(../images/sub_top3bg.jpg) repeat-x; }
 .top2_content{ background:url(../images/sub_top2contentbg.png) no-repeat; width:85%; height:1020px; margin:0 auto; padding:65px 50px 0 50px; background-size:100%;}
-.top2_content .quas{ color:#33528d; font-size:42px; font-family: 'Nanum Gothic-ExtraBold';}
+.top2_content .quas{ color:#33528d; font-size:42px; font-family: 'Nanum Gothic';}
 .top2_content .tag{ color:#6e80a9; font-family: 'Nanum Gothic'; font-size:42px; padding-right:3%;}
 .top2_content .tagtext{ color:#32528d; font-size:42px;  font-family: 'Nanum Gothic'; width:90%; text-decoration:underline; line-height:130%;}
 .top2_content .tagtext2{ color:#748bb7; font-size:42px; font-family: 'Nanum Gothic'; width:90%; line-height:130%;}
