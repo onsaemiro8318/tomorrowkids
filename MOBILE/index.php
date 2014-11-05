@@ -104,6 +104,7 @@
             <div class="facebook_but"><a href="#" onclick="facebook_login();"><img src="images/facebook_mobbut.png"/></a></div>
             <div><a href="#" onclick="kakao_login();"><img src="images/kakaotalk_mobbut.png"/></a></div>
         </div>
+        <p class="notice_ios">* 아이폰을 사용하신다면 꼭 '사파리'로 참여해주세요!</p>
         <p class="noticetext">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
         <div class="step_box_mob"><img src="images/step_mob.png"/></div>
         <div class="event"><img src="images/event_img.png"/></div>
