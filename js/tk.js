@@ -430,7 +430,7 @@ function kakao_login(){
 											{
 												location.href="work_test.php";
 											}else{
-												alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+												alert("테스트는 3번까지만 하실 수 있습니다.");
 											}
 										}
 									});
@@ -539,7 +539,7 @@ function facebook_login()
 							{
 								location.href="work_test.php"; 
 							}else{
-								alert("공유를 통한 기부는 3번까지만 하실 수 있습니다.");
+								alert("테스트는 3번까지만 하실 수 있습니다.");
 							}
 						}
 					});
@@ -632,7 +632,7 @@ function go_next_question_mobile(idx,num, selected_val)
 		param1 = "answer_al_1";
 	}
 
-	$('#' + param1).fadeOut(1000,function(){$('#' + param1).css("visibility","hidden‌​").css("visibility","hidden‌​");}).promise().done(function() {
+	$('#' + param1).fadeOut(300,function(){$('#' + param1).css("visibility","hidden‌​").css("visibility","hidden‌​");}).promise().done(function() {
 
 		if (sel_val == "")
 		{
