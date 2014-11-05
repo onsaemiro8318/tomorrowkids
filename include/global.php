@@ -24,22 +24,22 @@
 	$_gl['gubun']['pc']				= "PC";
 	$_gl['gubun']['mobile']			= "MOBILE";
 
-	$_gl['kakao_img'][1] = "http://dn-xl1-story.kakao.co.kr/dn//cQUmCx/hyc3yI2XvR/lCkOrGyk6v26hWayrzfa90/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][2] = "http://dn-xl1-story.kakao.co.kr/dn//OFYNq/hyc1nO7YRm/g5g7CltEzTKEkpP1YCvf8K/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][3] = "http://dn-xl0-story.kakao.co.kr/dn//IJOg2/hyc1iAhQRd/ZZuQnKsdYEO4QZX2xhqNh0/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][4] = "http://dn-xl0-story.kakao.co.kr/dn//hA6XF/hyc1iNOGiB/BtSPyGWK8KWwDymlv38CR0/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][5] = "http://dn-xl0-story.kakao.co.kr/dn//AjljK/hyc3Irmwzs/0V1D8nAw2CycZk3sQDKgJK/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][6] = "http://dn-xl1-story.kakao.co.kr/dn//bH04qI/hyc3Laym3V/4Lf4UYmZVzPt2MDKE4ZT20/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][7] = "http://dn-xl1-story.kakao.co.kr/dn//C5ei0/hyc3wdoCZp/TF40JykXaO4EwLzRkQ7XcK/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][8] = "http://dn-xl1-story.kakao.co.kr/dn//vCSPW/hyc3Cq82AI/8gUzKks0xUBEGEgwkauvXk/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][9] = "http://dn-xl1-story.kakao.co.kr/dn//Tkt81/hyc1mo05a4/4jwsVt2lIy6GNYF8oPIPT0/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][10] = "http://dn-xl1-story.kakao.co.kr/dn//bgXerF/hyc3JcJkGX/Yr1wB2S9vklHOXasGkPo4K/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][1] = "http://dn-xl0-story.kakao.co.kr/dn//lb9fo/hyc3Hmyfyk/hVKukvNotiYt8znJWXeeUK/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][2] = "http://dn-xl1-story.kakao.co.kr/dn//gkp8A/hyc3Bs57di/kKnZsQH5KUFBU6sbt3BxL1/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][3] = "http://dn-xl0-story.kakao.co.kr/dn//c9UngM/hyc3zhKhOk/9HgsIDZaVuFbQY2Z8iU3Kk/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][4] = "http://dn-xl1-story.kakao.co.kr/dn//80CdX/hyc6oNdhb1/QyBVAaT43FPIS3UlkMajwK/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][5] = "http://dn-xl0-story.kakao.co.kr/dn//dexIf4/hyc6lwaQO2/VZvPrLIrDyKBuxYlkzQIok/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][6] = "http://dn-xl0-story.kakao.co.kr/dn//bwGMul/hyc6bty4cv/SkiOVUWD1MogQfLk5YpEpK/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][7] = "http://dn-xl0-story.kakao.co.kr/dn//bfdeGN/hyc3LP11eZ/ytEJADnPWRJG4ekX5QJIj0/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][8] = "http://dn-xl0-story.kakao.co.kr/dn//EfBnt/hyc3B0VSyD/3RVv0z9QiejE8SAAeZCBR1/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][9] = "http://dn-xl0-story.kakao.co.kr/dn//bGpLh/hyc6oGq7G7/gGN4GgmgLrlnRIDurcUJR1/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][10] = "http://dn-xl0-story.kakao.co.kr/dn//cSrDo/hyc3zIOHWQ/sAAB5LTJA1NtlyQrtvK9t0/img.jpg?width=1200&height=630";
 
-	$_gl['kakao_img'][11] = "http://dn-xl0-story.kakao.co.kr/dn//cQLCAE/hyc3wxHaZG/kY7awVZDn88BzrBvTYPDI0/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][12] = "http://dn-xl1-story.kakao.co.kr/dn//d1QvPn/hyc1oAvBat/RMUtcijiEByyX1nJzy36mk/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][13] = "http://dn-xl1-story.kakao.co.kr/dn//plQvB/hyc1abbQMK/A3Qx9I9uBjAroFmwqGYvtK/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][14] = "http://dn-xl1-story.kakao.co.kr/dn//c133B/hyc1iG3TQB/QegqfwpPAfYiQlIE3FF7lk/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][15] = "http://dn-xl0-story.kakao.co.kr/dn//bmkTiN/hyc3JKzGqh/C5mz7aUgttNOs5rxpTzBy0/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][11] = "http://dn-xl1-story.kakao.co.kr/dn//x3YQY/hyc3Cle31C/HwPgwmjrxm5Rdp6x0UY2X1/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][12] = "http://dn-xl1-story.kakao.co.kr/dn//UXJt2/hyc3AHJuNm/yCrx776fBnPGjApCKHf1q0/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][13] = "http://dn-xl0-story.kakao.co.kr/dn//bwsIfM/hyc3zWlUUI/OHxKcOxkt30Fdd6Z468C3k/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][14] = "http://dn-xl1-story.kakao.co.kr/dn//bZNIO4/hyc6izsdLo/MjOB4F6VmrMa3O5t8q8iyk/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][15] = "http://dn-xl0-story.kakao.co.kr/dn//dMoAuU/hyc6bty6bO/GsXuOckR0sk1UVOtjczPNK/img.jpg?width=1200&height=630";
 	$_gl['kakao_img'][16] = "http://dn-xl0-story.kakao.co.kr/dn//clPfm5/hyc1jlEYEU/uqB0sSrg1StPK7x4UqSPw1/img.jpg?width=1200&height=630";
 	$_gl['kakao_img'][17] = "http://dn-xl1-story.kakao.co.kr/dn//2WREP/hyc09QSHrP/9yWue1QUqNuxmoJkK2Gej0/img.jpg?width=1200&height=630";
 	$_gl['kakao_img'][18] = "http://dn-xl0-story.kakao.co.kr/dn//vwRSo/hyc1edz8fe/w0L1FjGlP5ex4Xkx2nTgPK/img.jpg?width=1200&height=630";
