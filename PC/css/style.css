@@ -4,7 +4,8 @@
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, canvas, details, figcaption, figure{margin:0;padding:0;border:0;outline:0;font-size:100%; line-height:145%;}
 * {margin:0; padding:0;}
 
-@import url(http://fonts.googleapis.com/earlyaccess/Nanum Gothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 
 
 body{font: 12px/18px 'Nanum Gothic', Verdana;}
@@ -27,7 +28,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 
 .main_top2{background:url(../images/m_topbg2.gif) repeat-x; height:242px; padding:38px 0 41px 0;}
 .main_top2 .main_topin2{ width:625px; margin:0 auto;}
-.main_top2 .text_data{ text-align:center; padding-bottom:36px;}
+.main_top2 .text_data{ text-align:center; padding-bottom:36px; font-weight:bold;}
 .main_top2 .f_text{ font-size:26px; font-family: 'Nanum Gothic'}
 .main_top2 .t_text{ font-size:32px; text-decoration:underline; font-family: 'Nanum Gothic'}
 .main_top2 .greenco_left{ background-color:#369384; border-right:1px solid #258676;  border-bottom-left-radius:50px; border-top-left-radius:50px; height:20px; width:20%;}

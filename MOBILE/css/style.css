@@ -35,7 +35,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 
 .main_top2{background:url(../images/m_topbg2.gif) repeat-x; padding:38px 0 41px 0;}
 .main_top2 .main_topin2{ width:90%; margin:0 auto;}
-.main_top2 .text_data{ text-align:center; padding-bottom:45px;}
+.main_top2 .text_data{ text-align:center; padding-bottom:45px; font-weight:bold;}
 .main_top2 .f_text{ font-size:32px; font-family:'Nanum Gothic';}
 /*.main_top2 .t_text{ font-size:46px; text-decoration:underline; font-family: 'Nanum Gothic';}*/
 .main_top2 .t_text{ font-size:38px; text-decoration:underline; font-family: 'Nanum Gothic';}
