@@ -327,6 +327,21 @@ function fb_share(job, job_explain, test_idx, job_num)
 	);
 }
 
+function fb_share_test(job, job_explain, test_idx, job_num)
+{
+	url = "http://www.tomorrowkids.or.kr";
+
+	image = 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg';
+
+	title = "내일을 부탁해";
+
+	summary = "당신에게 어울리는 내일은 " + job + "입니다!";
+
+	var params = 'u='+encodeURIComponent(url+'?imgname='+image+'&msg='+summary+'&t='+title+"&passerby=1"); //passerby=1은 타인이 담벼락의 링크타고 들어올 때의 flag를 주는 것
+
+	window.open('https://www.facebook.com/sharer/sharer.php?'+params, 'sharer', 'width=626,height=1500');
+}
+
 /********************** 카카오톡 **********************/
 
 
