@@ -340,8 +340,11 @@ function kakao_login(){
 				success: function(res) {
 					jsonStr = JSON.stringify(res);
 					obj = JSON.parse(jsonStr);
-					ka_access_token = Kakao.Auth.getAccessToken();
-					ka_refresh_token = Kakao.Auth.getRefreshToken();
+					if (ka_access_token == null)
+					{
+						ka_access_token = Kakao.Auth.getAccessToken();
+						ka_refresh_token = Kakao.Auth.getRefreshToken();
+					}
           
 					Kakao.API.request({
 						url: '/v1/api/talk/profile',
