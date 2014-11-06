@@ -3,10 +3,6 @@
 	include_once "../config.php";
 	include_once "header.php";
 
-	if ( isset($_SESSION['ss_mb_id'] == false) ) {
-		header('Location: index.php'); 
-		exit; 
-	}
 
 	// 주소 바로 입력시 index로 이동
 	if ( !isset($_SERVER['HTTP_REFERER']) ) { 
