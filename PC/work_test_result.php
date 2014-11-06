@@ -3,6 +3,10 @@
 	include_once "../config.php";
 	include_once "header.php";
 
+	if ( isset($_SESSION['ss_mb_id']) == false ) {
+		header('Location: index.php'); 
+		exit; 
+	}
 
 	$user_job	= TK_GetUserJobInfo($_REQUEST['job']);
 
