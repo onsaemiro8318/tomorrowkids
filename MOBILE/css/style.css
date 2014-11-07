@@ -97,23 +97,23 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .mob_sub_top2{ background:url(../images/sub_top2bg.jpg) repeat-x; }
 .mob_sub_top3{ background:url(../images/sub_top3bg.jpg) repeat-x; }
 .top2_content{ background:url(../images/sub_top2contentbg.png) no-repeat; width:85%; height:1020px; margin:0 auto; padding:65px 50px 0 50px; background-size:100%;}
-.top2_content .quas{ color:#33528d; font-size:42px; font-family: 'Nanum Gothic';}
+.top2_content .quas{ color:#33528d; font-size:42px; font-family: 'Nanum Gothic'; font-weight:bold}
 .top2_content .tag{ color:#6e80a9; font-family: 'Nanum Gothic'; font-size:42px; padding-right:3%;}
 .top2_content .tagtext{ color:#32528d; font-size:42px;  font-family: 'Nanum Gothic'; width:90%; text-decoration:underline; line-height:130%;}
 .top2_content .tagtext2{ color:#748bb7; font-size:42px; font-family: 'Nanum Gothic'; width:90%; line-height:130%;}
 .top2_content .ansbox{ padding-top:5%; overflow:hidden;}
-.mob_sub_top2 .blue{ color:#253f71; font-size:42px; font-family: 'Nanum Gothic'; text-align:center; padding-top:5%;}
+.mob_sub_top2 .blue{ color:#253f71; font-size:42px; font-family: 'Nanum Gothic'; font-weight:bold; text-align:center; padding-top:5%;}
 .mob_sub_top2 .white{ font-size:42px; font-family: 'Nanum Gothic'; color:#fff; text-align:center;}
 .mob_sub_top2 .white1{font-family: 'Nanum Gothic'; font-size:36px; color:#fff; text-align:center; padding:3% 0 5% 0; line-height:135%;}
 .next_but{ width:189px; margin:0 auto; padding-top:5%;}
-.mob_sub_top3 .blue{ color:#253f71; font-size:42px; font-family: 'Nanum Gothic'; text-align:center; padding-top:5%;}
+.mob_sub_top3 .blue{ color:#253f71; font-size:42px; font-family: 'Nanum Gothic'; font-weight:bold; text-align:center; padding-top:5%;}
 .mob_sub_top3 .white{ font-size:42px; font-family: 'Nanum Gothic'; color:#fff; text-align:center;}
 .mob_sub_top3 .white1{font-family: 'Nanum Gothic'; font-size:36px; color:#fff; text-align:center; padding:3% 0 5% 0; line-height:135%;}
 
 .top3_content{ background:url(../images/sub_top3contentbg.png) no-repeat; width:85%; height:681px; margin:0 auto; padding:65px 50px 0 50px; background-size:100%;}
 .top3_content .imgbox{ height:380px; border:1px solid #e8e8e8; margin-bottom:4%;}
-.top3_content .bluetext{ color:#33528d; font-size:28px; text-decoration:underline; padding-left:2%; font-family: 'Nanum Gothic'; letter-spacing:-0.1;}
-.top3_content .title_work{ font-size:26px; color:#71baad; font-family: 'Nanum Gothic'; padding:2% 0;}
+.top3_content .bluetext{ color:#33528d; font-size:28px; text-decoration:underline; padding-left:2%; font-family: 'Nanum Gothic'; font-weight:bold; letter-spacing:-0.1;}
+.top3_content .title_work{ font-size:26px; color:#71baad; font-family: 'Nanum Gothic'; font-weight:bold; padding:2% 0;}
 .top3_content .summary{ color:#70b8ac; font-size:18px; letter-spacing:-0.1; font-family: 'Nanum Gothic';}
 .top3_content .arrow img{ width:20%;}
 .summary2{ color:#fff; font-size:26px; padding:0 10%; font-family: 'Nanum Gothic';}
@@ -240,7 +240,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:32px;}
 	.mob_sub_top2 .white1{ font-size:14px; padding:0 2%;}
 	.top2_content{ padding:5% 5% 0 5%; height:600px;}
-	.top2_content .quas{ font-size:22px;}
+	.top2_content .quas{ font-size:22px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{ font-size:22px;}
 	.top2_content .tagtext2{ font-size:22px;}
 	.top2_content .tag{ font-size:22px;}
@@ -310,7 +310,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:24px;}
 	.mob_sub_top2 .white1{ font-size:14px; padding:3% 2% 4% 2%;}
 	.top2_content{ padding:5% 5% 0 5%; height:480px;}
-	.top2_content .quas{ font-size:14px;}
+	.top2_content .quas{ font-size:14px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{  font-size:14px;}
 	.top2_content .tagtext2{ font-size:14px;}
 	.top2_content .tag{ font-size:14px;}
@@ -383,7 +383,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:24px;}
 	.mob_sub_top2 .white1{ font-size:18px; width:85%; margin:0 auto;}
 	.top2_content{ padding:10% 7% 0 7%}
-	.top2_content .quas{ font-size:14px;}
+	.top2_content .quas{ font-size:14px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{ font-size:14px;}
 	.top2_content .tag{ font-size:14px;}
 	.top2_content .tagtext2{ font-size:14px;}
