@@ -240,7 +240,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:32px;}
 	.mob_sub_top2 .white1{ font-size:14px; padding:0 2%;}
 	.top2_content{ padding:5% 5% 0 5%; height:600px;}
-	.top2_content .quas{ font-size:22px;}
+	.top2_content .quas{ font-size:22px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{ font-size:22px;}
 	.top2_content .tagtext2{ font-size:22px;}
 	.top2_content .tag{ font-size:22px;}
@@ -310,7 +310,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:24px;}
 	.mob_sub_top2 .white1{ font-size:14px; padding:3% 2% 4% 2%;}
 	.top2_content{ padding:5% 5% 0 5%; height:480px;}
-	.top2_content .quas{ font-size:14px;}
+	.top2_content .quas{ font-size:14px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{  font-size:14px;}
 	.top2_content .tagtext2{ font-size:14px;}
 	.top2_content .tag{ font-size:14px;}
@@ -383,7 +383,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:24px;}
 	.mob_sub_top2 .white1{ font-size:18px; width:85%; margin:0 auto;}
 	.top2_content{ padding:10% 7% 0 7%}
-	.top2_content .quas{ font-size:14px;}
+	.top2_content .quas{ font-size:14px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{ font-size:14px;}
 	.top2_content .tag{ font-size:14px;}
 	.top2_content .tagtext2{ font-size:14px;}
