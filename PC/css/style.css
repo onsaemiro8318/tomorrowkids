@@ -75,7 +75,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 
 .sub_top2{ background:url(../images/sub2_topbg2.gif) repeat-x;}
 .sub_top2in{ width:941px; margin:0 auto; padding:36px 0 60px 0;}
-.sub_top2in .bluetext{ color:#253f71; font-size:27px; font-family: 'Nanum Gothic'; line-height:110%;}
+.sub_top2in .bluetext{ color:#253f71; font-size:27px; font-family: 'Nanum Gothic'; font-weight:bold; line-height:110%;}
 .sub_top2in .whitetext{ color:#fff; font-size:25px; font-family: 'Nanum Gothic'; padding-bottom:30px;}
 .sub_toprite{ text-align:right;}
 .result_box{ background:url(../images/sub_top2_wbg.png) no-repeat; width:941px; height:263px; padding:45px 0 0 38px;}
@@ -106,7 +106,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 /*.result_box2{ background:url(../images/sub_top2_wbg2.png) no-repeat; width:941px; height:317px;  padding:50px 0 0 160px;}*/
 .result_box2{ background:url(../images/sub_top2_wbg2.png) no-repeat; width:941px; height:317px;  padding:50px 0 0 90px;}
 .result_box2 .plicon{ padding-right:20px;}
-.result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Nanum Gothic'; padding-bottom:20px;}
+.result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Nanum Gothic'; font-weight:bold; padding-bottom:20px;}
 .result_box2 .tag{ color:#6e80a9; font-size:19px; font-family: 'Nanum Gothic'; padding-right:5px;}
 .result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:675px; font-family: 'Nanum Gothic';}
 .result_box2 .anstextone{ font-size:19px; color:#748bb7;width:675px; font-family: 'Nanum Gothic';}
