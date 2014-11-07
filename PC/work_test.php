@@ -22,6 +22,9 @@
 
 	if (isset($_POST['test_idx']) == false)
 		$_POST['test_idx'] = "1";
+
+	if (isset($_POST['selected_val']) == false)
+		$_POST['selected_val'] = "";
 	// 질문 정보
 	$question_data	= TK_GetTestQuestionInfo($_POST['test_idx']);
 
@@ -76,8 +79,7 @@
           <div class="hidden">
             <div class="fl_left hidden plicon"><img src="images/step1_icon.jpg"/></div>
             <div class="fl_left textinbox">
-              <!-- <p class="bluetext"><?=$question_data['test_value']?></p> -->
-              <p class="bluetext">1. 당신의 성격을 설명하자면?</p>
+              <p class="bluetext"><?=$question_data['test_value']?></p>
               <p><div id="answer_al_1" class="fl_left tag">A.</div><span class="anstextone fl_left" id="answer1" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$answer_data[0]['idx']?>','<?=$next_num?>','')" style="cursor:pointer;padding-bottom:20px"><?=$answer_data[0]['test_value']?></span></p>
               <p><div id="answer_al_2" class="fl_left tag">B.</div><span class="anstextone fl_left" id="answer2" onmouseover="select_answer(this.id,'over');" onmouseout="select_answer(this.id,'out')" onclick="go_next_question('<?=$answer_data[1]['idx']?>','<?=$next_num?>','')" style="cursor:pointer;"><?=$answer_data[1]['test_value']?></span></p>
             </div>
