@@ -21,6 +21,10 @@
 
 	if (isset($_POST['test_idx']) == false)
 		$_POST['test_idx'] = "1";
+
+	if (isset($_POST['selected_val']) == false)
+		$_POST['selected_val'] = "";
+	
 	// 질문 정보
 	$question_data	= TK_GetTestQuestionInfo($_POST['test_idx']);
 
