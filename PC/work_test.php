@@ -30,6 +30,10 @@
 	$next_num		= $_POST['test_idx'] + 1;
 
 ?>
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+</style>
 <script>
 	// 테스트 결과 페이지에서 뒤로가기 버튼을 이용해 테스트 페이지로 이동 막기
 	window.history.forward(0);
