@@ -86,12 +86,6 @@
 </body>
 </html>
 <script type="text/javascript">
-	$(document).ready(function(){
-		if ($("#selected_answer").val() != "")
-			$("#"+ sel_answer).css("font-weight","bold");
-
-	});
-
 
 	function select_answer(answer_id, event_id)
 	{
