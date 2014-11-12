@@ -64,8 +64,9 @@ switch ($_REQUEST['exec'])
 
 	case "update_user_share" :
 		$test_idx	= $_REQUEST['test_idx'];
+		$share_gubun	= $_REQUEST['share_gubun'];
 		$share_on = "Y";
-		TK_UpdateUserShare($test_idx,$share_on);
+		TK_UpdateUserShare($test_idx,$share_on,$share_gubun);
 	break;
 
 	case "update_user_donation" :

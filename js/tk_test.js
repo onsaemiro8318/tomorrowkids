@@ -220,7 +220,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 									$.ajax({
 										type     : "POST",
 										async    : false,
-										url      : "../main_exec.php",
+										url      : "../main_exec_test.php",
 										data     : ({
 											"exec"     : "update_user_share" ,
 											"test_idx" : test_idx,
@@ -290,7 +290,7 @@ function fb_share(job, job_explain, test_idx, job_num)
 				$.ajax({
 					type     : "POST",
 					async    : false,
-					url      : "../main_exec.php",
+					url      : "../main_exec_test.php",
 					data     : ({
 						"exec"     : "update_user_share" ,
 						"test_idx" : test_idx,

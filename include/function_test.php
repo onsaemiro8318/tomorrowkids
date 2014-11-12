@@ -224,12 +224,18 @@
 		return $test_result;
 	}
 
-	function TK_UpdateUserShare($test_idx,$share_on)
+	function TK_UpdateUserShare($test_idx,$share_on,$share_gubun)
 	{
 		global $_gl;
 		global $my_db;
-        
-		$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."' WHERE idx= '".$test_idx."'";
+
+		if ($share_gubun == "fb")
+			$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."', fb_share = 'Y' WHERE idx= '".$test_idx."'";
+		else if ($share_gubun == "kt")
+			$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."', kt_share = 'Y' WHERE idx= '".$test_idx."'";
+		else
+			$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."', ks_share = 'Y' WHERE idx= '".$test_idx."'";
+
 		$result = mysqli_query($my_db, $query);  
 	}
 
