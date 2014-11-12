@@ -24,6 +24,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .main_topinbg1 h1{padding:30px 0 0 242px;}
 .videobox{position:relative; top:397px; margin:0 auto; width:255px; height:155px;}
 .videobox .video_but{position:absolute; top:39px; left:94px;}
+.testbox{position: relative; top: 450px; margin: 0 auto; width: 265px;}
 
 .main_top2{background:url(../images/m_topbg2.gif) repeat-x; height:242px; padding:38px 0 41px 0;}
 .main_top2 .main_topin2{ width:625px; margin:0 auto;}
