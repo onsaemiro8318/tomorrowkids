@@ -708,3 +708,17 @@ function fitImageSize(obj, href) {
 	image.src = href;
 }
 
+function test_start()
+{
+	$.ajax({
+		type     : "POST",
+		async    : false,
+		url      : "../main_exec_test.php",
+		data     : ({
+			"exec" : "insert_user_info"
+		}),
+		success: function(response){
+			location.href="work_test.php";
+		}
+	}); 
+}

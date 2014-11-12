@@ -62,6 +62,26 @@ switch ($_REQUEST['exec'])
 		echo $flag;
 	break;
 
+	case "insert_user_info" :
+		$ip_addr = $_SERVER['REMOTE_ADDR'];
+		$userid	= mt_rand(100000000, 999999999);;
+
+		unset($_SESSION['ss_mb_id']);
+
+		$info = TK_GetUserCnt($userid);
+
+		if ($info > 0){
+			$userid	= mt_rand(100000000, 999999999);;
+		}
+
+		// 회원아이디 세션 생성
+		$_SESSION['ss_mb_id'] = $userid;
+
+		TK_InsertUserInfo($userid,$ip_addr,$gubun);
+
+		echo $flag;
+
+	break;
 	case "update_user_share" :
 		$test_idx	= $_REQUEST['test_idx'];
 		$share_gubun	= $_REQUEST['share_gubun'];

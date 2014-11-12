@@ -174,12 +174,12 @@
 		return $info;
 	}
 
-	function TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img,$user_name)
+	function TK_InsertUserInfo($userid,$ip_addr,$gubun)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query = "INSERT INTO ".$_gl['tk_member_table']." (user_id, ip_addr, created_at, updated_at, media, gubun, mb_image, mb_nickname) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."','".$user_img."','".$user_name."')";
+		$query = "INSERT INTO ".$_gl['tk_member_table']." (user_id, ip_addr, created_at, updated_at, gubun) values ('".$userid."','".$ip_addr."',now(),now(),'".$gubun."')";
 		$result = mysqli_query($my_db, $query);
 	}
 

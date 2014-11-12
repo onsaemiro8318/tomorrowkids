@@ -3,8 +3,6 @@
 	include_once "../config_test.php";
 	include_once "header.php";
 
-	//unset($_SESSION['ss_mb_id']);
-	//unset($_SESSION['ss_media']);
 	session_destroy();
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
