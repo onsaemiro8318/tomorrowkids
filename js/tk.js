@@ -456,10 +456,9 @@ function facebook_login()
 	//if( navigator.userAgent.match('CriOS') ){
 	//	window.open('https://www.facebook.com/dialog/oauth?client_id=293604627507652&redirect_uri='+ document.location.href +'&scope=public_profile,email', '', null);
 	//}else{
-		FB.login(function(response){
-			_fbUserId = response.authResponse.userID;
-			accessToken = response.authResponse.accessToken;
-		_fbUserImage = "http://graph.facebook.com/" + _fbUserId + "/picture?type=square"
+	FB.api('/me', function(response) {
+		if (response.name)
+		{
 			$.ajax({
 				type     : "POST",
 				async    : false,
@@ -496,8 +495,52 @@ function facebook_login()
 					*/
 				}
 			}); 
-			//location.href="work_test.php"; 
-		},{scope: 'public_profile,email'});
+		}else{
+			FB.login(function(response){
+					_fbUserId = response.authResponse.userID;
+					accessToken = response.authResponse.accessToken;
+				_fbUserImage = "http://graph.facebook.com/" + _fbUserId + "/picture?type=square"
+					$.ajax({
+						type     : "POST",
+						async    : false,
+						url      : "../main_exec.php",
+						data     : ({
+							"exec" : "fb_user_info" ,
+							"fbUserId" : _fbUserId,
+							"fbUserImage" : _fbUserImage
+						}),
+						success: function(response){
+							$.ajax({
+								type		: "POST",
+								async		: false,
+								url			: "../main_exec.php",
+								data		: ({
+									"exec"         : "user_test_check"
+								}),
+								success: function(response){
+									//if (response == "Y")
+									//{
+										location.href="work_test.php"; 
+									//}else{
+									//	alert("테스트는 3번까지만 하실 수 있습니다.");
+									//}
+								}
+							});
+							/*
+							if(response == "Y"){
+								testAPI();
+								return;
+							}else{
+								return;
+							}
+							*/
+						}
+					}); 
+					//location.href="work_test.php"; 
+			},{scope: 'public_profile,email'});
+
+		}
+	});
 	//}
 }
 
