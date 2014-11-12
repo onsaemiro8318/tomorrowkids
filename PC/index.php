@@ -3,8 +3,6 @@
 	include_once "../config.php";
 	include_once "header.php";
 
-	//unset($_SESSION['ss_mb_id']);
-	//unset($_SESSION['ss_media']);
 	session_destroy();
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
@@ -67,6 +65,7 @@
 		}
 	});
 	$(document).ready(function(){
+
 		$(".mask").click(function(){
 			$(".mask").fadeOut(500);
 		//	$(".video_but").show();
@@ -87,6 +86,7 @@
       <div class="main_topinbg1">
         <h1><a href="http://www.dreamfull.or.kr" target="_blank"><img src="images/logo.png" alt="dreamfull"/></a></h1>
         <div class="videobox"><div class="video_but"><a href="#" onclick="play_movie('<?=$gubun?>');"><img src="images/play_but.png"/></a></div></div>
+        <div class="testbox"><div class="test_but"><a href="#" onclick="test_start();"><img src="images/test_bt.png"/></a></div></div>        
       </div>
     </div>
   <!--Line1 end-->
@@ -115,8 +115,7 @@
 <!--Line3 start-->
     <div class="main_top3">
       <div class="soc_linkbox">
-        <div class="hidden"><span class="fl_left facebookic"><a href="#" onclick="facebook_login();"><img src="images/facebook_but.png"/></a></span><span class="fl_left"><a href="#" onclick="kakao_login();"><img src="images/kakaotalk_but.png"/></a></span></div>
-        <p class="text hidden">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
+        <div class="hidden"></div>
       </div>
       <div class="stepbox hidden">
         <div><img src="images/step_fiveicon.png"/></div>
