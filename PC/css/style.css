@@ -2,10 +2,10 @@
 /* CSS Document */
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, canvas, details, figcaption, figure{margin:0;padding:0;border:0;outline:0;font-size:100%; line-height:145%;}
-* {margin:0; padding:0;}
+* {margin:0; padding:0; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif', serif;}
 
 
-body{font: 12px/18px 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif', Verdana;}
+body{font: 12px/18px 'Malgun Gothic,Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif', Verdana;}
 ul, li {list-style:none;}
 img {border:0;}
 a, a:link {text-decoration:none; color:#333;}
@@ -26,14 +26,14 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .main_top2{background:url(../images/m_topbg2.gif) repeat-x; height:242px; padding:38px 0 41px 0;}
 .main_top2 .main_topin2{ width:625px; margin:0 auto;}
 .main_top2 .text_data{ text-align:center; padding-bottom:36px; font-weight:bold;}
-.main_top2 .f_text{ font-size:26px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'}
-.main_top2 .t_text{ font-size:32px; text-decoration:underline; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'}
+.main_top2 .f_text{ font-size:26px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'}
+.main_top2 .t_text{ font-size:32px; text-decoration:underline; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'}
 .main_top2 .greenco_left{ background-color:#369384; border-right:1px solid #258676;  border-bottom-left-radius:50px; border-top-left-radius:50px; height:20px; width:20%;}
 .main_top2 .greenco_right{ background-color:#fff; border-top-right-radius:50px; border-bottom-right-radius:50px; height:20px; width:79.7%;}
 .main_top2 .gr_box{ position:relative;}
 .main_top2 .gr_box .minic{ position:absolute; right:-10px; top:-36px;}
 .main_top2 .gr_box .peopleic{ position:absolute; left:92px; top:-20px;}
-.main_top2 .peoplenumber{ font-size:22px; color:#444; line-height:70px; padding-right:20px;  font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.main_top2 .peoplenumber{ font-size:22px; color:#444; line-height:70px; padding-right:20px;  font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .number_box{ background:url(../images/number_bg.png) no-repeat; width:307px; height:70px;}
 .number_box ul li{ float:left; color:#fff; font-size:66px; line-height:62px; width:50px; text-align:center;}
 .number_box .number2{ margin-left:9px;}
@@ -46,10 +46,10 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .main_top3{ background:url(../images/m_topbg3.gif) repeat-x; overflow:hidden;}
 .main_top3 .facebookic{ margin-right:45px;}
 .main_top3 .soc_linkbox{ width:718px; margin:0 auto; padding-top:45px;}
-.soc_linkbox .text{ color:#000; font-size:16px; text-align:center; margin:18px 0 70px 0;  font-family:'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.soc_linkbox .text{ color:#000; font-size:16px; text-align:center; margin:18px 0 70px 0;  font-family:'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 
 .stepbox{ width:903px; margin:0 auto;}
-.stepbox ul li{ float:left; text-align:center; width:175px; font-size:17px; color:#555; letter-spacing:-2.1px;  font-family:'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.stepbox ul li{ float:left; text-align:center; width:175px; font-size:17px; color:#555; letter-spacing:-2.1px;  font-family:'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .stept1{ padding-left:63px;}
 .stept2{ padding-left:63px;}
 .stept3{ padding-left:63px;}
@@ -60,7 +60,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .subtopinbg1{ background:url(../images/m_top3.jpg) no-repeat left top; height:235px; width:1023px; margin:0 auto;}
 .subtopinbg1 h1{ padding:30px 0 0 82px;}
 .subtopinbg1 .tomrlogo{padding:30px 0 0 82px;}
-.toptext{ color:#222; font-size:13px; font-family:'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; text-align:right !important;}
+.toptext{ color:#222; font-size:13px; font-family:'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; text-align:right !important;}
 .number_sub{ background:url(../images/number_bg_sub.png) no-repeat; width:178px; height:42px; margin-top:10px;}
 .number_sub ul li{float:left; color:#fff; font-size:40px; line-height:40px; width:32px; text-align:center;}
 .number_sub .number2{ margin-left:2px;}
@@ -70,22 +70,22 @@ a:hover { text-decoration:underline;color:#3675c7;}
 
 .sub_top2{ background:url(../images/sub2_topbg2.gif) repeat-x;}
 .sub_top2in{ width:941px; margin:0 auto; padding:36px 0 60px 0;}
-.sub_top2in .bluetext{ color:#253f71; font-size:27px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; line-height:110%;}
-.sub_top2in .whitetext{ color:#fff; font-size:25px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-bottom:30px;}
+.sub_top2in .bluetext{ color:#253f71; font-size:27px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; line-height:110%;}
+.sub_top2in .whitetext{ color:#fff; font-size:25px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-bottom:30px;}
 .sub_toprite{ text-align:right;}
 .result_box{ background:url(../images/sub_top2_wbg.png) no-repeat; width:941px; height:263px; padding:45px 0 0 38px;}
 .bluebox_result{ border:3px solid #395899; width:385px; height:210px; margin-right:25px;}
-.re_text{ background:url(../images/result_arrow.gif) no-repeat left; padding-left:17px; color:#33528d; font-size:18px; text-decoration:underline; font-family:'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
-.resulttwotext .big{ color:#71baad; font-size:25px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding:30px 0 10px 0;}
-.resulttwotext .sm{ color:#70b8ac; font-size:16px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
-.undertext{ color:#fff; font-size:16px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; text-align:center; padding-top:20px;}
+.re_text{ background:url(../images/result_arrow.gif) no-repeat left; padding-left:17px; color:#33528d; font-size:18px; text-decoration:underline; font-family:'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.resulttwotext .big{ color:#71baad; font-size:25px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding:30px 0 10px 0;}
+.resulttwotext .sm{ color:#70b8ac; font-size:16px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.undertext{ color:#fff; font-size:16px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; text-align:center; padding-top:20px;}
 .facebookbut{ width:335px; margin:0 auto; padding-top:30px;}
 
 .footer .lineone{height:50px; line-height:50px; background:url(../images/footer_line1.png) repeat-x; }
 .footer .lineone ul {width:570px; margin:0 auto;}
-.footer .lineone ul li{ float:left; line-height:50px; font-size:12px; color:#8b8b8b; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.footer .lineone ul li{ float:left; line-height:50px; font-size:12px; color:#8b8b8b; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .footer .lineone img{ padding:0 5px;}
-.footer .linetwo{background:url(../images/footer_line2.png) repeat-x; height:45px; padding:23px 0 30px 0; font-size:12px; color:#8b8b8b; font-family:'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.footer .linetwo{background:url(../images/footer_line2.png) repeat-x; height:45px; padding:23px 0 30px 0; font-size:12px; color:#8b8b8b; font-family:'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .footer .linetwo .inbox{ width:960px; margin:0 auto;}
 .footer .linetwo .textbox{ width:600px;}
 .footer .linetwo .linkligo  ul li{ float:left;}
@@ -97,14 +97,14 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .video_fremebox .closebut{ position:absolute; top:15px; right:15px;}
 
 .sub_top2_step2{ background:url(../images/step_bgtwo.jpg) repeat-x;}
-.step_sumtext{ color:#fff; font-size:19px;  font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-left:56px; line-height:156%; padding-bottom:37px;}
+.step_sumtext{ color:#fff; font-size:19px;  font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-left:56px; line-height:156%; padding-bottom:37px;}
 /*.result_box2{ background:url(../images/sub_top2_wbg2.png) no-repeat; width:941px; height:317px;  padding:50px 0 0 160px;}*/
 .result_box2{ background:url(../images/sub_top2_wbg2.png) no-repeat; width:941px; height:317px;  padding:50px 0 0 90px;}
 .result_box2 .plicon{ padding-right:20px;}
-.result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-bottom:20px;}
-.result_box2 .tag{ color:#6e80a9; font-size:19px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-right:5px;}
-.result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:675px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
-.result_box2 .anstextone{ font-size:19px; color:#748bb7;width:675px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-bottom:20px;}
+.result_box2 .tag{ color:#6e80a9; font-size:19px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding-right:5px;}
+.result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:675px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.result_box2 .anstextone{ font-size:19px; color:#748bb7;width:675px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 /*.result_box2 .textinbox{}*/
 .result_box2 .textinbox{width:720px;}
 /*.result_box2 .nextbut{ width:158px; margin:26px 0 0 232px;}*/
@@ -116,23 +116,23 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .closeic{ position:absolute; right:20px; top:20px;}
 .mailbox{ width:145px;}
 .mailboxw{padding:210px 0 0 55px;}
-.mailbox .inputw{ border:0 !important; background-color:#b1dcd5; line-height:37px; height:37px; width:145px; color:#585858; font-size:16px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.mailbox .inputw{ border:0 !important; background-color:#b1dcd5; line-height:37px; height:37px; width:145px; color:#585858; font-size:16px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .mailboxw .mailcion img{ padding:0 3px;}
 .selectbox, .select {background:#b1dcd5 url(../images/sel_but.png) no-repeat right center; height:37px; width:140px; margin-left:10px; line-height:37px; -webkit-appearance:none;}
-.selectbox select{ border:none; background:none; width:140px; height:37px; padding:5px 0; -webkit-appearance:none; font-size:16px; font-family:'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; color:#585858;}
+.selectbox select{ border:none; background:none; width:140px; height:37px; padding:5px 0; -webkit-appearance:none; font-size:16px; font-family:'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; color:#585858;}
 
 
 .provboxw{ margin:0 auto; width:220px; padding:20px 0 35px 0;}
 .provboxw ul li{ float:left;}
 .provboxw ul li span{ padding:0 5px;}
-.provboxw ul .fi{ color:#585858; font-size:12px; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; letter-spacing:-0.1px;}
-.provboxw ul .ti{ color:#5db3a3; font-size:12px; text-decoration:underline; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; letter-spacing:-0.1px;}
+.provboxw ul .fi{ color:#585858; font-size:12px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; letter-spacing:-0.1px;}
+.provboxw ul .ti{ color:#5db3a3; font-size:12px; text-decoration:underline; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; letter-spacing:-0.1px;}
 .checkboxw{ width:13px; height:13px; margin-right:10px;}
 .summitbt{ width:103px; margin:0 auto;}
 .donationbt{ width:186px; margin:0 auto; padding-top:240px;}
 .privacy_content{ width:400px; margin:0 auto; padding-top:80px;}
-.privacy_content p {font-size:14px; margin-bottom:10px; color:#70b8ac; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
-.privacy_content .privacy_title {font-size:32px; color:#33528d; font-family: 'Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; }
+.privacy_content p {font-size:14px; margin-bottom:10px; color:#70b8ac; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.privacy_content .privacy_title {font-size:32px; color:#33528d; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; }
 
 
 .clearfix:after {
