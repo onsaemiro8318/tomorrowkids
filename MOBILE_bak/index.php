@@ -1,6 +1,6 @@
 <?
 	// 설정파일
-	include_once "../config_test.php";
+	include_once "../config.php";
 	include_once "header.php";
 
 	//unset($_SESSION['ss_mb_id']);
@@ -67,9 +67,6 @@
             </div>
             <!--<div class="top1_mobbotbg"><img src="images/top_1bg_img.png"/></div>-->
         </div>
-      	<div class="testbox">
-          <div class="facebook_but"><a href="#" onclick="test_start();"><img src="images/test_bt_mobile.png"/></a></div>
-        </div>
     </div>
     <!--Line2 start-->
     <div class="main_top2">
@@ -104,6 +101,12 @@
     </div>
     <!--Line2 end-->
     <div class="mob_top3box">
+    	<div class="so_butbox">
+            <div class="facebook_but"><a href="#" onclick="facebook_login();"><img src="images/facebook_mobbut.png"/></a></div>
+            <div><a href="#" onclick="kakao_login();"><img src="images/kakaotalk_mobbut.png"/></a></div>
+        </div>
+        <p class="notice_ios">* 아이폰 유저는 꼭 '사파리 브라우저'로 참여해주세요!</p>
+        <p class="noticetext">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
         <div class="step_box_mob"><img src="images/step_mob.png"/></div>
         <div class="event"><img src="images/event_img.png"/></div>
         <div class="so_butbox">
