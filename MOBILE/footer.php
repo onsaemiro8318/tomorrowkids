@@ -1,7 +1,7 @@
     <div class="footer_mob">
       <div class="line1">
-        <p>이 캠페인은 온라인 나눔문화 확산을 위한 한국타이어의</p>
-        <span><img src="./images/hankook_logo.png" class="hankook_logo">기부후원으로 진행됩니다.</span>
+        <p>이 캠페인은 온라인 나눔문화 확산을 위한</p>
+        <span><img src="./images/hankook_logo.png" class="hankook_logo">한국타이어의 기부후원으로 진행됩니다.</span>
       </div>
       <div class="line2">
     	<div class="logoline hidden">

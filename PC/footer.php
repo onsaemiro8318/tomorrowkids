@@ -1,9 +1,9 @@
 <div class="footer">
 	<div class="lineone">
     	<ul>
-        	<li>이 캠페인은 온라인 나눔문화 확산을 위한 한국타이어의</li>
+        	<li>이 캠페인은 온라인 나눔문화 확산을 위한</li>
             <li><img src="images/footer_line1_text.png"/></li>
-            <li>기부후원으로 진행됩니다.</li>
+            <li>한국타이어의 기부후원으로 진행됩니다.</li>
         </ul>
     </div>
     <div class="linetwo">
