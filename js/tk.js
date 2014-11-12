@@ -132,7 +132,7 @@ function ks_share_mobile(job, job_explain, test_idx, job_imgurl)
 				$.ajax({
 					type     : "POST",
 					async    : false,
-					url      : "../main_exec_test.php",
+					url      : "../main_exec.php",
 					data     : ({
 						"exec"     : "update_user_share" ,
 						"test_idx" : test_idx,
@@ -245,7 +245,7 @@ function kt_ajax(test_idx)
 	$.ajax({
 		type     : "POST",
 		async    : false,
-		url      : "../main_exec_test.php",
+		url      : "../main_exec.php",
 		data     : ({
 			"exec"     : "update_user_share" ,
 			"test_idx" : test_idx,
@@ -304,7 +304,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 									$.ajax({
 										type     : "POST",
 										async    : false,
-										url      : "../main_exec_test.php",
+										url      : "../main_exec.php",
 										data     : ({
 											"exec"     : "update_user_share" ,
 											"test_idx" : test_idx,
@@ -374,7 +374,7 @@ function fb_share(job, job_explain, test_idx, job_num)
 				$.ajax({
 					type     : "POST",
 					async    : false,
-					url      : "../main_exec_test.php",
+					url      : "../main_exec.php",
 					data     : ({
 						"exec"     : "update_user_share" ,
 						"test_idx" : test_idx,
@@ -585,7 +585,7 @@ function go_test(num, val)
 		$.ajax({
 			type		: "POST",
 			async		: false,
-			url			: "../main_exec_test.php",
+			url			: "../main_exec.php",
 			data		: ({
 				"exec"         : "insert_test_result",
 				"selected_val" : val
@@ -773,7 +773,7 @@ function test_start()
 	$.ajax({
 		type     : "POST",
 		async    : false,
-		url      : "../main_exec_test.php",
+		url      : "../main_exec.php",
 		data     : ({
 			"exec" : "insert_user_info"
 		}),
