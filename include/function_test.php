@@ -202,7 +202,7 @@
 
 	}
 
-	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media,$gubun)
+	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$gubun)
 	{
 		global $_gl;
 		global $my_db;

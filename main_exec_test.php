@@ -98,7 +98,6 @@ switch ($_REQUEST['exec'])
 	case "insert_test_result" :
 		$selected_val	= $_REQUEST['selected_val'];
 		$userid			= $_SESSION['ss_mb_id'];
-		$media			= $_SESSION['ss_media'];
 
 		//$test_cnt	= TK_GetTestUserCntInfo($userid);
 /*
@@ -128,7 +127,7 @@ switch ($_REQUEST['exec'])
 
 			$selected_job	= TK_GetTestResultInfo($test_point);
 
-			$test_result_idx = TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job['idx'],$media,$gubun);
+			$test_result_idx = TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job['idx'],$gubun);
 
 			echo $selected_job['idx']."|".$test_result_idx;
 		//}

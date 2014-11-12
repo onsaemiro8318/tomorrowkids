@@ -525,7 +525,7 @@ function go_test(num, val)
 		$.ajax({
 			type		: "POST",
 			async		: false,
-			url			: "../main_exec.php",
+			url			: "../main_exec_test.php",
 			data		: ({
 				"exec"         : "insert_test_result",
 				"selected_val" : val
