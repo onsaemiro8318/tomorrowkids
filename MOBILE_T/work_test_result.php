@@ -43,7 +43,7 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
     <!-- <script type="text/javascript" src="../js/custom.js"></script> -->
-    <script type='text/javascript' src='../js/tk.js'></script>
+    <script type='text/javascript' src='../js/tk_test.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
