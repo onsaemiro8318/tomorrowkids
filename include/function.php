@@ -207,7 +207,7 @@
 		global $_gl;
 		global $my_db;
         
-		$query = "INSERT INTO ".$_gl['tk_test_result_table']." (user_id, answer, job, media, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
+		$query = "INSERT INTO ".$_gl['tk_test_result_table']." (user_id, answer, job, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
 		$result = mysqli_query($my_db, $query);
 		$test_result = mysqli_insert_id($my_db);
 
