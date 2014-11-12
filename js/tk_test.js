@@ -223,7 +223,8 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 										url      : "../main_exec.php",
 										data     : ({
 											"exec"     : "update_user_share" ,
-											"test_idx" : test_idx
+											"test_idx" : test_idx,
+											"share_gubun" : 'fb'
 										}),
 										success: function(response){
 											var width = $(window).width();
@@ -292,7 +293,8 @@ function fb_share(job, job_explain, test_idx, job_num)
 					url      : "../main_exec.php",
 					data     : ({
 						"exec"     : "update_user_share" ,
-						"test_idx" : test_idx
+						"test_idx" : test_idx,
+						"share_gubun" : 'fb'
 					})
 				});
 				var width = $(window).width();
