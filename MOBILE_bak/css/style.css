@@ -31,8 +31,6 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .sum_text .bold{font-family:Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif !important;}
 .top1_mobbotbg{ overflow:hidden;}
 .top1_mobbotbg img{ width:100%;}
-.testbox{ padding-left:20%; position: relative; margin-top: 77%;}
-.testbox img{width: 75%;}
 
 .main_top2{background:url(../images/m_topbg2.gif) repeat-x; padding:38px 0 41px 0;}
 .main_top2 .main_topin2{ width:90%; margin:0 auto;}
@@ -118,9 +116,9 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .top3_content .summary{ color:#70b8ac; font-size:18px; letter-spacing:-0.1; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .top3_content .arrow img{ width:20%;}
 .summary2{ color:#fff; font-size:26px; padding:0 10%; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
-.face_dt_button{ width:498px; margin:0 auto; padding:15% 0 5% 0;}
+.face_dt_button{ width:498px; margin:0 auto; padding:15% 0 10% 0;}
 .face_dt_button img{ width:80%;}
-.kakaotalk_dt_button{ width:498px; margin:0 auto; padding:0% 0 5% 0;}
+.kakaotalk_dt_button{ width:498px; margin:0 auto; padding:15% 0 5% 0;}
 .kakaotalk_dt_button img{ width:80%;}
 .kakaostory_dt_button{ width:498px; margin:0 auto; padding:0% 0 5% 0;}
 .kakaostory_dt_button img{ width:80%;}

@@ -111,9 +111,19 @@
 당신의 내일(Work) 결과를 SNS에 공유하시면,
 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.
         </div>
+<?
+	if ($user_info['media'] == $_gl['login_media']['facebook'])
+	{
+?>    
         <div class="face_dt_button"><a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
+<?
+	}else{
+?>
         <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl2?>','<?=$user_info['mb_nickname']?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
-        <!-- <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div> -->
+        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
+<?
+	}
+?>    
     </div>
     <div class="footer_bggry">
 <?
