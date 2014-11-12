@@ -165,7 +165,8 @@ function kt_ajax(test_idx)
 		url      : "../main_exec.php",
 		data     : ({
 			"exec"     : "update_user_share" ,
-			"test_idx" : test_idx
+			"test_idx" : test_idx,
+			"share_gubun" : 'kt'
 		}),
 		success: function(res) {
 			var width = $(window).width();
@@ -224,7 +225,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 										data     : ({
 											"exec"     : "update_user_share" ,
 											"test_idx" : test_idx,
-											"share_gubun" : 'fb'
+											"share_gubun" : 'ks'
 										}),
 										success: function(response){
 											var width = $(window).width();
