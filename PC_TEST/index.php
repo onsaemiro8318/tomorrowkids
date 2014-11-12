@@ -116,8 +116,7 @@
 <!--Line3 start-->
     <div class="main_top3">
       <div class="soc_linkbox">
-        <div class="hidden"><span class="fl_left facebookic"><a href="#" onclick="facebook_login();"><img src="images/facebook_but.png"/></a></span><span class="fl_left"><a href="#" onclick="kakao_login();"><img src="images/kakaotalk_but.png"/></a></span></div>
-        <p class="text hidden">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
+        <div class="hidden"></div>
       </div>
       <div class="stepbox hidden">
         <div><img src="images/step_fiveicon.png"/></div>
