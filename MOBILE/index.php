@@ -50,6 +50,7 @@
 		$(".greenco_left").css("width","<?=$left_per?>%");
 		$(".greenco_right").css("width","<?=$right_per?>%");
 		$(".peopleic").css("left","<?=$left_per?>%");
+		facebook_logout();
 	});
 
     </script>
