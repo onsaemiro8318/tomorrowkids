@@ -1,6 +1,6 @@
 <?
 	// 설정파일
-	include_once "../config_test.php";
+	include_once "../config.php";
 	include_once "header.php";
 
 	if ( isset($_SESSION['ss_mb_id']) == false ) {

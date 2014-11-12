@@ -1,5 +1,5 @@
 <?php
-include_once "config_test.php";
+include_once "config.php";
 
 switch ($_REQUEST['exec'])
 {
@@ -62,31 +62,10 @@ switch ($_REQUEST['exec'])
 		echo $flag;
 	break;
 
-	case "insert_user_info" :
-		$ip_addr = $_SERVER['REMOTE_ADDR'];
-		$userid	= mt_rand(100000000, 999999999);;
-
-		unset($_SESSION['ss_mb_id']);
-
-		$info = TK_GetUserCnt($userid);
-
-		if ($info > 0){
-			$userid	= mt_rand(100000000, 999999999);;
-		}
-
-		// 회원아이디 세션 생성
-		$_SESSION['ss_mb_id'] = $userid;
-
-		TK_InsertUserInfo($userid,$ip_addr,$gubun);
-
-		echo $flag;
-
-	break;
 	case "update_user_share" :
 		$test_idx	= $_REQUEST['test_idx'];
-		$share_gubun	= $_REQUEST['share_gubun'];
 		$share_on = "Y";
-		TK_UpdateUserShare($test_idx,$share_on,$share_gubun);
+		TK_UpdateUserShare($test_idx,$share_on);
 	break;
 
 	case "update_user_donation" :
@@ -98,6 +77,7 @@ switch ($_REQUEST['exec'])
 	case "insert_test_result" :
 		$selected_val	= $_REQUEST['selected_val'];
 		$userid			= $_SESSION['ss_mb_id'];
+		$media			= $_SESSION['ss_media'];
 
 		//$test_cnt	= TK_GetTestUserCntInfo($userid);
 /*
@@ -127,7 +107,7 @@ switch ($_REQUEST['exec'])
 
 			$selected_job	= TK_GetTestResultInfo($test_point);
 
-			$test_result_idx = TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job['idx'],$gubun);
+			$test_result_idx = TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job['idx'],$media,$gubun);
 
 			echo $selected_job['idx']."|".$test_result_idx;
 		//}
