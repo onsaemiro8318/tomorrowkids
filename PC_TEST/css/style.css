@@ -81,7 +81,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .resulttwotext .big{ color:#71baad; font-size:25px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding:30px 0 10px 0;}
 .resulttwotext .sm{ color:#70b8ac; font-size:16px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .undertext{ color:#fff; font-size:16px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; text-align:center; padding-top:20px;}
-.facebookbut{ width:335px; margin:0 auto; padding-top:30px;}
+.facebookbut{ width:700px; margin:0 auto; padding-top:30px;}
 
 .footer .lineone{height:50px; line-height:50px; background:url(../images/footer_line1.png) repeat-x; }
 .footer .lineone ul {width:570px; margin:0 auto;}

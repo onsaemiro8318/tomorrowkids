@@ -86,7 +86,7 @@
 빈곤한 환경으로 이런 일이 있다는 것 조차 모른 채 제한된 꿈을 꾸는 아이들을 도와주세요.<br/>
 당신의 내일(Work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.</div>
   <div class="facebookbut">
-    <a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');return false;"><img src="images/facebook_sub.png"/></a>
+    <a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');return false;"><img src="images/facebook_sub.png" style="margin-left:10px"/></a>
     <a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a>
   </div>
 <div class="popupbg1" id="email_div">
