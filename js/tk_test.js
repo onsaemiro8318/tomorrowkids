@@ -274,9 +274,9 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 			Kakao.API.request({
 				url: '/v1/api/story/isstoryuser',
 				success: function(res) {
-					var ksUserJsonStr = JSON.stringify(res);
-					var ksUserObj = JSON.parse(ksUserJsonStr);
-					var isStoryUser = ksUserObj.isStoryUser;
+					ksUserJsonStr = JSON.stringify(res);
+					ksUserObj = JSON.parse(ksUserJsonStr);
+					isStoryUser = ksUserObj.isStoryUser;
 
 					// 카카오스토리 유저일 때
 					if(isStoryUser == true){
