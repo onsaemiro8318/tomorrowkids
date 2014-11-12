@@ -1,6 +1,6 @@
 <?
 	// 설정파일
-	include_once "../config.php";
+	include_once "../config_test.php";
 	include_once "header.php";
 
 	//unset($_SESSION['ss_mb_id']);
@@ -87,6 +87,7 @@
       <div class="main_topinbg1">
         <h1><a href="http://www.dreamfull.or.kr" target="_blank"><img src="images/logo.png" alt="dreamfull"/></a></h1>
         <div class="videobox"><div class="video_but"><a href="#" onclick="play_movie('<?=$gubun?>');"><img src="images/play_but.png"/></a></div></div>
+        <div class="testbox"><div class="test_but"><a href="#" onclick="test_start();"><img src="images/test_bt.png"/></a></div></div>        
       </div>
     </div>
   <!--Line1 end-->
