@@ -93,7 +93,7 @@
   <!--Line2 start-->
     <div class="main_top2">
       <div class="main_topin2">
-        <p class="text_data"><span class="f_text">10,000명의 내일이 모이면</span><br/><span class="t_text">아이들의 내일을 위한 특별 강연회</span>가 열립니다!</p>
+        <p class="text_data"><span class="f_text">10,000명의 내일이 모이면</span><br/><span class="t_text">아이들의 내일을 위해 5천만원</span>이 기부됩니다.</p>
         <div class="gr_box">
           <div class="greenco_left fl_left"></div><div class="greenco_right fl_left"><div class="peopleic"><img src="images/gr_peopleicon.png"/></div></div><div class="minic"><img src="images/gr_15min.png"/></div><div class="line_number"><img src="images/gr_number_line.png"/></div>
         </div>
