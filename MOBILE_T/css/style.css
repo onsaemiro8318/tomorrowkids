@@ -31,6 +31,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .sum_text .bold{font-family:Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif !important;}
 .top1_mobbotbg{ overflow:hidden;}
 .top1_mobbotbg img{ width:100%;}
+.testbox{ padding-left:20%; position: relative; margin-top: 77%;}
+.testbox img{width: 75%;}
 
 .main_top2{background:url(../images/m_topbg2.gif) repeat-x; padding:38px 0 41px 0;}
 .main_top2 .main_topin2{ width:90%; margin:0 auto;}
