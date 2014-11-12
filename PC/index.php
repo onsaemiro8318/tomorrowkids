@@ -65,6 +65,7 @@
 		}
 	});
 	$(document).ready(function(){
+
 		$(".mask").click(function(){
 			$(".mask").fadeOut(500);
 		//	$(".video_but").show();
