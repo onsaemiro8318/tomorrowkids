@@ -180,7 +180,7 @@ function kt_ajax(test_idx)
 	$.ajax({
 		type     : "POST",
 		async    : false,
-		url      : "../main_exec.php",
+		url      : "../main_exec_test.php",
 		data     : ({
 			"exec"     : "update_user_share" ,
 			"test_idx" : test_idx,
