@@ -160,7 +160,7 @@ function kt_share(job, job_explain, test_idx, job_imgurl, user_nickname)
 {
 	Kakao.Link.sendTalkLink({
 		//container: '#kakao-link-btn',
-		label: user_nickname + "님에게 어울리는 내일은 " + job + "입니다. 당신도 한번 테스트해 보세요.",
+		label: "저에게 어울리는 내일은 " + job + "입니다. 당신도 한번 테스트해 보세요.",
 		image: {
 			src: job_imgurl,
 			width: '300',
