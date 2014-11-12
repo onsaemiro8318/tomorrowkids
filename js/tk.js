@@ -417,29 +417,6 @@ function checkLoginState() {
 	});
 }
 
-window.fbAsyncInit = function() {
-	FB.init({
-		appId      : '293604627507652',
-		cookie     : true,  // enable cookies to allow the server to access 
-						// the session
-		xfbml      : true,  // parse social plugins on this page
-		version    : 'v2.0' // use version 2.1
-	});
-
-	FB.getLoginStatus(function(response) {
-		statusChangeCallback(response);
-	});
-
-};
-
-// Load the SDK asynchronously
-(function(d, s, id) {
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) return;
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/ko_KR/sdk.js";
-	fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
 
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
@@ -453,6 +430,30 @@ function testAPI() {
 // 페이스북 로그인
 function facebook_login()
 {
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '293604627507652',
+			cookie     : true,  // enable cookies to allow the server to access 
+							// the session
+			xfbml      : true,  // parse social plugins on this page
+			version    : 'v2.0' // use version 2.1
+		});
+
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});
+
+	};
+
+	// Load the SDK asynchronously
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/ko_KR/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
 	//if( navigator.userAgent.match('CriOS') ){
 	//	window.open('https://www.facebook.com/dialog/oauth?client_id=293604627507652&redirect_uri='+ document.location.href +'&scope=public_profile,email', '', null);
 	//}else{
