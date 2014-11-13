@@ -267,109 +267,172 @@ function kt_ajax(test_idx)
 
 function ks_share(job, job_explain, test_idx, job_imgurl)
 {
-	// 로그인 창을 띄웁니다.
-	Kakao.Auth.login({
-		success: function(authObj) {
-			// 로그인 성공시 API를 호출합니다.
-			Kakao.API.request({
-				url: '/v1/user/me',
-				success: function(res) {
-					jsonStr = JSON.stringify(res);
-					obj = JSON.parse(jsonStr);
-					ka_access_token = Kakao.Auth.getAccessToken();
-					ka_refresh_token = Kakao.Auth.getRefreshToken();
+	if (ka_access_token != null)
+	{
+		// 로그인 창을 띄웁니다.
+		Kakao.Auth.login({
+			success: function(authObj) {
+				// 로그인 성공시 API를 호출합니다.
+				Kakao.API.request({
+					url: '/v1/user/me',
+					success: function(res) {
+						jsonStr = JSON.stringify(res);
+						obj = JSON.parse(jsonStr);
+						ka_access_token = Kakao.Auth.getAccessToken();
+						ka_refresh_token = Kakao.Auth.getRefreshToken();
 
-					Kakao.API.request({
-						url: '/v1/api/story/isstoryuser',
-						success: function(res) {
-							var ksUserJsonStr = JSON.stringify(res);
-							var ksUserObj = JSON.parse(ksUserJsonStr);
-							var isStoryUser = ksUserObj.isStoryUser;
+						Kakao.API.request({
+							url: '/v1/api/story/isstoryuser',
+							success: function(res) {
+								var ksUserJsonStr = JSON.stringify(res);
+								var ksUserObj = JSON.parse(ksUserJsonStr);
+								var isStoryUser = ksUserObj.isStoryUser;
 
-							// 카카오스토리 유저일 때
-							if(isStoryUser == true){
-								Kakao.API.request( {
-									url : '/v1/api/story/linkinfo',
-									data : {
-										url : 'http://www.dreamfull.or.kr/tomorrowkids/ks'
-									}
-								}).then(function(res) {
-									// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-									return Kakao.API.request( {
-										url : '/v1/api/story/post/link',
+								// 카카오스토리 유저일 때
+								if(isStoryUser == true){
+									Kakao.API.request( {
+										url : '/v1/api/story/linkinfo',
 										data : {
-										link_info : {
-											url : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
-											host : 'www.dreamfull.or.kr',
-											title : '내일을 부탁해',
-											image : [job_imgurl],
-											description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
-										},
-										content : "당신에게 어울리는 내일은\n " + job + "입니다!"
-										},
-										success: function(res) {
-											alert("카카오스토리에 당신에게 어울리는 내일이 공유 되었습니다.");
-											$.ajax({
-												type     : "POST",
-												async    : false,
-												url      : "../main_exec.php",
-												data     : ({
-													"exec"     : "update_user_share" ,
-													"test_idx" : test_idx,
-													"share_gubun" : 'ks'
-												}),
-												success: function(response){
-													var width = $(window).width();
-													//var height = $(window).height();
-
-													var height = 0;
-
-													if( browser.msie ){ //IE
-														var scrollHeight = document.documentElement.scrollHeight;
-														var browserHeight = document.documentElement.clientHeight;
-														height = scrollHeight;
-
-													} else if ( browser.safari ){ //Chrome || Safari
-														height = document.body.scrollHeight;
-													} else if ( browser.firefox ){ // Firefox || NS
-														var bodyHeight = document.body.clientHeight;
-														height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-													} else if ( browser.opera ){ // Opera
-														var bodyHeight = document.body.clientHeight;
-														height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-													}
-
-													$(".mask").width(width);
-													$(".mask").height(height);
-													$(".mask").fadeTo(1000, 0.7);
-													$("#email_div").fadeIn(500);
-												//$("#video_fremebox").fadeIn(500);
-									  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-													//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
-													var openNewWindow = window.open("about:blank");
-													openNewWindow.location.href = "http://www.naver.com";
-												} */
-												}
-											}); 
+											url : 'http://www.dreamfull.or.kr/tomorrowkids/ks'
 										}
+									}).then(function(res) {
+										// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
+										return Kakao.API.request( {
+											url : '/v1/api/story/post/link',
+											data : {
+											link_info : {
+												url : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
+												host : 'www.dreamfull.or.kr',
+												title : '내일을 부탁해',
+												image : [job_imgurl],
+												description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
+											},
+											content : "당신에게 어울리는 내일은\n " + job + "입니다!"
+											},
+											success: function(res) {
+												alert("카카오스토리에 당신에게 어울리는 내일이 공유 되었습니다.");
+												$.ajax({
+													type     : "POST",
+													async    : false,
+													url      : "../main_exec.php",
+													data     : ({
+														"exec"     : "update_user_share" ,
+														"test_idx" : test_idx,
+														"share_gubun" : 'ks'
+													}),
+													success: function(response){
+														var width = $(window).width();
+														//var height = $(window).height();
+
+														var height = 0;
+
+														if( browser.msie ){ //IE
+															var scrollHeight = document.documentElement.scrollHeight;
+															var browserHeight = document.documentElement.clientHeight;
+															height = scrollHeight;
+
+														} else if ( browser.safari ){ //Chrome || Safari
+															height = document.body.scrollHeight;
+														} else if ( browser.firefox ){ // Firefox || NS
+															var bodyHeight = document.body.clientHeight;
+															height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+														} else if ( browser.opera ){ // Opera
+															var bodyHeight = document.body.clientHeight;
+															height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+														}
+
+														$(".mask").width(width);
+														$(".mask").height(height);
+														$(".mask").fadeTo(1000, 0.7);
+														$("#email_div").fadeIn(500);
+													//$("#video_fremebox").fadeIn(500);
+										  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+														//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
+														var openNewWindow = window.open("about:blank");
+														openNewWindow.location.href = "http://www.naver.com";
+													} */
+													}
+												}); 
+											}
+										});
 									});
-								});
-							// 카카오스토리 유저 아닐 때
-							}else { 
-								alert("카카오스토리 이용자가 아닙니다. 가입하신 후 이용해주세요.");
-								window.open("https://story.kakao.com/");
+								// 카카오스토리 유저 아닐 때
+								}else { 
+									alert("카카오스토리 이용자가 아닙니다. 가입하신 후 이용해주세요.");
+									window.open("https://story.kakao.com/");
+								}
 							}
+						});
+
+					},
+					fail : function(res) {
+						alert(JSON.stringify(res));
+					}
+				});
+
+			},
+		});
+
+	}else{
+		Kakao.API.request( {
+			url : '/v1/api/story/post/link',
+			data : {
+			link_info : {
+				url : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
+				host : 'www.dreamfull.or.kr',
+				title : '내일을 부탁해',
+				image : [job_imgurl],
+				description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
+			},
+			content : "당신에게 어울리는 내일은\n " + job + "입니다!"
+			},
+			success: function(res) {
+				alert("카카오스토리에 당신에게 어울리는 내일이 공유 되었습니다.");
+				$.ajax({
+					type     : "POST",
+					async    : false,
+					url      : "../main_exec.php",
+					data     : ({
+						"exec"     : "update_user_share" ,
+						"test_idx" : test_idx,
+						"share_gubun" : 'ks'
+					}),
+					success: function(response){
+						var width = $(window).width();
+						//var height = $(window).height();
+
+						var height = 0;
+
+						if( browser.msie ){ //IE
+							var scrollHeight = document.documentElement.scrollHeight;
+							var browserHeight = document.documentElement.clientHeight;
+							height = scrollHeight;
+
+						} else if ( browser.safari ){ //Chrome || Safari
+							height = document.body.scrollHeight;
+						} else if ( browser.firefox ){ // Firefox || NS
+							var bodyHeight = document.body.clientHeight;
+							height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+						} else if ( browser.opera ){ // Opera
+							var bodyHeight = document.body.clientHeight;
+							height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
 						}
-					});
 
-				},
-				fail : function(res) {
-					alert(JSON.stringify(res));
-				}
-			});
-
-		},
-	});
+						$(".mask").width(width);
+						$(".mask").height(height);
+						$(".mask").fadeTo(1000, 0.7);
+						$("#email_div").fadeIn(500);
+					//$("#video_fremebox").fadeIn(500);
+		  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+						//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
+						var openNewWindow = window.open("about:blank");
+						openNewWindow.location.href = "http://www.naver.com";
+					} */
+					}
+				}); 
+			}
+		});
+	}
 }
 
 function fb_share(job, job_explain, test_idx, job_num)
