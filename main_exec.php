@@ -1,5 +1,5 @@
 <?php
-include_once "config_test.php";
+include_once "config.php";
 
 switch ($_REQUEST['exec'])
 {
