@@ -4,13 +4,14 @@
 	include_once "header.php";
 
 	if ( isset($_SESSION['ss_mb_id']) == false ) {
-		header('Location: index.php'); 
+		//header('Location: index.php'); 
+		echo "<script>location.href='index.php'</script>"; 
 		exit; 
 	}
 
 	// 주소 바로 입력시 index로 이동
 	if ( !isset($_SERVER['HTTP_REFERER']) ) { 
-		header('Location: index.php'); 
+		echo "<script>location.href='index.php'</script>"; 
 		exit; 
 	} 
 
