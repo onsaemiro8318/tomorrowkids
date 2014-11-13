@@ -267,7 +267,7 @@ function kt_ajax(test_idx)
 
 function ks_share(job, job_explain, test_idx, job_imgurl)
 {
-	if (ka_access_token)
+	if (ka_access_token != "")
 	{
 		Kakao.API.request({
 			url: '/v1/api/story/isstoryuser',
