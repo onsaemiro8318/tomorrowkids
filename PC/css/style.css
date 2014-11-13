@@ -88,10 +88,18 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .facebookbut{ width:335px; margin:0 auto; padding-top:30px;}
 */
 
+/*
 .re_text{ background:url(../images/result_arrow.gif) no-repeat left; padding-left:17px; color:#33528d; font-size:18px; text-decoration:underline; font-family:'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .resulttwotext .big{ color:#71baad; font-size:25px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; padding:30px 0 10px 0;}
 .resulttwotext .sm{ color:#70b8ac; font-size:16px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
 .undertext{ color:#fff; font-size:16px; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif'; text-align:center; padding-top:20px;}
+.facebookbut{ width:700px; margin:0 auto; padding-top:30px;}
+*/
+
+.re_text{ background:url(../images/result_arrow.gif) no-repeat left; padding-left:17px; color:#33528d; font-size:18px; text-decoration:underline; font-family:'Malgun Gothic',Dotum,'돋움',Dotum,AppleSDGothicNeo,sans-serif;}
+.resulttwotext .big{ color:#71baad; font-size:25px; font-family: 'Malgun Gothic',Dotum,'돋움',Dotum,AppleGothic,Arial,sans-serif; padding:30px 0 10px 0;}
+.resulttwotext .sm{ color:#70b8ac; font-size:16px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
+.undertext{ color:#fff; font-size:16px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif; text-align:center; padding-top:20px;}
 .facebookbut{ width:700px; margin:0 auto; padding-top:30px;}
 
 
@@ -117,8 +125,8 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .result_box2 .plicon{ padding-right:20px;}
 .result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif; padding-bottom:20px;}
 .result_box2 .tag{ color:#6e80a9; font-size:19px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif; padding-right:5px;}
-.result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:675px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
-.result_box2 .anstextone{ font-size:19px; color:#748bb7;width:675px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
+.result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:685px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
+.result_box2 .anstextone{ font-size:19px; color:#748bb7;width:685px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
 /*.result_box2 .textinbox{}*/
 .result_box2 .textinbox{width:720px;}
 /*.result_box2 .nextbut{ width:158px; margin:26px 0 0 232px;}*/

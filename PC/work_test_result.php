@@ -3,7 +3,7 @@
 	include_once "../config.php";
 	include_once "header.php";
 
-	if ( isset($_SESSION['ss_mb_id']) == false ) {
+	if ( isset($_SESSION['ss_mb_id']) == false && $_SERVER['REMOTE_ADDR'] != "127.0.0.1" ) {
 		header('Location: index.php'); 
 		exit; 
 	}
