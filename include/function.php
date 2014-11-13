@@ -127,7 +127,7 @@
 		global $_gl;
 		global $my_db;
 
-		$query 		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE share='Y'";
+		$query 		= "SELECT * FROM ".$_gl['tk_member_table']."";
 		$result 	= mysqli_query($my_db, $query);
 		$info		= mysqli_num_rows($result);
 
@@ -174,12 +174,12 @@
 		return $info;
 	}
 
-	function TK_InsertUserInfo($userid,$ip_addr,$media,$gubun,$user_img,$user_name)
+	function TK_InsertUserInfo($userid,$ip_addr,$gubun)
 	{
 		global $_gl;
 		global $my_db;
 
-		$query = "INSERT INTO ".$_gl['tk_member_table']." (user_id, ip_addr, created_at, updated_at, media, gubun, mb_image, mb_nickname) values ('".$userid."','".$ip_addr."',now(),now(),'".$media."','".$gubun."','".$user_img."','".$user_name."')";
+		$query = "INSERT INTO ".$_gl['tk_member_table']." (user_id, ip_addr, created_at, updated_at, gubun) values ('".$userid."','".$ip_addr."',now(),now(),'".$gubun."')";
 		$result = mysqli_query($my_db, $query);
 	}
 
@@ -202,12 +202,12 @@
 
 	}
 
-	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$media,$gubun)
+	function TK_InsertTestResultUserInfo($userid,$selected_val,$selected_job,$gubun)
 	{
 		global $_gl;
 		global $my_db;
         
-		$query = "INSERT INTO ".$_gl['tk_test_result_table']." (user_id, answer, job, media, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$media."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
+		$query = "INSERT INTO ".$_gl['tk_test_result_table']." (user_id, answer, job, ip_addr, regdate, gubun) values ('".$userid."','".$selected_val."','".$selected_job."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
 		$result = mysqli_query($my_db, $query);
 		$test_result = mysqli_insert_id($my_db);
 
@@ -224,12 +224,18 @@
 		return $test_result;
 	}
 
-	function TK_UpdateUserShare($test_idx,$share_on)
+	function TK_UpdateUserShare($test_idx,$share_on,$share_gubun)
 	{
 		global $_gl;
 		global $my_db;
-        
-		$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."' WHERE idx= '".$test_idx."'";
+
+		if ($share_gubun == "fb")
+			$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."', fb_share = 'Y' WHERE idx= '".$test_idx."'";
+		else if ($share_gubun == "kt")
+			$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."', kt_share = 'Y' WHERE idx= '".$test_idx."'";
+		else
+			$query = "UPDATE ".$_gl['tk_test_result_table']." SET share = '".$share_on."', ks_share = 'Y' WHERE idx= '".$test_idx."'";
+
 		$result = mysqli_query($my_db, $query);  
 	}
 

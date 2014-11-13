@@ -3,9 +3,15 @@
 	include_once "../config.php";
 	include_once "header.php";
 
+	if ( isset($_SESSION['ss_mb_id']) == false ) {
+		//header('Location: index.php'); 
+		echo "<script>location.href='index.php'</script>"; 
+		exit; 
+	}
+
 	// 주소 바로 입력시 index로 이동
 	if ( !isset($_SERVER['HTTP_REFERER']) ) { 
-		header('Location: index.php'); 
+		echo "<script>location.href='index.php'</script>"; 
 		exit; 
 	} 
 
@@ -17,6 +23,10 @@
 
 	if (isset($_POST['test_idx']) == false)
 		$_POST['test_idx'] = "1";
+
+	if (isset($_POST['selected_val']) == false)
+		$_POST['selected_val'] = "";
+
 	// 질문 정보
 	$question_data	= TK_GetTestQuestionInfo($_POST['test_idx']);
 
@@ -40,7 +50,7 @@
       <h1><a href="http://www.dreamfull.or.kr" target="_blank"><img src="images/logo.png" alt="dreamfull"/></a></h1>
       <div class="fl_left tomrlogo"><a href="index.php"><img src="images/tomrr_logo.png"/></a></div>
       <div class="fl_right sub_toprite">
-        <span class="toptext">10,000명의 내일이 모이면<br/>아이들의 내일을 위한<br/>특별 강연회가 열립니다!</span>
+        <span class="toptext">10,000명의 내일이 모이면<br/>아이들의 내일을 위해<br/>5천만원이 기부됩니다.</span>
         <div class="number_sub">
           <ul>
             <li><?=$t_count1?></li>

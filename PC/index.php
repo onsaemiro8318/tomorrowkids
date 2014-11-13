@@ -3,9 +3,7 @@
 	include_once "../config.php";
 	include_once "header.php";
 
-	unset($_SESSION['ss_mb_id']);
-	unset($_SESSION['ss_media']);
-
+	session_destroy();
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
@@ -87,13 +85,14 @@
       <div class="main_topinbg1">
         <h1><a href="http://www.dreamfull.or.kr" target="_blank"><img src="images/logo.png" alt="dreamfull"/></a></h1>
         <div class="videobox"><div class="video_but"><a href="#" onclick="play_movie('<?=$gubun?>');"><img src="images/play_but.png"/></a></div></div>
+        <div class="testbox"><div class="test_but"><a href="#" onclick="test_start();"><img src="images/test_bt.png"/></a></div></div>        
       </div>
     </div>
   <!--Line1 end-->
   <!--Line2 start-->
     <div class="main_top2">
       <div class="main_topin2">
-        <p class="text_data"><span class="f_text">10,000명의 내일이 모이면</span><br/><span class="t_text">아이들의 내일을 위한 특별 강연회</span>가 열립니다!</p>
+        <p class="text_data"><span class="f_text">10,000명의 내일이 모이면</span><br/><span class="t_text">아이들의 내일을 위해 5천만원</span>이 기부됩니다.</p>
         <div class="gr_box">
           <div class="greenco_left fl_left"></div><div class="greenco_right fl_left"><div class="peopleic"><img src="images/gr_peopleicon.png"/></div></div><div class="minic"><img src="images/gr_15min.png"/></div><div class="line_number"><img src="images/gr_number_line.png"/></div>
         </div>
@@ -115,8 +114,7 @@
 <!--Line3 start-->
     <div class="main_top3">
       <div class="soc_linkbox">
-        <div class="hidden"><span class="fl_left facebookic"><a href="#" onclick="facebook_login();"><img src="images/facebook_but.png"/></a></span><span class="fl_left"><a href="#" onclick="kakao_login();"><img src="images/kakaotalk_but.png"/></a></span></div>
-        <p class="text hidden">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
+        <div class="hidden"></div>
       </div>
       <div class="stepbox hidden">
         <div><img src="images/step_fiveicon.png"/></div>

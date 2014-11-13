@@ -3,8 +3,9 @@
 	include_once "../config.php";
 	include_once "header.php";
 
-	unset($_SESSION['ss_mb_id']);
-	unset($_SESSION['ss_media']);
+	//unset($_SESSION['ss_mb_id']);
+	//unset($_SESSION['ss_media']);
+	session_destroy();
 
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
@@ -49,6 +50,7 @@
 		$(".greenco_left").css("width","<?=$left_per?>%");
 		$(".greenco_right").css("width","<?=$right_per?>%");
 		$(".peopleic").css("left","<?=$left_per?>%");
+		facebook_logout();
 	});
 
     </script>
@@ -65,11 +67,14 @@
             </div>
             <!--<div class="top1_mobbotbg"><img src="images/top_1bg_img.png"/></div>-->
         </div>
+      	<div class="testbox">
+          <div class="facebook_but"><a href="#" onclick="test_start();"><img src="images/test_bt_mobile.png"/></a></div>
+        </div>
     </div>
     <!--Line2 start-->
     <div class="main_top2">
     	<div class="main_topin2">
-        <p class="text_data"><span class="f_text">10,000명의 내일이 모이면</span><br/><span class="t_text">아이들의 내일을 위한 특별 강연회</span><span class="f_text">가<br/>열립니다!</span></p>
+        <p class="text_data"><span class="f_text">10,000명의 내일이 모이면</span><br/><span class="t_text">아이들의 내일을 위해 5천만원</span><span class="f_text">이<br/>기부됩니다.</span></p>
         <div class="gr_box">
         	<div class="greenco_left fl_left"></div><div class="greenco_right fl_left"><div class="peopleic"><img src="images/gr_peopleicon_mob.png"/></div></div><div class="minic"><img src="images/gr_15min_mob.png"/></div>
             <div class="line_number_mob">
@@ -99,11 +104,6 @@
     </div>
     <!--Line2 end-->
     <div class="mob_top3box">
-    	<div class="so_butbox">
-            <div class="facebook_but"><a href="#" onclick="facebook_login();"><img src="images/facebook_mobbut.png"/></a></div>
-            <div><a href="#" onclick="kakao_login();"><img src="images/kakaotalk_mobbut.png"/></a></div>
-        </div>
-        <p class="noticetext">* 어떠한 정보도 무단으로 포스팅하지 않습니다.</p>
         <div class="step_box_mob"><img src="images/step_mob.png"/></div>
         <div class="event"><img src="images/event_img.png"/></div>
         <div class="so_butbox">

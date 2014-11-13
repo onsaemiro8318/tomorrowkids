@@ -1,7 +1,13 @@
 <?
 	// 설정파일
 	include_once "../config.php";
-	include_once "header.php";
+	//include_once "header.php";
+
+	if ( isset($_SESSION['ss_mb_id']) == false ) {
+		header('Location: index.php');
+		exit;
+	}
+
 	$user_job		= TK_GetUserJobInfo($_REQUEST['job']);
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
@@ -21,6 +27,26 @@
 	$job_imgurl_kakao	= $_gl['kakao_img'][$_REQUEST['job']];
 
 ?>
+<html>
+  <head>
+    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
+
+<!-- <meta property="og:url" content="http://www.dreamfull.or.kr/tomorrowkids/fb" /> 
+<meta property="og:title" content="내일을 부탁해" />
+<meta property="og:description" content="당신에게 어울리는 내일은 입니다!" /> 
+<meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg" />  -->
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
+    <!-- <script type="text/javascript" src="../js/custom.js"></script> -->
+    <script type='text/javascript' src='../js/tk.js'></script>
+    <script type='text/javascript' src='../js/googleAnalytics.js'></script>
+    <script type='text/javascript' src='../js/kakao.link.js'></script>
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
 <script type="text/javascript">
 	window.history.forward(0);
 
@@ -42,13 +68,15 @@
 	}
 
 </script>
+  </head>
+
 <body>
 
 <div class="mob_sub_wrapper">
     <div class="mob_sub_top1">
 	    <h1><a href="http://www.dreamfull.or.kr/" target="_blank"><img src="images/logo.png"/></a></h1>
         <div>
-        	<div class="tmor_text fl_left"><a href="http://www.tomorrowkids.or.kr/"><img src="images/page_title.png"/></a></div>
+        	<div class="tmor_text fl_left"><a href="index.php"><img src="images/page_title.png"/></a></div>
             <div class="mob_sub_number fl_right">
                 <div class="peopletitle">현재 참여자</div>
                 <div class="numberbox">
@@ -83,19 +111,9 @@
 당신의 내일(Work) 결과를 SNS에 공유하시면,
 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.
         </div>
-<?
-	if ($user_info['media'] == $_gl['login_media']['facebook'])
-	{
-?>    
         <div class="face_dt_button"><a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
-<?
-	}else{
-?>
         <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl2?>','<?=$user_info['mb_nickname']?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
-        <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
-<?
-	}
-?>    
+        <!-- <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div> -->
     </div>
     <div class="footer_bggry">
 <?

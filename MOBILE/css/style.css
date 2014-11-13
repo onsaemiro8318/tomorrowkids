@@ -31,6 +31,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .sum_text .bold{font-family:'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif; !important;}
 .top1_mobbotbg{ overflow:hidden;}
 .top1_mobbotbg img{ width:100%;}
+.testbox{ padding-left:20%; position: relative; margin-top: 77%;}
+.testbox img{width: 75%;}
 
 .main_top2{background:url(../images/m_topbg2.gif) repeat-x; padding:38px 0 41px 0;}
 .main_top2 .main_topin2{ width:90%; margin:0 auto;}
@@ -63,7 +65,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .so_butbox{ padding-left:7%;}
 .so_butbox img{ width:93%;}
 .mob_top3box .facebook_but{ padding:10% 0 5% 0;}
-.noticetext{ font-size:24px; padding-top:20px; color:#000; text-align:center;}
+.noticetext{ font-size:24px; padding-top:5px; color:#000; text-align:center;}
+.notice_ios{ font-size:24px; padding-top:20px; color:#000; text-align:center; letter-spacing:-1px;}
 .mob_top3box .donation_but{ margin-bottom: 10%;}
 
 .step_box_mob img{ width:87%; padding-left:6%; margin:10% 0;}
@@ -114,10 +117,17 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 .top3_content .title_work{ font-size:26px; color:#71baad; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif; padding:2% 0;}
 .top3_content .summary{ color:#70b8ac; font-size:18px; letter-spacing:-0.1; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
 .top3_content .arrow img{ width:20%;}
+
+/*
 .summary2{ color:#fff; font-size:26px; padding:0 10%; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
 .face_dt_button{ width:498px; margin:0 auto; padding:15% 0 10% 0;}
+*/
+
+.summary2{ color:#fff; font-size:26px; padding:0 10%; font-family: 'Malgun Gothic,Dotum,돋움,Helvetica,AppleSDGothicNeo,sans-serif';}
+.face_dt_button{ width:498px; margin:0 auto; padding:15% 0 5% 0;}
+
 .face_dt_button img{ width:80%;}
-.kakaotalk_dt_button{ width:498px; margin:0 auto; padding:15% 0 5% 0;}
+.kakaotalk_dt_button{ width:498px; margin:0 auto; padding:0% 0 5% 0;}
 .kakaotalk_dt_button img{ width:80%;}
 .kakaostory_dt_button{ width:498px; margin:0 auto; padding:0% 0 5% 0;}
 .kakaostory_dt_button img{ width:80%;}
@@ -192,7 +202,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.number_box_mob .number3{ margin-left:7% !important;}
 	.number_box_mob .number4{ margin-left:1% !important;}
 	.number_box_mob .number5{ margin-left:1% !important;}
-	.noticetext{ font-size:14px; padding-top:4px;}
+	.noticetext{ font-size:14px; padding-top:2px;}
+	.notice_ios{ font-size:14px; padding-top:12px;}
 	.footer_mob .line1{ font-size:17px; height:65px;}
 	.footer_mob .line2{ font-size:17px;}
 	.footer_mob .logoline .link1 img{ width:40%;}
@@ -224,7 +235,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.number_box_mob .number3{ margin-left:2% !important;}
 	.number_box_mob .number4{ margin-left:2% !important;}
 	.number_box_mob .number5{ margin-left:2% !important;}
-	.noticetext{ font-size:14px; padding-top:4px;}
+	.noticetext{ font-size:14px; padding-top:2px;}
+	.notice_ios{ font-size:14px; padding-top:12px;}
 	.footer_mob .line1{ font-size:16px; height:60px;}
 	.footer_mob .line2{ font-size:16px;}
 	.footer_mob .logoline .link1 img{ width:40%;}
@@ -236,7 +248,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:32px;}
 	.mob_sub_top2 .white1{ font-size:14px; padding:0 2%;}
 	.top2_content{ padding:5% 5% 0 5%; height:600px;}
-	.top2_content .quas{ font-size:22px;}
+	.top2_content .quas{ font-size:22px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{ font-size:22px;}
 	.top2_content .tagtext2{ font-size:22px;}
 	.top2_content .tag{ font-size:22px;}
@@ -292,7 +304,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.number_box_mob .number3{ margin-left:9% !important;}
 	.number_box_mob .number4{ margin-left:2% !important;}
 	.number_box_mob .number5{ margin-left:2% !important;}
-	.noticetext{ font-size:14px; padding-top:4px;}
+	.noticetext{ font-size:14px; padding-top:2px;}
+	.notice_ios{ font-size:14px; padding-top:12px;}
 	.footer_mob .line1{ font-size:12px; height:50px;}
 	.footer_mob .line2{ font-size:12px;}
 	.footer_mob .logoline .link1 img{ width:43%;}
@@ -305,7 +318,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:24px;}
 	.mob_sub_top2 .white1{ font-size:14px; padding:3% 2% 4% 2%;}
 	.top2_content{ padding:5% 5% 0 5%; height:480px;}
-	.top2_content .quas{ font-size:14px;}
+	.top2_content .quas{ font-size:14px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{  font-size:14px;}
 	.top2_content .tagtext2{ font-size:14px;}
 	.top2_content .tag{ font-size:14px;}
@@ -365,7 +378,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.number_box_mob .number3{ margin-left:9% !important;}
 	.number_box_mob .number4{ margin-left:2% !important;}
 	.number_box_mob .number5{ margin-left:2% !important;}
-	.noticetext{ font-size:14px; padding-top:4px;}
+	.noticetext{ font-size:14px; padding-top:2px;}
+	.notice_ios{ font-size:14px; padding-top:12px;}
 	.footer_mob .line1{ font-size:12px; height:50px;}
 	.footer_mob .line2{ font-size:12px;}
 	.footer_mob .logoline img{ width:80%;}
@@ -377,7 +391,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 	.mob_sub_top2 .white{ font-size:24px;}
 	.mob_sub_top2 .white1{ font-size:18px; width:85%; margin:0 auto;}
 	.top2_content{ padding:10% 7% 0 7%}
-	.top2_content .quas{ font-size:14px;}
+	.top2_content .quas{ font-size:14px; font-family: 'Nanum Gothic'; font-weight:bold}
 	.top2_content .tagtext{ font-size:14px;}
 	.top2_content .tag{ font-size:14px;}
 	.top2_content .tagtext2{ font-size:14px;}
