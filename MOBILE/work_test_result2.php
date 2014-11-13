@@ -2,6 +2,7 @@
 	// 설정파일
 	include_once "../config.php";
 	//include_once "header.php";
+
 	$user_job		= TK_GetUserJobInfo($_REQUEST['job']);
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
@@ -26,22 +27,6 @@
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<link rel="image_src" href="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg" />
-<meta property="fb:app_id" content="293604627507652" />
-
-	<meta property="og:title" content="test"/>
-
-	<meta property="og:type" content="article"/>
-
-	<meta property="og:url" content="http://www.tomorrow.or.kr"/>
-
-	<meta property="og:description" content="This is a description."/>
-
-	<meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_2.jpg"/>
-
-	<meta property="og:image:width" content="1200" />
-
-	<meta property="og:image:height" content="630" />
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
 
 <!-- <meta property="og:url" content="http://www.dreamfull.or.kr/tomorrowkids/fb" /> 
@@ -53,7 +38,7 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
     <!-- <script type="text/javascript" src="../js/custom.js"></script> -->
-    <script type='text/javascript' src='../js/tk2.js'></script>
+    <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type='text/javascript' src='../js/kakao.link.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
@@ -77,18 +62,10 @@
 		$("#privacy_term").fadeOut(500);
 	}
 
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=293604627507652&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
 </script>
   </head>
 
 <body>
-<div id="fb-root"></div>
 
 <div class="mob_sub_wrapper">
     <div class="mob_sub_top1">
@@ -129,20 +106,9 @@
 당신의 내일(Work) 결과를 SNS에 공유하시면,
 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.
         </div>
-<?
-	if ($user_info['media'] == $_gl['login_media']['facebook'])
-	{
-?>    
-        <div class="face_dt_button"><a class="btn" target="_blank" href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo urlencode(YOUR_TITLE);?>&amp;p[summary]=<?php echo urlencode(YOUR_PAGE_DESCRIPTION) ?>&amp;p[url]=<?php echo urlencode(YOUR_PAGE_URL); ?>&amp;p[images][0]=<?php echo urlencode(YOUR_LINK_THUMBNAIL); ?>"><a href="#" onclick="fb_share_test('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
-
-<?
-	}else{
-?>
+        <div class="face_dt_button"><a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');"><img src="images/facebook_mobbut_1.png"/></a></div>
         <div class="kakaotalk_dt_button"><a href="#" id="kakao-link-btn" onclick="kt_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl2?>','<?=$user_info['mb_nickname']?>');"><img src="images/kakaotalk_mobbut_1.png"/></a></div>
         <div class="kakaostory_dt_button"><a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');"><img src="images/kakaostory_mobbut_1.png"/></a></div>
-<?
-	}
-?>    
     </div>
     <div class="footer_bggry">
 <?
