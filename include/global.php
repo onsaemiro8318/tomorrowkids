@@ -44,7 +44,7 @@
 	$_gl['kakao_img'][17] = "http://dn-xl1-story.kakao.co.kr/dn//kYweW/hydbGmvyUA/7PHswgZ7kfFWjSbUrYOHD1/img.jpg?width=1200&height=630";
 	$_gl['kakao_img'][18] = "http://dn-xl0-story.kakao.co.kr/dn//dRGuO/hydbBS2p4k/3e56pL6ahdtWX3omWamHX1/img.jpg?width=1200&height=630";
 	$_gl['kakao_img'][19] = "http://dn-xl0-story.kakao.co.kr/dn//bhfSAh/hydbwjToJR/u426d35q8PbI8VlNOuJG8k/img.jpg?width=1200&height=630";
-	$_gl['kakao_img'][20] = "http://dn-xl0-story.kakao.co.kr/dn//zn9wn/hyc3ITjLpO/Ktp9akb0RjRkblVyvkQXK0/img.jpg?width=1200&height=630";
+	$_gl['kakao_img'][20] = "http://dn-xl1-story.kakao.co.kr/dn//W7NdX/hyc9dZLSyh/KwlSkTd3KsMEjSv2Nu7Klk/img.jpg?width=1200&height=630";
     
 	$_gl['kakao_img'][21] = "http://dn-xl1-story.kakao.co.kr/dn//bQVcN6/hydbznnPxU/sx8VN4wRwGEgVeZMVRHNQ0/img.jpg?width=1200&height=630";
 	$_gl['kakao_img'][22] = "http://dn-xl0-story.kakao.co.kr/dn//zrRqN/hyc84PjnMl/IlB57PUKshapxkC8FIbqtK/img.jpg?width=1200&height=630";
