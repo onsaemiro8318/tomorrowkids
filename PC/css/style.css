@@ -107,8 +107,8 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .result_box2 .plicon{ padding-right:20px;}
 .result_box2 .bluetext{ font-size:20px; color:#33528d; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif; padding-bottom:20px;}
 .result_box2 .tag{ color:#6e80a9; font-size:19px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif; padding-right:5px;}
-.result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:675px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
-.result_box2 .anstextone{ font-size:19px; color:#748bb7;width:675px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
+.result_box2 .anstext{ font-size:19px; color:#32528d; text-decoration:underline; width:685px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
+.result_box2 .anstextone{ font-size:19px; color:#748bb7;width:685px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
 /*.result_box2 .textinbox{}*/
 .result_box2 .textinbox{width:720px;}
 /*.result_box2 .nextbut{ width:158px; margin:26px 0 0 232px;}*/

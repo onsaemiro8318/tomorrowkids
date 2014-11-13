@@ -3,14 +3,14 @@
 	include_once "../config.php";
 	include_once "header.php";
 
-	if ( isset($_SESSION['ss_mb_id']) == false ) {
+	if ( isset($_SESSION['ss_mb_id']) == false && $_SERVER['REMOTE_ADDR'] != "127.0.0.1") {
 		//header('Location: index.php'); 
 		echo "<script>location.href='index.php'</script>"; 
 		exit; 
 	}
 
 	// 주소 바로 입력시 index로 이동
-	if ( !isset($_SERVER['HTTP_REFERER']) ) { 
+	if ( !isset($_SERVER['HTTP_REFERER']) && $_SERVER['REMOTE_ADDR'] != "127.0.0.1" ) { 
 		echo "<script>location.href='index.php'</script>"; 
 		exit; 
 	} 
