@@ -19,7 +19,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .fl_right{float:right;}
 
 .footer_mob a, a:link, a:hover {text-decoration:none; color:#8b8b8b;}
-.mob_top1box{overflow:hidden; height:766px; background:url(../images/mob_top3bg.jpg) no-repeat; background-size:100%; padding-bottom:39%; position:relative;}
+.mob_top1box{overflow:hidden; height:786px; background:url(../images/mob_top3bg.jpg) no-repeat; background-size:100%; padding-bottom:39%; position:relative;}
 .mob_top1box .content{ position:absolute; width:100%;}
 .mob_top1box .content h1{position:absolute; top:20px; left:20px;}
 .mob_top1box .content h1 img{ width:100%; padding:4% 0 0 4%;}
@@ -164,11 +164,11 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 
 @media(max-width:870px){
 	.number_boxwr{ width:80%;}
-	.mob_top1box{ height:683px;}
+	.mob_top1box{ height:753px;}
 }
 @media(max-width:800px){
 	.number_boxwr{ width:90%;}
-	.mob_top1box{ height:626px;}
+	.mob_top1box{ height:686px;}
 	.footer_mob .line2{ font-size:21px;}
   .mob_top1box .content h1 img{ width:90%;}
 	h1 img{ width:25%; padding:4% 0 0 4%;}
@@ -184,7 +184,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
   .number_box_mob .number5{ margin-left:7px;}
   .number_boxwr{ margin:0 auto; width:90%;}
 	.sum_text{ font-size:22px; line-height:140%;}
-	.mob_top1box{ height:498px;}
+	.mob_top1box{ height:558px;}
 /*  .main_top2 .f_text{ font-size:18px;}*/
 /*  .main_top2 .t_text{ font-size:22px;}*/
 	.main_top2 .f_text{ font-size:16px;}
@@ -215,7 +215,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 }
 @media(max-width:520px){
 	.sum_text{ font-size:18px; line-height:130%;}
-	.mob_top1box{ height:344px;}
+	.mob_top1box{ height:404px;}
   .mob_top1box .content h1 img{ width:70%;}
 	h1 img{ width:25%; padding:4% 0 0 4%;}
 /*  .main_top2 .f_text{ font-size:18px;}*/
@@ -284,7 +284,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 }
 @media(max-width:420px){
 	.sum_text{ font-size:16px; line-height:120%;}
-	.mob_top1box{ height:291px;}
+	.mob_top1box{ height:351px;}
   .mob_top1box .content h1 img{ width:60%;}
 	h1 img{ width:25%; padding:4% 0 0 4%;}
 /*  .main_top2 .f_text{ font-size:18px;}*/
@@ -360,7 +360,7 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 }
 @media(max-width:320px){
 	.sum_text{ font-size:12px;}
-	.mob_top1box{ height:236px;}
+	.mob_top1box{ height:316px;}
 /*  .main_top2 .f_text{ font-size:18px;}*/
 /*  .main_top2 .t_text{ font-size:22px;}*/
 	.main_top2 .f_text{ font-size:16px;}
