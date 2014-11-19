@@ -16,7 +16,10 @@
 	$left_per	= ($total_count / 10000) * 100;
 	$right_per	= 100 - $left_per - 1.3;
 
-
+	$iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
+	$iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
+	$iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
+	$Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
 ?>
     <script type='text/javascript'>
 	// 유튜브 반복 재생
@@ -70,6 +73,15 @@
       	<div class="testbox">
           <div class="facebook_but"><a href="#" onclick="test_start();"><img src="images/test_bt_mobile.png"/></a></div>
         </div>
+<?
+	if($Android)
+	{
+?>
+        <p style="text-align:center;font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;font-size:12px">페이스북 오류시 크롬, 사파리 브라우저에서 참여해주세요.</p>
+<?
+	}
+?>
+
     </div>
     <!--Line2 start-->
     <div class="main_top2">
