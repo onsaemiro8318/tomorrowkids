@@ -77,7 +77,7 @@
 	if($Android)
 	{
 ?>
-        <p style="text-align:center;font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;font-size:12px">페이스북 오류시 크롬, 사파리 브라우저에서 참여해주세요.</p>
+        <p style="text-align:center;font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;font-size:12px">페이스북 오류시 크롬, 사파리<br /> 브라우저에서 참여해주세요.</p>
 <?
 	}
 ?>
