@@ -768,7 +768,6 @@ function fitImageSize(obj, href) {
 
 function test_start()
 {
-	alert('1');
 	$.ajax({
 		type     : "POST",
 		async    : false,
