@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
