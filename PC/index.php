@@ -122,7 +122,7 @@
           <li>내일<br/>테스트하기</li>
           <li class="stept1">내일 결과<br/>SNS에 공유하기</li>
           <li class="stept2">참여를 통한<br/>기부 완료</li>
-          <li class="stept3">세상을 바꾸는 시간,15분 과<br/>함께 하는 아이들 교육<br/>프로그램 제작</li>
+          <li class="stept3">세상을 바꾸는 시간, 15분과<br/>함께 하는 아이들 교육<br/>프로그램 제작</li>
         </ul>
       </div>
       <div class="donation"><img src="images/donation_img.png"/><div class="donationbutton"><span class="fl_left pinkbut"><a href="http://www.dreamfull.or.kr/app/newdf/donation/collection_box_detail?themeNo=201401070002" target="_blank"><img src="images/donation_but_pink.png"/></a></span><span class="fl_left"><a href="http://www.dreamfull.or.kr/app/newdf/donation/collection_box" target="_blank"><img src="images/donation_but_green.png"/></a></span></div>
