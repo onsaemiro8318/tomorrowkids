@@ -2,8 +2,8 @@
 	// 설정파일
 	include_once "../config.php";
 	include_once "header.php";
-
-	if ( isset($_SESSION['ss_mb_id']) == false && $_SERVER['REMOTE_ADDR'] != "127.0.0.1") {
+/*
+	if ( isset($_SESSION['ss_mb_id']) == false) {
 		//header('Location: index.php'); 
 		echo "<script>location.href='index.php'</script>"; 
 		exit; 
@@ -14,7 +14,7 @@
 		echo "<script>location.href='index.php'</script>"; 
 		exit; 
 	} 
-
+*/
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
 	$t_count3 = substr($total_count,2,1);
