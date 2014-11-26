@@ -35,7 +35,7 @@ ini_set("display_errors", 1);
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta property="og:title" content="내일을 부탁해" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="www.dreamfull.or.kr/tomorrowkids/fb" />
+<meta property="og:url" content="www.tomorrowkids.or.kr/" />
 <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg" />
 <meta property="og:description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다." />
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
