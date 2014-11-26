@@ -45,6 +45,7 @@
     <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+  </head>
 
 <script type="text/javascript">
 
@@ -69,7 +70,6 @@
 	}
 
 </script>
-  </head>
 <body>
 <div class="main_wrapper">
 <!--Line1 start-->
