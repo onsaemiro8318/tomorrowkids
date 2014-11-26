@@ -193,6 +193,12 @@ ini_set("display_errors", 1);
 			$(".popupbg2").fadeOut(500);
 		});
 		//fncSelectFile();
+
+		if ( "fb" == "<?=$_REQUEST['sns_gubun']?>")
+		{
+			location.href="index.php";
+		}
+
     });
 
 window.fbAsyncInit = function() {
@@ -218,7 +224,7 @@ function fb_share2()
 	var sTop=window.screen.height/2-(280);
 	var sLeft=window.screen.width/2-(310);
 
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php?sns_gubun=fb'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
 
 }
 /*
