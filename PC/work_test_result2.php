@@ -35,7 +35,7 @@ ini_set("display_errors", 1);
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta property="og:title" content="내일을 부탁해" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="www.tomorrowkids.or.kr/" />
+<meta property="og:url" content="http://www.tomorrowkids.or.kr/PC/work_test_result2.php" />
 <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg" />
 <meta property="og:description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다." />
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
@@ -224,7 +224,7 @@ function fb_share2()
 	var sTop=window.screen.height/2-(280);
 	var sLeft=window.screen.width/2-(310);
 
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('www.tomorrowkids.or.kr'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
 
 }
 /*
