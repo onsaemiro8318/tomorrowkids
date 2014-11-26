@@ -2,6 +2,12 @@
 	// 설정파일
 error_reporting(E_ALL & ~E_NOTICE);
 ini_set("display_errors", 1);
+
+	if ( $_REQUEST['sns_gubun'] = "fb" ) {
+		header('Location: index.php'); 
+		exit; 
+	}
+
 	include_once "../config.php";
 	//include_once "header.php";
 /*
@@ -224,7 +230,7 @@ function fb_share2()
 	var sTop=window.screen.height/2-(280);
 	var sLeft=window.screen.width/2-(310);
 
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php?sns_gubun=fb'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
 
 }
 /*
