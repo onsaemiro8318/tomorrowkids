@@ -199,11 +199,12 @@ ini_set("display_errors", 1);
 			$(".popupbg2").fadeOut(500);
 		});
 		//fncSelectFile();
-
+/*
 		if ( "fb" == "<?=$_REQUEST['sns_gubun']?>")
 		{
 			location.href="index.php";
 		}
+*/
     });
 
 window.fbAsyncInit = function() {
