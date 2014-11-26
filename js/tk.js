@@ -425,8 +425,7 @@ function fb_share2(job, job_explain, test_idx, job_num)
 		'href': 'http://www.tomorrowkids.or.kr/PC/work_test_result2.php'
 	},
 		function(response) {
-			alert(response);
-			if (response && response.post_id) {
+			if (response) {
 				$.ajax({
 					type     : "POST",
 					async    : false,
