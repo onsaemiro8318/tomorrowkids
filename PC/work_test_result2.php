@@ -203,7 +203,7 @@ ini_set("display_errors", 1);
 
 window.fbAsyncInit = function() {
 	FB.init({
-		appId      : '293604627507652',
+		appId      : '880257948675085',
 		xfbml      : true,  // parse social plugins on this page
 		version    : 'v2.2' // use version 2.2
 	});
