@@ -26,17 +26,18 @@
 	$job_imgurl_kakao	= $_gl['kakao_img'][$_REQUEST['job']];
 ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" itemscope itemtype="http://schema.org/Article" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" mlns:fb="http://www.facebook.com/2008/fbml" >
+
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
 
-<meta property="og:title" content="내일을 부탁해">
-<meta property="og:type" content="website">
-<meta property="og:url" content="www.tomorrowkids.or.kr/PC/work_test_result2.php">
-<meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg">
-<meta property="og:description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다.">
+<meta property="og:title" content="내일을 부탁해" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="www.tomorrowkids.or.kr/PC/work_test_result2.php" />
+<meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg" />
+<meta property="og:description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다." />
 
     <link rel="shortcut icon" type="image/x-icon" href="./images/tomorrow.ico" />
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
