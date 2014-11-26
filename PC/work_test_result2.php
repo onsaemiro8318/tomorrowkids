@@ -3,10 +3,6 @@
 error_reporting(E_ALL & ~E_NOTICE);
 ini_set("display_errors", 1);
 
-	if ( $_REQUEST['sns_gubun'] == "fb" ) {
-		header('Location: index.php'); 
-		exit; 
-	}
 
 	include_once "../config.php";
 	//include_once "header.php";
@@ -197,14 +193,17 @@ ini_set("display_errors", 1);
 </html>
 <script type="text/javascript">
     $(document).ready(function(){
-    $(".mask").click(function(){
-        $(".mask").fadeOut(500);
-        $(".popupbg1").fadeOut(500);
-        $(".popupbg2").fadeOut(500);
-    });
-	//fncSelectFile();
+		$(".mask").click(function(){
+			$(".mask").fadeOut(500);
+			$(".popupbg1").fadeOut(500);
+			$(".popupbg2").fadeOut(500);
+		});
+		//fncSelectFile();
 
-
+		if ( "fb" == "<?=$_REQUEST['sns_gubun']?>")
+		{
+			location.href="index.php";
+		}
     });
 
 window.fbAsyncInit = function() {
