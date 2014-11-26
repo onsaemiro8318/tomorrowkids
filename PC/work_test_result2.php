@@ -2,12 +2,12 @@
 	// 설정파일
 	include_once "../config.php";
 	//include_once "header.php";
-
+/*
 	if ( isset($_SESSION['ss_mb_id']) == false && $_SERVER['REMOTE_ADDR'] != "127.0.0.1" ) {
 		header('Location: index.php'); 
 		exit; 
 	}
-
+*/
 	$user_job	= TK_GetUserJobInfo($_REQUEST['job']);
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
@@ -220,7 +220,7 @@ function fb_share2()
 	var sTop=window.screen.height/2-(280);
 	var sLeft=window.screen.width/2-(310);
 
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('www.dreamfull.or.kr/tomorrowkids/fb'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('www.tomorrowkids.or.kr/PC/work_test_result2.php'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
 
 }
 /*
