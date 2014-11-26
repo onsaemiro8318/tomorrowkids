@@ -110,7 +110,7 @@ ini_set("display_errors", 1);
 빈곤한 환경으로 이런 일이 있다는 것 조차 모른 채 제한된 꿈을 꾸는 아이들을 도와주세요.<br/>
 당신의 내일(Work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.</div>
   <div class="facebookbut">
-    <a href="#" onclick="fb_share2('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');return false;"><img src="images/facebook_sub.png" style="margin-right:10px"/></a>
+    <a href="#" onclick="fb_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');return false;"><img src="images/facebook_sub.png" style="margin-right:10px"/></a>
     <a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a>
   </div>
 <div class="popupbg1" id="email_div">
@@ -203,7 +203,7 @@ ini_set("display_errors", 1);
 
 window.fbAsyncInit = function() {
 	FB.init({
-		appId      : '880257948675085',
+		appId      : '293604627507652',
 		xfbml      : true,  // parse social plugins on this page
 		version    : 'v2.2' // use version 2.2
 	});
@@ -224,7 +224,58 @@ function fb_share2()
 	var sTop=window.screen.height/2-(280);
 	var sLeft=window.screen.width/2-(310);
 
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php?sns_gubun=fb'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+	//var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+
+	FB.ui({
+		'method': 'share',
+		'href': 'http://www.tomorrowkids.or.kr/PC/work_test_result2.php'
+	}, function (response) {
+		if (response && response.post_id) {
+			$.ajax({
+				type     : "POST",
+				async    : false,
+				url      : "../main_exec.php",
+				data     : ({
+					"exec"     : "update_user_share" ,
+					"test_idx" : test_idx,
+					"share_gubun" : 'fb'
+				})
+			});
+			var width = $(window).width();
+			//var height = $(window).height();
+			
+			var height = 0;
+
+			if( browser.msie ){ //IE
+				var scrollHeight = document.documentElement.scrollHeight;
+				var browserHeight = document.documentElement.clientHeight;
+				height = scrollHeight;
+
+			} else if ( browser.safari ){ //Chrome || Safari
+				height = document.body.scrollHeight;
+			} else if ( browser.firefox ){ // Firefox || NS
+				var bodyHeight = document.body.clientHeight;
+				height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+			} else if ( browser.opera ){ // Opera
+				var bodyHeight = document.body.clientHeight;
+				height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+			}
+
+			$(".mask").width(width);
+			$(".mask").height(height);
+
+			$(".mask").fadeTo(1000, 0.7);
+			$("#email_div").fadeIn(500);
+
+			/*
+			if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+				window.open("http://www.naver.com/");
+			}else{
+				location.href="index.php";
+			}
+			*/
+		}
+	});
 
 }
 /*
