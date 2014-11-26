@@ -219,7 +219,7 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
-function fb_share2()
+function fb_share2(job, job_explain, test_idx, job_num)
 {
 	var sTop=window.screen.height/2-(280);
 	var sLeft=window.screen.width/2-(310);
