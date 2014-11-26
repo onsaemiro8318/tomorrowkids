@@ -421,13 +421,8 @@ function fb_share2(job, job_explain, test_idx, job_num)
 {
 	FB.ui(
 	{
-		method: 'feed',
-		name: '내일을 부탁해',
-		link: 'www.dreamfull.or.kr/tomorrowkids/fb',
-		picture: 'http://www.tomorrowkids.or.kr/images/Desert_test.jpg',
-		caption: 'www.dreamfull.or.kr/tomorrowkids/fb',
-		//description: job + " - " + job_explain
-		description: "당신에게 어울리는 내일은 " + job + "입니다!"
+		'method': 'share',
+		'href': 'http://www.tomorrowkids.or.kr/PC/work_test_result2.php'
 	},
 		function(response) {
 			alert(response);
