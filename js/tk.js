@@ -417,6 +417,63 @@ function fb_share(job, job_explain, test_idx, job_num)
 	);
 }
 
+function fb_share2(job, job_explain, test_idx, job_num)
+{
+	FB.ui(
+	{
+		'method': 'share',
+		'href': 'http://www.tomorrowkids.or.kr/PC/work_test_result2.php'
+	},
+		function(response) {
+			if (response && response.post_id) {
+				$.ajax({
+					type     : "POST",
+					async    : false,
+					url      : "../main_exec.php",
+					data     : ({
+						"exec"     : "update_user_share" ,
+						"test_idx" : test_idx,
+						"share_gubun" : 'fb'
+					})
+				});
+				var width = $(window).width();
+				//var height = $(window).height();
+				
+				var height = 0;
+
+				if( browser.msie ){ //IE
+					var scrollHeight = document.documentElement.scrollHeight;
+					var browserHeight = document.documentElement.clientHeight;
+					height = scrollHeight;
+
+				} else if ( browser.safari ){ //Chrome || Safari
+					height = document.body.scrollHeight;
+				} else if ( browser.firefox ){ // Firefox || NS
+					var bodyHeight = document.body.clientHeight;
+					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+				} else if ( browser.opera ){ // Opera
+					var bodyHeight = document.body.clientHeight;
+					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+				}
+
+				$(".mask").width(width);
+				$(".mask").height(height);
+
+				$(".mask").fadeTo(1000, 0.7);
+				$("#email_div").fadeIn(500);
+
+				/*
+				if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
+					window.open("http://www.naver.com/");
+				}else{
+					location.href="index.php";
+				}
+				*/
+			}
+		}
+	);
+}
+
 /********************** 카카오톡 **********************/
 
 
