@@ -224,7 +224,7 @@ function fb_share2()
 	var sTop=window.screen.height/2-(280);
 	var sLeft=window.screen.width/2-(310);
 
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('www.dreamfull.or.kr/tomorrowkids/fb'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('www.tomorrowkids.or.kr'),'sharer','toolbar=0,status=0,width=600,height=325,top='+sTop+',left='+sLeft);
 
 }
 /*
