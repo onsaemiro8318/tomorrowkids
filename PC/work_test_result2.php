@@ -25,6 +25,7 @@
 	//$job_imgurl	= "http://www.tomorrowkids.or.kr/images/jobimg_2.jpg";
 	$job_imgurl_kakao	= $_gl['kakao_img'][$_REQUEST['job']];
 ?>
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
