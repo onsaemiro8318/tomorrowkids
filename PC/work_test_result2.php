@@ -200,7 +200,7 @@ ini_set("display_errors", 1);
 
 
     });
-/*
+
 window.fbAsyncInit = function() {
 	FB.init({
 		appId      : '880257948675085',
@@ -217,7 +217,7 @@ window.fbAsyncInit = function() {
 	js.src = "//connect.facebook.net/ko_KR/sdk.js";
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-*/
+
 
 function fb_share2()
 {
@@ -240,10 +240,3 @@ function fb_share2()
 		$("#privacy_term").show();
 	}
 </script>
-<script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
