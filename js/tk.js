@@ -421,16 +421,12 @@ function fb_share2(job, job_explain, test_idx, job_num)
 {
 	FB.ui(
 	{
-		'method': 'share_open_graph',
-		//'href': 'http://www.tomorrowkids.or.kr/PC/work_test_result2.php'
-	  action_type: 'og.likes',
-	  action_properties: JSON.stringify({
-		  object:'http://www.tomorrowkids.or.kr/PC/work_test_result2.php',
-	  })
+		'method': 'share',
+		'href': 'http://www.tomorrowkids.or.kr/PC/work_test_result2.php'
 	},
 		function(response) {
 			alert(response);
-			if (response ) {
+			if (response && response.post_id) {
 				$.ajax({
 					type     : "POST",
 					async    : false,
