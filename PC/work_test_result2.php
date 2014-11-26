@@ -6,12 +6,6 @@ ini_set("display_errors", 1);
 
 	include_once "../config.php";
 	//include_once "header.php";
-/*
-	if ( isset($_SESSION['ss_mb_id']) == false && $_SERVER['REMOTE_ADDR'] != "127.0.0.1" ) {
-		header('Location: index.php'); 
-		exit; 
-	}
-*/
 	$user_job	= TK_GetUserJobInfo($_REQUEST['job']);
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
@@ -199,12 +193,6 @@ ini_set("display_errors", 1);
 			$(".popupbg2").fadeOut(500);
 		});
 		//fncSelectFile();
-/*
-		if ( "fb" == "<?=$_REQUEST['sns_gubun']?>")
-		{
-			location.href="index.php";
-		}
-*/
     });
 
 window.fbAsyncInit = function() {
