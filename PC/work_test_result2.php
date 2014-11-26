@@ -230,6 +230,7 @@ function fb_share2()
 		'method': 'share',
 		'href': 'http://www.tomorrowkids.or.kr/PC/work_test_result2.php'
 	}, function (response) {
+		alert(response);
 		if (response && response.post_id) {
 			$.ajax({
 				type     : "POST",
