@@ -31,13 +31,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
-
 <meta property="og:title" content="내일을 부탁해" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="www.tomorrowkids.or.kr/PC/work_test_result2.php" />
 <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg" />
 <meta property="og:description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다." />
+    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
+
 
     <link rel="shortcut icon" type="image/x-icon" href="./images/tomorrow.ico" />
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
@@ -47,7 +47,6 @@
     <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
-  </head>
 
 <script type="text/javascript">
 
@@ -72,6 +71,7 @@
 	}
 
 </script>
+  </head>
 <body>
 <div class="main_wrapper">
 <!--Line1 start-->
