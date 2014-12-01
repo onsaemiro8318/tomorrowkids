@@ -40,7 +40,7 @@
 		$pg = $_REQUEST['pg'];
 
 	//if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
-	$page_size = 20;	// 한 페이지에 나타날 개수
+	$page_size = 20000;	// 한 페이지에 나타날 개수
 	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
 	//if (isset($search_type) == false)
@@ -83,7 +83,17 @@
             </thead>
             <tbody>
 <?php 
-	$mail_list_query = "SELECT * FROM ".$_gl['tk_member_table']." WHERE mb_email IS NOT NULL";
+
+
+  $mail_count_query = "SELECT count(*) FROM ".$_gl['tk_member_table']." WHERE mb_email IS NOT NULL";
+
+  list($mail_count) = @mysqli_fetch_array(mysqli_query($my_db, $mail_count_query));
+
+  $PAGE_CLASS = new Page($pg,$mail_count,$page_size,$block_size);
+  $BLOCK_LIST = $PAGE_CLASS->blockList();
+  $PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
+
+	$mail_list_query = "SELECT * FROM ".$_gl['tk_member_table']." WHERE mb_email IS NOT NULL Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $mail_list_query);
 
 	while($mail_data = @mysqli_fetch_array($res))
