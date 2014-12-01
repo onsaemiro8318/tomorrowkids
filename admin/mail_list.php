@@ -88,6 +88,7 @@
 
 	while($mail_data = @mysqli_fetch_array($res))
 	{
+?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
                 <td><?php echo $mail_data['mb_email']?></td>
