@@ -85,6 +85,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
                 <a href="member_list.php"><i class="fa fa-fw fa-table"></i> 테스트 참여자 목록</a>
               </li>
               <li>
+                <a href="mail_list.php"><i class="fa fa-fw fa-table"></i> 테스트 참여자 이메일</a>
+              </li>              
+              <li>
                 <a href="answer_list.php"><i class="fa fa-fw fa-edit"></i> 답변 선택 목록</a>
               </li>
               <li>
