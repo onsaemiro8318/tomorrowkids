@@ -13,7 +13,10 @@
 
 	//$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
-	$test_idx	= $_REQUEST['idx'];
+	if (isset($_REQUEST['idx']) == false)
+		$test_idx	= "";
+	else
+		$test_idx	= $_REQUEST['idx'];
 
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
@@ -40,7 +43,7 @@
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
     <!-- <script type="text/javascript" src="../js/custom.js"></script> -->
-    <script type='text/javascript' src='../js/tk2.js'></script>
+    <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
 
