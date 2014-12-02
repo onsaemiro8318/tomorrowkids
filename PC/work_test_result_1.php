@@ -3,10 +3,10 @@
 	include_once "../config.php";
 	//include_once "header.php";
 
-	if ( isset($_SESSION['ss_mb_id']) == false && $_SERVER['REMOTE_ADDR'] != "127.0.0.1" ) {
-		header('Location: index.php'); 
-		exit; 
-	}
+	//if ( isset($_SESSION['ss_mb_id']) == false && $_SERVER['REMOTE_ADDR'] != "127.0.0.1" ) {
+	//	header('Location: index.php'); 
+	//	exit; 
+	//}
 
 	$job_idx = "1";
 	$user_job	= TK_GetUserJobInfo($job_idx);
