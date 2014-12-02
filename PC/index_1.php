@@ -19,7 +19,7 @@
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta property="og:title" content="나는 <?php echo $user_job?>!! 당신에게 어울리는 직업은?">
+    <meta property="og:title" content="나는 증강현실엔지니어!! 당신에게 어울리는 직업은?">
     <meta property="og:type" content="website" />
     <!-- <meta property="og:url" content="http://www.tomorrowkids.or.kr/PC/work_test_result_1.php" /> -->
     <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobbigimg_1.jpg" />
