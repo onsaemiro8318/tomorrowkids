@@ -25,11 +25,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0"/>
-    <meta property="og:title" content="내일을 부탁해">
+    <meta property="og:title" content="나는 우유검사원!! 당신에게 어울리는 직업은?">
     <meta property="og:type" content="website" />
     <!-- <meta property="og:url" content="http://www.tomorrowkids.or.kr/PC/work_test_result_1.php" /> -->
     <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobbigimg_4.jpg" />
-    <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
+    <meta property="og:description" content="당신은 내일을 꿈꾸며 살아가고 있습니다. 당신에게 어울리는 직업을 찾아보세요!">
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
