@@ -38,7 +38,7 @@
     <meta property="og:title" content="내일을 부탁해">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.tomorrowkids.or.kr/MOBILE/work_test_result_44.php" />
-    <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_44.jpg" />
+    <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobbigimg_44.jpg" />
     <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>

@@ -22,7 +22,7 @@
     <meta property="og:title" content="내일을 부탁해">
     <meta property="og:type" content="website" />
     <!-- <meta property="og:url" content="http://www.tomorrowkids.or.kr/PC/work_test_result_1.php" /> -->
-    <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_45.jpg" />
+    <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobbigimg_45.jpg" />
     <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
     <link rel="shortcut icon" type="image/x-icon" href="./images/tomorrow.ico" />
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
