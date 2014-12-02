@@ -12,9 +12,12 @@
 
 	$user_job		= TK_GetUserJobInfo($job_idx);
 
-	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
+	//$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
-	$test_idx	= $_REQUEST['idx'];
+	if (isset($_REQUEST['idx']) == false)
+		$test_idx	= "";
+	else
+		$test_idx	= $_REQUEST['idx'];
 
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
