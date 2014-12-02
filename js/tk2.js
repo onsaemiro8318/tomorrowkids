@@ -357,7 +357,7 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 
 function fb_share(job, job_explain, test_idx, job_num)
 {
-	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('www.dreamfull.or.kr/tomorrowkids/fb/indexgoods_idx='+ idx),'sharer','toolbar=0,status=0,width=600,height=325');
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.dreamfull.or.kr/app/newdf/tomorrowkids/fb/?job_idx='+ job_num),'sharer','toolbar=0,status=0,width=600,height=325');
 /*
 	$.ajax({
 		type     : "POST",
