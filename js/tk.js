@@ -357,64 +357,44 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 
 function fb_share(job, job_explain, test_idx, job_num)
 {
-	FB.ui(
-	{
-		method: 'feed',
-		name: '내일을 부탁해',
-		link: 'www.dreamfull.or.kr/tomorrowkids/fb',
-		picture: 'http://www.tomorrowkids.or.kr/images/fb/jobimg_'+job_num+'.jpg',
-		caption: 'www.dreamfull.or.kr/tomorrowkids/fb',
-		//description: job + " - " + job_explain
-		description: "당신에게 어울리는 내일은 " + job + "입니다!"
-	},
-		function(response) {
-			if (response && response.post_id) {
-				$.ajax({
-					type     : "POST",
-					async    : false,
-					url      : "../main_exec.php",
-					data     : ({
-						"exec"     : "update_user_share" ,
-						"test_idx" : test_idx,
-						"share_gubun" : 'fb'
-					})
-				});
-				var width = $(window).width();
-				//var height = $(window).height();
-				
-				var height = 0;
+	var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.dreamfull.or.kr/app/newdf/tomorrowkids/fb/?job_idx='+ job_num),'sharer','toolbar=0,status=0,width=600,height=325');
+/*
+	$.ajax({
+		type     : "POST",
+		async    : false,
+		url      : "../main_exec.php",
+		data     : ({
+			"exec"     : "update_user_share" ,
+			"test_idx" : test_idx,
+			"share_gubun" : 'fb'
+		})
+	});
+	var width = $(window).width();
+	//var height = $(window).height();
+	
+	var height = 0;
 
-				if( browser.msie ){ //IE
-					var scrollHeight = document.documentElement.scrollHeight;
-					var browserHeight = document.documentElement.clientHeight;
-					height = scrollHeight;
+	if( browser.msie ){ //IE
+		var scrollHeight = document.documentElement.scrollHeight;
+		var browserHeight = document.documentElement.clientHeight;
+		height = scrollHeight;
 
-				} else if ( browser.safari ){ //Chrome || Safari
-					height = document.body.scrollHeight;
-				} else if ( browser.firefox ){ // Firefox || NS
-					var bodyHeight = document.body.clientHeight;
-					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-				} else if ( browser.opera ){ // Opera
-					var bodyHeight = document.body.clientHeight;
-					height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-				}
+	} else if ( browser.safari ){ //Chrome || Safari
+		height = document.body.scrollHeight;
+	} else if ( browser.firefox ){ // Firefox || NS
+		var bodyHeight = document.body.clientHeight;
+		height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+	} else if ( browser.opera ){ // Opera
+		var bodyHeight = document.body.clientHeight;
+		height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
+	}
 
-				$(".mask").width(width);
-				$(".mask").height(height);
+	$(".mask").width(width);
+	$(".mask").height(height);
 
-				$(".mask").fadeTo(1000, 0.7);
-				$("#email_div").fadeIn(500);
-
-				/*
-				if(confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-					window.open("http://www.naver.com/");
-				}else{
-					location.href="index.php";
-				}
-				*/
-			}
-		}
-	);
+	$(".mask").fadeTo(1000, 0.7);
+	$("#email_div").fadeIn(500);
+*/
 }
 
 function fb_share2(job, job_explain, test_idx, job_num)
@@ -655,7 +635,8 @@ function go_test(num, val)
 					location.href = "work_test_result.php?job=" + response;
 				}
 				*/
-				location.href = "work_test_result.php?job=" + res_result[0] + "&idx=" + res_result[1];
+				//location.href = "work_test_result.php?job=" + res_result[0] + "&idx=" + res_result[1];
+				location.href = "work_test_result_" + res_result[0] + ".php?idx=" + res_result[1];
 			}
 		});
 	}else{
