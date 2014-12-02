@@ -11,7 +11,7 @@
 	$job_idx = "1";
 	$user_job	= TK_GetUserJobInfo($job_idx);
 
-	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
+	//$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
 	$test_idx	= $_REQUEST['idx'];
 
