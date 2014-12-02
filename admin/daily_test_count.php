@@ -41,7 +41,6 @@
 			$share_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE regdate LIKE  '%".$daily_date."%' AND share='Y'";
 			$share_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
       $total_count = $pc_count + $mobile_count;
-		}
 ?>
                   <tr>
                     <td><?php echo $daily_date?></td>
