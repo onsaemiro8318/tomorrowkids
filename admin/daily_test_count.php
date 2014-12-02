@@ -30,6 +30,7 @@
 
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
+		$daily_date		= substr($date_daily_data['regdate'],0,10);
       $total_count = 0;
       $pc_count = 0;
       $mobile_count = 0;
