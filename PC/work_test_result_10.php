@@ -13,7 +13,12 @@
 
 	$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
 
-	$test_idx	= $_REQUEST['idx'];
+	//$user_info	= TK_GetUserInfo($_SESSION['ss_mb_id']);
+
+	if (isset($_REQUEST['idx']) == false)
+		$test_idx	= "";
+	else
+		$test_idx	= $_REQUEST['idx'];
 
 	$t_count1 = substr($total_count,0,1);
 	$t_count2 = substr($total_count,1,1);
@@ -30,11 +35,11 @@
     <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta property="og:title" content="내일을 부탁해">
+    <meta property="og:title" content="나는 <?php echo $user_job['job']?>!! 당신에게 어울리는 직업은?">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.tomorrowkids.or.kr/PC/work_test_result_10.php" />
     <meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobbigimg_10.jpg" />
-    <meta property="og:description" content="어릴 적 당신이 지녔던 '그 마음'을 팝니다">
+    <meta property="og:description" content="당신은 내일을 꿈꾸며 살아가고 있습니다. 당신에게 어울리는 직업을 찾아보세요!">
     <link rel="shortcut icon" type="image/x-icon" href="./images/tomorrow.ico" />
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
