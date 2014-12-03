@@ -189,6 +189,7 @@ ini_set("display_errors", 1);
 <script type="text/javascript">
 	function ks_share2(job, job_explain, test_idx, job_imgurl)
 	{
+		/*
 		kakao.link("story").send({
 			post : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
 			appid : "www.dreamfull.or.kr",
@@ -196,6 +197,9 @@ ini_set("display_errors", 1);
 			appname : "내일을 부탁해",
 			urlinfo : JSON.stringify({title:"내일을 부탁해", desc:job_explain, imageurl:[job_imgurl], type:"article"})
 		});
+		*/https://story.kakao.com/share?url=http%3A//www.youtube.com/watch%3Fv%3DESpZx1XhBPk%26feature%3Dshare
+		var newWindow = window.open('https://story.kakao.com/share?feature=share&url=' + encodeURIComponent('http://www.dreamfull.or.kr/tomorrowkids/ks'),'sharer','toolbar=0,status=0,width=600,height=325');
+
 	}
     $(document).ready(function(){
 		$(".mask").click(function(){
