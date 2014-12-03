@@ -111,7 +111,7 @@ ini_set("display_errors", 1);
 당신의 내일(Work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.</div>
   <div class="facebookbut">
     <a href="#" onclick="fb_share2('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');return false;"><img src="images/facebook_sub.png" style="margin-right:10px"/></a>
-    <a href="#" onclick="ks_share('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a>
+    <a href="#" onclick="ks_share2('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a>
   </div>
 <div class="popupbg1" id="email_div">
   <div class="closeic"><a href="#" onclick="close_email();"><img src="images/close_icon.gif"/></a></div>
@@ -186,6 +186,16 @@ ini_set("display_errors", 1);
 </body>
 </html>
 <script type="text/javascript">
+	function executeKakaoStoryLink()
+	{
+		kakao.link("story").send({
+			post : curURL,
+			appid : "www.dreamfull.or.kr",
+			appver : "1.0",
+			appname : "내일을 부탁해",
+			urlinfo : JSON.stringify({title:curTitle, desc:"당신은 내일을 꿈꾸며 살아가고 있습니다. 당신에게 어울리는 직업을 찾아보세요!", imageurl:["<?=$job_imgurl_kakao?>"], type:"article"})
+		});
+	}
     $(document).ready(function(){
 		$(".mask").click(function(){
 			$(".mask").fadeOut(500);
@@ -199,6 +209,9 @@ ini_set("display_errors", 1);
 			location.href="index.php";
 		}
 
+		$("#kstory").click(function(){
+			executeKakaoStoryLink();
+		});
     });
 
 window.fbAsyncInit = function() {
