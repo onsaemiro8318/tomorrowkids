@@ -37,7 +37,7 @@ ini_set("display_errors", 1);
 <meta name="title" content="내일을 부탁해" />
 <meta name="image" content="http://dn-xl0-story.kakao.co.kr/dn//DvQ9c/hydhsCK1Rj/aua0bOkBZB2D4gIltonyR1/img.jpg?width=1200&height=630" />
 <meta name="description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다." />
-<link rel="canonical" href="http://www.youtube.com/watch?v=ESpZx1XhBPk">    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
+    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
 
 
     <link rel="shortcut icon" type="image/x-icon" href="./images/tomorrow.ico" />
@@ -115,7 +115,7 @@ ini_set("display_errors", 1);
 당신의 내일(Work) 결과를 SNS에 공유하시면, 아이들의 내일(Tomorrow)을 위한 기부로 이어집니다.</div>
   <div class="facebookbut">
     <a href="#" onclick="fb_share2('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$_REQUEST['job']?>');return false;"><img src="images/facebook_sub.png" style="margin-right:10px"/></a>
-    <a href="#" onclick="ks_share2('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a>
+    <a href="#" onclick="kakaoStory_new('<?=$user_job['job']?>','<?=$user_job['job_explain']?>','<?=$test_idx?>','<?=$job_imgurl_kakao?>');return false;"><img src="images/ks_sub.png"/></a>
   </div>
 <div class="popupbg1" id="email_div">
   <div class="closeic"><a href="#" onclick="close_email();"><img src="images/close_icon.gif"/></a></div>
@@ -190,6 +190,41 @@ ini_set("display_errors", 1);
 </body>
 </html>
 <script type="text/javascript">
+	function kakaoStory_new(title, summary, image, shareUrl){
+		//var host = location.host;
+		var url = "http://www.tomorrowkids.or.kr/?media=ks";
+		var newwindow;
+
+		var kakaoUrl = "https://story.kakao.com/share?";
+
+		var linkUrl = shareUrl;
+
+		summary = summary.substring(0,100);
+
+		var arr = [];
+		arr.push("url=" + encodeURIComponent(linkUrl));
+		arr.push("img=" + encodeURIComponent(image));
+		arr.push("title=" + encodeURIComponent(title));
+		arr.push("summary=" + encodeURIComponent(summary));
+
+		url += arr.join("&");
+		var param = encodeURIComponent(url);
+
+		kakaoUrl += ('url=' + param);
+
+		var w = 530;
+		var h = 480;
+		var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
+		var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
+		var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+		var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+		var left = ((width / 2) - (w / 2)) + dualScreenLeft - 20;
+		var top = ((height / 2) - (h / 2)) + dualScreenTop + 30;
+		newwindow = window.open(kakaoUrl, 'kakaoPopup', 'toolbar=0, status=0, width=530, height=480, top=' + top + ',left=' + left);
+
+	}
+
+
 	function ks_share2(job, job_explain, test_idx, job_imgurl)
 	{
 		/*
