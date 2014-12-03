@@ -92,7 +92,7 @@ function play_movie(gubun){
 function ks_share_mobile(job, job_explain, test_idx, job_imgurl)
 {
 	kakao.link("story").send({
-		post : "http://www.dreamfull.or.kr/tomorrowkids/ks",
+		post : " ",
 		appid : "http://www.dreamfull.or.kr/tomorrowkids/ks",
 		appver : "1.0",
 		appname : "내일을 부탁해",
