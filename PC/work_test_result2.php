@@ -41,6 +41,7 @@ ini_set("display_errors", 1);
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type='text/javascript' src='../js/jquery-1.11.0.min.js'></script>
+    <script type='text/javascript' src='../js/kakao.link.js'></script>
     <!-- <script type="text/javascript" src="../js/custom.js"></script> -->
     <script type='text/javascript' src='../js/tk.js'></script>
     <script type='text/javascript' src='../js/googleAnalytics.js'></script>
