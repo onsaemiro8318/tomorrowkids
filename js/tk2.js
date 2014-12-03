@@ -91,79 +91,13 @@ function play_movie(gubun){
 
 function ks_share_mobile(job, job_explain, test_idx, job_imgurl)
 {
-	Kakao.API.request( {
-		url : '/v1/api/story/linkinfo',
-		data : {
-			url : 'http://www.dreamfull.or.kr/tomorrowkids/ks'
-		}
-	}).then(function(res) {
-		// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-		return Kakao.API.request( {
-			url : '/v1/api/story/post/link',
-			data : {
-			link_info : {
-				url : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
-				host : 'www.dreamfull.or.kr',
-				title : '내일을 부탁해',
-				image : [job_imgurl],
-				description : '내일(work)이 모여 아이들의 내일(Tomorrow)이 만들어집니다.'
-			},
-			content : "당신에게 어울리는 내일은\n " + job + "입니다!"
-			},
-			success: function(res) {
-				alert("카카오스토리에 당신에게 어울리는 내일이 공유 되었습니다.");
-				$.ajax({
-					type     : "POST",
-					async    : false,
-					url      : "../main_exec.php",
-					data     : ({
-						"exec"     : "update_user_share" ,
-						"test_idx" : test_idx,
-						"share_gubun" : 'ks'
-					}),
-					success: function(response){
-						var width = $(window).width();
-						//var height = $(window).height();
-
-						var height = 0;
-
-						if( browser.msie ){ //IE
-							var scrollHeight = document.documentElement.scrollHeight;
-							var browserHeight = document.documentElement.clientHeight;
-							height = scrollHeight;
-
-						} else if ( browser.safari ){ //Chrome || Safari
-							height = document.body.scrollHeight;
-						} else if ( browser.firefox ){ // Firefox || NS
-							var bodyHeight = document.body.clientHeight;
-							height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-						} else if ( browser.opera ){ // Opera
-							var bodyHeight = document.body.clientHeight;
-							height = window.innerHeight < bodyHeight ? bodyHeight : window.innerHeight;
-						}
-
-						$(".mask").width(width);
-						$(".mask").height(height);
-						$(".mask").fadeTo(1000, 0.7);
-						$("#email_div").fadeIn(500);
-					//$("#video_fremebox").fadeIn(500);
-		  /*if (confirm("공유가 완료되었습니다. 직접 후원에도 참여하시겠습니까?")){
-						//window.open("http://www.naver.com","newWindow","scrollbars=yes,toolbar=yes,location=yes,resizable=yes,status=yes,menubar=yes,resizable=yes");
-						var openNewWindow = window.open("about:blank");
-						openNewWindow.location.href = "http://www.naver.com";
-					} */
-					}
-				}); 
-			}
-		});
-	});	
-  // kakao.link("story").send({
-  //   post : "http://www.dreamfull.or.kr/tomorrowkids/ks",
-  //   appid : "http://www.dreamfull.or.kr/tomorrowkids/ks",
-  //   appver : "1.0",
-  //   appname : "내일을 부탁해",
-  //   urlinfo : JSON.stringify({title:"내일을 부탁해", desc:"당신에게 어울리는 내일은 " + job + " 입니다.", imageurl:[job_imgurl], type:"article"})
-  // });
+	kakao.link("story").send({
+		post : "http://www.dreamfull.or.kr/tomorrowkids/ks",
+		appid : "http://www.dreamfull.or.kr/tomorrowkids/ks",
+		appver : "1.0",
+		appname : "내일을 부탁해",
+		urlinfo : JSON.stringify({title:"나는 " + job + "!! 당신에게 어울리는 직업은?", desc:"당신은 내일을 꿈꾸며 살아가고 있습니다. 당신에게 어울리는 직업을 찾아보세요!", imageurl:[job_imgurl], type:"article"})
+	});
 }
 
 
@@ -250,38 +184,6 @@ function kt_ajax(test_idx)
 
 function ks_share(job, job_explain, test_idx, job_imgurl)
 {
-	var url = "http://www.tomorrowkids.or.kr/?media=ks";
-	var newwindow;
-
-	var kakaoUrl = "https://story.kakao.com/share?";
-
-	var linkUrl = url;
-	var title = "나는 " + job + "!! 당신에게 어울리는 직업은?";
-	var summary = "당신은 내일을 꿈꾸며 살아가고 있습니다. 당신에게 어울리는 직업을 찾아보세요!";
-	//summary = summary.substring(0,100);
-
-	var arr = [];
-	arr.push("url=" + encodeURIComponent(linkUrl));
-	arr.push("img=" + encodeURIComponent(job_imgurl));
-	arr.push("title=" + encodeURIComponent(title));
-	arr.push("summary=" + encodeURIComponent(summary));
-
-	url += arr.join("&");
-	var param = encodeURIComponent(url);
-
-	kakaoUrl += ('url=' + param);
-
-	var w = 530;
-	var h = 480;
-	var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
-	var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
-	var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-	var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-	var left = ((width / 2) - (w / 2)) + dualScreenLeft - 20;
-	var top = ((height / 2) - (h / 2)) + dualScreenTop + 30;
-	newwindow = window.open(kakaoUrl, 'kakaoPopup', 'toolbar=0, status=0, width=530, height=480, top=' + top + ',left=' + left);
-
-/*
 	// 로그인 창을 띄웁니다.
 	Kakao.Auth.login({
 		success: function(authObj) {
@@ -379,7 +281,6 @@ function ks_share(job, job_explain, test_idx, job_imgurl)
 
 		},
 	});
-*/
 }
 
 function fb_share(job, job_explain, test_idx, job_num)
