@@ -32,9 +32,12 @@ ini_set("display_errors", 1);
 <meta property="og:title" content="내일을 부탁해" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.tomorrowkids.or.kr/PC/work_test_result2.php" />
-<meta property="og:image" content="http://www.tomorrowkids.or.kr/images/fb/jobimg_1.jpg" />
+<meta property="og:image" content="http://dn-xl0-story.kakao.co.kr/dn//DvQ9c/hydhsCK1Rj/aua0bOkBZB2D4gIltonyR1/img.jpg?width=1200&height=630" />
 <meta property="og:description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다." />
-    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
+<meta name="title" content="내일을 부탁해" />
+<meta name="image" content="http://dn-xl0-story.kakao.co.kr/dn//DvQ9c/hydhsCK1Rj/aua0bOkBZB2D4gIltonyR1/img.jpg?width=1200&height=630" />
+<meta name="description" content="당신에게 어울리는 직업은 증강현실엔지니어입니다." />
+<link rel="canonical" href="http://www.youtube.com/watch?v=ESpZx1XhBPk">    <title>내일을부탁해 - 드림풀 매칭그랜트 캠페인</title>
 
 
     <link rel="shortcut icon" type="image/x-icon" href="./images/tomorrow.ico" />
@@ -198,7 +201,7 @@ ini_set("display_errors", 1);
 			urlinfo : JSON.stringify({title:"내일을 부탁해", desc:job_explain, imageurl:[job_imgurl], type:"article"})
 		});
 		*/https://story.kakao.com/share?url=http%3A//www.youtube.com/watch%3Fv%3DESpZx1XhBPk%26feature%3Dshare
-		var newWindow = window.open('https://story.kakao.com/share?feature=share&url=' + encodeURIComponent('http://www.dreamfull.or.kr/tomorrowkids/ks'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://story.kakao.com/share?feature=share&url=' + encodeURIComponent('http://www.tomorrowkids.or.kr/PC/work_test_result2.php'),'sharer','toolbar=0,status=0,width=600,height=325');
 
 	}
     $(document).ready(function(){
