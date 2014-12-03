@@ -186,14 +186,14 @@ ini_set("display_errors", 1);
 </body>
 </html>
 <script type="text/javascript">
-	function executeKakaoStoryLink()
+	function ks_share2(job, job_explain, test_idx, job_imgurl)
 	{
 		kakao.link("story").send({
-			post : curURL,
+			post : 'http://www.dreamfull.or.kr/tomorrowkids/ks',
 			appid : "www.dreamfull.or.kr",
 			appver : "1.0",
 			appname : "내일을 부탁해",
-			urlinfo : JSON.stringify({title:curTitle, desc:"당신은 내일을 꿈꾸며 살아가고 있습니다. 당신에게 어울리는 직업을 찾아보세요!", imageurl:["<?=$job_imgurl_kakao?>"], type:"article"})
+			urlinfo : JSON.stringify({title:"내일을 부탁해", desc:job_explain, imageurl:[job_imgurl], type:"article"})
 		});
 	}
     $(document).ready(function(){
@@ -209,9 +209,9 @@ ini_set("display_errors", 1);
 			location.href="index.php";
 		}
 
-		$("#kstory").click(function(){
-			executeKakaoStoryLink();
-		});
+		//$("#kstory").click(function(){
+		//	executeKakaoStoryLink();
+		//});
     });
 
 window.fbAsyncInit = function() {
