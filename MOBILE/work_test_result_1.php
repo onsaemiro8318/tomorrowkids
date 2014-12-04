@@ -30,9 +30,14 @@
 	//$job_imgurl		= "../images/jobimg_1.jpg";
 	//$job_imgurl2	= "http://www.tomorrowkids.or.kr/images/jobimg_1.jpg";
 	$job_imgurl_kakao	= $_gl['kakao_img'][$job_idx];
-
+/*
 	$Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
 
+	if ($Android)
+		$android_flag = "Y";
+	else
+		$android_flag = "N";
+*/
 ?>
 <html>
   <head>
