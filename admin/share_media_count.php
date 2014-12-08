@@ -105,16 +105,20 @@
   			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media is null AND gubun='MOBILE' AND direct='Y'";
   			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
   			$total_count		= $pc_count + $mobile_count;        
+        $media_name = $media_data['media'];
       }else {
   			$pc_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='PC' AND direct='Y'";
   			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
   			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='MOBILE' AND direct='Y'";
   			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
   			$total_count		= $pc_count + $mobile_count;        
+        $media_name = "구분없음";
       }
+    
+      
 ?>
                   <tr>
-                    <td><?=$media_data['media']?></td>
+                    <td><?=$media_name?></td>
                     <td><?=number_format($pc_count)?></td>
                     <td><?=number_format($mobile_count)?></td>
                     <td><?=number_format($total_count)?></td>
