@@ -43,7 +43,7 @@
   			$pc_fb_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE gubun='PC' AND fb_share='Y'";
   			$pc_fb_count		= mysqli_num_rows(mysqli_query($my_db, $pc_fb_query));        
         $pc_sum = $pc_count + $pc_fb_count;
-      }else {
+      }else if($media_data['media'] == "kakao"){
   			$pc_kt_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE gubun='PC' AND kt_share='Y'";         			$pc_kt_count		= mysqli_num_rows(mysqli_query($my_db, $pc_kt_query));
   			$pc_ks_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE gubun='PC' AND ks_share='Y'";  
   			$pc_ks_count		= mysqli_num_rows(mysqli_query($my_db, $pc_ks_query));
@@ -56,7 +56,7 @@
   			$mob_fb_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE gubun='MOBILE' AND fb_share='Y'";
   			$mob_fb_count		= mysqli_num_rows(mysqli_query($my_db, $mob_fb_query));
         $mob_sum = $mobile_count + $mob_fb_count;                
-      }else{
+      }else if($media_data['media'] == "kakao"){
   			$mob_kt_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE gubun='MOBILE' AND kt_share='Y'"; 
   			$mob_kt_count		= mysqli_num_rows(mysqli_query($my_db, $mob_kt_query));
         $mob_ks_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE gubun='MOBILE' AND ks_share='Y'"; 
@@ -99,12 +99,19 @@
 
 		while ($media_data = mysqli_fetch_array($media_res))
 		{
-			$pc_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='PC' AND direct='Y'";
-			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='MOBILE' AND direct='Y'";
-			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
-			$total_count		= $pc_count + $mobile_count;
-
+      if($media_data['media'] == ""){
+  			$pc_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media is null AND gubun='PC' AND direct='Y'";
+  			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
+  			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media is null AND gubun='MOBILE' AND direct='Y'";
+  			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
+  			$total_count		= $pc_count + $mobile_count;        
+      }else {
+  			$pc_query		= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='PC' AND direct='Y'";
+  			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
+  			$mobile_query	= "SELECT * FROM ".$_gl['tk_test_result_table']." WHERE media='".$media_data['media']."' AND gubun='MOBILE' AND direct='Y'";
+  			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
+  			$total_count		= $pc_count + $mobile_count;        
+      }
 ?>
                   <tr>
                     <td><?=$media_data['media']?></td>
