@@ -32,7 +32,7 @@ a:hover { text-decoration:underline;color:#3675c7;}
 .main_top2 .text_data{ text-align:center; padding-bottom:36px; font-weight:bold;}
 .main_top2 .f_text{ font-size:26px; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
 .main_top2 .t_text{ font-size:32px; text-decoration:underline; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
-.main_top2 .greenco_left{ background-color:#369384; border-right:1px solid #258676;  border-bottom-left-radius:50px; border-top-left-radius:50px; height:20px; width:20%;}
+.main_top2 .greenco_left{ background-color:#369384; border-right:1px solid #258676;  border-bottom-left-radius:50px; border-top-left-radius:50px; border-bottom-right-radius:50px; border-top-right-radius:50px; height:20px; width:20%;}
 .main_top2 .greenco_right{ background-color:#fff; border-top-right-radius:50px; border-bottom-right-radius:50px; height:20px; width:79.7%;}
 .main_top2 .gr_box{ position:relative;}
 .main_top2 .gr_box .minic{ position:absolute; right:-10px; top:-36px;}
