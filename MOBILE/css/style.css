@@ -41,7 +41,8 @@ h1 img{ width:25%; padding:4% 0 0 4%;}
 /*.main_top2 .t_text{ font-size:46px; text-decoration:underline; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;';}*/
 .main_top2 .t_text{ font-size:38px; text-decoration:underline; font-family: 'Malgun Gothic','돋움',Dotum,AppleGothic,Arial,sans-serif;}
 .main_top2 .greenco_left{ background-color:#369384; border-right:1px solid #258676;  border-bottom-left-radius:50px; border-top-left-radius:50px; height:54px; width:20%;}
-.main_top2 .greenco_right{ background-color:#fff; border-top-right-radius:50px; border-bottom-right-radius:50px; height:54px; width:79.7%;}
+/*.main_top2 .greenco_right{ background-color:#fff; border-top-right-radius:50px; border-bottom-right-radius:50px; height:54px; width:79.7%;}*/
+.main_top2 .greenco_right{ background-color:#369384; border-top-right-radius:50px; border-bottom-right-radius:50px; height:54px; width:79.7%;}
 .main_top2 .gr_box{ position:relative; padding-bottom:40px;}
 .main_top2 .gr_box .minic{ position:absolute; right:0px; top:-29px;}
 .main_top2 .gr_box .peopleic{ position:absolute; left:92px; top:-32px;}
