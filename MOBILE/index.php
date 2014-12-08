@@ -14,7 +14,7 @@
 	$t_count5 = substr($total_count,4,1);
 
 	if ($total_count > 10000)
-		$total_count = 10000;
+		$total_count = 8000;
 
 	$left_per	= ($total_count / 10000) * 100;
 	$right_per	= 100 - $left_per - 1.3;
